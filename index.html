@@ -174,10 +174,20 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-2 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+        <p><img src="/css/images/hexo.png" alt=""></p>
+<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-2 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
 <h3 id="Hexo_Installation"><a href="#Hexo_Installation" class="headerlink" title="Hexo Installation"></a>Hexo Installation</h3><p>Hexo is powered by node.js framework. To Install Hexo, first we need to install Node.Js. It can be downloaded from <a href="https://nodejs.org/en/download/" target="_blank" rel="external">here</a>. We can verify the installation by checking the node version through command prompt.</p>
-<p><img src="/source/Images/node-version-check.png" alt="Node version check"></p>
-<p>Once Node.js is successfully installed, we can proceed with Hexo installation using the Node Package Manager.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;node --version</span><br></pre></td></tr></table></figure>
+<p>Once Node.js is successfully installed, we can proceed with Hexo installation using the Node Package Manager.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;npm install hexo -g</span><br></pre></td></tr></table></figure></p>
+<p>Once the Hexo is installed, we need to setup website folder,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;hexo init [folder]</span><br></pre></td></tr></table></figure>
+<p>[folder] is optional in the above command, if it is not specified folder structure will be created under the current directory, else in the specified directory.</p>
+<p><img src="/css/images/hexo-folder.png" alt=""></p>
+<p>Website uses the default theme called “Landscape” from Hexo, To preview the site locally, we need to run the following command,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo Project&#62;hexo server [folder]</span><br></pre></td></tr></table></figure>
+<p>now, we can preview the blog at <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>,</p>
+<p><img src="/css/images/hexo-folder.png" alt=""></p>
+<p>This finishes the hexo initial setup, in the next post will show, how to host it in using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>.<br>Please feel free to contact of you face any issues while setting up. Thanks for reading, and have a nice day :).</p>
 
       
     </div>
@@ -227,7 +237,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-1 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+        <p><img src="/css/images/nodejs.png" alt=""><br>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-1 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
 <h3 id="Static_Site_Generator"><a href="#Static_Site_Generator" class="headerlink" title="Static Site Generator"></a>Static Site Generator</h3><p>Everybody knows about <a href="https://www.wordpress.com" target="_blank" rel="external">Wordpress</a> which is a very famous CMS (Content Management System) blogging platform.<br>Suppose we have a blog which is created using wordpress, in which we are trying to access a page. When a user tries to access a page using URL, what really happens behind the scene is, server will go &amp; fetch the content from one or more databases, template engine will process the content, and generate a HTML file which will sent to the client browser.</p>
 <p>In opposite way static site generators will take the content and layouts, once compiled it give us the HTML files which we can directly deploy on the server. When a user tries to access a page using URL, there is no processing involved,server just sends the corresponding HTML file.</p>
 <p>The big &amp; main difference which we can directly identify here is <strong><em>Speed</em></strong> which static site generator provides. This is main reason for which I had decided to use Static blogging Framework. There are lot of pros and cons in both the frameworks. You can find more details in this <a href="https://davidwalsh.name/introduction-static-site-generators" target="_blank" rel="external">great article</a>, and the following link contains the list of top <a href="https://www.staticgen.com/" target="_blank" rel="external">Open-Source Static Site Generators</a> .</p>
@@ -322,7 +332,7 @@ ga('send', 'pageview');
             <div class="item-thumbnail">
               <a href="/2016/01/static-blog-with-hexo-2/" class="thumbnail">
   
-    <span style="background-image:url(/source/Images/node-version-check.png
+    <span style="background-image:url(/css/images/hexo.png
 )" alt="Static Blog Setup with Hexo : Initial Setup" class="thumbnail-image"></span>
   
 </a>
@@ -341,7 +351,8 @@ ga('send', 'pageview');
             <div class="item-thumbnail">
               <a href="/2016/01/static-blog-with-hexo-1/" class="thumbnail">
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <span style="background-image:url(/css/images/nodejs.png
+)" alt="Static Blog Setup with Hexo : Introduction" class="thumbnail-image"></span>
   
 </a>
 
