@@ -113,7 +113,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        3
+        4
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -144,6 +144,67 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-static-blog-with-hexo-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/static-blog-with-hexo-3/">Static Blog Setup with Hexo : Hosting</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/03/static-blog-with-hexo-3/" style="text-align:right">
+      <time datetime="2016-03-06T15:10:45.000Z" itemprop="datePublished">Mar 06 2016</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><img src="/css/images/github-pages.jpg" alt=""></p>
+<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-3 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+<h3 id="Project_Setup_in_Github"><a href="#Project_Setup_in_Github" class="headerlink" title="Project Setup in Github"></a>Project Setup in Github</h3><p>To host simple static HTML site, there are lot of options available. We can deploy them on normal hosting server or on cloud (like <a href="https://aws.amazon.com/" target="_blank" rel="external">Amazon Web Services</a> or <a href="https://azure.microsoft.com" target="_blank" rel="external">Microsoft Azure</a>).</p>
+<p>I have chosen <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a> to host my site.The main reason is, I can directly host my site from Github repository. For each Account, Github provides an option to host one static website.</p>
+<p>To create the repository and host the site, we have step by step instruction on the <a href="https://pages.github.com/" target="_blank" rel="external">homepage</a>. I am using <a href="https://desktop.github.com/" target="_blank" rel="external">Github Desktop</a> as my Git client.<br>By default this hosting files can be accessed from the URL <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a>. Username being the account username.</p>
+<h3 id="Custom_domain_setup"><a href="#Custom_domain_setup" class="headerlink" title="Custom domain setup"></a>Custom domain setup</h3><p>I have my own domain which is purchased from <a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>.</p>
+<ul>
+<li><p>In DNS provider (in my case Godaddy), first we need to create two ‘A’ records that point our custom domain to the following IP addresses:<br>192.30.252.153<br>192.30.252.154</p>
+</li>
+<li><p>In Github pages, we can setup our custom domain using the <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">instructions</a>.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/" data-id="cilgparet000078mgiznq189c" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-static-blog-with-hexo-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -187,7 +248,7 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo Project&#62;hexo server [folder]</span><br></pre></td></tr></table></figure>
 <p>now, we can preview the blog at <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>,</p>
 <p><img src="/css/images/hexo-folder.png" alt=""></p>
-<p>This finishes the hexo initial setup, in the next post will show, how to host it in using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>.<br>Please feel free to contact of you face any issues while setting up. Thanks for reading, and have a nice day :).</p>
+<p>This finishes the hexo initial setup, in the next post will see how to host it in using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>.<br>Please feel free to contact if you face any issues while setting up. Thanks for reading, and have a nice day :).</p>
 
       
     </div>
@@ -300,7 +361,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <p>Hi, welcome to my blog, this is my first post. This blog is created using ‘A Static Site Generator’ <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! I will be writing both technical and non-technical topics here. Technical posts will be in English, other writings will be either in English or in Telugu (Mother tongue).</p>
+        <p>Hi, welcome to my blog, this is the first post. This blog is created using ‘Static Site Generator tool’ <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! I will be writing both technical and non-technical topics here. Technical posts will be in English, other writings will be either in English or  Telugu (Mother tongue).</p>
 
       
     </div>
@@ -326,6 +387,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/static-blog-with-hexo-3/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/github-pages.jpg
+)" alt="Static Blog Setup with Hexo : Hosting" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2016/03/static-blog-with-hexo-3/" class="title">Static Blog Setup with Hexo : Hosting</a></p>
+              <p class="item-date"><time datetime="2016-03-06T15:10:45.000Z" itemprop="datePublished">Mar 06 2016</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -394,7 +474,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -412,7 +492,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 

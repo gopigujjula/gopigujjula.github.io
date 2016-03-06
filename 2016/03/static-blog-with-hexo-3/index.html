@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | Gopi Thoughts</title>
+  <title>Static Blog Setup with Hexo : Hosting | Gopi Thoughts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am Gopikrishna Gujjula, working as a Senior Engineer for a wonderful organization Verndale, and residing in Bangalore, India.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://gopigujjula.com/about/index.html">
+  <meta name="description" content="This blog is created using one of the Static blogging framework Hexo, and hosted using Github pages. This post is part-3 of the series and you can view all the posts in the series here Static Blog Set">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Static Blog Setup with Hexo : Hosting">
+<meta property="og:url" content="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/index.html">
 <meta property="og:site_name" content="Gopi Thoughts">
-<meta property="og:description" content="I am Gopikrishna Gujjula, working as a Senior Engineer for a wonderful organization Verndale, and residing in Bangalore, India.">
-<meta property="og:updated_time" content="2016-01-22T09:31:26.022Z">
+<meta property="og:description" content="This blog is created using one of the Static blogging framework Hexo, and hosted using Github pages. This post is part-3 of the series and you can view all the posts in the series here Static Blog Set">
+<meta property="og:image" content="http://gopigujjula.com/css/images/github-pages.jpg">
+<meta property="og:updated_time" content="2016-03-06T17:38:22.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am Gopikrishna Gujjula, working as a Senior Engineer for a wonderful organization Verndale, and residing in Bangalore, India.">
+<meta name="twitter:title" content="Static Blog Setup with Hexo : Hosting">
+<meta name="twitter:description" content="This blog is created using one of the Static blogging framework Hexo, and hosted using Github pages. This post is part-3 of the series and you can view all the posts in the series here Static Blog Set">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -144,7 +145,7 @@ ga('send', 'pageview');
 </aside>
 
       
-      <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-static-blog-with-hexo-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -153,7 +154,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      About
+      Static Blog Setup with Hexo : Hosting
     </h1>
   
 
@@ -161,8 +162,8 @@ ga('send', 'pageview');
           
   <div class="article-date">
     <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/about/index.html" style="text-align:right">
-      <time datetime="2016-01-22T09:31:26.022Z" itemprop="datePublished">Jan 22 2016</time>
+    <a href="/2016/03/static-blog-with-hexo-3/" style="text-align:right">
+      <time datetime="2016-03-06T15:10:45.000Z" itemprop="datePublished">Mar 06 2016</time>
     </a>
   </div>
 
@@ -174,20 +175,43 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <p>I am Gopikrishna Gujjula, working as a Senior Engineer for a wonderful organization <a href="http://www.verndale.com/" target="_blank" rel="external">Verndale</a>, and residing in Bangalore, India.</p>
+        <p><img src="/css/images/github-pages.jpg" alt=""></p>
+<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-3 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+<h3 id="Project_Setup_in_Github"><a href="#Project_Setup_in_Github" class="headerlink" title="Project Setup in Github"></a>Project Setup in Github</h3><p>To host simple static HTML site, there are lot of options available. We can deploy them on normal hosting server or on cloud (like <a href="https://aws.amazon.com/" target="_blank" rel="external">Amazon Web Services</a> or <a href="https://azure.microsoft.com" target="_blank" rel="external">Microsoft Azure</a>).</p>
+<p>I have chosen <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a> to host my site.The main reason is, I can directly host my site from Github repository. For each Account, Github provides an option to host one static website.</p>
+<p>To create the repository and host the site, we have step by step instruction on the <a href="https://pages.github.com/" target="_blank" rel="external">homepage</a>. I am using <a href="https://desktop.github.com/" target="_blank" rel="external">Github Desktop</a> as my Git client.<br>By default this hosting files can be accessed from the URL <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a>. Username being the account username.</p>
+<h3 id="Custom_domain_setup"><a href="#Custom_domain_setup" class="headerlink" title="Custom domain setup"></a>Custom domain setup</h3><p>I have my own domain which is purchased from <a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>.</p>
+<ul>
+<li><p>In DNS provider (in my case Godaddy), first we need to create two ‘A’ records that point our custom domain to the following IP addresses:<br>192.30.252.153<br>192.30.252.154</p>
+</li>
+<li><p>In Github pages, we can setup our custom domain using the <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">instructions</a>.</p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/about/index.html" data-id="cijqhuelg0003jsmgm2f6yudm" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/" data-id="cilgparet000078mgiznq189c" class="article-share-link">Share</a>
       
-        <a href="http://gopigujjula.com/about/index.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/static-blog-with-hexo-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Static Blog Setup with Hexo : Initial Setup</div>
+    </a>
+  
+</nav>
+
 
   
 </article>
