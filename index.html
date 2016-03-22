@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Gopi Thoughts</title>
+  <title>Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gopi Thoughts">
+<meta property="og:title" content="Gopi Notes">
 <meta property="og:url" content="http://gopigujjula.com/index.html">
-<meta property="og:site_name" content="Gopi Thoughts">
+<meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gopi Thoughts">
+<meta name="twitter:title" content="Gopi Notes">
 <meta name="twitter:description">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
-    <link rel="icon" href="css/images/favicon.ico">
+    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
   
   
  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
@@ -51,7 +51,7 @@ ga('send', 'pageview');
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="/" id="logo">
-        <span class="site-title">Gopi Thoughts</span>
+        <span class="site-title">Gopi Notes</span>
       </a>
       <nav id="main-nav">
         
@@ -113,12 +113,12 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        4
+        27
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        1
-        <span>tag</span>
+        8
+        <span>tags</span>
       </div>
     </div>
     
@@ -190,7 +190,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/" data-id="cilgparet000078mgiznq189c" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/" data-id="cilhvswxu0009komgiftew98f" class="article-share-link">Share</a>
       
         <a href="http://gopigujjula.com/2016/03/static-blog-with-hexo-3/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -253,7 +253,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/01/static-blog-with-hexo-2/" data-id="cijxxq5xg0000m8mgm4dmffkq" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/01/static-blog-with-hexo-2/" data-id="cilhvswy2000ckomg9njt4lqp" class="article-share-link">Share</a>
       
         <a href="http://gopigujjula.com/2016/01/static-blog-with-hexo-2/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -316,7 +316,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/01/static-blog-with-hexo-1/" data-id="cijqhueln0004jsmg1s6u0msy" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/01/static-blog-with-hexo-1/" data-id="cilhvswy9000ekomgo63mv8x6" class="article-share-link">Share</a>
       
         <a href="http://gopigujjula.com/2016/01/static-blog-with-hexo-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -366,7 +366,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/01/first-post/" data-id="cijqhuejw0000jsmglxp5bl4t" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/01/first-post/" data-id="cilhvswym000ikomgmalswyk2" class="article-share-link">Share</a>
       
         <a href="http://gopigujjula.com/2016/01/first-post/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -378,6 +378,139 @@ ga('send', 'pageview');
 
 
 
+    
+      <article id="post-Using-statement-in-C" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/Using-statement-in-C/">Using statement in C#</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2015/06/Using-statement-in-C/" style="text-align:right">
+      <time datetime="2015-06-03T14:27:00.000Z" itemprop="datePublished">Jun 03 2015</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note : <em>This post is first published on June-2015 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<h4 id="using"><a href="#using" class="headerlink" title="using"></a>using</h4><p>  Using block/statement is used to free unmanaged resources.</p>
+<p>Using statement is translated to three parts,</p>
+<ul>
+<li>Acquisition</li>
+<li>Usage</li>
+<li>Disposal</li>
+</ul>
+<p>This resource is first acquired, then the usage is enclosed in a try statement with a finally clause. The object then gets disposed in the finally clause.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using (MemoryStream objStream = new MemoryStream())&#10;&#123;&#10;    objStream.WriteTo(Response.OutputStream);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>this code gets translated to</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MemoryStream objStream = new MemoryStream();&#10;try&#10;&#123;&#10;    objStream.WriteTo(Response.OutputStream);&#10;&#125;&#10;finally&#10;&#123;&#10;  if(objStream !=null)&#10;    ((IDisposable)objStream).Dispose();&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>Objects that implement <strong><em>IDisposable</em></strong> can be used in a <strong><em>using</em></strong> statement. Calling <strong><em>Dispose()</em></strong> explicitly (or implicitly via a <strong><em>using</em></strong> statement) can have performance benefits.</p>
+<p>“Code that is using a resource can call <strong><em>Dispose()</em></strong> to indicate that the resource is no longer needed. If <strong><em>Dispose()</em></strong> is not called, then automatic disposal eventually occurs as a consequence of garbage collection.” - MSDN</p>
+<p>In the below code we can observe the following points,</p>
+<ul>
+<li>If we use ‘using’ block along a Customer type, it give a compiler error, saying that “type used in a using statement must be implicitly convertible to ‘System.IDisposable’”.</li>
+<li>Same if use with Student type, it does not give any error, because it implements System.IDisposable interface.</li>
+</ul>
+<p>Sample code</p>
+<script src="https://gist.github.com/gopigujjula/1550c9eed8f0a61dc099.js"></script>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2015/06/Using-statement-in-C/" data-id="cilhvswz0000kkomgdizcrq34" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2015/06/Using-statement-in-C/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-foreach-loop-in-Csharp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/foreach-loop-in-Csharp/">foreach loop in C#</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2015/06/foreach-loop-in-Csharp/" style="text-align:right">
+      <time datetime="2015-06-03T13:25:00.000Z" itemprop="datePublished">Jun 03 2015</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note : <em>This post is first published on June-2015 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<h4 id="foreach_3A"><a href="#foreach_3A" class="headerlink" title="foreach:"></a>foreach:</h4><p>It repeats a group of embedded statements for each element in an array or an object collection. By a collection, we mean any class, struct, or interface that implements the <strong><em>IEnumerable</em></strong> interface.<br><strong><em>foreach</em></strong> gives read-only access to the array contents, so we can not change the values of any of the elements.<br>Only forward iteration is possible in for-each loop.<br>The condition to work with <strong><em>IEnumerable</em></strong> objects is that the underlying collection must not change while you are accessing it. You can presume that the Enumerable object is a snap shot of the original collection, so if you tries to change the collection while enumerating, it will throw an exception. However the fetched objects in Enumeration is not immutable at all.<br>Since the variable used in <strong><em>foreach</em></strong> loop is local to the loop block this variable is however not available outside the block.</p>
+<p>In the below code we can observe the following points,</p>
+<ul>
+<li>If we try to modify the foreach iteration variable either primitive type (int) or a user defined class (Customer), we get compile time error.</li>
+<li>If we try to add/remove any item from the collection, we get run time exception.</li>
+<li>We can always modify the object properties(Name property in Customer type), which are not immutable.</li>
+</ul>
+<p>Sample Code</p>
+<script src="https://gist.github.com/gopigujjula/d98b62dc8dcba472342b.js"></script>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2015/06/foreach-loop-in-Csharp/" data-id="cim3h2nou00009smgs40k3ikl" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2015/06/foreach-loop-in-Csharp/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      </nav>
     </section>
       
         <aside id="sidebar">
@@ -463,6 +596,24 @@ ga('send', 'pageview');
             </div>
           </li>
         
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/Using-statement-in-C/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2015/06/Using-statement-in-C/" class="title">Using statement in C#</a></p>
+              <p class="item-date"><time datetime="2015-06-03T14:27:00.000Z" itemprop="datePublished">Jun 03 2015</time></p>
+            </div>
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -474,7 +625,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LINQ/">LINQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVC/">MVC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog-setup/">hexo blog setup</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -483,7 +634,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">tag cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo-blog-setup/" style="font-size: 10px;">hexo blog setup</a>
+      <a href="/tags/ASP-NET/" style="font-size: 10px;">ASP.NET</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/LINQ/" style="font-size: 10px;">LINQ</a> <a href="/tags/MVC/" style="font-size: 10px;">MVC</a> <a href="/tags/Tools/" style="font-size: 16.67px;">Tools</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/hexo-blog-setup/" style="font-size: 13.33px;">hexo blog setup</a>
     </div>
   </div>
 
@@ -492,7 +643,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
