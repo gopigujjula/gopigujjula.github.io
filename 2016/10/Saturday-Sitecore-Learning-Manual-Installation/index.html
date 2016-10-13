@@ -5,14 +5,14 @@
   
   <title>Saturday Sitecore Learning - Manual Installation | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP FileIn this post, we will look into Manual installation option.
-Installation Overview:Before proceeding any further, we need">
+  <meta name="description" content="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP FileIn this post, we will look into Manual installation option.
+Installation Overview:Before proceeding, we need to understand">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Saturday Sitecore Learning - Manual Installation">
 <meta property="og:url" content="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/index.html">
 <meta property="og:site_name" content="Gopi Notes">
-<meta property="og:description" content="Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP FileIn this post, we will look into Manual installation option.
-Installation Overview:Before proceeding any further, we need">
+<meta property="og:description" content="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP FileIn this post, we will look into Manual installation option.
+Installation Overview:Before proceeding, we need to understand">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecoredb.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-folders.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/attach-db.png">
@@ -21,11 +21,11 @@ Installation Overview:Before proceeding any further, we need">
 <meta property="og:image" content="http://gopigujjula.com/css/images/new-login-1b.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/new-login-1c.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/IIS-website.png">
-<meta property="og:updated_time" content="2016-10-10T18:14:20.189Z">
+<meta property="og:updated_time" content="2016-10-13T10:28:40.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saturday Sitecore Learning - Manual Installation">
-<meta name="twitter:description" content="Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP FileIn this post, we will look into Manual installation option.
-Installation Overview:Before proceeding any further, we need">
+<meta name="twitter:description" content="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP FileIn this post, we will look into Manual installation option.
+Installation Overview:Before proceeding, we need to understand">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -185,28 +185,29 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <h3 id="Saturday_Sitecore_Learning__3A_Manual_Installation__3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning__3A_Manual_Installation__3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP File"></a>Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
-<p><strong><em>Installation Overview:</em></strong><br>Before proceeding any further, we need to understand what actually needs to happen in the installation process. In the previous post we discussed about installation using .exe. There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
+        <h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
+<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
 <ul>
-<li>Creates around 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
+<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
 <li>Copies Sitecore site in the specified destination folder path.</li>
 <li>Creates new website in IIS, and point to the destination folder.</li>
 <li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
 </ul>
-<p>When we are talking about manual installation, we need to take care of all the above steps.</p>
+<p>When we go through manual installation, we need to take care of all the above steps.</p>
 <p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
 <p><img src="/css/images/sitecore-folders.png" alt=""></p>
-<p>Now we will look into DB part of the installation,</p>
-<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, navigate to Databases, and Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped file. Attach all the five databases.</p>
+<p>Now we will look into Database setup,</p>
+<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
 <p><img src="/css/images/attach-db.png" alt=""></p>
 <p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
 <p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
 <p>Now all the databases are set.</p>
-<p>Next we will look into Website setup:</p>
+<p>Next we will proceed to Website setup:</p>
 <p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc.variable name=&#34;dataFolder&#34; value=&#34;F:\inetpub\wwwroot\Data&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
 <p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.</p>
-<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.<br><img src="/css/images/IIS-website.png" alt=""></p>
-<p>Now run the site.</p>
+<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
+<p><img src="/css/images/IIS-website.png" alt=""></p>
+<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
 
       
     </div>

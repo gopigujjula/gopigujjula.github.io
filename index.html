@@ -174,28 +174,29 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <h3 id="Saturday_Sitecore_Learning__3A_Manual_Installation__3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning__3A_Manual_Installation__3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP File"></a>Saturday Sitecore Learning : Manual Installation : Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
-<p><strong><em>Installation Overview:</em></strong><br>Before proceeding any further, we need to understand what actually needs to happen in the installation process. In the previous post we discussed about installation using .exe. There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
+        <h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
+<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
 <ul>
-<li>Creates around 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
+<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
 <li>Copies Sitecore site in the specified destination folder path.</li>
 <li>Creates new website in IIS, and point to the destination folder.</li>
 <li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
 </ul>
-<p>When we are talking about manual installation, we need to take care of all the above steps.</p>
+<p>When we go through manual installation, we need to take care of all the above steps.</p>
 <p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
 <p><img src="/css/images/sitecore-folders.png" alt=""></p>
-<p>Now we will look into DB part of the installation,</p>
-<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, navigate to Databases, and Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped file. Attach all the five databases.</p>
+<p>Now we will look into Database setup,</p>
+<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
 <p><img src="/css/images/attach-db.png" alt=""></p>
 <p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
 <p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
 <p>Now all the databases are set.</p>
-<p>Next we will look into Website setup:</p>
+<p>Next we will proceed to Website setup:</p>
 <p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc.variable name=&#34;dataFolder&#34; value=&#34;F:\inetpub\wwwroot\Data&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
 <p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.</p>
-<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.<br><img src="/css/images/IIS-website.png" alt=""></p>
-<p>Now run the site.</p>
+<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
+<p><img src="/css/images/IIS-website.png" alt=""></p>
+<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
 
       
     </div>
@@ -246,46 +247,47 @@ ga('send', 'pageview');
       
                 
         <p><em>My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.</em></p>
-<p>Again I am re-initiating it from this month. In learning series, till now we have seen what is Sitecore, resources, and certification information. From now on, we will look into Setup, installation, and implementation parts.</p>
+<p>Again I am re-initiating it from this month. In learning series, till now we have seen what is Sitecore, resources, and certification information. From now onwards, we will look into Initial Setup, installation, and implementation parts.</p>
 <p>Sitecore installation can be done in three ways</p>
 <ol>
 <li>Sitecore web application installer</li>
 <li>Sitecore Zip (manual installation)</li>
 <li>Sitecore Instance Manager (SIM)</li>
 </ol>
-<p>Sitecore installtion consists of mainly three steps.</p>
+<p>Sitecore installation consists of mainly three steps.</p>
 <ol>
 <li>DB Setup</li>
 <li>Web site Deploy location</li>
 <li>IIS configuration for site</li>
 </ol>
 <p>In this post, we will look into first option.</p>
-<p><strong><em>Sitecore web application installer:</em></strong><br>Among all the three options, web application installer is the easiest one, as it is through exe. We just need to run the .exe file and just follow the instructions.</p>
-<p>Before installing Sitecore, we need to have following installed,</p>
+<p><strong><em>Sitecore web application installer:</em></strong><br>Among all the three options, web application installer is the easiest one, as it is through exe. We just need to run .exe file and follow the instructions.</p>
+<p>Before installing Sitecore, we need to have following installed, with administrator access</p>
 <ul>
-<li>.NET framework</li>
+<li>.NET framework 4.5 and above (for Sitecore 8.2)</li>
 <li>IIS</li>
-<li>Visual Studio</li>
+<li>Visual Studio - Community/Professional/Enterprise</li>
 <li>MS SQL Server or Oracle</li>
 </ul>
-<p>I have downloaded latest Sitecore version (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>.</p>
-<p><strong>Installation Steps</strong><br><strong>Step 1 :</strong> First unzip the downloaded file, and run the <strong>Sitecore 8.2 rev. 160729.exe</strong> file, and click on Next.<br><img src="/css/images/sitecore-installation-1.png" alt=""></p>
-<p><strong>Step 2 :</strong> Accept the license agreement.<br><img src="/css/images/sitecore-installation-2.png" alt=""></p>
-<p><strong>Step 3 :</strong> Select the type of installation. Here we have three options,<br>     <em>Complete:</em> both Sitecore web site and database.<br>     <em>Database Only:</em> It is useful when we already have web site setup, but need fresh DB.<br>     <em>Client Only:</em> It is useful when we want to access already setup DB.</p>
+<p>You can find more details <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a> about Sitecore compatibility.</p>
+<p>Download latest Sitecore exe file -version (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>.</p>
+<p><strong>Installation Steps</strong><br><strong>Step 1:</strong> Unzip the downloaded file, and run the <strong>Sitecore 8.2 rev. 160729.exe</strong> file, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Accept the license agreement, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Select the type of installation. Here we have three options,<br>   <em>Complete:</em> both Sitecore web site and database.<br>   <em>Database Only:</em> It is useful when we already have web site setup, but need fresh DB.<br>   <em>Client Only:</em> It is useful if we are using the database from any other common server with in the organization.<br>If you are trying to install in personal mission then choose Complete option otherwise based on requirement choose the option and click on Next -&gt;.</p>
 <p><img src="/css/images/sitecore-installation-3.png" alt=""></p>
-<p><strong>Step 4 :</strong> Give a unique name for this new instance.<br><img src="/css/images/sitecore-installation-4.png" alt=""></p>
-<p><strong>Step 5 :</strong> Select the Sitecore license file. I do not have much information on how to get the license file. I am using my companies license file. I guess for individual developer, there is a Student trail license which is valid for one month.<br>Once license is selected, below details are populated.<br><img src="/css/images/sitecore-installation-5.png" alt=""></p>
-<p><strong>Step 6 :</strong> Both SQL Server and Oracle are supported. Select the database vendor, give the Database name, and credentials. From Advanced settings, can changed Database Prefix, which will be defaulted to previoulsy given Sitecore instance name. <em>ImP Note: Login Id should have server admin access enabled in DB server.</em><br><img src="/css/images/sitecore-installation-6a.png" alt=""></p>
+<p><strong>Step 4:</strong> Give a unique name for this new instance and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-4.png" alt=""></p>
+<p><strong>Step 5:</strong> Select the Sitecore license file. I do not have much information on how to get the license file. I am using my firm (Sitecore Platinum Partner) license file. I guess for individual developer, there is a Student trail license which is valid for one month.<br>Once license file is selected, it will auto populate the below details. Then click on Next -&gt;.<br><img src="/css/images/sitecore-installation-5.png" alt=""></p>
+<p><strong>Step 6:</strong> Both SQL Server and Oracle are supported. Select the database vendor from dropdown, give the Database server name, and credentials. On click of Advanced settings, we can change Database Prefix, which will be defaulted to previously given Sitecore instance name. <em>Imp Note: Login Id should have admin access enabled in DB server.</em><br>Click on OK to proceed.<br><img src="/css/images/sitecore-installation-6a.png" alt=""></p>
 <p><img src="/css/images/sitecore-installation-6b.png" alt=""></p>
-<p><strong>Step 7 :</strong> Select the wwwroot folder for Sitecore installation. From Advanced settings, can also select locations for Data, and Database.<br><img src="/css/images/sitecore-installation-7a.png" alt=""></p>
+<p><strong>Step 7:</strong> Select the IIS root path/wwwroot folder location for Sitecore installation. From Advanced settings, can also select locations for Data, and Database. Click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-7a.png" alt=""></p>
 <p><img src="/css/images/sitecore-installation-7b.png" alt=""></p>
-<p><strong>Step 8 :</strong> Give web site name<br><img src="/css/images/sitecore-installation-8.png" alt=""></p>
-<p><strong>Step 9 :</strong> At last one more time review all the options, and click <strong>Install</strong>.<br><img src="/css/images/sitecore-installation-9.png" alt=""></p>
-<p><strong>Step 10 :</strong> Sitecore will take some time to get installed, and after finishing the installation, just check the Launch Sitecore option, and click on Finish.<br><img src="/css/images/sitecore-installation-10a.png" alt=""></p>
+<p><strong>Step 8:</strong> Give web site name, and click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-8.png" alt=""></p>
+<p><strong>Step 9:</strong> At last one more time review all the options, and click <strong>Install</strong>.<br><img src="/css/images/sitecore-installation-9.png" alt=""></p>
+<p><strong>Step 10:</strong> Sitecore will take some time to get installed, and after finishing the installation, select the Launch Sitecore check box, and click on Finish.<br><img src="/css/images/sitecore-installation-10a.png" alt=""></p>
 <p><img src="/css/images/sitecore-installation-10b.png" alt=""></p>
-<p><strong>Step 11 :</strong> Now the site will be launched. You can login with default Sitecore credentials,<br><strong>User name: admin<br>Password: b</strong></p>
+<p><strong>Step 11:</strong> Now, you can see Sitecore home page in your default browser. You can login with default Sitecore credentials,<br><strong>User name: admin<br>Password: b</strong></p>
 <p><img src="/css/images/sitecore-installation-11.png" alt=""></p>
-<p>Cheers on successful installation.</p>
+<p>Cheers on successful installation.In my next post I will explain about Manual Installation.</p>
 
       
     </div>
@@ -453,12 +455,12 @@ ga('send', 'pageview');
       
                 
         <p><img src="/css/images/sitecore_logo.png" alt=""></p>
-<p>After learning about <strong>WCM</strong> platforms, now I am trying to understand more about <strong>Sitecore</strong> as a company and as well as product, and it’s market position.<br>As a developer, it is very much crucial to know that, we are investing our time on technologies which are having bright future.</p>
+<p>After learning about <strong>WCM</strong> platforms, now I am trying to understand more about <strong>Sitecore</strong> as a technology and as well as product, and it’s market position.<br>As a developer, it is very much crucial to know that, when we choose it as a career path/option, and to make sure we are investing our time on technologies which are having bright future.</p>
 <p>After going through several websites and posts, here is my notes,</p>
 <p>For seven years in a row, the <strong>Sitecore Experience Platform</strong> has been placed in the Leaders quadrant of <strong>Gartner’s Magic Quadrant for Web Content Management</strong>.</p>
-<p>In ranking Sitecore as a leader, <strong>Gartner</strong> cited the company’s strengths as:</p>
+<p>In ranking Sitecore as a leader In CMS, <strong>Gartner</strong> cited the company’s strengths as:</p>
 <p><em>Sitecore has an industry-leading, compelling and executable vision for a “contextual delivery machine.” The Sitecore Experience Database (xDB), which promises to deliver the long-sought-after “360-degree view of the customer,” contributes to this vision.</em></p>
-<p><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a> is one of the leading enterprise-level Content Management System in ASP.NET world, using which we can create both Intranet portals and enterprise web sites.</p>
+<p><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a> is one of the leading enterprise-level Content Management System in .NET world, using which we can create both Intranet portals and enterprise web sites.</p>
 <p>It supports <strong>ASP.NET MVC</strong> and as well as <strong>Web Forms</strong>.</p>
 <p><strong>Sitecore company</strong> was started in Copenhagen in <strong>2001</strong> by five friends who saw a need for a better way to build and manage websites.</p>
 <p><strong>Sitecore product</strong> was mainly introduced as WCM platform, which combines the components dynamically on to page and deliver to the user. Later on it has evolved to fully digital marketing platform, and now it is called as <strong>Sitecore Experience Platform</strong>, which included Web Content Management, Customer Intelligence, and Cross-Channel Delivery.</p>
@@ -468,7 +470,7 @@ ga('send', 'pageview');
 <p>Please check this <a href="http://www.sitecore.net/en/products/sitecore-experience-platform" target="_blank" rel="external">link</a> to know more about the experience platform.</p>
 <p><em>“Sitecore is a high-performance, scalable, extensible ASP.NET web CMS that generates all output<br>dynamically and uses the same components and system architecture for both content and application<br>pages.”</em> – <strong><a href="https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog?tag=f1b992e4-4511-44a9-aa1a-7b48e5225d9a" target="_blank" rel="external">John West</a> (All time Sitecore MVP)</strong></p>
 <p>Current version of <strong>Sitecore is 8.2</strong>, which is going to be released on August - 2016.</p>
-<p>Sitecore continously and very rapidly evolves as a product, to provide more options and features to the customers. It provides a variety of licensing option to clients.</p>
+<p>Sitecore continuously and very rapidly evolves as a product, to provide more options and features to the customers. It provides a variety of licensing option to clients.</p>
 <p>Sitecore code is not open source.</p>
 <p>There is a very good article <a href="http://www.cygnet-infotech.com/blog/8-reasons-why-many-enterprise-cmos-choose-sitecore" target="_blank" rel="external">8 Reasons Why Many Enterprise CMOs Choose Sitecore</a></p>
 <p>Credits:<br><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a><br><a href="http://blogs.perficient.com/microsoft/2016/10/sitecore-named-a-leader-in-gartner-magic-quadrant-for-wcm/" target="_blank" rel="external">Perficient</a></p>
