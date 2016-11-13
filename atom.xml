@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-11-13T11:21:13.684Z</updated>
+  <updated>2016-11-13T11:35:12.362Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/</id>
     <published>2016-11-12T05:30:00.000Z</published>
-    <updated>2016-11-13T11:21:13.684Z</updated>
+    <updated>2016-11-13T11:35:12.362Z</updated>
     
     <content type="html"><![CDATA[<p>In last post we had seen, how to set up the project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore this option,</p>
 <p>I am using <strong>Visual Studio 2015</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
@@ -86,7 +86,7 @@
 <li>Now try to load the site, and check whether we are able to login to Sitecore or not.</li>
 </ul>
 <p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
-<p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
+<p><img src="/css/images/VS-deploy-verify-2.png" alt=""></p>
 <p>That’s all, thanks for reading.</p>
 ]]></content>
     
