@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gopi Notes</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://gopigujjula.com/"/>
+  <updated>2016-11-13T11:21:13.684Z</updated>
+  <id>http://gopigujjula.com/</id>
+  
+  <author>
+    <name>Gopikrishna Gujjula</name>
+    <email>gopikreddy.gn@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</title>
+    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/"/>
+    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/</id>
+    <published>2016-11-12T05:30:00.000Z</published>
+    <updated>2016-11-13T11:21:13.684Z</updated>
+    
+    <content type="html"><![CDATA[<p>In last post we had seen, how to set up the project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore this option,</p>
+<p>I am using <strong>Visual Studio 2015</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
+<p><strong>Outside web root setup steps:</strong></p>
+<ul>
+<li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
+</ul>
+<p><img src="/css/images/VS-new-project.png" alt=""></p>
+<ul>
+<li><p>Select the appropriate <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
+</li>
+<li><p>Enter the <strong>Name</strong> of the project, specify the <strong>Location</strong> field, and then click on OK button.</p>
+</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-MVC-project.png" alt=""></p>
+<ul>
+<li>Now we get another dialog, to select the project template. Here select <strong>Empty</strong> template present under <strong>ASP.NET 4.5.2 Templates</strong> section, and check the MVC checkbox as shown below, and click OK to proceed.</li>
+</ul>
+<p><img src="/css/images/VS-MVC-project.png" alt=""></p>
+<ul>
+<li>Once the project is created, solution contains the files as shown below.</li>
+</ul>
+<p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
+<ul>
+<li>Now from the project, remove <strong>Web.config</strong>, and <strong>Global.asax</strong> files, else on publish, these files will override the respective Sitecore files.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-file-delete.png" alt=""></p>
+<ul>
+<li>Once deleted, we need to copy both of the <strong>Web.config</strong> and <strong>Global.asax</strong> from web root into the project.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-file-paste.png" alt=""></p>
+<ul>
+<li>Create a folder with name <strong>App_Config</strong>, then copy the <strong>ConnectionStrings.config</strong> &amp; <strong>Sitecore.config</strong> files from web root to the project.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-config files.png" alt=""></p>
+<p><img src="/css/images/VS-inside-webroot-config files-copy.png" alt=""></p>
+<ul>
+<li>Next step is to add Sitecore references. We need both <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong>, Let’s grab these files from web root. Create a directory in Project file system, let’s call that <strong>Assemblies</strong>, and copy the two dll’s to inside the directory.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-dll.png" alt=""></p>
+<p><img src="/css/images/VS-inside-webroot-dll-copy-1.png" alt=""></p>
+<p><img src="/css/images/VS-inside-webroot-dll-copy-2.png" alt=""></p>
+<p><img src="/css/images/VS-inside-webroot-dll-reference.png" alt=""></p>
+<ul>
+<li>Please double check on the Mvc version compatibility <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a>, and make sure you are using correct .NET Mvc version. We can check the <strong>Web.config</strong> for the version, like below.</li>
+</ul>
+<p><img src="/css/images/VS-mvc-version.png" alt=""></p>
+<ul>
+<li>Now our project is all set. To deploy we need to create a publishing profile. Select <strong>Publishing Method</strong> as <strong>File System</strong> and specify the local Sitecore instance web root path.</li>
+</ul>
+<p><img src="/css/images/VS-publish-profile.png" alt=""></p>
+<p><img src="/css/images/VS-publish-profile-2.png" alt=""></p>
+<p><img src="/css/images/VS-publish-profile-3.png" alt=""></p>
+<ul>
+<li>At last, click on the <strong>Publish</strong> button, we can see the Site is published to web root folder.</li>
+</ul>
+<p><img src="/css/images/VS-publish-profile-4.png" alt=""></p>
+<ul>
+<li>To confirm the publish to web root folder, we can navigate to bin folder in web root folder, and see that <strong>SIMSitecore.dll</strong> is copied over.</li>
+</ul>
+<p><img src="/css/images/VS-publish-verification.png" alt=""></p>
+<ul>
+<li>Now try to load the site, and check whether we are able to login to Sitecore or not.</li>
+</ul>
+<p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
+<p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
+<p>That’s all, thanks for reading.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In last post we had seen, how to set up the project inside the web root. But this option is only useful for POC’s. Most of the time outsi
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Visual Studio - Project - Inside Web root</title>
+    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/"/>
+    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/</id>
+    <published>2016-11-05T05:30:00.000Z</published>
+    <updated>2016-11-13T11:23:16.527Z</updated>
+    
+    <content type="html"><![CDATA[<p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
+<p>There are mainly two approaches to create the project,</p>
+<ol>
+<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files sit at the same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
+<li><strong>Outside the web root</strong><br>This is the most preferred choice, as it separates the Sitecore, and our code, and easy to version Control. This is the <em>recommended</em> approach from Sitecore.</li>
+</ol>
+<p>In this post we will look into the first approach, I am using <strong>Visual Studio 2015</strong> edition.</p>
+<p><strong>Inside the web root Setup steps:</strong></p>
+<ul>
+<li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
+</ul>
+<p><img src="/css/images/VS-new-project.png" alt=""></p>
+<ul>
+<li><p>Select the appropriate <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
+</li>
+<li><p>Enter the <strong>Name</strong> of the project, and in <strong>Location</strong> field specify the newly installed Sitecore web root path (in our case <em>F:\inetpub\wwwroot\SIMSitecore\Website</em>), and make sure to uncheck the <strong>Create directory for solution</strong> checkbox, and then click on OK button.</p>
+</li>
+</ul>
+<p><img src="/css/images/VS-new-project-name.png" alt=""></p>
+<ul>
+<li>Now we get another dialog, to select the project template. Here select <strong>Empty</strong> template present under <strong>ASP.NET 4.5.2 Templates</strong> section, and check the MVC checkbox as shown below, and click OK to proceed.</li>
+</ul>
+<p><img src="/css/images/VS-MVC-project.png" alt=""></p>
+<ul>
+<li>Once the project is created, solution contains the files as shown below.</li>
+</ul>
+<p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
+<ul>
+<li>If we go to the web root, we can observer there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot.png" alt=""></p>
+<ul>
+<li>By drilling down the newly created folder (SIMSitecore), we can see the files, which are same as shown in the VS solution explorer.</li>
+</ul>
+<p><img src="/css/images/project-drilldown.png" alt=""></p>
+<ul>
+<li>Close the VS solution. Copy the Properties directory, SIMSitecore.csproj, and SIMSitecore.csproj.user files to the main web root directory.</li>
+</ul>
+<p><img src="/css/images/VS-inside-webroot-files.png" alt=""></p>
+<ul>
+<li>Now delete the <strong><em>SIMSitecore subdirectory</em></strong>, which is present inside the Website directory.</li>
+<li>Open the SIMSitecore.csproj file in Visual studio, and delete all the missing files from project.</li>
+</ul>
+<p><img src="/css/images/VS-remove-files.png" alt=""></p>
+<ul>
+<li><p>Add references to <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong> files which are in Website-&gt;bin directory.<br><img src="/css/images/VS-sitecore-kernerl.png" alt=""></p>
+</li>
+<li><p>Navigate to the Sitecore references, and change</p>
+</li>
+</ul>
+<p><strong>Will be continued</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In this post we will look into creating Visual Studio project for the installed Sitecore.&lt;/p&gt;
+&lt;p&gt;There are mainly two approaches to creat
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Launchpad</title>
+    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/"/>
+    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/</id>
+    <published>2016-10-29T05:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>By this time, we have latest version (8.2) of Sitecore running in local. It’s ok to install using either of the three approaches, web application installer, or manual installation, or using SIM.</p>
+<p>Before going ahead to create .NET web application, it’s good to have a look at Sitecore launch pad, different components, and the content tree structure.</p>
+<p>For any application, to open Sitecore, we need to append <strong><em>/sitecore</em></strong> to the URL. In my case, URL is <a href="http://testsitecore/" target="_blank" rel="external">http://testsitecore/</a>, so to open Sitecore click on <a href="http://testsitecore/sitecore" target="_blank" rel="external">http://testsitecore/sitecore</a>.</p>
+<p><img src="/css/images/sitecore-login.png" alt=""></p>
+<p>To login to Sitecore, default Administrator credentials are as below<br><strong><em>username: admin<br>password: b</em></strong></p>
+<p>Once we login, we can see the Sitecore Launchpad,</p>
+<p><img src="/css/images/sitecore-latest-launchpad.png" alt=""></p>
+<p>In the Launchpad, we can see there are 4 sections,</p>
+<ul>
+<li><p><strong><em>Marketing Applications:</em></strong> This section contains, all the components relate to Digital Marketing suite. These are the main components using which marketers can connect better with customers.</p>
+</li>
+<li><p><strong><em>Content Editing:</em></strong> This section is the main heart of the CMS. Using these components, Content Authors can add, edit, or delete the content.</p>
+</li>
+<li><p><strong><em>Control Panel:</em></strong> As the name suggests, using these components, we can do the administrative activities, like Search indexing manager, clean up databases, and localization.. etc.</p>
+</li>
+<li><p><strong><em>Access Management:</em></strong> This section contains all the user, role, and security related components.</p>
+</li>
+</ul>
+<p>Now we look into some of the main components,</p>
+<ul>
+<li><strong><em>Content Editor:</em></strong> This is where Content Authors manage content. They can either add, edit, or delete the content. As a <em>developer</em>, we frequently access this to create templates, rendering, and placeholders etc. In this all items are displayed in tree structure.</li>
+</ul>
+<p><img src="/css/images/sitecore-content-editor.png" alt=""></p>
+<ul>
+<li><strong><em>Experience Editor:</em></strong> Here Content Authors can create/modify the content in the live mode. In previous Sitecore versions this was called Page Editor.</li>
+</ul>
+<p><img src="/css/images/sitecore-experience-editor.png" alt=""></p>
+<ul>
+<li><strong><em>Experience Analytics:</em></strong> This section contains more of reports, like Channel groups by visits, Top campaigns by value, Top goals by conversions, etc.</li>
+</ul>
+<p><img src="/css/images/sitecore-experience-analytics.png" alt=""></p>
+<p>In the next post, we will look into how to create a .NET web project for Sitecore.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;By this time, we have latest version (8.2) of Sitecore running in local. It’s ok to install using either of the three approaches, web app
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Sitecore Installation with SIM tool</title>
+    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/"/>
+    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/</id>
+    <published>2016-10-22T05:30:00.000Z</published>
+    <updated>2016-11-05T12:24:41.196Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_Sitecore_with_SIM"><a href="#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM" class="headerlink" title="Saturday Sitecore Learning: Sitecore with SIM"></a>Saturday Sitecore Learning: Sitecore with SIM</h3><p>Last week, we had seen how to install Sitecore Instance Manager (SIM) tool. This week we will explore how to install Sitecore using SIM.</p>
+<p>Among all the three (<strong>Web Application Installer, Manual Installation, and SIM</strong>) available options, to choose, SIM is the most preferred choice among all the Sitecore developers. The Main reason for that is the flexibility it provides in managing the Sitecore sites.</p>
+<p>Let’s dive into step by step Sitecore installation,</p>
+<p><strong>Step 1:</strong><br>If we remember in the last post, while installing SIM, we configured <em>4 settings</em>, these are very crucial while installing Sitecore. Before proceeding any further, we need to double check on these settings, and if it is required, make any necessary changes.</p>
+<ul>
+<li>Instance Root Folder</li>
+<li>SQL Server Connection String</li>
+<li>Sitecore License File</li>
+<li>Local repository (Make sure to place downloaded Sitecore zip folder inside this path)</li>
+</ul>
+<p>To verify the 4 options, open the Home tab, and click on the Settings</p>
+<p><img src="/css/images/SIM-home.png" alt=""><br><img src="/css/images/SIM-settings.png" alt=""></p>
+<p><strong>Step 2:</strong><br>For additional settings, click on Advanced Settings. But before making any changes, please go through the <a href="https://github.com/sitecore/sitecore-instance-manager/wiki/Advanced" target="_blank" rel="external">documentation</a> very carefully.</p>
+<p><img src="/css/images/SIM-advanced-settings.png" alt=""></p>
+<p><strong>Step 3:</strong><br>Click on the Install Instance<br><img src="/css/images/SIM-install-instance.png" alt=""></p>
+<p><img src="/css/images/SIM-install-new-instance.png" alt=""></p>
+<p><strong>Step 4:</strong><br>Make all the necessary changes, Site Name, and Host name. Location value is prepopulated from the settings <em>Instance Root Folder</em>. Click on <em>Next</em> to proceed.</p>
+<p><img src="/css/images/SIM-new-sitecore.png" alt=""></p>
+<p><strong>Step 5:</strong><br>Some more options for instance details. Better to keep the default values, until and unless you are fully aware of the modifications. Click on <em>Next</em> to proceed.</p>
+<p><img src="/css/images/SIM-instance-details.png" alt=""></p>
+<p><strong>Step 6:</strong><br>If any of the Sitecore modules are present in the <em>Instance Root Folder</em>, those all are going to be listed here. We can select the modules, to install with Sitecore. Click on <em>Next</em> to proceed.</p>
+<p><img src="/css/images/SIM-module-list.png" alt=""></p>
+<p><strong>Step 7:</strong><br>You can select any available custom packages, and click on <em>Next</em> to proceed.</p>
+<p><img src="/css/images/SIM-custom-packages.png" alt=""></p>
+<p><strong>Step 8:</strong><br>Select any Configuration presets, and click on <em>Next</em> to proceed.</p>
+<p><img src="/css/images/SIM-configuration-presets.png" alt=""></p>
+<p><strong>Step 9:</strong><br>Finally all the selected modules, and custom packages, will be listed for review. Make any final modification and click on <em>Install</em>.</p>
+<p><img src="/css/images/SIM-instance-review.png" alt=""></p>
+<p><strong>Step 10:</strong><br>Now Sitecore is getting installed.</p>
+<p><img src="/css/images/SIM-sitecore-installation.png" alt=""></p>
+<p><strong>Step 11:</strong><br>Once the installation is completed, you can check the listed options, and click on <em>Finish</em>.</p>
+<p><img src="/css/images/SIM-sitecore-installation-finish.png" alt=""></p>
+<p>See you on next <strong><em>Saturday</em></strong>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_Sitecore_with_SIM&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM&quot; class=&quot;headerlink&quot; title
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Sitecore Instance Manager (SIM) </title>
+    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/"/>
+    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/</id>
+    <published>2016-10-15T05:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.433Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_SIM_tool_Installation"><a href="#Saturday_Sitecore_Learning_3A_SIM_tool_Installation" class="headerlink" title="Saturday Sitecore Learning: SIM tool Installation"></a>Saturday Sitecore Learning: SIM tool Installation</h3><p>Sitecore Instance Manager (SIM), is the tool, using which we can install, maintain, and uninstall the Sitecore. Among Sitecore developers, this is the most preferred choice to maintain Sitecore installations.</p>
+<p>SIM provides rich set of choices, you can watch this wonderful <a href="https://www.youtube.com/watch?v=bqYhjoW83RE" target="_blank" rel="external">video</a>, in which <a href="https://twitter.com/vasiliyfomichev" target="_blank" rel="external">Vasiliy Fomichev</a> explains the main features.</p>
+<p>In this post, we will look into SIM installation, in the next we will look into Sitecore installation using SIM.</p>
+<p>Installation Steps</p>
+<ul>
+<li><p>Download SIM tool from [Sitecore Marketplace] (<a href="https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx" target="_blank" rel="external">https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx</a>).<br><img src="/css/images/SIM1.png" alt=""></p>
+</li>
+<li><p>Click on the <strong>Link</strong> to get the ClickOnce version of SIM.<br><img src="/css/images/SIM2.png" alt=""></p>
+</li>
+<li><p>It will be redirected to <a href="http://dl.sitecore.net/updater/sim/" target="_blank" rel="external">http://dl.sitecore.net/updater/sim/</a>. From here click on <strong>Install and Launch</strong>.<br><img src="/css/images/SIM3.png" alt=""></p>
+</li>
+<li><p>Click on the downloaded <strong>SIM.Tool.application</strong><br><img src="/css/images/SIM4.png" alt=""></p>
+</li>
+<li><p>On the Initial Configuration Wizard, click on Next to proceed.<br><img src="/css/images/SIM5.png" alt=""></p>
+</li>
+<li><p>Click on Next to proceed.<br><img src="/css/images/SIM6.png" alt=""></p>
+</li>
+<li><p>In the previous post, we had downloaded latest Sitecore Zip (<strong>Sitecore 8.2 rev. 160729</strong>) file. For local repository point to the location of Sitecore folder, and point the local path for Sitecore License file.<br><img src="/css/images/SIM7.png" alt=""></p>
+</li>
+<li><p>Here give a SQL connection string, with <strong>(Data Source, User ID and Password)</strong> values.<br><img src="/css/images/SIM8.png" alt=""></p>
+</li>
+<li><p>Specify the File system path, and make sure to give the Network Service access, by clicking on the <strong>Grant</strong> button.<br><img src="/css/images/SIM9.png" alt=""><br><img src="/css/images/SIM10.png" alt=""><br><img src="/css/images/SIM11.png" alt=""></p>
+</li>
+<li><p>After the successful installation, SIM will check for any sitecore websites in the specified File System path. In my local I already have TestSitecore website, the same is listed below.<br><img src="/css/images/SIM12.png" alt=""></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_SIM_tool_Installation&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_SIM_tool_Installation&quot; class=&quot;headerlin
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Manual Installation</title>
+    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/"/>
+    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/</id>
+    <published>2016-10-08T03:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.408Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
+<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
+<ul>
+<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
+<li>Copies Sitecore site in the specified destination folder path.</li>
+<li>Creates new website in IIS, and point to the destination folder.</li>
+<li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
+</ul>
+<p>When we go through manual installation, we need to take care of all the above steps.</p>
+<p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
+<p><img src="/css/images/sitecore-folders.png" alt=""></p>
+<p>Now we will look into Database setup,</p>
+<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
+<p><img src="/css/images/attach-db.png" alt=""></p>
+<p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
+<p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
+<p>Now all the databases are set.</p>
+<p>Next we will proceed to Website setup:</p>
+<p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc.variable name=&#34;dataFolder&#34; value=&#34;F:\inetpub\wwwroot\Data&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.<br><img src="/css/images/connectionstring.png" alt=""></p>
+<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
+<p><img src="/css/images/IIS-website.png" alt=""></p>
+<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_Manual_I
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Sitecore Installation : Web Application Installer</title>
+    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/"/>
+    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/</id>
+    <published>2016-10-01T03:30:00.000Z</published>
+    <updated>2016-11-05T12:21:22.337Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.</em></p>
+<p>Again I am re-initiating it from this month. In learning series, till now we have seen what is Sitecore, resources, and certification information. From now onwards, we will look into Initial Setup, installation, and implementation parts.</p>
+<p>Sitecore installation can be done in three ways</p>
+<ol>
+<li>Sitecore web application installer</li>
+<li>Sitecore Zip (manual installation)</li>
+<li>Sitecore Instance Manager (SIM)</li>
+</ol>
+<p>Sitecore installation consists of mainly three steps.</p>
+<ol>
+<li>DB Setup</li>
+<li>Web site Deploy location</li>
+<li>IIS configuration for site</li>
+</ol>
+<p>In this post, we will look into first option.</p>
+<p><strong><em>Sitecore web application installer:</em></strong><br>Among all the three options, web application installer is the easiest one, as it is through exe. We just need to run .exe file and follow the instructions.</p>
+<p>Before installing Sitecore, we need to have following installed, with administrator access</p>
+<ul>
+<li>.NET framework 4.5 and above (for Sitecore 8.2)</li>
+<li>IIS</li>
+<li>Visual Studio - Community/Professional/Enterprise</li>
+<li>MS SQL Server or Oracle</li>
+</ul>
+<p>You can find more details <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a> about Sitecore compatibility.</p>
+<p>Download latest Sitecore exe file -version (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>.</p>
+<p><strong>Installation Steps</strong><br><strong>Step 1:</strong> Unzip the downloaded file, and run the <strong>Sitecore 8.2 rev. 160729.exe</strong> file, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Accept the license agreement, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Select the type of installation. Here we have three options,<br>   <em>Complete:</em> both Sitecore web site and database.<br>   <em>Database Only:</em> It is useful when we already have web site setup, but need fresh DB.<br>   <em>Client Only:</em> It is useful if we are using the database from any other common server with in the organization.<br>If you are trying to install in personal mission then choose Complete option otherwise based on requirement choose the option and click on Next -&gt;.</p>
+<p><img src="/css/images/sitecore-installation-3.png" alt=""></p>
+<p><strong>Step 4:</strong> Give a unique name for this new instance and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-4.png" alt=""></p>
+<p><strong>Step 5:</strong> Select the Sitecore license file. I do not have much information on how to get the license file. I am using my firm (Sitecore Platinum Partner) license file. I guess for individual developer, there is a Student trail license which is valid for one month.<br>Once license file is selected, it will auto populate the below details. Then click on Next -&gt;.<br><img src="/css/images/sitecore-installation-5.png" alt=""></p>
+<p><strong>Step 6:</strong> Both SQL Server and Oracle are supported. Select the database vendor from dropdown, give the Database server name, and credentials. On click of Advanced settings, we can change Database Prefix, which will be defaulted to previously given Sitecore instance name. <em>Imp Note: Login Id should have admin access enabled in DB server.</em><br>Click on OK to proceed.<br><img src="/css/images/sitecore-installation-6a.png" alt=""></p>
+<p><img src="/css/images/sitecore-installation-6b.png" alt=""></p>
+<p><strong>Step 7:</strong> Select the IIS root path/wwwroot folder location for Sitecore installation. From Advanced settings, can also select locations for Data, and Database. Click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-7a.png" alt=""></p>
+<p><img src="/css/images/sitecore-installation-7b.png" alt=""></p>
+<p><strong>Step 8:</strong> Give web site name, and click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-8.png" alt=""></p>
+<p><strong>Step 9:</strong> At last one more time review all the options, and click <strong>Install</strong>.<br><img src="/css/images/sitecore-installation-9.png" alt=""></p>
+<p><strong>Step 10:</strong> Sitecore will take some time to get installed, and after finishing the installation, select the Launch Sitecore check box, and click on Finish.<br><img src="/css/images/sitecore-installation-10a.png" alt=""></p>
+<p><img src="/css/images/sitecore-installation-10b.png" alt=""></p>
+<p><strong>Step 11:</strong> Now, you can see Sitecore home page in your default browser. You can login with default Sitecore credentials,<br><strong>User name: admin<br>Password: b</strong></p>
+<p><img src="/css/images/sitecore-installation-11.png" alt=""></p>
+<p>Cheers on successful installation.In my next post I will explain about Manual Installation.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Again I am re-initiating 
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Journey from Hotel Management student to Software Engineer</title>
+    <link href="http://gopigujjula.com/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/"/>
+    <id>http://gopigujjula.com/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/</id>
+    <published>2016-07-03T04:30:00.000Z</published>
+    <updated>2016-09-17T19:49:54.634Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/medium.png" alt=""></p>
+<p>Every journey has to start some where, I am going to start mine from my graduation.</p>
+<p>Why am I telling this now? As, I am celebrating my 6th year (1st July) work anniversary, want to go back to where i had started. Currently I am working as a Senior Engineer in an IT firm at Bangalore.</p>
+<p>I am a hotel management graduate(also a chemistry graduate), then went on to do a masters in computer science and later became a software engineer.</p>
+<p>Please read the full post <a href="https://goo.gl/rR0Ijv" target="_blank" rel="external">here</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/medium.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Every journey has to start some where, I am going to start mine from my graduation.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Career" scheme="http://gopigujjula.com/tags/Career/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Sitecore Learning : Developer Resources</title>
+    <link href="http://gopigujjula.com/2016/07/Saturday-Sitecore-Learning-Developer-Resources/"/>
+    <id>http://gopigujjula.com/2016/07/Saturday-Sitecore-Learning-Developer-Resources/</id>
+    <published>2016-07-02T03:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.453Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore-launchpad.png" alt=""></p>
+<p>Now we explore what are all the resources available for developers to learn Sitecore.</p>
+<p><strong>Prerequisite</strong> : As we know that, it is built on .NET platform, so we should have basic understanding, and little hands-on experience in .NET, ASP.NET (Web Forms or MVC), C#, and little bit in SQL server or RDBMS concepts.</p>
+<p>Sitecore company is providing two options to train backend developers, although course curriculum is similar in both,</p>
+<ol>
+<li><p><a href="http://www.sitecore.net/services-and-support/training/classroom-training/back-end-developers" target="_blank" rel="external">Classroom Training</a>:<br><strong>Duration</strong>: 4 days<br><strong>Fees</strong>: varies country to country, but approximately around USD $2000+.<br><strong>Lectures by</strong>: Sitecore Certified Trainers<br><strong>Hands on lab</strong>: Yes<br><strong>Certification</strong>: I do not have much information on this.<br><strong>Sitecore License</strong>: Not sure about this.<br><strong>More details</strong>: <a href="http://www.sitecore.net/en/services-and-support/training/classroom-training/back-end-developers/wnd8-sitecore-website-development-for-net-developers" target="_blank" rel="external">Check here</a></p>
+</li>
+<li><p><a href="https://elearning.sitecore.net/public/searchResults.aspx?q=&amp;ty=ML.BASE.DV.SearchAnyWords" target="_blank" rel="external">eLearning</a><br><strong>Duration</strong>: 14 hours<br><strong>Fees</strong>: USD $1500.<br><strong>Lectures by</strong>: Pre recorded videos by Trainers<br><strong>Hands on lab</strong>: Yes<br><strong>Certification</strong>: The purchase of this course includes a Sitecore Certification Exam Voucher (for single attempt).<br><strong>Sitecore License</strong>: Sitecore license is must to practice labs. Independent developers may apply for a one month Temporary Student License.<br><strong>Course Access</strong>: Up to 4 months.<br><strong>More details</strong>: <a href="https://elearning.sitecore.net/public/ContentDetails.aspx?id=ADA90A1B1DDD4CAF848234763A00135B" target="_blank" rel="external">Check here</a></p>
+</li>
+</ol>
+<p>I have taken eLearning course, which was fully sponsored by my company <a href="http://www.verndale.com/" target="_blank" rel="external">Verndale</a>. Course is having very good explanation of the concepts, and after the course completion, passed the Certification exam, and got the <strong><em>Sitecore 8 Professional Developer Certification</em></strong>.</p>
+<p>One main drawback of the course is, it is based on ASP .NET Web Forms. But mostly all new projects are into ASP.NET MVC implementation. But anyway Sitecore concepts are more of similar in both.</p>
+<p><strong>Other options</strong><br>If you are unable to spend that much amount on course, and if your company is not sponsoring it, then it is little bit difficult to kick start. But there are so many wonderful people who share their knowledge through blog posts, webinars, and videos.<br>There is a very good community around Sitecore, with lot of MVPs and certified developers.</p>
+<p><strong>Developer Portal</strong>: <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a><br><strong>community documentation</strong>: <a href="http://sitecore-community.github.io/docs/" target="_blank" rel="external">sitecore-community.github.io/docs/</a><br><strong>Slack Channel</strong>: <a href="https://sitecorechat.slack.com/" target="_blank" rel="external">sitecorechat</a><br><strong>Unofficial Sitecore 8 Training Webinar Series</strong>: <a href="http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/" target="_blank" rel="external">http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/</a><br><strong>Stack Exchange</strong>: <a href="https://sitecore.stackexchange.com/" target="_blank" rel="external">sitecore.stackexchange.com</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore-launchpad.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Now we explore what are all the resources available for developers to learn 
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - About Sitecore</title>
+    <link href="http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-About-Sitecore/"/>
+    <id>http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-About-Sitecore/</id>
+    <published>2016-06-25T07:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.534Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore_logo.png" alt=""></p>
+<p>After learning about <strong>WCM</strong> platforms, now I am trying to understand more about <strong>Sitecore</strong> as a technology and as well as product, and it’s market position.<br>As a developer, it is very much crucial to know that, when we choose it as a career path/option, and to make sure we are investing our time on technologies which are having bright future.</p>
+<p>After going through several websites and posts, here is my notes,</p>
+<p>For seven years in a row, the <strong>Sitecore Experience Platform</strong> has been placed in the Leaders quadrant of <strong>Gartner’s Magic Quadrant for Web Content Management</strong>.</p>
+<p>In ranking Sitecore as a leader In CMS, <strong>Gartner</strong> cited the company’s strengths as:</p>
+<p><em>Sitecore has an industry-leading, compelling and executable vision for a “contextual delivery machine.” The Sitecore Experience Database (xDB), which promises to deliver the long-sought-after “360-degree view of the customer,” contributes to this vision.</em></p>
+<p><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a> is one of the leading enterprise-level Content Management System in .NET world, using which we can create both Intranet portals and enterprise web sites.</p>
+<p>It supports <strong>ASP.NET MVC</strong> and as well as <strong>Web Forms</strong>.</p>
+<p><strong>Sitecore company</strong> was started in Copenhagen in <strong>2001</strong> by five friends who saw a need for a better way to build and manage websites.</p>
+<p><strong>Sitecore product</strong> was mainly introduced as WCM platform, which combines the components dynamically on to page and deliver to the user. Later on it has evolved to fully digital marketing platform, and now it is called as <strong>Sitecore Experience Platform</strong>, which included Web Content Management, Customer Intelligence, and Cross-Channel Delivery.</p>
+<p>Sitecore is mainly trying to achieve, “<strong>To deliver the right content to the right person at the right time and on the right device.</strong>“</p>
+<p>Below pic depicts, what exactly Sitecore Experience Platform provides,</p>
+<p><img src="/css/images/sitecorexp.png" alt=""></p>
+<p>Please check this <a href="http://www.sitecore.net/en/products/sitecore-experience-platform" target="_blank" rel="external">link</a> to know more about the experience platform.</p>
+<p><em>“Sitecore is a high-performance, scalable, extensible ASP.NET web CMS that generates all output<br>dynamically and uses the same components and system architecture for both content and application<br>pages.”</em> – <strong><a href="https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog?tag=f1b992e4-4511-44a9-aa1a-7b48e5225d9a" target="_blank" rel="external">John West</a> (All time Sitecore MVP)</strong></p>
+<p>Current version of <strong>Sitecore is 8.2</strong>, which is going to be released on August - 2016.</p>
+<p>Sitecore continuously and very rapidly evolves as a product, to provide more options and features to the customers. It provides a variety of licensing option to clients.</p>
+<p>Sitecore code is not open source.</p>
+<p>There is a very good article <a href="http://www.cygnet-infotech.com/blog/8-reasons-why-many-enterprise-cmos-choose-sitecore" target="_blank" rel="external">8 Reasons Why Many Enterprise CMOs Choose Sitecore</a></p>
+<p>Credits:<br><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a><br><a href="http://blogs.perficient.com/microsoft/2016/10/sitecore-named-a-leader-in-gartner-magic-quadrant-for-wcm/" target="_blank" rel="external">Perficient</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore_logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After learning about &lt;strong&gt;WCM&lt;/strong&gt; platforms, now I am trying to understan
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Content Management System</title>
+    <link href="http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-CMS/"/>
+    <id>http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-CMS/</id>
+    <published>2016-06-18T07:30:00.000Z</published>
+    <updated>2016-11-05T12:26:00.515Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/cms.png" alt=""></p>
+<p>In this post we mainly discuss about what is CMS (Content Management System) or sometimes called WCMS.</p>
+<p>When I think of any tool or technology, first thing that comes to my mind is, under which category it falls into, and what are the benefits of using it. for example, when we say C#, what is it? C# is a programming Language, same as c, or C++. (I am not getting into the details of OOP language or functional language), when we say Entity Framework or Hibernate, these are Object Relational Mapping tools, and MS SQL Server is RDBMS, similar way Sitecore is one of the enterprise-level <a href="https://en.wikipedia.org/wiki/Content_management_system#Web_content_management_system" target="_blank" rel="external">Content Management System (CMS)</a> platform.</p>
+<p>So what exactly CMS means?<br>I found one of the definitions in <a href="https://www.lynda.com/" target="_blank" rel="external">Lynda</a> site, which I feel very apt,</p>
+<p><strong>“Server-side software that is designed to simplify the creation and maintenance of sites. These systems manage online content, generate web pages, and allow users to upload and change content without requiring technical expertise”</strong> – Lynda.com</p>
+<p>For normal websites, if client needs to add or modify any content (page, text, image or video), they cannot make this changes directly, first they need to reach out to technical team (Web Developer), with their help they can make the required changes. But this is time consuming process, and definitely not feasible for the rapidly content changing site.</p>
+<p>In this cases, clients need a way to update their content as quickly as possible. Content Management Systems help client in this process. CMS provides a way to streamline the content addition, approval, and publishing. CMS provides an easy UI to create or modify the content.</p>
+<p>There are lot of Content Management Systems for each technology (PHP,.NET, and Java etc).</p>
+<p>Some of the popular CMS among all technologies,</p>
+<ol>
+<li>Wordpress</li>
+<li>Joomla</li>
+<li>Drupal</li>
+</ol>
+<p>Popular CMS in .NET,</p>
+<ol>
+<li>DotNetNuke</li>
+<li>Sitecore</li>
+<li>Umbraco</li>
+<li>EpiServer</li>
+<li>Kentico</li>
+<li>Sitefinity</li>
+<li>mojoPortal</li>
+</ol>
+<p><strong>Credits :</strong> <a href="http://forerunner.com.au/digital-media/content-management-systems/" target="_blank" rel="external">Image Courtesy</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/cms.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In this post we mainly discuss about what is CMS (Content Management System) or sometimes c
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Career Awards</title>
+    <link href="http://gopigujjula.com/2016/06/career-awards/"/>
+    <id>http://gopigujjula.com/2016/06/career-awards/</id>
+    <published>2016-06-12T04:30:00.000Z</published>
+    <updated>2016-09-17T20:07:16.126Z</updated>
+    
+    <content type="html"><![CDATA[<p>2015 - Spot Award at 𝐍𝐓𝐓𝐃𝐚𝐭𝐚,<br>2016 - VET Award at 𝐕𝐞𝐫𝐧𝐝𝐚𝐥𝐞…</p>
+<p><img src="/css/images/nttdata.jpg" alt=""></p>
+<p><img src="/css/images/verndale.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2015 - Spot Award at 𝐍𝐓𝐓𝐃𝐚𝐭𝐚,&lt;br&gt;2016 - VET Award at 𝐕𝐞𝐫𝐧𝐝𝐚𝐥𝐞…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/css/images/nttdata.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i
+    
+    </summary>
+    
+    
+      <category term="Career" scheme="http://gopigujjula.com/tags/Career/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Introduction</title>
+    <link href="http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-Series/"/>
+    <id>http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-Series/</id>
+    <published>2016-06-11T16:00:00.000Z</published>
+    <updated>2016-11-05T12:26:00.473Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore_logo.png" alt=""></p>
+<p>It has been since few months, I had started learning Sitecore. In Sitecore, there are lot of concepts to learn, &amp; practice, and I have come across some wonderful videos, articles, and blogs, which explains the concepts very nicely. As I was learning, wanted to take notes, so that it will aid me in better understanding the concepts. The same notes I want to share it here.<br>One of the video series I love on Sitecore is <a href="https://goo.gl/Jud1E9" target="_blank" rel="external">Weekly Friday video series covering Sitecore Best Practices</a> by <a href="https://twitter.com/VasiliyFomichev" target="_blank" rel="external">Vasiliy Fomichev</a> a Sitecore MVP.<br>I like his idea of one video on every Friday. With his inspiration, I have named this series as Saturday Sitecore Learning. Here every Saturday I will be posting one article on my learning. It will be kind of notes.</p>
+<p>Before started learning Sitecore, I have more than 5 years of experience in Web development, mainly using ASP.NET web forms and MVC, but never heard of neither CMS platform nor Sitecore term.</p>
+<p>At last why Sitecore? This is the easy one to answer, because in the organization where I work, we develop mostly digital marketing solutions, and we use Sitecore more.</p>
+<p>In the next post, let’s see what exactly is CMS platform, and why do we need one?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore_logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It has been since few months, I had started learning Sitecore. In Sitecore, there
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ASafaWeb - Automated Security Analyzer for ASP.NET Websites</title>
+    <link href="http://gopigujjula.com/2016/05/asp-net-security-analyser/"/>
+    <id>http://gopigujjula.com/2016/05/asp-net-security-analyser/</id>
+    <published>2016-05-21T17:14:00.000Z</published>
+    <updated>2016-11-05T11:55:13.660Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ASafaWeb"><a href="#ASafaWeb" class="headerlink" title="ASafaWeb"></a><a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a></h3><p>Recently I am trying to improve my knowledge on both general security and web security concepts. I was going through technical articles, blogs, and pluralsight courses. Also started attending the monthly <a href="https://www.owasp.org/index.php/Bangalore#tab=Next_Meeting" target="_blank" rel="external">OWASP tech meetup</a>, where they mainly discuss on the security concepts and related technologies.</p>
+<p><img src="/css/images/asafeweb.png" alt=""></p>
+<p>In <a href="http://pluralsight.com" target="_blank" rel="external">Pluralsight</a>, there are lot of security courses authored by <a href="http://app.pluralsight.com/author/troy-hunt" target="_blank" rel="external">Troy Hunt</a>, where he clearly explains the concepts in a simple manner. Even in his <a href="https://www.troyhunt.com" target="_blank" rel="external">blog</a>, there are wonderful articles. I learned a lot from his courses and articles.</p>
+<p>This <a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a>, is the tool developed by Troy Hunt, for specifically analyzing the ASP.NET websites for any security risks. This tool can analyze the vulnerabilities of the hosted site, and also it doesn’t require any access to the code. It mainly send some extra HTTP requests to the given site URL, and give us the report by analyzing the responses.</p>
+<p>The security check is mainly done for the following,</p>
+<ol>
+<li>Tracing</li>
+<li>Custom Errors</li>
+<li>Stack Trace</li>
+<li>Request Validation</li>
+<li>HTTP to HTTPS redirect</li>
+<li>Hash DoS patch</li>
+<li>ELMAH log</li>
+<li>Excessive Headers</li>
+<li>HTTP only cookies</li>
+<li>Secure cookies</li>
+<li>Clickjacking</li>
+<li>View state MAC</li>
+</ol>
+<p>ASafaWeb only checks for the common configuration related vulnerabilities, but there are many other security related aspects, like SQL injection, Cross Site Scripting, and Cross-Site Request Forgery, etc..</p>
+<p>So for what are we waiting, just go to <a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a>, and enter your ASP.NET website URL, and click on Scan to get the report. We can also Schedule the scans, but we need to register for that. Currently it is in Beta stage.</p>
+<p><img src="/css/images/asafeweb-1.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;ASafaWeb&quot;&gt;&lt;a href=&quot;#ASafaWeb&quot; class=&quot;headerlink&quot; title=&quot;ASafaWeb&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://asafaweb.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
+    
+    </summary>
+    
+      <category term="ASP.NET" scheme="http://gopigujjula.com/categories/ASP-NET/"/>
+    
+    
+      <category term="ASP.NET" scheme="http://gopigujjula.com/tags/ASP-NET/"/>
+    
+      <category term="Security" scheme="http://gopigujjula.com/tags/Security/"/>
+    
+      <category term="Tools" scheme="http://gopigujjula.com/tags/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ASP.NET Core day - BDotnet</title>
+    <link href="http://gopigujjula.com/2016/05/aspnetcoreday/"/>
+    <id>http://gopigujjula.com/2016/05/aspnetcoreday/</id>
+    <published>2016-05-09T10:37:28.000Z</published>
+    <updated>2016-11-05T11:59:13.928Z</updated>
+    
+    <content type="html"><![CDATA[<p>Another month, another <a href="https://www.facebook.com/groups/BDotNet/" target="_blank" rel="external">BDotent</a> community event, but this time it is on latest <strong>ASP.NET Core</strong> technology and a full day event.</p>
+<p>We are not going to miss it. :)</p>
+<p>For me all the <a href="https://www.facebook.com/groups/BDotNet/" target="_blank" rel="external">BDotent</a> events are about getting to know the gist of the topic and leave with enough enthusiasm to explore the remaining details.</p>
+<p>One more big thing is Networking, It is always pleasure to meet and know the fellow developers and to share the information on what type of applications we work on, and what all the tools &amp; technologies we are using.<br><em>(This time met some of the old buddies, and also made some new friends.)</em></p>
+<p><strong>Overall, it’s mainly the experience of being present at the event.</strong></p>
+<p>As usual, all the speakers are wonderful in sharing their knowledge, and their enthusiasm conveys us the most. All the topics are very well chosen, like connecting the dots to get the overall picture on the ASP.NET core.</p>
+<p>Thank you for all the awesome speakers, and the organizing committee.</p>
+<p>It was wonderful to witness the house packed sessions.</p>
+<p><img src="/css/images/aspnetcoreday.png" alt=""></p>
+<p>My key takeaways from the event are,</p>
+<ol>
+<li><p>As there is an another new framework is out, we shouldn’t jump in and start using it for all kind of applications. We first need to understand our application use cases, then evaluate the options to take the decision.</p>
+</li>
+<li><p>ASP.NET (Web forms) framework is not going any where. It is very much supported. New features will still be coming out for this. There are lot of application, which are running on ASP.NET framework. (I had a big doubt on the ASP.NET web forms support, glad that it is clarified.)</p>
+</li>
+<li><p>ASP.NET Web forms is not supported in ASP.NET core. It is   very much dependent on System.Web.</p>
+</li>
+<li><p>POCO controller are very much useful when we do not require all the features from BaseController.</p>
+</li>
+<li><p>In new framework, Dependency Injection is already integrated, But if require, we can very much plug in any of the third party DI containers.</p>
+</li>
+<li><p>New web server (Kestrel - cross platform) written from the scratch, for the .NET core.</p>
+</li>
+<li><p>RC2 is going to be out in mid May, and RTM is going to be released by June end.</p>
+</li>
+<li><p>Cloud born applications.</p>
+</li>
+<li><p>Tag helpers, more cleanness, more readability.</p>
+</li>
+<li><p>ASP.NET core more of modularized, empty project means it’s clearly empty. Whatever we want, we need to add it.</p>
+</li>
+</ol>
+<p><em><strong>Volunteer</strong> : It was my pleasure to help the event in a very small way (being part of the registration process). Thanks <a href="https://www.facebook.com/LohithGN" target="_blank" rel="external">Lohith</a> for the opportunity.</em></p>
+<p>some pics,</p>
+<p><img src="/css/images/aspnetcoreday-1.png" alt=""><br><img src="/css/images/aspnetcoreday-2.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Another month, another &lt;a href=&quot;https://www.facebook.com/groups/BDotNet/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;BDotent&lt;/a&gt; community event, but
+    
+    </summary>
+    
+      <category term="ASP.NET" scheme="http://gopigujjula.com/categories/ASP-NET/"/>
+    
+    
+      <category term="ASP.NET" scheme="http://gopigujjula.com/tags/ASP-NET/"/>
+    
+      <category term="Bangalore Tech event" scheme="http://gopigujjula.com/tags/Bangalore-Tech-event/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Agent Ransack - Free File Searching Utility</title>
+    <link href="http://gopigujjula.com/2016/04/Agent-Ransact-tool/"/>
+    <id>http://gopigujjula.com/2016/04/Agent-Ransact-tool/</id>
+    <published>2016-04-30T10:37:28.000Z</published>
+    <updated>2016-05-13T06:56:43.591Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Agent_Ransack"><a href="#Agent_Ransack" class="headerlink" title="Agent Ransack"></a>Agent Ransack</h3><p>Everybody knows about, how painful to search for files in Windows, and also there is no easy way to search the content of all the files with particular text.</p>
+<p><img src="/css/images/agent-ransack.png" alt=""></p>
+<p><a href="https://www.mythicsoft.com/agentransack" target="_blank" rel="external">Agent Ransack</a> comes to our rescue, this is a very powerful file searching tool, which provides us lot of options to search the content, and generate reports.</p>
+<p>We can also search the remote server contents from our local, this is the most useful feature for me, which helps &amp; saves me lot of time.</p>
+<p>There are lot of options, like searching with regular expressions, date modified range, and match case etc. We can export the results to Tabular, CSV, or text formats.</p>
+<p>There is also a licensed version with more features <a href="https://www.mythicsoft.com/filelocatorpro" target="_blank" rel="external">File Locator Pro</a>.</p>
+<p>We have also some other search utilities like <a href="http://www.voidtools.com/" target="_blank" rel="external">Everything</a>, and <a href="http://mfctips.com/2014/01/16/everything-vs-agent-ransack-vs-searchmyfiles-vs-file-finder/" target="_blank" rel="external">SearchMyFiles</a>, but among all Agent Ransack stand out.</p>
+<p>There is a very nice <a href="http://mfctips.com/2014/01/16/everything-vs-agent-ransack-vs-searchmyfiles-vs-file-finder/" target="_blank" rel="external">article</a> which explains the details about different search utilities.</p>
+<p><strong>Credits : Thanks to <a href="https://www.linkedin.com/in/peterfranceschini" target="_blank" rel="external">Peter Franceschini</a>, for letting me know about this wonderful tool.</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Agent_Ransack&quot;&gt;&lt;a href=&quot;#Agent_Ransack&quot; class=&quot;headerlink&quot; title=&quot;Agent Ransack&quot;&gt;&lt;/a&gt;Agent Ransack&lt;/h3&gt;&lt;p&gt;Everybody knows about, how
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="http://gopigujjula.com/tags/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dotnet Bangalore Q1-2016</title>
+    <link href="http://gopigujjula.com/2016/02/DoteNet-Bangalore-meetup-Q1-2016/"/>
+    <id>http://gopigujjula.com/2016/02/DoteNet-Bangalore-meetup-Q1-2016/</id>
+    <published>2016-02-28T11:38:00.000Z</published>
+    <updated>2016-03-26T14:06:02.739Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Dotnet_Bangalore_User_Group__2827-02-2016_29"><a href="#Dotnet_Bangalore_User_Group__2827-02-2016_29" class="headerlink" title="Dotnet Bangalore User Group (27-02-2016)"></a><a href="https://www.facebook.com/groups/dotnetbangalore/" target="_blank" rel="external">Dotnet Bangalore User Group</a> (27-02-2016)</h5><p>This is one of the active dotnet user group in Bangalore. This event is conducted quarterly once on Saturday &amp; sponsored by <a href="http://www.prowareness.com/" target="_blank" rel="external">Prowareness Bangalore</a>. In this event speakers usually present on the .NET related topics.</p>
+<p>Around one year back that first I heard about this user group. Every time I plan to attend, but at the last minute, had to cancel because of some or other urgent work. This time I was very determined to attend it, glad that at last I could make it.</p>
+<p>This event happens at Prowareness office, Embassy TechVillage, &amp; a full day event.<br><img src="/css/images/dotnetblrQ1-2016.jpg" alt=""></p>
+<p>Following are the list of talks happened on 2016 Q1 meetup,</p>
+<ol>
+<li><p><strong>What’s New in EF 7, by Raghavendra Rentala</strong><br>Raghavendra is having very good knowledge on Entity Framework, he explained some of the new concepts introduced in EF 7, with on hands demo. This talk was very informative.</p>
+</li>
+<li><p><strong>Techniques to optimize .NET Apps Performance</strong> <a href="https://www.facebook.com/Anand.M.Deshmukh" target="_blank" rel="external">Anand Deshmukh</a><br>This talk was completely on how to write better code in .NET, by keeping the performance in mind. This was also hands on.</p>
+</li>
+<li><p><strong>Common Intermediate Language (CIL) by Example</strong> <a href="https://www.facebook.com/ganesh.sg.144" target="_blank" rel="external">Ganesh SG</a><br>This was the talk of the day. With his talk, Ganesh has taken us back to College days, where we used to struggle with Finite Automata. He explained how to learn &amp; practice on reading the Intermediate language, and all what are all the benefits we can get from that.</p>
+</li>
+<li><p><strong>Inheritance Concepts With Database Table, by Madhukar Bhandari</strong><br>Madhukar clearly explained the Table per type(TPT), Table per hierarchy (TPH), and Table per concrete type(TPC) concepts in Database. This was also hands on demo.</p>
+</li>
+<li><p><strong>Dependency Injection with Ninject</strong> <a href="https://www.facebook.com/mahesh.pratap.it" target="_blank" rel="external">Mahesh Pratap</a><br>This event in happened at the time of open house. Mahesh neatly explained the basics of Dependency injection, and how to implement DI concept using Ninject DI container in both desktop &amp; web application.</p>
+</li>
+</ol>
+<p>Few other things about the event,</p>
+<ul>
+<li>Event is free of cost.</li>
+<li>Lunch, snacks, Tea, &amp; juice are provided by the sponsors.</li>
+<li>After the lunch, there was a technical quiz. Participants were divided into 3 groups, and believe me this Quiz was lot of fun. For winning team there was prizes too.</li>
+<li>At end of the event, there was a lucky draw on the submitted feedback forms.</li>
+</ul>
+<p>Some of the pics from facebook group page,</p>
+<p><img src="/css/images/Q1-2016-1.jpg" alt=""></p>
+<p><img src="/css/images/Q1-2016-2.jpg" alt=""></p>
+<p>Looking for Q2 meetup.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Dotnet_Bangalore_User_Group__2827-02-2016_29&quot;&gt;&lt;a href=&quot;#Dotnet_Bangalore_User_Group__2827-02-2016_29&quot; class=&quot;headerlink&quot; title=&quot;Dotn
+    
+    </summary>
+    
+    
+      <category term="Bangalore Tech event" scheme="http://gopigujjula.com/tags/Bangalore-Tech-event/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore Certification</title>
+    <link href="http://gopigujjula.com/2016/02/sitecore-certification/"/>
+    <id>http://gopigujjula.com/2016/02/sitecore-certification/</id>
+    <published>2016-02-16T09:59:16.000Z</published>
+    <updated>2016-11-05T11:52:43.766Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Cleared_Sitecore_Certification"><a href="#Cleared_Sitecore_Certification" class="headerlink" title="Cleared Sitecore Certification"></a>Cleared Sitecore Certification</h4><p>Today morning I have cleared <strong>Sitecore® XP 8 Website Development for .NET Developers Certification</strong> with 90% score. This is my first ever technical Certification. :)</p>
+<p><img src="/css/images/certificate.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Cleared_Sitecore_Certification&quot;&gt;&lt;a href=&quot;#Cleared_Sitecore_Certification&quot; class=&quot;headerlink&quot; title=&quot;Cleared Sitecore Certification&quot;&gt;
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+    
+      <category term="Certification" scheme="http://gopigujjula.com/tags/Certification/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Static Blog Setup with Hexo : Hosting</title>
+    <link href="http://gopigujjula.com/2016/02/static-blog-with-hexo-3/"/>
+    <id>http://gopigujjula.com/2016/02/static-blog-with-hexo-3/</id>
+    <published>2016-02-06T15:10:45.000Z</published>
+    <updated>2016-11-05T11:54:26.767Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/github-pages.jpg" alt=""></p>
+<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-3 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+<h3 id="Project_Setup_in_Github"><a href="#Project_Setup_in_Github" class="headerlink" title="Project Setup in Github"></a>Project Setup in Github</h3><p>To host simple static HTML site, there are lot of options available. We can deploy them on normal hosting server or on cloud (like <a href="https://aws.amazon.com/" target="_blank" rel="external">Amazon Web Services</a> or <a href="https://azure.microsoft.com" target="_blank" rel="external">Microsoft Azure</a>).</p>
+<p>I have chosen <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a> to host my site.The main reason is, I can directly host my site from Github repository. For each Account, Github provides an option to host one static website.</p>
+<p>To create the repository and host the site, we have step by step instruction on the <a href="https://pages.github.com/" target="_blank" rel="external">homepage</a>. I am using <a href="https://desktop.github.com/" target="_blank" rel="external">Github Desktop</a> as my Git client.<br>By default this hosting files can be accessed from the URL <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a>. Username being the account username.</p>
+<h3 id="Custom_domain_setup"><a href="#Custom_domain_setup" class="headerlink" title="Custom domain setup"></a>Custom domain setup</h3><p>I have my own domain which is purchased from <a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>.</p>
+<ul>
+<li><p>In DNS provider (in my case Godaddy), first we need to create two ‘A’ records that point our custom domain to the following IP addresses:<br>192.30.252.153<br>192.30.252.154</p>
+</li>
+<li><p>In Github pages, we can setup our custom domain using the <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">instructions</a>.</p>
+</li>
+</ul>
+<p><strong>Credits : Thanks to <a href="http://chitrangshah.com/" target="_blank" rel="external">Chitrang Shah</a>, for letting us know about this wonderful framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>.</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/github-pages.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This blog is created using one of the Static blogging framework &lt;a href=&quot;https://h
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://gopigujjula.com/categories/Hexo/"/>
+    
+    
+      <category term="hexo blog setup" scheme="http://gopigujjula.com/tags/hexo-blog-setup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Static Blog Setup with Hexo : Initial Setup</title>
+    <link href="http://gopigujjula.com/2016/01/static-blog-with-hexo-2/"/>
+    <id>http://gopigujjula.com/2016/01/static-blog-with-hexo-2/</id>
+    <published>2016-01-28T07:15:28.000Z</published>
+    <updated>2016-11-05T11:54:26.727Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/hexo.png" alt=""></p>
+<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-2 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
+<h3 id="Hexo_Installation"><a href="#Hexo_Installation" class="headerlink" title="Hexo Installation"></a>Hexo Installation</h3><p>Hexo is powered by node.js framework. To Install Hexo, first we need to install Node.Js. It can be downloaded from <a href="https://nodejs.org/en/download/" target="_blank" rel="external">here</a>. We can verify the installation by checking the node version through command prompt.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;node --version</span><br></pre></td></tr></table></figure>
+<p>Once Node.js is successfully installed, we can proceed with Hexo installation using the Node Package Manager.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;npm install hexo -g</span><br></pre></td></tr></table></figure></p>
+<p>Once the Hexo is installed, we need to setup website folder,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;hexo init [folder]</span><br></pre></td></tr></table></figure>
+<p>[folder] is optional in the above command, if it is not specified folder structure will be created under the current directory, else in the specified directory.</p>
+<p><img src="/css/images/hexo-folder.png" alt=""></p>
+<p>Website uses the default theme called “Landscape” from Hexo, To preview the site locally, we need to run the following command,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo Project&#62;hexo server [folder]</span><br></pre></td></tr></table></figure>
+<p>now, we can preview the blog at <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>,</p>
+<p><img src="/css/images/hexo-default.PNG" alt=""></p>
+<p>This finishes the hexo initial setup, in the next post will see how to host it in using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>.<br>Please feel free to contact if you face any issues while setting up. Thanks for reading, and have a nice day :).</p>
+<p><strong>Credits : Thanks to <a href="http://chitrangshah.com/" target="_blank" rel="external">Chitrang Shah</a>, for letting us know about this wonderful framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>.</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/hexo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This blog is created using one of the Static blogging framework &lt;a href=&quot;https://hexo.io/&quot;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://gopigujjula.com/categories/Hexo/"/>
+    
+    
+      <category term="hexo blog setup" scheme="http://gopigujjula.com/tags/hexo-blog-setup/"/>
+    
+  </entry>
+  
+</feed>
