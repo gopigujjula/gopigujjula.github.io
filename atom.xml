@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-11-21T04:59:12.270Z</updated>
+  <updated>2016-11-21T07:17:06.277Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -17,14 +17,15 @@
   
   <entry>
     <title>Saturday Sitecore Learning - Sitecore Databases</title>
-    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore%20Databases/"/>
-    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/</id>
+    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/"/>
+    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/</id>
     <published>2016-11-19T05:30:00.000Z</published>
-    <updated>2016-11-21T04:59:12.270Z</updated>
+    <updated>2016-11-21T07:17:06.277Z</updated>
     
     <content type="html"><![CDATA[<p>By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
 <h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developers perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what all the databases Sitecore uses.</p>
 <p>Sitecore uses multiple databases to manage both content and also analytics related data.</p>
+<p><img src="/css/images/sitecore-databases.png" alt=""></p>
 <h5 id="Content_Databases"><a href="#Content_Databases" class="headerlink" title="Content Databases"></a>Content Databases</h5><p>Sitecore uses three databases to maintain content. It always supports MS SQL server, but in Sitecore latest version 8.2, it also supports <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">Oracle 12g</a>.<br><img src="/css/images/oracle.png" alt=""></p>
 <p>Sitecore CMS uses the following three databases,</p>
 <ul>
