@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ASP.NET Page life cycle | Gopi Notes</title>
+  <title>Saturday Sitecore Learning - Sitecore Databases | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
+  <meta name="description" content="By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.As we all know Sit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ASP.NET Page life cycle">
-<meta property="og:url" content="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/index.html">
+<meta property="og:title" content="Saturday Sitecore Learning - Sitecore Databases">
+<meta property="og:url" content="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/index.html">
 <meta property="og:site_name" content="Gopi Notes">
-<meta property="og:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
-<meta property="og:updated_time" content="2016-11-05T11:54:59.105Z">
+<meta property="og:description" content="By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.As we all know Sit">
+<meta property="og:image" content="http://gopigujjula.com/css/images/oracle.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/database-selection.png">
+<meta property="og:updated_time" content="2016-11-21T04:59:12.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ASP.NET Page life cycle">
-<meta name="twitter:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
+<meta name="twitter:title" content="Saturday Sitecore Learning - Sitecore Databases">
+<meta name="twitter:description" content="By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.As we all know Sit">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -147,7 +146,7 @@ ga('send', 'pageview');
 </aside>
 
       
-      <section id="main"><article id="post-ASP-NET-Page-life-cycle" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Saturday-Sitecore-Learning-Sitecore Databases" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -156,7 +155,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      ASP.NET Page life cycle
+      Saturday Sitecore Learning - Sitecore Databases
     </h1>
   
 
@@ -164,8 +163,8 @@ ga('send', 'pageview');
           
   <div class="article-date">
     <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2014/03/ASP-NET-Page-life-cycle/" style="text-align:right">
-      <time datetime="2014-03-29T10:44:00.000Z" itemprop="datePublished">March 29, 2014</time>
+    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" style="text-align:right">
+      <time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time>
     </a>
   </div>
 
@@ -173,7 +172,7 @@ ga('send', 'pageview');
           
   <div class="article-category">
   	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/ASP-NET/">ASP.NET</a>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
   </div>
 
         </div>
@@ -182,94 +181,33 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <p>Note : <em>This post is first published on Mar-2014 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
-<p>This is some of the notes I have collected when digging more details on the page life cycle. The below points are fetched up from all over the net.</p>
-<p>Page Life Cycle in ASP.NET</p>
-<p><strong><em>Page_PreInit</em></strong></p>
+        <p>By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
+<h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developers perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what all the databases Sitecore uses.</p>
+<p>Sitecore uses multiple databases to manage both content and also analytics related data.</p>
+<h5 id="Content_Databases"><a href="#Content_Databases" class="headerlink" title="Content Databases"></a>Content Databases</h5><p>Sitecore uses three databases to maintain content. It always supports MS SQL server, but in Sitecore latest version 8.2, it also supports <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">Oracle 12g</a>.<br><img src="/css/images/oracle.png" alt=""></p>
+<p>Sitecore CMS uses the following three databases,</p>
 <ul>
-<li>This is the first event raised in the ASP.NET page life cycle.</li>
-<li>IsPostBack property would have bee already set by this event, so we can determine whether this is the first request or not.</li>
-<li>Create or re-create dynamic controls.</li>
-<li>Set a master page dynamically.</li>
-<li>Set the Theme property dynamically.</li>
-<li>Read or set profile property values.</li>
-<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
-<li>Master page can only be set in this event or before to this event. if we try to set it in any other event, exception will be thrown.</li>
-<li>There are two ways to add dynamic controls in the page,_<ul>
-<li><em>If there is no master page associated with the current page, then we can create dynamic controls in this event.</em></li>
-<li><em>If there is a master page associated with the current page, then we need to add controls in the Init event.</em></li>
-</ul>
+<li><p><strong>Core:</strong> This database contains all settings related to Sitecore, ex: Sitecore User Interface (Content Editor, Experience Editor, etc.) configuration. Using this database, we can add any new application, or shortcut on Sitecore launch pad or desktop.<br>This database also contains information about authentication and authorization, (Users &amp; roles)</p>
+</li>
+<li><p><strong>Master:</strong> This is content authoring database. All content authors mainly interact with this database, using either Content Editor or Experience Editor. It contains all versions of any content or assets.</p>
+</li>
+<li><p><strong>Web:</strong> This is also called live database. It contains all the live content, which is serving on the production website. When content author modifies any content, and publish it, content copied over to web database. Master database contains all versions of content, whereas web database only contains live version of content. Web database is subset of the Master database.</p>
 </li>
 </ul>
-<p><strong><em>Page_Init</em></strong></p>
-<ul>
-<li>This event is recursive, The Init event of individual controls occurs before the Init event of the page.</li>
-<li>Create or re-create dynamic controls.</li>
-<li>By using this event we can read or initialize control properties.</li>
-<li>We can set the Page.ViewStateUserKey value only in this event,if we try to set it in any other event, exception will be thrown._</li>
-<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
-</ul>
-<p><strong><em>Page_InitComplete</em></strong></p>
-<ul>
-<li>This is the last event in the initialization.</li>
-<li>Before this event TrackViewState() method would be called. So from here on wards, any changes to viewstate data will be persisted to next postbacks.</li>
-<li>We can not access any ViewState and PostBack data in this event, because that data would not be loaded by this time.</li>
-<li>We can use this event to change any data, that should be persisted in the next postback.</li>
-</ul>
-<p><strong><em>Page_PreLoad</em></strong></p>
-<ul>
-<li>This is the first event will be called after loading the ViewState and the Postback data by two methods, LoadViewState and LoadPostData respectively.</li>
-<li><em>The purpose of the Page.PreLoad event is to provide a hook for control authors. The behavior of the load phase of the page lifecycle, is that &nbsp;the Load event is raised on the page before it is raised on all its child controls. As a control author, you might want to perform some action after viewstate is loaded (so Init is too early), but before Page_Load is called (so Load is too late). How you do that is to add an event handler to Page.PreLoad.</em></li>
-</ul>
-<p><strong><em>Page_Load</em></strong></p>
-<ul>
-<li>This event is recursive, The Load event of the page occurs before the Load event of the controls.</li>
-<li>We can use this event to set properties in controls and to establish database connections.</li>
-</ul>
-<p><strong><em>Control events</em></strong></p>
-<ul>
-<li>Use these events to handle specific control events, such as a Button control’s Click event or a TextBox control’s TextChanged event.</li>
-</ul>
-<p><strong><em>Page_LoadComplete</em></strong></p>
-<ul>
-<li>Use this event for tasks that require that all other controls on the page be loaded.</li>
-<li><em>There may be certain situations where we need to do some processing after control event, in that case Load event will be too early, so we can use the LoadComplete event for this king of processing.When you hook up several methods to the Load event you don’t know the order they will get called. So you have the PreLoad, Load and LoadComplete events to have some more control as to in what order your code gets called. The use of this might not always be clear when working only with your page class. When working with controls however, with the need to have some code running at Load time, you might want to make it run right before or right after what would normally happen in the Load event. Then you can use the PreLoad and LoadComplete methods.</em></li>
-</ul>
-<p><strong><em>Page_PreRender</em></strong></p>
-<ul>
-<li>This event is recursive, The PreRender event of the page occurs before the PreRender event of the controls.</li>
-<li>Raised after the Page object has created all controls that are required in order to render the page, including child controls of composite controls.</li>
-<li>Use the event to make final changes to the contents of the page or its controls before the rendering stage begins.</li>
-</ul>
-<p><strong><em>Page_PreRenderComplete</em></strong></p>
-<ul>
-<li>Raised after each data bound control whose DataSourceID property is set calls its DataBind method.</li>
-<li>This is the last event raised before the page’s view state is saved.</li>
-</ul>
-<p><strong><em>SaveStateComplete</em></strong></p>
-<ul>
-<li>Raised after view state and control state have been saved for the page and for all controls. Any changes to the page or controls at this point affect rendering, but the changes will not be retrieved on the next postback.</li>
-</ul>
-<p><strong><em>Render</em></strong></p>
-<ul>
-<li>This is not an event; instead, at this stage of processing, the Page object calls this method on each control. All ASP.NET Web server controls have a Render method that writes out the control’s markup to send to the browser.</li>
-</ul>
-<p><strong><em>Unload</em></strong></p>
-<ul>
-<li>This event is recursive, The Unload event of individual controls occurs before the Unload event of the page.</li>
-<li>In controls, use this event to do final cleanup for specific controls, such as closing control-specific database connections.For the page itself, use this event to do final cleanup work, such as closing open files and database connections, or finishing up logging or other request-specific tasks.</li>
-<li>During the unload stage, the page and its controls have been rendered, so you cannot make further changes to the response stream. If you attempt to call a method such as the Response.Write method, the page will throw an exception.</li>
-</ul>
+<p>When we log into Sitecore, by default it always displays content from Master database, but we can select the database to show the content from other databases, like as shown below,</p>
+<p><img src="/css/images/database-selection.png" alt=""></p>
+<h5 id="Collection_Database__28Mongo_DB_29_3A"><a href="#Collection_Database__28Mongo_DB_29_3A" class="headerlink" title="Collection Database (Mongo DB):"></a>Collection Database (Mongo DB):</h5><p>As stated in Sitecore documentation, “In the Siteecore Experience Database (xDB), the <strong>Collection database</strong> is the central repository for storing contact, interaction, history &amp; automation data.”<br>It uses <strong>MongoDB</strong> - a highly scalable document-based NoSQL database solution.<br>Prior to Sitecore Version 7.5, all of analytics data used to get stored in <strong>Analytics</strong> database which was part of MS SQL server.</p>
+<h5 id="Reporting_Database_3A"><a href="#Reporting_Database_3A" class="headerlink" title="Reporting Database:"></a>Reporting Database:</h5><p>The reporting database is a SQL Server database that stores aggregated data from the collection database suitable for fast querying and reporting. This database contains aggregated data from collection DB.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/" data-id="ciulhu2230000u4mgm6hdevi3" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" data-id="civpevujn0000j4mgh1e4ckua" class="article-share-link">Share</a>
       
-        <a href="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
 
     </footer>
   </div>
@@ -277,19 +215,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2014/09/JQuery-Validations/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          JQuery Validations
-        
-      </div>
-    </a>
   
-  
-    <a href="/2014/03/typeof/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">typeof</div>
+      <div class="article-nav-title">Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</div>
     </a>
   
 </nav>

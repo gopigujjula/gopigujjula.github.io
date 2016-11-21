@@ -113,7 +113,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        45
+        46
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -144,6 +144,77 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Sitecore Databases" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/">Saturday Sitecore Learning - Sitecore Databases</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" style="text-align:right">
+      <time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
+<h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developers perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what all the databases Sitecore uses.</p>
+<p>Sitecore uses multiple databases to manage both content and also analytics related data.</p>
+<h5 id="Content_Databases"><a href="#Content_Databases" class="headerlink" title="Content Databases"></a>Content Databases</h5><p>Sitecore uses three databases to maintain content. It always supports MS SQL server, but in Sitecore latest version 8.2, it also supports <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">Oracle 12g</a>.<br><img src="/css/images/oracle.png" alt=""></p>
+<p>Sitecore CMS uses the following three databases,</p>
+<ul>
+<li><p><strong>Core:</strong> This database contains all settings related to Sitecore, ex: Sitecore User Interface (Content Editor, Experience Editor, etc.) configuration. Using this database, we can add any new application, or shortcut on Sitecore launch pad or desktop.<br>This database also contains information about authentication and authorization, (Users &amp; roles)</p>
+</li>
+<li><p><strong>Master:</strong> This is content authoring database. All content authors mainly interact with this database, using either Content Editor or Experience Editor. It contains all versions of any content or assets.</p>
+</li>
+<li><p><strong>Web:</strong> This is also called live database. It contains all the live content, which is serving on the production website. When content author modifies any content, and publish it, content copied over to web database. Master database contains all versions of content, whereas web database only contains live version of content. Web database is subset of the Master database.</p>
+</li>
+</ul>
+<p>When we log into Sitecore, by default it always displays content from Master database, but we can select the database to show the content from other databases, like as shown below,</p>
+<p><img src="/css/images/database-selection.png" alt=""></p>
+<h5 id="Collection_Database__28Mongo_DB_29_3A"><a href="#Collection_Database__28Mongo_DB_29_3A" class="headerlink" title="Collection Database (Mongo DB):"></a>Collection Database (Mongo DB):</h5><p>As stated in Sitecore documentation, “In the Siteecore Experience Database (xDB), the <strong>Collection database</strong> is the central repository for storing contact, interaction, history &amp; automation data.”<br>It uses <strong>MongoDB</strong> - a highly scalable document-based NoSQL database solution.<br>Prior to Sitecore Version 7.5, all of analytics data used to get stored in <strong>Analytics</strong> database which was part of MS SQL server.</p>
+<h5 id="Reporting_Database_3A"><a href="#Reporting_Database_3A" class="headerlink" title="Reporting Database:"></a>Reporting Database:</h5><p>The reporting database is a SQL Server database that stores aggregated data from the collection database suitable for fast querying and reporting. This database contains aggregated data from collection DB.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" data-id="civpevujn0000j4mgh1e4ckua" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -622,83 +693,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Manual-Installation" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/">Saturday Sitecore Learning - Manual Installation</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" style="text-align:right">
-      <time datetime="2016-10-08T03:30:00.000Z" itemprop="datePublished">October 08, 2016</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
-<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
-<ul>
-<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
-<li>Copies Sitecore site in the specified destination folder path.</li>
-<li>Creates new website in IIS, and point to the destination folder.</li>
-<li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
-</ul>
-<p>When we go through manual installation, we need to take care of all the above steps.</p>
-<p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
-<p><img src="/css/images/sitecore-folders.png" alt=""></p>
-<p>Now we will look into Database setup,</p>
-<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
-<p><img src="/css/images/attach-db.png" alt=""></p>
-<p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
-<p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
-<p>Now all the databases are set.</p>
-<p>Next we will proceed to Website setup:</p>
-<p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc.variable name=&#34;dataFolder&#34; value=&#34;F:\inetpub\wwwroot\Data&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.<br><img src="/css/images/connectionstring.png" alt=""></p>
-<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
-<p><img src="/css/images/IIS-website.png" alt=""></p>
-<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" data-id="ciulhu2ey001vu4mg78zw6wte" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -711,6 +705,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/oracle.png
+)" alt="Saturday Sitecore Learning - Sitecore Databases" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" class="title">Saturday Sitecore Learning - Sitecore Databases</a></p>
+              <p class="item-date"><time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -788,25 +801,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/SIM1.png
-)" alt="Saturday Sitecore Learning - Sitecore Instance Manager (SIM) " class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" class="title">Saturday Sitecore Learning - Sitecore Instance Manager (SIM) </a></p>
-              <p class="item-date"><time datetime="2016-10-15T05:30:00.000Z" itemprop="datePublished">October 15, 2016</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -816,7 +810,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">11</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">12</span></li></ul></li></ul>
     </div>
   </div>
 

@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ASP.NET Page life cycle | Gopi Notes</title>
+  <title>Tag: Sitecore | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ASP.NET Page life cycle">
-<meta property="og:url" content="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gopi Notes">
+<meta property="og:url" content="http://gopigujjula.com/tags/Sitecore/page/3/index.html">
 <meta property="og:site_name" content="Gopi Notes">
-<meta property="og:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
-<meta property="og:updated_time" content="2016-11-05T11:54:59.105Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ASP.NET Page life cycle">
-<meta name="twitter:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
-This is some of the notes I have collected when digging more details on the page life cycle.">
+<meta name="twitter:title" content="Gopi Notes">
+<meta name="twitter:description">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -147,165 +143,56 @@ ga('send', 'pageview');
 </aside>
 
       
-      <section id="main"><article id="post-ASP-NET-Page-life-cycle" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+      <section id="main">
+    <section class="archives-wrap">
+    <div class="archive-tag-wrap">
+      <span class="archive-tag">#Sitecore</span>
+    </div>
+    <div class="archives">
     
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
     
-    
-      <header class="article-header">
-        
+    <div class="archive-article-thumbnail">
+      <a href="/2016/02/sitecore-certification/" class="thumbnail">
   
-    <h1 class="article-title" itemprop="name">
-      ASP.NET Page life cycle
+    <span style="background-image:url(/css/images/certificate.jpg
+)" alt="Sitecore Certification" class="thumbnail-image"></span>
+  
+</a>
+
+    </div>
+    
+    <header class="archive-article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/02/sitecore-certification/">Sitecore Certification</a>
     </h1>
   
 
-        <div class="article-meta">
-          
-  <div class="article-date">
+      
+        
+  <div class="archive-article-date">
     <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2014/03/ASP-NET-Page-life-cycle/" style="text-align:right">
-      <time datetime="2014-03-29T10:44:00.000Z" itemprop="datePublished">March 29, 2014</time>
+    <a href="/2016/02/sitecore-certification/" style="text-align:right">
+      <time datetime="2016-02-16T09:59:16.000Z" itemprop="datePublished">February 16, 2016</time>
     </a>
   </div>
 
 
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/ASP-NET/">ASP.NET</a>
+      
+    </header>
   </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Note : <em>This post is first published on Mar-2014 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
-<p>This is some of the notes I have collected when digging more details on the page life cycle. The below points are fetched up from all over the net.</p>
-<p>Page Life Cycle in ASP.NET</p>
-<p><strong><em>Page_PreInit</em></strong></p>
-<ul>
-<li>This is the first event raised in the ASP.NET page life cycle.</li>
-<li>IsPostBack property would have bee already set by this event, so we can determine whether this is the first request or not.</li>
-<li>Create or re-create dynamic controls.</li>
-<li>Set a master page dynamically.</li>
-<li>Set the Theme property dynamically.</li>
-<li>Read or set profile property values.</li>
-<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
-<li>Master page can only be set in this event or before to this event. if we try to set it in any other event, exception will be thrown.</li>
-<li>There are two ways to add dynamic controls in the page,_<ul>
-<li><em>If there is no master page associated with the current page, then we can create dynamic controls in this event.</em></li>
-<li><em>If there is a master page associated with the current page, then we need to add controls in the Init event.</em></li>
-</ul>
-</li>
-</ul>
-<p><strong><em>Page_Init</em></strong></p>
-<ul>
-<li>This event is recursive, The Init event of individual controls occurs before the Init event of the page.</li>
-<li>Create or re-create dynamic controls.</li>
-<li>By using this event we can read or initialize control properties.</li>
-<li>We can set the Page.ViewStateUserKey value only in this event,if we try to set it in any other event, exception will be thrown._</li>
-<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
-</ul>
-<p><strong><em>Page_InitComplete</em></strong></p>
-<ul>
-<li>This is the last event in the initialization.</li>
-<li>Before this event TrackViewState() method would be called. So from here on wards, any changes to viewstate data will be persisted to next postbacks.</li>
-<li>We can not access any ViewState and PostBack data in this event, because that data would not be loaded by this time.</li>
-<li>We can use this event to change any data, that should be persisted in the next postback.</li>
-</ul>
-<p><strong><em>Page_PreLoad</em></strong></p>
-<ul>
-<li>This is the first event will be called after loading the ViewState and the Postback data by two methods, LoadViewState and LoadPostData respectively.</li>
-<li><em>The purpose of the Page.PreLoad event is to provide a hook for control authors. The behavior of the load phase of the page lifecycle, is that &nbsp;the Load event is raised on the page before it is raised on all its child controls. As a control author, you might want to perform some action after viewstate is loaded (so Init is too early), but before Page_Load is called (so Load is too late). How you do that is to add an event handler to Page.PreLoad.</em></li>
-</ul>
-<p><strong><em>Page_Load</em></strong></p>
-<ul>
-<li>This event is recursive, The Load event of the page occurs before the Load event of the controls.</li>
-<li>We can use this event to set properties in controls and to establish database connections.</li>
-</ul>
-<p><strong><em>Control events</em></strong></p>
-<ul>
-<li>Use these events to handle specific control events, such as a Button control’s Click event or a TextBox control’s TextChanged event.</li>
-</ul>
-<p><strong><em>Page_LoadComplete</em></strong></p>
-<ul>
-<li>Use this event for tasks that require that all other controls on the page be loaded.</li>
-<li><em>There may be certain situations where we need to do some processing after control event, in that case Load event will be too early, so we can use the LoadComplete event for this king of processing.When you hook up several methods to the Load event you don’t know the order they will get called. So you have the PreLoad, Load and LoadComplete events to have some more control as to in what order your code gets called. The use of this might not always be clear when working only with your page class. When working with controls however, with the need to have some code running at Load time, you might want to make it run right before or right after what would normally happen in the Load event. Then you can use the PreLoad and LoadComplete methods.</em></li>
-</ul>
-<p><strong><em>Page_PreRender</em></strong></p>
-<ul>
-<li>This event is recursive, The PreRender event of the page occurs before the PreRender event of the controls.</li>
-<li>Raised after the Page object has created all controls that are required in order to render the page, including child controls of composite controls.</li>
-<li>Use the event to make final changes to the contents of the page or its controls before the rendering stage begins.</li>
-</ul>
-<p><strong><em>Page_PreRenderComplete</em></strong></p>
-<ul>
-<li>Raised after each data bound control whose DataSourceID property is set calls its DataBind method.</li>
-<li>This is the last event raised before the page’s view state is saved.</li>
-</ul>
-<p><strong><em>SaveStateComplete</em></strong></p>
-<ul>
-<li>Raised after view state and control state have been saved for the page and for all controls. Any changes to the page or controls at this point affect rendering, but the changes will not be retrieved on the next postback.</li>
-</ul>
-<p><strong><em>Render</em></strong></p>
-<ul>
-<li>This is not an event; instead, at this stage of processing, the Page object calls this method on each control. All ASP.NET Web server controls have a Render method that writes out the control’s markup to send to the browser.</li>
-</ul>
-<p><strong><em>Unload</em></strong></p>
-<ul>
-<li>This event is recursive, The Unload event of individual controls occurs before the Unload event of the page.</li>
-<li>In controls, use this event to do final cleanup for specific controls, such as closing control-specific database connections.For the page itself, use this event to do final cleanup work, such as closing open files and database connections, or finishing up logging or other request-specific tasks.</li>
-<li>During the unload stage, the page and its controls have been rendered, so you cannot make further changes to the response stream. If you attempt to call a method such as the Response.Write method, the page will throw an exception.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/" data-id="ciulhu2230000u4mgm6hdevi3" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2014/09/JQuery-Validations/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          JQuery Validations
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/03/typeof/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">typeof</div>
-    </a>
-  
-</nav>
-
-
-  
 </article>
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-
-</section>
+    
+    </div></section>
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/tags/Sitecore/page/2/">&laquo; Prev</a><a class="page-number" href="/tags/Sitecore/">1</a><a class="page-number" href="/tags/Sitecore/page/2/">2</a><span class="page-number current">3</span>
+      </nav>
+    </section>
       
         <aside id="sidebar">
   
@@ -446,7 +333,7 @@ ga('send', 'pageview');
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

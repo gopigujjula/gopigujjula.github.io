@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-11-13T11:35:12.362Z</updated>
+  <updated>2016-11-21T04:59:12.270Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Sitecore Databases</title>
+    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore%20Databases/"/>
+    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/</id>
+    <published>2016-11-19T05:30:00.000Z</published>
+    <updated>2016-11-21T04:59:12.270Z</updated>
+    
+    <content type="html"><![CDATA[<p>By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
+<h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developers perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what all the databases Sitecore uses.</p>
+<p>Sitecore uses multiple databases to manage both content and also analytics related data.</p>
+<h5 id="Content_Databases"><a href="#Content_Databases" class="headerlink" title="Content Databases"></a>Content Databases</h5><p>Sitecore uses three databases to maintain content. It always supports MS SQL server, but in Sitecore latest version 8.2, it also supports <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">Oracle 12g</a>.<br><img src="/css/images/oracle.png" alt=""></p>
+<p>Sitecore CMS uses the following three databases,</p>
+<ul>
+<li><p><strong>Core:</strong> This database contains all settings related to Sitecore, ex: Sitecore User Interface (Content Editor, Experience Editor, etc.) configuration. Using this database, we can add any new application, or shortcut on Sitecore launch pad or desktop.<br>This database also contains information about authentication and authorization, (Users &amp; roles)</p>
+</li>
+<li><p><strong>Master:</strong> This is content authoring database. All content authors mainly interact with this database, using either Content Editor or Experience Editor. It contains all versions of any content or assets.</p>
+</li>
+<li><p><strong>Web:</strong> This is also called live database. It contains all the live content, which is serving on the production website. When content author modifies any content, and publish it, content copied over to web database. Master database contains all versions of content, whereas web database only contains live version of content. Web database is subset of the Master database.</p>
+</li>
+</ul>
+<p>When we log into Sitecore, by default it always displays content from Master database, but we can select the database to show the content from other databases, like as shown below,</p>
+<p><img src="/css/images/database-selection.png" alt=""></p>
+<h5 id="Collection_Database__28Mongo_DB_29_3A"><a href="#Collection_Database__28Mongo_DB_29_3A" class="headerlink" title="Collection Database (Mongo DB):"></a>Collection Database (Mongo DB):</h5><p>As stated in Sitecore documentation, “In the Siteecore Experience Database (xDB), the <strong>Collection database</strong> is the central repository for storing contact, interaction, history &amp; automation data.”<br>It uses <strong>MongoDB</strong> - a highly scalable document-based NoSQL database solution.<br>Prior to Sitecore Version 7.5, all of analytics data used to get stored in <strong>Analytics</strong> database which was part of MS SQL server.</p>
+<h5 id="Reporting_Database_3A"><a href="#Reporting_Database_3A" class="headerlink" title="Reporting Database:"></a>Reporting Database:</h5><p>The reporting database is a SQL Server database that stores aggregated data from the collection database suitable for fast querying and reporting. This database contains aggregated data from collection DB.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concep
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</title>
@@ -514,11 +559,11 @@
   </entry>
   
   <entry>
-    <title>Saturday Sitecore Learning - Sitecore Learning : Developer Resources</title>
+    <title>Saturday Sitecore Learning : Developer Resources</title>
     <link href="http://gopigujjula.com/2016/07/Saturday-Sitecore-Learning-Developer-Resources/"/>
     <id>http://gopigujjula.com/2016/07/Saturday-Sitecore-Learning-Developer-Resources/</id>
     <published>2016-07-02T03:30:00.000Z</published>
-    <updated>2016-11-05T12:26:00.453Z</updated>
+    <updated>2016-11-19T16:09:44.410Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/css/images/sitecore-launchpad.png" alt=""></p>
 <p>Now we explore what are all the resources available for developers to learn Sitecore.</p>
@@ -533,7 +578,7 @@
 <p>I have taken eLearning course, which was fully sponsored by my company <a href="http://www.verndale.com/" target="_blank" rel="external">Verndale</a>. Course is having very good explanation of the concepts, and after the course completion, passed the Certification exam, and got the <strong><em>Sitecore 8 Professional Developer Certification</em></strong>.</p>
 <p>One main drawback of the course is, it is based on ASP .NET Web Forms. But mostly all new projects are into ASP.NET MVC implementation. But anyway Sitecore concepts are more of similar in both.</p>
 <p><strong>Other options</strong><br>If you are unable to spend that much amount on course, and if your company is not sponsoring it, then it is little bit difficult to kick start. But there are so many wonderful people who share their knowledge through blog posts, webinars, and videos.<br>There is a very good community around Sitecore, with lot of MVPs and certified developers.</p>
-<p><strong>Developer Portal</strong>: <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a><br><strong>community documentation</strong>: <a href="http://sitecore-community.github.io/docs/" target="_blank" rel="external">sitecore-community.github.io/docs/</a><br><strong>Slack Channel</strong>: <a href="https://sitecorechat.slack.com/" target="_blank" rel="external">sitecorechat</a><br><strong>Unofficial Sitecore 8 Training Webinar Series</strong>: <a href="http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/" target="_blank" rel="external">http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/</a><br><strong>Stack Exchange</strong>: <a href="https://sitecore.stackexchange.com/" target="_blank" rel="external">sitecore.stackexchange.com</a></p>
+<p><strong>Developer Portal</strong>: <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a><br><strong>Community documentation</strong>: <a href="http://sitecore-community.github.io/docs/" target="_blank" rel="external">sitecore-community.github.io/docs/</a><br><strong>Slack Channel</strong>: <a href="https://sitecorechat.slack.com/" target="_blank" rel="external">sitecorechat</a><br><strong>Unofficial Sitecore 8 Training Webinar Series</strong>: <a href="http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/" target="_blank" rel="external">http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/</a><br><strong>Stack Exchange</strong>: <a href="https://sitecore.stackexchange.com/" target="_blank" rel="external">sitecore.stackexchange.com</a></p>
 ]]></content>
     
     <summary type="html">
@@ -953,44 +998,6 @@
     
       &lt;p&gt;&lt;img src=&quot;/css/images/github-pages.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This blog is created using one of the Static blogging framework &lt;a href=&quot;https://h
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://gopigujjula.com/categories/Hexo/"/>
-    
-    
-      <category term="hexo blog setup" scheme="http://gopigujjula.com/tags/hexo-blog-setup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Static Blog Setup with Hexo : Initial Setup</title>
-    <link href="http://gopigujjula.com/2016/01/static-blog-with-hexo-2/"/>
-    <id>http://gopigujjula.com/2016/01/static-blog-with-hexo-2/</id>
-    <published>2016-01-28T07:15:28.000Z</published>
-    <updated>2016-11-05T11:54:26.727Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/css/images/hexo.png" alt=""></p>
-<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-2 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
-<h3 id="Hexo_Installation"><a href="#Hexo_Installation" class="headerlink" title="Hexo Installation"></a>Hexo Installation</h3><p>Hexo is powered by node.js framework. To Install Hexo, first we need to install Node.Js. It can be downloaded from <a href="https://nodejs.org/en/download/" target="_blank" rel="external">here</a>. We can verify the installation by checking the node version through command prompt.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;node --version</span><br></pre></td></tr></table></figure>
-<p>Once Node.js is successfully installed, we can proceed with Hexo installation using the Node Package Manager.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;npm install hexo -g</span><br></pre></td></tr></table></figure></p>
-<p>Once the Hexo is installed, we need to setup website folder,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&#62;hexo init [folder]</span><br></pre></td></tr></table></figure>
-<p>[folder] is optional in the above command, if it is not specified folder structure will be created under the current directory, else in the specified directory.</p>
-<p><img src="/css/images/hexo-folder.png" alt=""></p>
-<p>Website uses the default theme called “Landscape” from Hexo, To preview the site locally, we need to run the following command,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Hexo Project&#62;hexo server [folder]</span><br></pre></td></tr></table></figure>
-<p>now, we can preview the blog at <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>,</p>
-<p><img src="/css/images/hexo-default.PNG" alt=""></p>
-<p>This finishes the hexo initial setup, in the next post will see how to host it in using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>.<br>Please feel free to contact if you face any issues while setting up. Thanks for reading, and have a nice day :).</p>
-<p><strong>Credits : Thanks to <a href="http://chitrangshah.com/" target="_blank" rel="external">Chitrang Shah</a>, for letting us know about this wonderful framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>.</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/css/images/hexo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;This blog is created using one of the Static blogging framework &lt;a href=&quot;https://hexo.io/&quot;
     
     </summary>
     

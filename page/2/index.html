@@ -113,7 +113,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        45
+        46
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -144,6 +144,83 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Manual-Installation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/">Saturday Sitecore Learning - Manual Installation</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" style="text-align:right">
+      <time datetime="2016-10-08T03:30:00.000Z" itemprop="datePublished">October 08, 2016</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
+<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
+<ul>
+<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
+<li>Copies Sitecore site in the specified destination folder path.</li>
+<li>Creates new website in IIS, and point to the destination folder.</li>
+<li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
+</ul>
+<p>When we go through manual installation, we need to take care of all the above steps.</p>
+<p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
+<p><img src="/css/images/sitecore-folders.png" alt=""></p>
+<p>Now we will look into Database setup,</p>
+<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
+<p><img src="/css/images/attach-db.png" alt=""></p>
+<p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
+<p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
+<p>Now all the databases are set.</p>
+<p>Next we will proceed to Website setup:</p>
+<p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc.variable name=&#34;dataFolder&#34; value=&#34;F:\inetpub\wwwroot\Data&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.<br><img src="/css/images/connectionstring.png" alt=""></p>
+<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
+<p><img src="/css/images/IIS-website.png" alt=""></p>
+<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" data-id="ciulhu2ey001vu4mg78zw6wte" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Web-Application-Installer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -303,7 +380,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/Saturday-Sitecore-Learning-Developer-Resources/">Saturday Sitecore Learning - Sitecore Learning : Developer Resources</a>
+      <a class="article-title" href="/2016/07/Saturday-Sitecore-Learning-Developer-Resources/">Saturday Sitecore Learning : Developer Resources</a>
     </h1>
   
 
@@ -342,7 +419,7 @@ ga('send', 'pageview');
 <p>I have taken eLearning course, which was fully sponsored by my company <a href="http://www.verndale.com/" target="_blank" rel="external">Verndale</a>. Course is having very good explanation of the concepts, and after the course completion, passed the Certification exam, and got the <strong><em>Sitecore 8 Professional Developer Certification</em></strong>.</p>
 <p>One main drawback of the course is, it is based on ASP .NET Web Forms. But mostly all new projects are into ASP.NET MVC implementation. But anyway Sitecore concepts are more of similar in both.</p>
 <p><strong>Other options</strong><br>If you are unable to spend that much amount on course, and if your company is not sponsoring it, then it is little bit difficult to kick start. But there are so many wonderful people who share their knowledge through blog posts, webinars, and videos.<br>There is a very good community around Sitecore, with lot of MVPs and certified developers.</p>
-<p><strong>Developer Portal</strong>: <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a><br><strong>community documentation</strong>: <a href="http://sitecore-community.github.io/docs/" target="_blank" rel="external">sitecore-community.github.io/docs/</a><br><strong>Slack Channel</strong>: <a href="https://sitecorechat.slack.com/" target="_blank" rel="external">sitecorechat</a><br><strong>Unofficial Sitecore 8 Training Webinar Series</strong>: <a href="http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/" target="_blank" rel="external">http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/</a><br><strong>Stack Exchange</strong>: <a href="https://sitecore.stackexchange.com/" target="_blank" rel="external">sitecore.stackexchange.com</a></p>
+<p><strong>Developer Portal</strong>: <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a><br><strong>Community documentation</strong>: <a href="http://sitecore-community.github.io/docs/" target="_blank" rel="external">sitecore-community.github.io/docs/</a><br><strong>Slack Channel</strong>: <a href="https://sitecorechat.slack.com/" target="_blank" rel="external">sitecorechat</a><br><strong>Unofficial Sitecore 8 Training Webinar Series</strong>: <a href="http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/" target="_blank" rel="external">http://www.akshaysura.com/2016/02/03/unofficial-sitecore-8-training-webinar-series-full-curriculum/</a><br><strong>Stack Exchange</strong>: <a href="https://sitecore.stackexchange.com/" target="_blank" rel="external">sitecore.stackexchange.com</a></p>
 
       
     </div>
@@ -515,58 +592,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-career-awards" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/career-awards/">Career Awards</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/06/career-awards/" style="text-align:right">
-      <time datetime="2016-06-12T04:30:00.000Z" itemprop="datePublished">June 12, 2016</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>2015 - Spot Award at 𝐍𝐓𝐓𝐃𝐚𝐭𝐚,<br>2016 - VET Award at 𝐕𝐞𝐫𝐧𝐝𝐚𝐥𝐞…</p>
-<p><img src="/css/images/nttdata.jpg" alt=""></p>
-<p><img src="/css/images/verndale.jpg" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/06/career-awards/" data-id="ciulhu2bg000mu4mgoga4f6np" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/06/career-awards/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Career/">Career</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
       </nav>
@@ -579,6 +604,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/oracle.png
+)" alt="Saturday Sitecore Learning - Sitecore Databases" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore Databases/" class="title">Saturday Sitecore Learning - Sitecore Databases</a></p>
+              <p class="item-date"><time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -656,25 +700,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/SIM1.png
-)" alt="Saturday Sitecore Learning - Sitecore Instance Manager (SIM) " class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" class="title">Saturday Sitecore Learning - Sitecore Instance Manager (SIM) </a></p>
-              <p class="item-date"><time datetime="2016-10-15T05:30:00.000Z" itemprop="datePublished">October 15, 2016</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -684,7 +709,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">11</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">12</span></li></ul></li></ul>
     </div>
   </div>
 
