@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-11-21T07:17:06.277Z</updated>
+  <updated>2016-11-27T12:55:31.012Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,14 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Saturday Sitecore Learning - Sitecore Code review check list</title>
+    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/"/>
+    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/</id>
+    <published>2016-11-26T05:30:00.000Z</published>
+    <updated>2016-11-27T12:55:31.012Z</updated>
+    
+    <content type="html"><![CDATA[<p>This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation is part of the knowledge share session, I had delivered in office.</p>
+<p>This check list helps Sitecore developers to better enhance the Content Author experience in managing their content.</p>
+
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation 
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Saturday Sitecore Learning - Sitecore Databases</title>
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/</id>
     <published>2016-11-19T05:30:00.000Z</published>
-    <updated>2016-11-21T07:17:06.277Z</updated>
+    <updated>2016-11-27T12:57:27.207Z</updated>
     
-    <content type="html"><![CDATA[<p>By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concepts, in both theoretical and practical manner.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
-<h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developers perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what all the databases Sitecore uses.</p>
+    <content type="html"><![CDATA[<p>By this time, we have Sitecore website running in our machine, and also ready with Visual Studio solution setup. From now, we will look into Sitecore concepts, in both theory and hands on as well.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
+<h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developer’s perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what are all databases Sitecore uses.</p>
 <p>Sitecore uses multiple databases to manage both content and also analytics related data.</p>
 <p><img src="/css/images/sitecore-databases.png" alt=""></p>
 <h5 id="Content_Databases"><a href="#Content_Databases" class="headerlink" title="Content Databases"></a>Content Databases</h5><p>Sitecore uses three databases to maintain content. It always supports MS SQL server, but in Sitecore latest version 8.2, it also supports <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">Oracle 12g</a>.<br><img src="/css/images/oracle.png" alt=""></p>
@@ -44,7 +80,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;By this time, we have a running Sitecore website, and also a Visual Studio solution setup. From now on, we will look into Sitecore concep
+      &lt;p&gt;By this time, we have Sitecore website running in our machine, and also ready with Visual Studio solution setup. From now, we will look i
     
     </summary>
     
@@ -66,19 +102,19 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/</id>
     <published>2016-11-12T05:30:00.000Z</published>
-    <updated>2016-11-13T11:35:12.362Z</updated>
+    <updated>2016-11-23T06:16:35.470Z</updated>
     
-    <content type="html"><![CDATA[<p>In last post we had seen, how to set up the project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore this option,</p>
-<p>I am using <strong>Visual Studio 2015</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
+    <content type="html"><![CDATA[<p>In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore more advanced,</p>
+<p>I am using <strong>Visual Studio 2015 community/professional</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
 <p><strong>Outside web root setup steps:</strong></p>
 <ul>
 <li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
 </ul>
 <p><img src="/css/images/VS-new-project.png" alt=""></p>
 <ul>
-<li><p>Select the appropriate <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
+<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
 </li>
-<li><p>Enter the <strong>Name</strong> of the project, specify the <strong>Location</strong> field, and then click on OK button.</p>
+<li><p>Enter the <strong>Name</strong> of the project, specify the <strong>Location</strong> field, and then click on OK to continue.</p>
 </li>
 </ul>
 <p><img src="/css/images/VS-inside-webroot-MVC-project.png" alt=""></p>
@@ -91,11 +127,11 @@
 </ul>
 <p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
 <ul>
-<li>Now from the project, remove <strong>Web.config</strong>, and <strong>Global.asax</strong> files, else on publish, these files will override the respective Sitecore files.</li>
+<li>Now from the project, remove <strong>Web.config</strong>, and <strong>Global.asax</strong> files, otherwise while publishing, these files will override the respective Sitecore files.</li>
 </ul>
 <p><img src="/css/images/VS-inside-webroot-file-delete.png" alt=""></p>
 <ul>
-<li>Once deleted, we need to copy both of the <strong>Web.config</strong> and <strong>Global.asax</strong> from web root into the project.</li>
+<li>Once after deleted, we need to copy both <strong>Web.config</strong> and <strong>Global.asax</strong> from web root into the project.</li>
 </ul>
 <p><img src="/css/images/VS-inside-webroot-file-paste.png" alt=""></p>
 <ul>
@@ -111,7 +147,7 @@
 <p><img src="/css/images/VS-inside-webroot-dll-copy-2.png" alt=""></p>
 <p><img src="/css/images/VS-inside-webroot-dll-reference.png" alt=""></p>
 <ul>
-<li>Please double check on the Mvc version compatibility <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a>, and make sure you are using correct .NET Mvc version. We can check the <strong>Web.config</strong> for the version, like below.</li>
+<li>Please double check on the Mvc version compatibility <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a>, and make sure you are using correct .NET Mvc version. We can verify the MVC version in <strong>Web.config</strong> file as shown below.</li>
 </ul>
 <p><img src="/css/images/VS-mvc-version.png" alt=""></p>
 <ul>
@@ -138,7 +174,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;In last post we had seen, how to set up the project inside the web root. But this option is only useful for POC’s. Most of the time outsi
+      &lt;p&gt;In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside
     
     </summary>
     
@@ -160,13 +196,13 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/</id>
     <published>2016-11-05T05:30:00.000Z</published>
-    <updated>2016-11-13T11:23:16.527Z</updated>
+    <updated>2016-11-23T06:19:41.473Z</updated>
     
     <content type="html"><![CDATA[<p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
 <p>There are mainly two approaches to create the project,</p>
 <ol>
-<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files sit at the same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
-<li><strong>Outside the web root</strong><br>This is the most preferred choice, as it separates the Sitecore, and our code, and easy to version Control. This is the <em>recommended</em> approach from Sitecore.</li>
+<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files in same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
+<li><strong>Outside the web root</strong><br>This is the most preferred one, as it separates the Sitecore, and our code and Sitecore in different locations, and easy to version Control. This is the <em>recommended</em> approach from core Sitecore team.</li>
 </ol>
 <p>In this post we will look into the first approach, I am using <strong>Visual Studio 2015</strong> edition.</p>
 <p><strong>Inside the web root Setup steps:</strong></p>
@@ -175,7 +211,7 @@
 </ul>
 <p><img src="/css/images/VS-new-project.png" alt=""></p>
 <ul>
-<li><p>Select the appropriate <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
+<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
 </li>
 <li><p>Enter the <strong>Name</strong> of the project, and in <strong>Location</strong> field specify the newly installed Sitecore web root path (in our case <em>F:\inetpub\wwwroot\SIMSitecore\Website</em>), and make sure to uncheck the <strong>Create directory for solution</strong> checkbox, and then click on OK button.</p>
 </li>
@@ -186,15 +222,15 @@
 </ul>
 <p><img src="/css/images/VS-MVC-project.png" alt=""></p>
 <ul>
-<li>Once the project is created, solution contains the files as shown below.</li>
+<li>Once the project is created, solution contains the files/folders as shown below.</li>
 </ul>
 <p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
 <ul>
-<li>If we go to the web root, we can observer there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
+<li>If we go to the web root, we can observe there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
 </ul>
 <p><img src="/css/images/VS-inside-webroot.png" alt=""></p>
 <ul>
-<li>By drilling down the newly created folder (SIMSitecore), we can see the files, which are same as shown in the VS solution explorer.</li>
+<li>Drill down the newly created folder (SIMSitecore), to see the files, which are same as shown in the VS solution explorer.</li>
 </ul>
 <p><img src="/css/images/project-drilldown.png" alt=""></p>
 <ul>
@@ -970,42 +1006,6 @@
       <category term="Certification" scheme="http://gopigujjula.com/tags/Certification/"/>
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Static Blog Setup with Hexo : Hosting</title>
-    <link href="http://gopigujjula.com/2016/02/static-blog-with-hexo-3/"/>
-    <id>http://gopigujjula.com/2016/02/static-blog-with-hexo-3/</id>
-    <published>2016-02-06T15:10:45.000Z</published>
-    <updated>2016-11-05T11:54:26.767Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/css/images/github-pages.jpg" alt=""></p>
-<p>This blog is created using one of the Static blogging framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>, and hosted using <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a>. This post is part-3 of the series and you can view all the posts in the series here <a href="/tags/hexo-blog-setup/">Static Blog Setup with Hexo, and Github</a></p>
-<h3 id="Project_Setup_in_Github"><a href="#Project_Setup_in_Github" class="headerlink" title="Project Setup in Github"></a>Project Setup in Github</h3><p>To host simple static HTML site, there are lot of options available. We can deploy them on normal hosting server or on cloud (like <a href="https://aws.amazon.com/" target="_blank" rel="external">Amazon Web Services</a> or <a href="https://azure.microsoft.com" target="_blank" rel="external">Microsoft Azure</a>).</p>
-<p>I have chosen <a href="https://pages.github.com/" target="_blank" rel="external">Github pages</a> to host my site.The main reason is, I can directly host my site from Github repository. For each Account, Github provides an option to host one static website.</p>
-<p>To create the repository and host the site, we have step by step instruction on the <a href="https://pages.github.com/" target="_blank" rel="external">homepage</a>. I am using <a href="https://desktop.github.com/" target="_blank" rel="external">Github Desktop</a> as my Git client.<br>By default this hosting files can be accessed from the URL <a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a>. Username being the account username.</p>
-<h3 id="Custom_domain_setup"><a href="#Custom_domain_setup" class="headerlink" title="Custom domain setup"></a>Custom domain setup</h3><p>I have my own domain which is purchased from <a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>.</p>
-<ul>
-<li><p>In DNS provider (in my case Godaddy), first we need to create two ‘A’ records that point our custom domain to the following IP addresses:<br>192.30.252.153<br>192.30.252.154</p>
-</li>
-<li><p>In Github pages, we can setup our custom domain using the <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">instructions</a>.</p>
-</li>
-</ul>
-<p><strong>Credits : Thanks to <a href="http://chitrangshah.com/" target="_blank" rel="external">Chitrang Shah</a>, for letting us know about this wonderful framework <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>.</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/css/images/github-pages.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;This blog is created using one of the Static blogging framework &lt;a href=&quot;https://h
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://gopigujjula.com/categories/Hexo/"/>
-    
-    
-      <category term="hexo blog setup" scheme="http://gopigujjula.com/tags/hexo-blog-setup/"/>
     
   </entry>
   

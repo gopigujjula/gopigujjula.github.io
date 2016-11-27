@@ -26,7 +26,7 @@ Inside the web rootHere both deployed files, and solut">
 <meta property="og:image" content="http://gopigujjula.com/css/images/VS-inside-webroot-files.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/VS-remove-files.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/VS-sitecore-kernerl.png">
-<meta property="og:updated_time" content="2016-11-13T11:23:16.527Z">
+<meta property="og:updated_time" content="2016-11-23T06:19:41.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saturday Sitecore Learning - Visual Studio - Project - Inside Web root">
 <meta name="twitter:description" content="In this post we will look into creating Visual Studio project for the installed Sitecore.
@@ -132,11 +132,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        46
+        47
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        16
+        17
         <span>tags</span>
       </div>
     </div>
@@ -200,8 +200,8 @@ ga('send', 'pageview');
         <p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
 <p>There are mainly two approaches to create the project,</p>
 <ol>
-<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files sit at the same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
-<li><strong>Outside the web root</strong><br>This is the most preferred choice, as it separates the Sitecore, and our code, and easy to version Control. This is the <em>recommended</em> approach from Sitecore.</li>
+<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files in same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
+<li><strong>Outside the web root</strong><br>This is the most preferred one, as it separates the Sitecore, and our code and Sitecore in different locations, and easy to version Control. This is the <em>recommended</em> approach from core Sitecore team.</li>
 </ol>
 <p>In this post we will look into the first approach, I am using <strong>Visual Studio 2015</strong> edition.</p>
 <p><strong>Inside the web root Setup steps:</strong></p>
@@ -210,7 +210,7 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/VS-new-project.png" alt=""></p>
 <ul>
-<li><p>Select the appropriate <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
+<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
 </li>
 <li><p>Enter the <strong>Name</strong> of the project, and in <strong>Location</strong> field specify the newly installed Sitecore web root path (in our case <em>F:\inetpub\wwwroot\SIMSitecore\Website</em>), and make sure to uncheck the <strong>Create directory for solution</strong> checkbox, and then click on OK button.</p>
 </li>
@@ -221,15 +221,15 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/VS-MVC-project.png" alt=""></p>
 <ul>
-<li>Once the project is created, solution contains the files as shown below.</li>
+<li>Once the project is created, solution contains the files/folders as shown below.</li>
 </ul>
 <p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
 <ul>
-<li>If we go to the web root, we can observer there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
+<li>If we go to the web root, we can observe there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
 </ul>
 <p><img src="/css/images/VS-inside-webroot.png" alt=""></p>
 <ul>
-<li>By drilling down the newly created folder (SIMSitecore), we can see the files, which are same as shown in the VS solution explorer.</li>
+<li>Drill down the newly created folder (SIMSitecore), to see the files, which are same as shown in the VS solution explorer.</li>
 </ul>
 <p><img src="/css/images/project-drilldown.png" alt=""></p>
 <ul>
@@ -302,6 +302,24 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="title">Saturday Sitecore Learning - Sitecore Code review check list</a></p>
+              <p class="item-date"><time datetime="2016-11-26T05:30:00.000Z" itemprop="datePublished">November 26, 2016</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -379,25 +397,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/SIM-home.png
-)" alt="Saturday Sitecore Learning - Sitecore Installation with SIM tool" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" class="title">Saturday Sitecore Learning - Sitecore Installation with SIM tool</a></p>
-              <p class="item-date"><time datetime="2016-10-22T05:30:00.000Z" itemprop="datePublished">October 22, 2016</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -407,7 +406,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">12</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">13</span></li></ul></li></ul>
     </div>
   </div>
 
