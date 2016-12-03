@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Gopi Notes</title>
-  
+  <subtitle>Notes on .NET &amp; Sitecore</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-11-29T05:08:36.071Z</updated>
+  <updated>2016-12-03T13:00:53.228Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Default Home Page</title>
+    <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/"/>
+    <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/</id>
+    <published>2016-12-03T05:30:00.000Z</published>
+    <updated>2016-12-03T13:00:53.228Z</updated>
+    
+    <content type="html"><![CDATA[<p>As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Content Item etc. At last we will see how the Content Author can change the text using Content editor.</p>
+<p>Before we move further, few of you may not be convenient with terminology (template, layout, sub-layout) but no issues just follow the steps, we will discuss more about each topic in coming posts.</p>
+<p>If we load the newly installed Sitecore website, we can see the below page, as the website home page.</p>
+<p><img src="/css/images/sitecore-default-homepage.png" alt=""></p>
+<p>Now let’s look into each and every aspect from Sitecore side, first let’s login into Sitecore using <strong>admin/b</strong> credentials,</p>
+<p>From Launch pad, navigate to Content Editor, by directly clicking on the <strong>Content Editor</strong> option, or through <strong>Desktop</strong> option, it is a good practice to go from Desktop, as we can open multiple windows, and navigate among them, similar to windows desktop, and also having start menu. This is not possible by directly selecting Content Editor option from Launch pad.</p>
+<p><img src="/css/images/sitecore-desktop.png" alt=""></p>
+<p>If you click on Desktop mode, select Sitecore logo/start button and select “Content Editor” option.</p>
+<p><img src="/css/images/start-menu.png" alt=""></p>
+<p>In Content Editor, navigate to the Home content item (<strong>/sitecore/content/Home</strong>),</p>
+<p><img src="/css/images/default-home-content.png" alt=""></p>
+<h4 id="Data_Template_3A"><a href="#Data_Template_3A" class="headerlink" title="Data Template:"></a>Data Template:</h4><p>In Sitecore, every content item is created from Template. Template contains field definition, and presentation information. Some say <em>“Templates are like class definitions. Content is like an instance of that class.”</em><br>In Sitecore tree, all the templates are present under <strong>sitecore/Templates</strong></p>
+<p>For the default “Home” page Template is already present in Templates section. We can see the Template name, In Quick Info section, which is <strong>Sample Item</strong> in this case. By clicking on the template name, we can navigate to the template item.(if you opened in Desktop mode, Template will be opened in new window, else on the same window) or we can navigate to the template using its path <strong>/sitecore/templates/Sample/Sample Item</strong>.</p>
+<p><img src="/css/images/template-structure.png" alt=""></p>
+<p>By looking into <strong>Sample Item</strong> Template’s <strong>Builder</strong> tab, we can understand that there are two fields defined in it, which are <strong>Title</strong> (text Type) and <strong>Text</strong> (Rich Text Type). <strong>Field Type</strong> determines the control to manage the content by content author using the editing interface.</p>
+<p><img src="/css/images/template-fields.png" alt=""></p>
+<p><strong>Standard Values</strong> for a particular template, lists all the fields including inherited fields. All the presentation details are assigned on Standard values.<br>For all the page templates, we have a presentation, where we can assign a layout and components (sub-layouts). On request of a web page, Sitecore assembles the page dynamically from it’s content and the presentation components.</p>
+<p><img src="/css/images/template-presentation.png" alt=""></p>
+<h4 id="Presentation_3A"><a href="#Presentation_3A" class="headerlink" title="Presentation:"></a>Presentation:</h4><p>Now let’s look into presentation components, both layout, and sub layouts. All the layouts, sub layouts, renderings (in MVC), will be present under <strong>sitecore/Layout</strong> in the Sitecore tree.</p>
+<p><img src="/css/images/layoust.png" alt=""></p>
+<p>From <strong>Sample Item</strong> template presentation, we can see that there is one layout <strong>(Sample Layout)</strong>, and three components <strong>(Sample Sublayout, Sample Inner Sublayout,</strong> and <strong>Sample Rendering)</strong>.</p>
+<p><img src="/css/images/presentation.png" alt=""></p>
+<p>Let’s explore Sample Layout first, which is present in <strong>sitecore/Layout/Layouts/</strong> path. Layout is kind of master page in ASP.NET terminology, where we have basic html tags are added, and placeholders are defined. On Click of Sample Layout item, we can see the <strong>Path</strong> field, there is a .aspx page path is given, which contains all the HTML code with respect to the page.</p>
+<p><img src="/css/images/main-layout.png" alt=""></p>
+<p><img src="/css/images/layout-path.png" alt=""></p>
+<p>If we observe the layout code, we can see that HTML tags are present and also a placeholder with key as <strong>main</strong> is added. This is the placeholder where, other page components are going to be embedded.</p>
+<p><img src="/css/images/layout-code.png" alt=""></p>
+<p>Similar way if we look at <strong>Sample Sublayout</strong> item, which is under <strong>/sitecore/Layout/Sublayouts</strong>. This is an .ascx file.</p>
+<p><img src="/css/images/sublayout.png" alt=""></p>
+<p><img src="/css/images/sublayout-code.png" alt=""></p>
+<p>Similar to this component, other page components also have code files with respect to them.<br>ASP.NET webforms -&gt; <strong>.ascx</strong> files<br>ASP.NET MVC -&gt; <strong>Controller</strong> rendering, or <strong>View</strong> rendering.<br>XSLT -&gt; XSL Rendering</p>
+<p>If we look at the Sample rendering which is a xsl rendering, this is where we are rendering both the fields, <strong>‘title’ &amp; ‘text’</strong>, which are created in template.</p>
+<p><img src="/css/images/xslrendering.png" alt=""></p>
+<p><img src="/css/images/xslrenderingcode.png" alt=""></p>
+<p>Now let’s get back to our home item, where we have already content present for both the fields, which we can see on home page.</p>
+<p><img src="/css/images/conten-output.png" alt=""></p>
+<p>Till now we have seen Templates, Standard values, presentation, layout, sub-layout and renderings. Stay tune to this space for my next posts to discuss more detail on each item we used in home page.</p>
+<h4 id="Hello_World"><a href="#Hello_World" class="headerlink" title="Hello World"></a>Hello World</h4><p>We will try changing the Title field content to <strong>Hello World</strong>, and verify that text is changing on home page or not. After making any change, we need to publish the item; As I discussed earlier our changes will save in to Master database. On Click of publish latest modifications/final content gets pushed to <strong>web</strong> database. Refer Below screenshot for final output we are expecting. Hello world is indeed appearing on home page.</p>
+<p><img src="/css/images/helloworld-content.png" alt=""></p>
+<p>Sitecore supports both ASP.NET web forms and MVC, but default home page comes with all web forms related code. Currently most of new Sitecore implementations are done in MVC. So in coming up posts, we will always try to see the code examples in MVC.<br>ASP.NET web forms is still very much in picture, because lot of implementations till now are done in web forms. Whenever we are maintaining those applications, web forms knowledge is very much required.<br>That’s all for this week.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Sitecore Code review check list</title>
@@ -208,7 +276,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/</id>
     <published>2016-11-05T05:30:00.000Z</published>
-    <updated>2016-11-23T06:19:41.473Z</updated>
+    <updated>2016-12-03T13:09:40.138Z</updated>
     
     <content type="html"><![CDATA[<p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
 <p>There are mainly two approaches to create the project,</p>
@@ -257,10 +325,10 @@
 <ul>
 <li><p>Add references to <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong> files which are in Website-&gt;bin directory.<br><img src="/css/images/VS-sitecore-kernerl.png" alt=""></p>
 </li>
-<li><p>Navigate to the Sitecore references, and change</p>
+<li><p>Navigate to the Sitecore references</p>
 </li>
 </ul>
-<p><strong>Will be continued</strong></p>
+<p><strong>To be continued -having some trouble to setup</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -992,32 +1060,6 @@
     
     
       <category term="Bangalore Tech event" scheme="http://gopigujjula.com/tags/Bangalore-Tech-event/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Certification</title>
-    <link href="http://gopigujjula.com/2016/02/sitecore-certification/"/>
-    <id>http://gopigujjula.com/2016/02/sitecore-certification/</id>
-    <published>2016-02-16T09:59:16.000Z</published>
-    <updated>2016-11-05T11:52:43.766Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Cleared_Sitecore_Certification"><a href="#Cleared_Sitecore_Certification" class="headerlink" title="Cleared Sitecore Certification"></a>Cleared Sitecore Certification</h4><p>Today morning I have cleared <strong>Sitecore® XP 8 Website Development for .NET Developers Certification</strong> with 90% score. This is my first ever technical Certification. :)</p>
-<p><img src="/css/images/certificate.jpg" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Cleared_Sitecore_Certification&quot;&gt;&lt;a href=&quot;#Cleared_Sitecore_Certification&quot; class=&quot;headerlink&quot; title=&quot;Cleared Sitecore Certification&quot;&gt;
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-    
-      <category term="Certification" scheme="http://gopigujjula.com/tags/Certification/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
