@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Saturday Sitecore Learning - Default Home Page | Gopi Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Saturday Sitecore Learning - Default Home Page">
+<meta property="og:url" content="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Co">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-default-homepage.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-desktop.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/start-menu.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/default-home-content.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/template-structure.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/template-fields.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/template-presentation.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/layoust.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/presentation.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/main-layout.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/layout-path.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/layout-code.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sublayout.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sublayout-code.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/xslrendering.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/xslrenderingcode.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/conten-output.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/helloworld-content.png">
+<meta property="og:updated_time" content="2016-12-03T13:00:53.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Saturday Sitecore Learning - Default Home Page">
+<meta name="twitter:description" content="As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Co">
+<link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
+  
+  
+    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo">
+        <span class="site-title">Gopi Notes</span>
+      </a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+    <!--  <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+        
+      </div> -->
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <!--
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+          
+        </td>-->
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29">
+      <h2 id="name">Gopikrishna Gujjula</h2>
+      <h3 id="title">.NET &amp; Sitecore Developer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Bangalore, India</span>
+      <a id="follow" target="_blank" href="https://twitter.com/gopikreddy">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        48
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        17
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/gopikreddy" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/gopikreddy" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/gopikreddy.gn" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+          <td><a href="/atom.xml" target="_blank" title="rss"><i class="fa fa-rss"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main"><article id="post-Saturday-Sitecore-Learning-Default-Home-Page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Saturday Sitecore Learning - Default Home Page
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" style="text-align:right">
+      <time datetime="2016-12-03T05:30:00.000Z" itemprop="datePublished">December 03, 2016</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Content Item etc. At last we will see how the Content Author can change the text using Content editor.</p>
+<p>Before we move further, few of you may not be convenient with terminology (template, layout, sub-layout) but no issues just follow the steps, we will discuss more about each topic in coming posts.</p>
+<p>If we load the newly installed Sitecore website, we can see the below page, as the website home page.</p>
+<p><img src="/css/images/sitecore-default-homepage.png" alt=""></p>
+<p>Now let’s look into each and every aspect from Sitecore side, first let’s login into Sitecore using <strong>admin/b</strong> credentials,</p>
+<p>From Launch pad, navigate to Content Editor, by directly clicking on the <strong>Content Editor</strong> option, or through <strong>Desktop</strong> option, it is a good practice to go from Desktop, as we can open multiple windows, and navigate among them, similar to windows desktop, and also having start menu. This is not possible by directly selecting Content Editor option from Launch pad.</p>
+<p><img src="/css/images/sitecore-desktop.png" alt=""></p>
+<p>If you click on Desktop mode, select Sitecore logo/start button and select “Content Editor” option.</p>
+<p><img src="/css/images/start-menu.png" alt=""></p>
+<p>In Content Editor, navigate to the Home content item (<strong>/sitecore/content/Home</strong>),</p>
+<p><img src="/css/images/default-home-content.png" alt=""></p>
+<h4 id="Data_Template_3A"><a href="#Data_Template_3A" class="headerlink" title="Data Template:"></a>Data Template:</h4><p>In Sitecore, every content item is created from Template. Template contains field definition, and presentation information. Some say <em>“Templates are like class definitions. Content is like an instance of that class.”</em><br>In Sitecore tree, all the templates are present under <strong>sitecore/Templates</strong></p>
+<p>For the default “Home” page Template is already present in Templates section. We can see the Template name, In Quick Info section, which is <strong>Sample Item</strong> in this case. By clicking on the template name, we can navigate to the template item.(if you opened in Desktop mode, Template will be opened in new window, else on the same window) or we can navigate to the template using its path <strong>/sitecore/templates/Sample/Sample Item</strong>.</p>
+<p><img src="/css/images/template-structure.png" alt=""></p>
+<p>By looking into <strong>Sample Item</strong> Template’s <strong>Builder</strong> tab, we can understand that there are two fields defined in it, which are <strong>Title</strong> (text Type) and <strong>Text</strong> (Rich Text Type). <strong>Field Type</strong> determines the control to manage the content by content author using the editing interface.</p>
+<p><img src="/css/images/template-fields.png" alt=""></p>
+<p><strong>Standard Values</strong> for a particular template, lists all the fields including inherited fields. All the presentation details are assigned on Standard values.<br>For all the page templates, we have a presentation, where we can assign a layout and components (sub-layouts). On request of a web page, Sitecore assembles the page dynamically from it’s content and the presentation components.</p>
+<p><img src="/css/images/template-presentation.png" alt=""></p>
+<h4 id="Presentation_3A"><a href="#Presentation_3A" class="headerlink" title="Presentation:"></a>Presentation:</h4><p>Now let’s look into presentation components, both layout, and sub layouts. All the layouts, sub layouts, renderings (in MVC), will be present under <strong>sitecore/Layout</strong> in the Sitecore tree.</p>
+<p><img src="/css/images/layoust.png" alt=""></p>
+<p>From <strong>Sample Item</strong> template presentation, we can see that there is one layout <strong>(Sample Layout)</strong>, and three components <strong>(Sample Sublayout, Sample Inner Sublayout,</strong> and <strong>Sample Rendering)</strong>.</p>
+<p><img src="/css/images/presentation.png" alt=""></p>
+<p>Let’s explore Sample Layout first, which is present in <strong>sitecore/Layout/Layouts/</strong> path. Layout is kind of master page in ASP.NET terminology, where we have basic html tags are added, and placeholders are defined. On Click of Sample Layout item, we can see the <strong>Path</strong> field, there is a .aspx page path is given, which contains all the HTML code with respect to the page.</p>
+<p><img src="/css/images/main-layout.png" alt=""></p>
+<p><img src="/css/images/layout-path.png" alt=""></p>
+<p>If we observe the layout code, we can see that HTML tags are present and also a placeholder with key as <strong>main</strong> is added. This is the placeholder where, other page components are going to be embedded.</p>
+<p><img src="/css/images/layout-code.png" alt=""></p>
+<p>Similar way if we look at <strong>Sample Sublayout</strong> item, which is under <strong>/sitecore/Layout/Sublayouts</strong>. This is an .ascx file.</p>
+<p><img src="/css/images/sublayout.png" alt=""></p>
+<p><img src="/css/images/sublayout-code.png" alt=""></p>
+<p>Similar to this component, other page components also have code files with respect to them.<br>ASP.NET webforms -&gt; <strong>.ascx</strong> files<br>ASP.NET MVC -&gt; <strong>Controller</strong> rendering, or <strong>View</strong> rendering.<br>XSLT -&gt; XSL Rendering</p>
+<p>If we look at the Sample rendering which is a xsl rendering, this is where we are rendering both the fields, <strong>‘title’ &amp; ‘text’</strong>, which are created in template.</p>
+<p><img src="/css/images/xslrendering.png" alt=""></p>
+<p><img src="/css/images/xslrenderingcode.png" alt=""></p>
+<p>Now let’s get back to our home item, where we have already content present for both the fields, which we can see on home page.</p>
+<p><img src="/css/images/conten-output.png" alt=""></p>
+<p>Till now we have seen Templates, Standard values, presentation, layout, sub-layout and renderings. Stay tune to this space for my next posts to discuss more detail on each item we used in home page.</p>
+<h4 id="Hello_World"><a href="#Hello_World" class="headerlink" title="Hello World"></a>Hello World</h4><p>We will try changing the Title field content to <strong>Hello World</strong>, and verify that text is changing on home page or not. After making any change, we need to publish the item; As I discussed earlier our changes will save in to Master database. On Click of publish latest modifications/final content gets pushed to <strong>web</strong> database. Refer Below screenshot for final output we are expecting. Hello world is indeed appearing on home page.</p>
+<p><img src="/css/images/helloworld-content.png" alt=""></p>
+<p>Sitecore supports both ASP.NET web forms and MVC, but default home page comes with all web forms related code. Currently most of new Sitecore implementations are done in MVC. So in coming up posts, we will always try to see the code examples in MVC.<br>ASP.NET web forms is still very much in picture, because lot of implementations till now are done in web forms. Whenever we are maintaining those applications, web forms knowledge is very much required.<br>That’s all for this week.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" data-id="ciw7qcpz300007kmgpwe8noc4" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Saturday Sitecore Learning - Sitecore Code review check list</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-default-homepage.png
+)" alt="Saturday Sitecore Learning - Default Home Page" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="title">Saturday Sitecore Learning - Default Home Page</a></p>
+              <p class="item-date"><time datetime="2016-12-03T05:30:00.000Z" itemprop="datePublished">December 03, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="title">Saturday Sitecore Learning - Sitecore Code review check list</a></p>
+              <p class="item-date"><time datetime="2016-11-26T05:30:00.000Z" itemprop="datePublished">November 26, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-databases.png
+)" alt="Saturday Sitecore Learning - Sitecore Databases" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/" class="title">Saturday Sitecore Learning - Sitecore Databases</a></p>
+              <p class="item-date"><time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/VS-new-project.png
+)" alt="Saturday Sitecore Learning - Visual Studio - Project - Outside Web root" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/" class="title">Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</a></p>
+              <p class="item-date"><time datetime="2016-11-12T05:30:00.000Z" itemprop="datePublished">November 12, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/VS-new-project.png
+)" alt="Saturday Sitecore Learning - Visual Studio - Project - Inside Web root" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/" class="title">Saturday Sitecore Learning - Visual Studio - Project - Inside Web root</a></p>
+              <p class="item-date"><time datetime="2016-11-05T05:30:00.000Z" itemprop="datePublished">November 05, 2016</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">14</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Gopikrishna Gujjula<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+  </div>
+</footer>
+
+    
+
+<script>
+  var disqus_shortname = 'gopigujjula';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
