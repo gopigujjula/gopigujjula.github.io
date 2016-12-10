@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2016-12-03T13:00:53.228Z</updated>
+  <updated>2016-12-10T17:20:09.916Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Templates</title>
+    <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template/"/>
+    <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template/</id>
+    <published>2016-12-10T07:30:00.000Z</published>
+    <updated>2016-12-10T17:20:09.916Z</updated>
+    
+    <content type="html"><![CDATA[<p>As part of <a href="/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning series</a>, till now we looked into,</p>
+<ul>
+<li><a href="/2016/06/Saturday-Sitecore-Learning-CMS/">What is CMS?</a></li>
+<li><a href="/2016/06/Saturday-Sitecore-Learning-About-Sitecore/">What is Sitecore?</a></li>
+<li><a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a> (I prefer using SIM)</li>
+<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> (Outside webroot)</li>
+<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">About Sitecore Databases</a></li>
+<li><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Exploring Default home page</a></li>
+</ul>
+<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not take your time and setup both.<br>From now onwards let’s look into each core Sitecore concepts in a more detail manner.</p>
+<p>In this post let’s look into one of the important part of Sitecore content, which is Template.</p>
+<h4 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h4><p>Templates, also commonly referred to as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
+<p>To understand it better, Templates can be compared to Class (In object oriented programming) definitions,</p>
+<ul>
+<li>Each Class contain fields with their respective data types, similarly every Template contain fields, with their respective field types. (Ex: <em>Single-line text</em>)</li>
+<li>Any number of instances can be created for a class, similarly we can create any number of content items for a single template.</li>
+<li>Class supports inheritance, similarly templates also supports inheritance, in which a single template can inherit from multiple base templates, to inherit the common fields.</li>
+</ul>
+<p>Before creating any content, first we need to create a Template with fields and their types. In a nutshell, They specify the data fields and many other settings that can be applied to content upon creation.</p>
+<p>All Templates are defined under /sitecore/templates in Sitecore tree structure.</p>
+<p><img src="/css/images/templates-tree.png" alt=""></p>
+<p>To open templates, we can open them either from Content Editor, or from Template Navigator, which is present in Start menu. (Start menu is available in Desktop mode)</p>
+<p><img src="/css/images/template-manager.png" alt=""></p>
+<p>While exploring <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">default home page</a>, we noticed that home page content item, is using Sample item template, which can be found in <em>/sitecore/templates/Sample/Sample Item</em><br><img src="/css/images/default-home-template.png" alt=""></p>
+<p>There are various templates types,</p>
+<ul>
+<li>Page Templates</li>
+<li>Datasource Templates</li>
+<li>Folder Templates</li>
+<li>Branch Templates</li>
+</ul>
+<ul>
+<li><p><strong>Page Templates:</strong><br>As the name suggests these are the templates, used to create page content. Similar to other template types, this also can contain fields, field sections, and inheritance. But only page templates can have presentation settings, Sitecore uses these presentation settings to render the page. All the components are added in presentation settings.</p>
+</li>
+<li><p><strong>Datasource Templates:</strong><br>Component items are created using this templates. Same component item can be re-used on multiple pages using datasource. This templates do not contain any presentation settings.</p>
+</li>
+<li><p><strong>Folder Templates:</strong><br>These templates are used for folders; mainly they enable reuse of a folder’s set of insert options to maintain which items can be created in the folder.</p>
+</li>
+<li><p><strong>Branch Templates:</strong><br>Normally we create a single item from one template. But what if we need to create a set of certain content items, whenever we create particular item. This can be done manually, but it is time consuming and error prone. Branch templates are useful in this scenarios. With branch templates, we can specify a predefined hierarchy of dependencies<br>that are created each time an item is created from the template.</p>
+</li>
+</ul>
+<p>Next post we will look into Sitecore field types.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;As part of &lt;a href=&quot;/Sitecore/Saturday-Sitecore-Learning/&quot;&gt;Saturday Sitecore Learning series&lt;/a&gt;, till now we looked into,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Default Home Page</title>
@@ -582,7 +654,7 @@
     <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/"/>
     <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/</id>
     <published>2016-10-01T03:30:00.000Z</published>
-    <updated>2016-11-05T12:21:22.337Z</updated>
+    <updated>2016-12-10T08:24:45.813Z</updated>
     
     <content type="html"><![CDATA[<p><em>My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.</em></p>
 <p>Again I am re-initiating it from this month. In learning series, till now we have seen what is Sitecore, resources, and certification information. From now onwards, we will look into Initial Setup, installation, and implementation parts.</p>
@@ -606,6 +678,7 @@
 <li>IIS</li>
 <li>Visual Studio - Community/Professional/Enterprise</li>
 <li>MS SQL Server or Oracle</li>
+<li>Mongo DB</li>
 </ul>
 <p>You can find more details <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a> about Sitecore compatibility.</p>
 <p>Download latest Sitecore exe file -version (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>.</p>
@@ -1013,53 +1086,6 @@
     
     
       <category term="Tools" scheme="http://gopigujjula.com/tags/Tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dotnet Bangalore Q1-2016</title>
-    <link href="http://gopigujjula.com/2016/02/DoteNet-Bangalore-meetup-Q1-2016/"/>
-    <id>http://gopigujjula.com/2016/02/DoteNet-Bangalore-meetup-Q1-2016/</id>
-    <published>2016-02-28T11:38:00.000Z</published>
-    <updated>2016-03-26T14:06:02.739Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="Dotnet_Bangalore_User_Group__2827-02-2016_29"><a href="#Dotnet_Bangalore_User_Group__2827-02-2016_29" class="headerlink" title="Dotnet Bangalore User Group (27-02-2016)"></a><a href="https://www.facebook.com/groups/dotnetbangalore/" target="_blank" rel="external">Dotnet Bangalore User Group</a> (27-02-2016)</h5><p>This is one of the active dotnet user group in Bangalore. This event is conducted quarterly once on Saturday &amp; sponsored by <a href="http://www.prowareness.com/" target="_blank" rel="external">Prowareness Bangalore</a>. In this event speakers usually present on the .NET related topics.</p>
-<p>Around one year back that first I heard about this user group. Every time I plan to attend, but at the last minute, had to cancel because of some or other urgent work. This time I was very determined to attend it, glad that at last I could make it.</p>
-<p>This event happens at Prowareness office, Embassy TechVillage, &amp; a full day event.<br><img src="/css/images/dotnetblrQ1-2016.jpg" alt=""></p>
-<p>Following are the list of talks happened on 2016 Q1 meetup,</p>
-<ol>
-<li><p><strong>What’s New in EF 7, by Raghavendra Rentala</strong><br>Raghavendra is having very good knowledge on Entity Framework, he explained some of the new concepts introduced in EF 7, with on hands demo. This talk was very informative.</p>
-</li>
-<li><p><strong>Techniques to optimize .NET Apps Performance</strong> <a href="https://www.facebook.com/Anand.M.Deshmukh" target="_blank" rel="external">Anand Deshmukh</a><br>This talk was completely on how to write better code in .NET, by keeping the performance in mind. This was also hands on.</p>
-</li>
-<li><p><strong>Common Intermediate Language (CIL) by Example</strong> <a href="https://www.facebook.com/ganesh.sg.144" target="_blank" rel="external">Ganesh SG</a><br>This was the talk of the day. With his talk, Ganesh has taken us back to College days, where we used to struggle with Finite Automata. He explained how to learn &amp; practice on reading the Intermediate language, and all what are all the benefits we can get from that.</p>
-</li>
-<li><p><strong>Inheritance Concepts With Database Table, by Madhukar Bhandari</strong><br>Madhukar clearly explained the Table per type(TPT), Table per hierarchy (TPH), and Table per concrete type(TPC) concepts in Database. This was also hands on demo.</p>
-</li>
-<li><p><strong>Dependency Injection with Ninject</strong> <a href="https://www.facebook.com/mahesh.pratap.it" target="_blank" rel="external">Mahesh Pratap</a><br>This event in happened at the time of open house. Mahesh neatly explained the basics of Dependency injection, and how to implement DI concept using Ninject DI container in both desktop &amp; web application.</p>
-</li>
-</ol>
-<p>Few other things about the event,</p>
-<ul>
-<li>Event is free of cost.</li>
-<li>Lunch, snacks, Tea, &amp; juice are provided by the sponsors.</li>
-<li>After the lunch, there was a technical quiz. Participants were divided into 3 groups, and believe me this Quiz was lot of fun. For winning team there was prizes too.</li>
-<li>At end of the event, there was a lucky draw on the submitted feedback forms.</li>
-</ul>
-<p>Some of the pics from facebook group page,</p>
-<p><img src="/css/images/Q1-2016-1.jpg" alt=""></p>
-<p><img src="/css/images/Q1-2016-2.jpg" alt=""></p>
-<p>Looking for Q2 meetup.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;Dotnet_Bangalore_User_Group__2827-02-2016_29&quot;&gt;&lt;a href=&quot;#Dotnet_Bangalore_User_Group__2827-02-2016_29&quot; class=&quot;headerlink&quot; title=&quot;Dotn
-    
-    </summary>
-    
-    
-      <category term="Bangalore Tech event" scheme="http://gopigujjula.com/tags/Bangalore-Tech-event/"/>
     
   </entry>
   
