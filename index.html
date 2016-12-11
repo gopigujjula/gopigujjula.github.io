@@ -145,7 +145,7 @@ ga('send', 'pageview');
 
       
       <section id="main">
-      <article id="post-Saturday-Sitecore-Learning-Template" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-Saturday-Sitecore-Learning-Template-Part-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -154,7 +154,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/Saturday-Sitecore-Learning-Template/">Saturday Sitecore Learning - Templates</a>
+      <a class="article-title" href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/">Saturday Sitecore Learning - Templates Part-1</a>
     </h1>
   
 
@@ -162,7 +162,7 @@ ga('send', 'pageview');
           
   <div class="article-date">
     <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/12/Saturday-Sitecore-Learning-Template/" style="text-align:right">
+    <a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" style="text-align:right">
       <time datetime="2016-12-10T07:30:00.000Z" itemprop="datePublished">December 10, 2016</time>
     </a>
   </div>
@@ -189,46 +189,41 @@ ga('send', 'pageview');
 <li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">About Sitecore Databases</a></li>
 <li><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Exploring Default home page</a></li>
 </ul>
-<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not take your time and setup both.<br>From now onwards let’s look into each core Sitecore concepts in a more detail manner.</p>
-<p>In this post let’s look into one of the important part of Sitecore content, which is Template.</p>
-<h4 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h4><p>Templates, also commonly referred to as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
+<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not, please go though these two posts, <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a>, <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> and try setting them up.</p>
+<p>From now onwards we will look into core Sitecore concepts in a more detail manner.</p>
+<p>First let’s explore one of the important part of Sitecore, which are Templates. Understanding the Templates, is very important for developers, as selecting the correct template type, dictates overall experience of managing content. Templates is a very vast topic, and can not be covered in a single post, so it will be spanning across multiple posts.</p>
+<h4 id="Template_Fundamentals"><a href="#Template_Fundamentals" class="headerlink" title="Template Fundamentals"></a>Template Fundamentals</h4><p>Templates, also commonly referred to as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
 <p>To understand it better, Templates can be compared to Class (In object oriented programming) definitions,</p>
 <ul>
 <li>Each Class contain fields with their respective data types, similarly every Template contain fields, with their respective field types. (Ex: <em>Single-line text</em>)</li>
-<li>Any number of instances can be created for a class, similarly we can create any number of content items for a single template.</li>
-<li>Class supports inheritance, similarly templates also supports inheritance, in which a single template can inherit from multiple base templates, to inherit the common fields.</li>
+<li>Any number of instances can be created based on a class, similarly we can create any number of content items based on a single template.</li>
+<li>Class supports inheritance, similarly templates also supports inheritance, in which a single template can inherit from multiple base templates, to mainly share the common fields.</li>
 </ul>
-<p>Before creating any content, first we need to create a Template with fields and their types. In a nutshell, They specify the data fields and many other settings that can be applied to content upon creation.</p>
-<p>All Templates are defined under /sitecore/templates in Sitecore tree structure.</p>
+<p>Before creating any content, first we need to create a Template with fields and their types. In a nutshell, Templates specify the data fields and many other settings that can be applied to content upon creation.</p>
+<p>All Templates are defined under <em>/sitecore/templates</em> in Sitecore tree structure.</p>
 <p><img src="/css/images/templates-tree.png" alt=""></p>
 <p>To open templates, we can open them either from Content Editor, or from Template Navigator, which is present in Start menu. (Start menu is available in Desktop mode)</p>
 <p><img src="/css/images/template-manager.png" alt=""></p>
 <p>While exploring <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">default home page</a>, we noticed that home page content item, is using Sample item template, which can be found in <em>/sitecore/templates/Sample/Sample Item</em><br><img src="/css/images/default-home-template.png" alt=""></p>
-<p>There are various templates types,</p>
+<p>Following are some of the terms, we need to understand, before trying our hands on creating templates. Lets look into each concept more detail in coming up posts.</p>
 <ul>
-<li>Page Templates</li>
-<li>Datasource Templates</li>
-<li>Folder Templates</li>
-<li>Branch Templates</li>
+<li>Fields - Field Sections, Field Types, Field Source, and Field Validation.</li>
+<li>Template Inheritance</li>
+<li>Standard Values</li>
+<li>Template types</li>
 </ul>
+<p>In next post we will look into Sitecore fields.</p>
+<p><strong>References</strong></p>
 <ul>
-<li><p><strong>Page Templates:</strong><br>As the name suggests these are the templates, used to create page content. Similar to other template types, this also can contain fields, field sections, and inheritance. But only page templates can have presentation settings, Sitecore uses these presentation settings to render the page. All the components are added in presentation settings.</p>
-</li>
-<li><p><strong>Datasource Templates:</strong><br>Component items are created using this templates. Same component item can be re-used on multiple pages using datasource. This templates do not contain any presentation settings.</p>
-</li>
-<li><p><strong>Folder Templates:</strong><br>These templates are used for folders; mainly they enable reuse of a folder’s set of insert options to maintain which items can be created in the folder.</p>
-</li>
-<li><p><strong>Branch Templates:</strong><br>Normally we create a single item from one template. But what if we need to create a set of certain content items, whenever we create particular item. This can be done manually, but it is time consuming and error prone. Branch templates are useful in this scenarios. With branch templates, we can specify a predefined hierarchy of dependencies<br>that are created each time an item is created from the template.</p>
-</li>
+<li>Professional Sitecore 8 development - <a href="http://www.apress.com/us/book/9781484222911" target="_blank" rel="external">http://www.apress.com/us/book/9781484222911</a></li>
 </ul>
-<p>Next post we will look into Sitecore field types.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template/" data-id="ciwizbm6m001kb4mgcouikmpx" class="article-share-link">Share</a>
+      <a data-url="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" data-id="ciwkbx97n000gyomgzzkg031m" class="article-share-link">Share</a>
       
-        <a href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
@@ -720,10 +715,10 @@ ga('send', 'pageview');
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/12/Saturday-Sitecore-Learning-Template/" class="thumbnail">
+              <a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" class="thumbnail">
   
     <span style="background-image:url(/css/images/templates-tree.png
-)" alt="Saturday Sitecore Learning - Templates" class="thumbnail-image"></span>
+)" alt="Saturday Sitecore Learning - Templates Part-1" class="thumbnail-image"></span>
   
 </a>
 
@@ -731,7 +726,7 @@ ga('send', 'pageview');
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Template/" class="title">Saturday Sitecore Learning - Templates</a></p>
+              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" class="title">Saturday Sitecore Learning - Templates Part-1</a></p>
               <p class="item-date"><time datetime="2016-12-10T07:30:00.000Z" itemprop="datePublished">December 10, 2016</time></p>
             </div>
           </li>
