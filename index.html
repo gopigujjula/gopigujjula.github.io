@@ -114,7 +114,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        50
+        51
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -145,6 +145,124 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Template-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Saturday Sitecore Learning - Templates Part 2</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" style="text-align:right">
+      <time datetime="2017-01-21T07:30:00.000Z" itemprop="datePublished">January 21, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
+<p>How each property of the class has it’s own type, similarly each template field also has a field type. Field type determines, what type of content (normal text, rich text, image etc.) can be entered into the field, and what type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data, and also in what format the value is stored in the database.</p>
+<p>Out of the box Sitecore provides lot of field types, but based on the need, developers can also create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
+<p>We can categories field types as shown below,</p>
+<ul>
+<li>Simple types</li>
+<li>List types</li>
+<li>Link types</li>
+</ul>
+<p>Let’s look into types under Simple types,</p>
+<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, or an integer, or a date value.</p>
+<p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
+<ul>
+<li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/single-line-text.png" alt=""></p>
+<ul>
+<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/multi-line-text.png" alt=""></p>
+<ul>
+<li><strong>Rich Text:</strong> This field type allows content authors to enter large text with media items, and also allows to modify HTML. This is similar to WYSIWYG editor.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/rich-text.png" alt=""></p>
+<ul>
+<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/integer-field-type.png" alt=""></p>
+<ul>
+<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/number-type.png" alt=""></p>
+<ul>
+<li><strong>Password:</strong> This field type is used for passwords, where characters in the field are masked. It is similar to HTML input control with password type.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField</li>
+</ul>
+<p><img src="/css/images/password-field-type.png" alt=""></p>
+<ul>
+<li><strong>Date &amp; Date Time:</strong> As the name suggests both of these field types are used for date &amp; date time respectively. This field types allow content authors to select or manually enter the data and time. These are similar to HTML input control with date type.<br><em>Raw value:</em> string (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601</a> formatted date-time, <strong>yyyyMMddThhmmss</strong>)<br><em>Field type class:</em> Sitecore.Data.Fields.DateField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/date-field-type.png" alt=""></p>
+<ul>
+<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and is similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/checkbox-field-type.png" alt=""></p>
+<ul>
+<li><strong>Image:</strong> This field type allows content authors to select an image from the media library and specify image properties.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.ImageField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/image-field-type.png" alt=""></p>
+<ul>
+<li><strong>File:</strong> The File field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the user opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/file-field-type.png" alt=""></p>
+<ul>
+<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
+</ul>
+<p><img src="/css/images/word-document-field-type.png" alt=""></p>
+<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
+<p>In coming posts, will look into List and Link types.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" data-id="ciy6te1uf0000xgmg7kpnxel4" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -570,126 +688,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/" style="text-align:right">
-      <time datetime="2016-11-12T05:30:00.000Z" itemprop="datePublished">November 12, 2016</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore more advanced,</p>
-<p>I am using <strong>Visual Studio 2015 community/professional</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
-<p><strong>Outside web root setup steps:</strong></p>
-<ul>
-<li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
-</ul>
-<p><img src="/css/images/VS-new-project.png" alt=""></p>
-<ul>
-<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
-</li>
-<li><p>Enter the <strong>Name</strong> of the project, specify the <strong>Location</strong> field, and then click on OK to continue.</p>
-</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-MVC-project.png" alt=""></p>
-<ul>
-<li>Now we get another dialog, to select the project template. Here select <strong>Empty</strong> template present under <strong>ASP.NET 4.5.2 Templates</strong> section, and check the MVC checkbox as shown below, and click OK to proceed.</li>
-</ul>
-<p><img src="/css/images/VS-MVC-project.png" alt=""></p>
-<ul>
-<li>Once the project is created, solution contains the files as shown below.</li>
-</ul>
-<p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
-<ul>
-<li>Now from the project, remove <strong>Web.config</strong>, and <strong>Global.asax</strong> files, otherwise while publishing, these files will override the respective Sitecore files.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-file-delete.png" alt=""></p>
-<ul>
-<li>Once after deleted, we need to copy both <strong>Web.config</strong> and <strong>Global.asax</strong> from web root into the project.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-file-paste.png" alt=""></p>
-<ul>
-<li>Create a folder with name <strong>App_Config</strong>, then copy the <strong>ConnectionStrings.config</strong> &amp; <strong>Sitecore.config</strong> files from web root to the project.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-config files.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-config files-copy.png" alt=""></p>
-<ul>
-<li>Next step is to add Sitecore references. We need both <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong>, Let’s grab these files from web root. Create a directory in Project file system, let’s call that <strong>Assemblies</strong>, and copy the two dll’s to inside the directory.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-dll.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-copy-1.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-copy-2.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-reference.png" alt=""></p>
-<ul>
-<li>Please double check on the Mvc version compatibility <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a>, and make sure you are using correct .NET Mvc version. We can verify the MVC version in <strong>Web.config</strong> file as shown below.</li>
-</ul>
-<p><img src="/css/images/VS-mvc-version.png" alt=""></p>
-<ul>
-<li>Now our project is all set. To deploy we need to create a publishing profile. Select <strong>Publishing Method</strong> as <strong>File System</strong> and specify the local Sitecore instance web root path.</li>
-</ul>
-<p><img src="/css/images/VS-publish-profile.png" alt=""></p>
-<p><img src="/css/images/VS-publish-profile-2.png" alt=""></p>
-<p><img src="/css/images/VS-publish-profile-3.png" alt=""></p>
-<ul>
-<li>At last, click on the <strong>Publish</strong> button, we can see the Site is published to web root folder.</li>
-</ul>
-<p><img src="/css/images/VS-publish-profile-4.png" alt=""></p>
-<ul>
-<li>To confirm the publish to web root folder, we can navigate to bin folder in web root folder, and see that <strong>SIMSitecore.dll</strong> is copied over.</li>
-</ul>
-<p><img src="/css/images/VS-publish-verification.png" alt=""></p>
-<ul>
-<li>Now try to load the site, and check whether we are able to login to Sitecore or not.</li>
-</ul>
-<p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
-<p><img src="/css/images/VS-deploy-verify-2.png" alt=""></p>
-<p>That’s all, thanks for reading.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/" data-id="civgb090y0004twmgeu6jn7m8" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -702,6 +700,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-simple-types.png
+)" alt="Saturday Sitecore Learning - Templates Part 2" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" class="title">Saturday Sitecore Learning - Templates Part 2</a></p>
+              <p class="item-date"><time datetime="2017-01-21T07:30:00.000Z" itemprop="datePublished">January 21, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -778,25 +795,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-databases.png
-)" alt="Saturday Sitecore Learning - Sitecore Databases" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/" class="title">Saturday Sitecore Learning - Sitecore Databases</a></p>
-              <p class="item-date"><time datetime="2016-11-19T05:30:00.000Z" itemprop="datePublished">November 19, 2016</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -806,7 +804,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
     </div>
   </div>
 
@@ -819,7 +817,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 - 2017 Gopikrishna Gujjula<br>
+      &copy; 2017 Gopikrishna Gujjula<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
     </div>
   </div>

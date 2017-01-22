@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Saturday Sitecore Learning - Templates Part 2 | Gopi Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Template FieldsThis is the second post as part of Sitecore Template series.
+In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Saturday Sitecore Learning - Templates Part 2">
+<meta property="og:url" content="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="Template FieldsThis is the second post as part of Sitecore Template series.
+In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-simple-types.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/single-line-text.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/multi-line-text.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/rich-text.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/integer-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/number-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/password-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/date-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/checkbox-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/image-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/file-field-type.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/word-document-field-type.png">
+<meta property="og:updated_time" content="2017-01-22T17:08:50.434Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Saturday Sitecore Learning - Templates Part 2">
+<meta name="twitter:description" content="Template FieldsThis is the second post as part of Sitecore Template series.
+In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+<link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
+  
+  
+    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo">
+        <span class="site-title">Gopi Notes</span>
+      </a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+    <!--  <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+        
+      </div> -->
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <!--
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+          
+        </td>-->
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29">
+      <h2 id="name">Gopikrishna Gujjula</h2>
+      <h3 id="title">.NET &amp; Sitecore Developer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Bangalore, India</span>
+      <a id="follow" target="_blank" href="https://twitter.com/gopikreddy">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        51
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        18
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/gopikreddy" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/gopikreddy" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/gopikreddy.gn" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+          <td><a href="/atom.xml" target="_blank" title="rss"><i class="fa fa-rss"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main"><article id="post-Saturday-Sitecore-Learning-Template-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Saturday Sitecore Learning - Templates Part 2
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" style="text-align:right">
+      <time datetime="2017-01-21T07:30:00.000Z" itemprop="datePublished">January 21, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
+<p>How each property of the class has it’s own type, similarly each template field also has a field type. Field type determines, what type of content (normal text, rich text, image etc.) can be entered into the field, and what type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data, and also in what format the value is stored in the database.</p>
+<p>Out of the box Sitecore provides lot of field types, but based on the need, developers can also create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
+<p>We can categories field types as shown below,</p>
+<ul>
+<li>Simple types</li>
+<li>List types</li>
+<li>Link types</li>
+</ul>
+<p>Let’s look into types under Simple types,</p>
+<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, or an integer, or a date value.</p>
+<p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
+<ul>
+<li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/single-line-text.png" alt=""></p>
+<ul>
+<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/multi-line-text.png" alt=""></p>
+<ul>
+<li><strong>Rich Text:</strong> This field type allows content authors to enter large text with media items, and also allows to modify HTML. This is similar to WYSIWYG editor.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/rich-text.png" alt=""></p>
+<ul>
+<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/integer-field-type.png" alt=""></p>
+<ul>
+<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/number-type.png" alt=""></p>
+<ul>
+<li><strong>Password:</strong> This field type is used for passwords, where characters in the field are masked. It is similar to HTML input control with password type.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField</li>
+</ul>
+<p><img src="/css/images/password-field-type.png" alt=""></p>
+<ul>
+<li><strong>Date &amp; Date Time:</strong> As the name suggests both of these field types are used for date &amp; date time respectively. This field types allow content authors to select or manually enter the data and time. These are similar to HTML input control with date type.<br><em>Raw value:</em> string (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601</a> formatted date-time, <strong>yyyyMMddThhmmss</strong>)<br><em>Field type class:</em> Sitecore.Data.Fields.DateField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/date-field-type.png" alt=""></p>
+<ul>
+<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and is similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/checkbox-field-type.png" alt=""></p>
+<ul>
+<li><strong>Image:</strong> This field type allows content authors to select an image from the media library and specify image properties.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.ImageField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/image-field-type.png" alt=""></p>
+<ul>
+<li><strong>File:</strong> The File field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the user opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/file-field-type.png" alt=""></p>
+<ul>
+<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
+</ul>
+<p><img src="/css/images/word-document-field-type.png" alt=""></p>
+<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
+<p>In coming posts, will look into List and Link types.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" data-id="ciy6te1uf0000xgmg7kpnxel4" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Saturday Sitecore Learning - Sitecore Enhancing Content Author Experience</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-simple-types.png
+)" alt="Saturday Sitecore Learning - Templates Part 2" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" class="title">Saturday Sitecore Learning - Templates Part 2</a></p>
+              <p class="item-date"><time datetime="2017-01-21T07:30:00.000Z" itemprop="datePublished">January 21, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/firsttechtalkwebinar.jpg
+)" alt="Saturday Sitecore Learning - Sitecore Enhancing Content Author Experience" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/" class="title">Saturday Sitecore Learning - Sitecore Enhancing Content Author Experience</a></p>
+              <p class="item-date"><time datetime="2017-01-14T05:30:00.000Z" itemprop="datePublished">January 14, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/templates-tree.png
+)" alt="Saturday Sitecore Learning - Templates Part-1" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" class="title">Saturday Sitecore Learning - Templates Part-1</a></p>
+              <p class="item-date"><time datetime="2016-12-10T07:30:00.000Z" itemprop="datePublished">December 10, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-default-homepage.png
+)" alt="Saturday Sitecore Learning - Default Home Page" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="title">Saturday Sitecore Learning - Default Home Page</a></p>
+              <p class="item-date"><time datetime="2016-12-03T05:30:00.000Z" itemprop="datePublished">December 03, 2016</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" class="title">Saturday Sitecore Learning - Sitecore Code review check list</a></p>
+              <p class="item-date"><time datetime="2016-11-26T05:30:00.000Z" itemprop="datePublished">November 26, 2016</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Gopikrishna Gujjula<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+  </div>
+</footer>
+
+    
+
+<script>
+  var disqus_shortname = 'gopigujjula';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

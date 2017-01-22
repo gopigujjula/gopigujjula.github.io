@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-01-14T18:04:55.739Z</updated>
+  <updated>2017-01-22T17:08:50.434Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Templates Part 2</title>
+    <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
+    <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
+    <published>2017-01-21T07:30:00.000Z</published>
+    <updated>2017-01-22T17:08:50.434Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
+<p>How each property of the class has it’s own type, similarly each template field also has a field type. Field type determines, what type of content (normal text, rich text, image etc.) can be entered into the field, and what type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data, and also in what format the value is stored in the database.</p>
+<p>Out of the box Sitecore provides lot of field types, but based on the need, developers can also create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
+<p>We can categories field types as shown below,</p>
+<ul>
+<li>Simple types</li>
+<li>List types</li>
+<li>Link types</li>
+</ul>
+<p>Let’s look into types under Simple types,</p>
+<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, or an integer, or a date value.</p>
+<p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
+<ul>
+<li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/single-line-text.png" alt=""></p>
+<ul>
+<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/multi-line-text.png" alt=""></p>
+<ul>
+<li><strong>Rich Text:</strong> This field type allows content authors to enter large text with media items, and also allows to modify HTML. This is similar to WYSIWYG editor.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/rich-text.png" alt=""></p>
+<ul>
+<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/integer-field-type.png" alt=""></p>
+<ul>
+<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/number-type.png" alt=""></p>
+<ul>
+<li><strong>Password:</strong> This field type is used for passwords, where characters in the field are masked. It is similar to HTML input control with password type.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField</li>
+</ul>
+<p><img src="/css/images/password-field-type.png" alt=""></p>
+<ul>
+<li><strong>Date &amp; Date Time:</strong> As the name suggests both of these field types are used for date &amp; date time respectively. This field types allow content authors to select or manually enter the data and time. These are similar to HTML input control with date type.<br><em>Raw value:</em> string (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601</a> formatted date-time, <strong>yyyyMMddThhmmss</strong>)<br><em>Field type class:</em> Sitecore.Data.Fields.DateField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/date-field-type.png" alt=""></p>
+<ul>
+<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and is similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/checkbox-field-type.png" alt=""></p>
+<ul>
+<li><strong>Image:</strong> This field type allows content authors to select an image from the media library and specify image properties.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.ImageField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/image-field-type.png" alt=""></p>
+<ul>
+<li><strong>File:</strong> The File field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the user opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/file-field-type.png" alt=""></p>
+<ul>
+<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
+</ul>
+<p><img src="/css/images/word-document-field-type.png" alt=""></p>
+<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
+<p>In coming posts, will look into List and Link types.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Template_Fields&quot;&gt;&lt;a href=&quot;#Template_Fields&quot; class=&quot;headerlink&quot; title=&quot;Template Fields&quot;&gt;&lt;/a&gt;Template Fields&lt;/h4&gt;&lt;p&gt;This is the second
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Sitecore Enhancing Content Author Experience</title>
@@ -1071,65 +1165,6 @@
       <category term="Security" scheme="http://gopigujjula.com/tags/Security/"/>
     
       <category term="Tools" scheme="http://gopigujjula.com/tags/Tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ASP.NET Core day - BDotnet</title>
-    <link href="http://gopigujjula.com/2016/05/aspnetcoreday/"/>
-    <id>http://gopigujjula.com/2016/05/aspnetcoreday/</id>
-    <published>2016-05-09T10:37:28.000Z</published>
-    <updated>2016-11-05T11:59:13.928Z</updated>
-    
-    <content type="html"><![CDATA[<p>Another month, another <a href="https://www.facebook.com/groups/BDotNet/" target="_blank" rel="external">BDotent</a> community event, but this time it is on latest <strong>ASP.NET Core</strong> technology and a full day event.</p>
-<p>We are not going to miss it. :)</p>
-<p>For me all the <a href="https://www.facebook.com/groups/BDotNet/" target="_blank" rel="external">BDotent</a> events are about getting to know the gist of the topic and leave with enough enthusiasm to explore the remaining details.</p>
-<p>One more big thing is Networking, It is always pleasure to meet and know the fellow developers and to share the information on what type of applications we work on, and what all the tools &amp; technologies we are using.<br><em>(This time met some of the old buddies, and also made some new friends.)</em></p>
-<p><strong>Overall, it’s mainly the experience of being present at the event.</strong></p>
-<p>As usual, all the speakers are wonderful in sharing their knowledge, and their enthusiasm conveys us the most. All the topics are very well chosen, like connecting the dots to get the overall picture on the ASP.NET core.</p>
-<p>Thank you for all the awesome speakers, and the organizing committee.</p>
-<p>It was wonderful to witness the house packed sessions.</p>
-<p><img src="/css/images/aspnetcoreday.png" alt=""></p>
-<p>My key takeaways from the event are,</p>
-<ol>
-<li><p>As there is an another new framework is out, we shouldn’t jump in and start using it for all kind of applications. We first need to understand our application use cases, then evaluate the options to take the decision.</p>
-</li>
-<li><p>ASP.NET (Web forms) framework is not going any where. It is very much supported. New features will still be coming out for this. There are lot of application, which are running on ASP.NET framework. (I had a big doubt on the ASP.NET web forms support, glad that it is clarified.)</p>
-</li>
-<li><p>ASP.NET Web forms is not supported in ASP.NET core. It is   very much dependent on System.Web.</p>
-</li>
-<li><p>POCO controller are very much useful when we do not require all the features from BaseController.</p>
-</li>
-<li><p>In new framework, Dependency Injection is already integrated, But if require, we can very much plug in any of the third party DI containers.</p>
-</li>
-<li><p>New web server (Kestrel - cross platform) written from the scratch, for the .NET core.</p>
-</li>
-<li><p>RC2 is going to be out in mid May, and RTM is going to be released by June end.</p>
-</li>
-<li><p>Cloud born applications.</p>
-</li>
-<li><p>Tag helpers, more cleanness, more readability.</p>
-</li>
-<li><p>ASP.NET core more of modularized, empty project means it’s clearly empty. Whatever we want, we need to add it.</p>
-</li>
-</ol>
-<p><em><strong>Volunteer</strong> : It was my pleasure to help the event in a very small way (being part of the registration process). Thanks <a href="https://www.facebook.com/LohithGN" target="_blank" rel="external">Lohith</a> for the opportunity.</em></p>
-<p>some pics,</p>
-<p><img src="/css/images/aspnetcoreday-1.png" alt=""><br><img src="/css/images/aspnetcoreday-2.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Another month, another &lt;a href=&quot;https://www.facebook.com/groups/BDotNet/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;BDotent&lt;/a&gt; community event, but
-    
-    </summary>
-    
-      <category term="ASP.NET" scheme="http://gopigujjula.com/categories/ASP-NET/"/>
-    
-    
-      <category term="ASP.NET" scheme="http://gopigujjula.com/tags/ASP-NET/"/>
-    
-      <category term="Bangalore Tech event" scheme="http://gopigujjula.com/tags/Bangalore-Tech-event/"/>
     
   </entry>
   
