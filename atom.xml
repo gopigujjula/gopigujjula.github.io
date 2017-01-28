@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-01-22T17:08:50.434Z</updated>
+  <updated>2017-01-28T02:36:19.679Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,27 +20,33 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
     <published>2017-01-21T07:30:00.000Z</published>
-    <updated>2017-01-22T17:08:50.434Z</updated>
+    <updated>2017-01-28T02:36:19.679Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
 <p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
-<p>How each property of the class has it’s own type, similarly each template field also has a field type. Field type determines, what type of content (normal text, rich text, image etc.) can be entered into the field, and what type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data, and also in what format the value is stored in the database.</p>
-<p>Out of the box Sitecore provides lot of field types, but based on the need, developers can also create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
-<p>We can categories field types as shown below,</p>
+<p>How each property of the class has its own type, similar way each template field also has its own field type. Field type determines, three things</p>
+<ol>
+<li>What type of content (normal text, rich text, image etc.) can be entered into the field,</li>
+<li>What type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data,</li>
+<li>In what format the value is stored in the database.</li>
+</ol>
+<p>Out of the box Sitecore provides lot of field types, but based on the requirement, developers can create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
+<p>We can classify/categorize field types as shown below,</p>
 <ul>
 <li>Simple types</li>
 <li>List types</li>
 <li>Link types</li>
 </ul>
-<p>Let’s look into types under Simple types,</p>
-<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, or an integer, or a date value.</p>
+<p>Let’s look into each type in detail,</p>
+<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, integer, or date value.</p>
 <p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
 <ul>
 <li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/single-line-text.png" alt=""></p>
 <ul>
-<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text/comments to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/multi-line-text.png" alt=""></p>
 <ul>
@@ -48,11 +54,11 @@
 </ul>
 <p><img src="/css/images/rich-text.png" alt=""></p>
 <ul>
-<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/integer-field-type.png" alt=""></p>
 <ul>
-<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/number-type.png" alt=""></p>
 <ul>
@@ -64,7 +70,7 @@
 </ul>
 <p><img src="/css/images/date-field-type.png" alt=""></p>
 <ul>
-<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and is similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
+<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and it’s similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
 </ul>
 <p><img src="/css/images/checkbox-field-type.png" alt=""></p>
 <ul>
@@ -72,11 +78,11 @@
 </ul>
 <p><img src="/css/images/image-field-type.png" alt=""></p>
 <ul>
-<li><strong>File:</strong> The File field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the user opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
+<li><strong>File:</strong> This field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the content author opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
 </ul>
 <p><img src="/css/images/file-field-type.png" alt=""></p>
 <ul>
-<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
+<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE browser)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
 </ul>
 <p><img src="/css/images/word-document-field-type.png" alt=""></p>
 <p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
@@ -84,6 +90,7 @@
 <p><strong>References:</strong></p>
 <ul>
 <li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
 <li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
 </ul>
 ]]></content>
@@ -114,19 +121,19 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/</id>
     <published>2017-01-14T05:30:00.000Z</published>
-    <updated>2017-01-14T18:04:55.739Z</updated>
+    <updated>2017-01-28T02:01:34.088Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
+    <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
 <p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
 <p>I regularly participate in technical user groups, in and around Bangalore, and also in some of the virtual user groups (webinars). This expands my knowledge, helps in understanding new trends, buzzwords, and also to update my skills.</p>
-<p>In last November, I had given a Sitecore knowledge share session in our team. As my friends were also interested in the topic, then got the idea of why not give this session in Sitecore user group, but this is completely out of my comfort zone.</p>
-<p>Lot of thoughts went into my head, previously also many times got the same idea, but every time dropped it because of my discomfort. This time there was an urge to do it at any cost.</p>
+<p>In last November, I had given a Sitecore knowledge share session in my organization. As my friends were also interested in the topic, then got the idea of why not give this session in Sitecore user group, but this is completely out of my comfort zone.</p>
+<p>Lot of thoughts runs in my mind, previously also many times got the same idea, but every time dropped it because of my discomfort. This time there was an urge to do it at any cost.</p>
 <blockquote><p>Always do what you are afraid to do.</p>
 <footer><strong>-Ralph Waldo Emerson</strong></footer></blockquote>
 <p><img src="/css/images/firsttechtalkwebinar.jpg" alt=""></p>
-<p>After much deliberation, one day mailed my willingness to present, and other relevant information to SUG Bangalore. <a href="https://techmusingz.wordpress.com/" target="_blank" rel="external">Annie</a> was very encouraging, and also gave some tips on presentation. After few back and forth mails we decided on a date (07-January-2017) and announced it. By that time I had finished with presentation deck, and local demo site, and also practiced the talk for few times (should have practiced more).</p>
-<p>As it is a Webinar, one day before, we did a dry run in my system, and all set for big day. On 7th morning when I got up to practice once more, my demo site is down. It was just 2 hours before the session, there are only two options, either setup the site again, or make the existing site up. I choose the first option, as there was not much time in digging the issue. Quickly I had setup the site again (thanks to Sitecore Instance Manager), and created all the necessary items.</p>
-<p>In my area power is not so reliable, so decided to give the talk from office. Going to office on Saturdays is completely different experience, thanks to <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> for accompanying me. When session started, I was lot nervous, later was little bit at ease. As it is a webinar (can’t see audience faces), I couldn’t decide exactly on where I need to slow down, or increase my speed, and same case with screen zoom in or zoom out. But somehow I was able to finish up within the time.</p>
+<p>After much deliberation, one day mailed my willingness to present, and other relevant information to SUG Bangalore. <a href="https://techmusingz.wordpress.com/" target="_blank" rel="external">Annie</a> was very encouraging, and also gave some tips on presentation. After a short communication through emails we decided on a date (07-January-2017) and announced it. By that time, I had finished with presentation deck, and local demo site, and also practiced the talk to follow time constraint (should have practiced more).</p>
+<p>As it is a Webinar, one day before, we did a dry run in my system, and all set for go live. On 7th morning when I woke up to practice once more, my demo site is down. It was just 2 hours before the session, there are only two options, either setup the site again, or make the existing site up. I choose the first option, as there was not much time in digging the issue. Quickly I had setup the site again (thanks to Sitecore Instance Manager), and created all the necessary items.</p>
+<p>In my area power is not so reliable, so decided to give the talk from office. Going to office on Saturdays is completely different experience, thanks to <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> for accompanying me. When session started, I was lot nervous, slowly getting into comfort zone with ease. As it is a webinar (can’t see audience faces), I couldn’t decide exactly on where I need to slow down, or increase my speed, and same case with screen zoom in or zoom out. But somehow I was able to finish up within the time.</p>
 <p>Only two things are in my mind while preparing &amp; giving the presentation,</p>
 <ul>
 <li>Should not give any misleading or false information.</li>
@@ -142,10 +149,10 @@
 <p>In coming months, some of the topics I am thinking of presenting are,</p>
 <ul>
 <li>Sitecore Media Framework with Brightcove (Two parts)</li>
-<li>Sitecore Goals form Developer perspective</li>
-<li>Search : Absolute basics</li>
+<li>Sitecore Goals from Developer perspective</li>
+<li>Search: Absolute basics</li>
 <li>Niche topics: Sitemap, SEO Metadata, URL redirects, 400 not found, 500 server error page, and RSS feeds.</li>
-<li>Sitecore What, Why &amp; How : For Beginners who never heard of Sitecore.</li>
+<li>Sitecore What, Why &amp; How: For .NET developers who never heard of Sitecore.</li>
 <li>T4 templates &amp; code generation.</li>
 </ul>
 <p>User groups I regularly participate are,</p>
@@ -190,7 +197,7 @@
     <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/"/>
     <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/</id>
     <published>2016-12-10T07:30:00.000Z</published>
-    <updated>2016-12-16T17:49:14.282Z</updated>
+    <updated>2017-01-28T02:04:09.932Z</updated>
     
     <content type="html"><![CDATA[<p>As part of <a href="/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning series</a>, till now we looked into,</p>
 <ul>
@@ -201,10 +208,10 @@
 <li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">About Sitecore Databases</a></li>
 <li><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Exploring Default home page</a></li>
 </ul>
-<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not, please go though these two posts, <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a>, <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> and try setting them up.</p>
-<p>From now onwards we will look into core Sitecore concepts in a more detail manner.</p>
-<p>First let’s explore one of the important part of Sitecore, which are Templates. Understanding the Templates, is very important for developers, as selecting the correct template type, dictates overall experience of managing content. Templates is a very vast topic, and can not be covered in a single post, so it will be spanning across multiple posts.</p>
-<h4 id="Template_Fundamentals"><a href="#Template_Fundamentals" class="headerlink" title="Template Fundamentals"></a>Template Fundamentals</h4><p>Templates, also commonly referred to as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
+<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not, please go through these two posts, <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a>, <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> and try setting them up.</p>
+<p>From now onwards we will look into core Sitecore concepts in more detail manner.</p>
+<p>First let’s explore one of the important part of Sitecore, which are Templates. Understanding the Templates, is very important for developers, as selecting the correct template type, dictates overall experience of managing content. Templates is a very vast topic, and can’t be covered in a single post, so it will be spanning across multiple posts.</p>
+<h4 id="Template_Fundamentals"><a href="#Template_Fundamentals" class="headerlink" title="Template Fundamentals"></a>Template Fundamentals</h4><p>Templates, also commonly referred as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
 <p>To understand it better, Templates can be compared to Class (In object oriented programming) definitions,</p>
 <ul>
 <li>Each Class contain fields with their respective data types, similarly every Template contain fields, with their respective field types. (Ex: <em>Single-line text</em>)</li>
@@ -217,7 +224,7 @@
 <p>To open templates, we can open them either from Content Editor, or from Template Navigator, which is present in Start menu. (Start menu is available in Desktop mode)</p>
 <p><img src="/css/images/template-manager.png" alt=""></p>
 <p>While exploring <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">default home page</a>, we noticed that home page content item, is using Sample item template, which can be found in <em>/sitecore/templates/Sample/Sample Item</em><br><img src="/css/images/default-home-template.png" alt=""></p>
-<p>Following are some of the terms, we need to understand, before trying our hands on creating templates. Lets look into each of them more detail in coming up posts.</p>
+<p>Following are some of the terms, we need to understand, before we do hands on creating templates. Let’s look into each of them more detail in coming up posts.</p>
 <ul>
 <li>Fields - Field Sections, Field Types, Field Source, and Field Validation.</li>
 <li>Template Inheritance</li>

@@ -6,13 +6,15 @@
   <title>Saturday Sitecore Learning - Templates Part 2 | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Template FieldsThis is the second post as part of Sitecore Template series.
-In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+Sitecore 8.2 (rev. 160729)
+In this post, let’s discuss about fields, and their types. If we think of a template as a class,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Saturday Sitecore Learning - Templates Part 2">
 <meta property="og:url" content="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/index.html">
 <meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description" content="Template FieldsThis is the second post as part of Sitecore Template series.
-In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+Sitecore 8.2 (rev. 160729)
+In this post, let’s discuss about fields, and their types. If we think of a template as a class,">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-simple-types.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/single-line-text.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/multi-line-text.png">
@@ -25,11 +27,12 @@ In this post, let’s discuss about fields, and their types. If we think of a te
 <meta property="og:image" content="http://gopigujjula.com/css/images/image-field-type.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/file-field-type.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/word-document-field-type.png">
-<meta property="og:updated_time" content="2017-01-22T17:08:50.434Z">
+<meta property="og:updated_time" content="2017-01-28T02:36:19.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saturday Sitecore Learning - Templates Part 2">
 <meta name="twitter:description" content="Template FieldsThis is the second post as part of Sitecore Template series.
-In this post, let’s discuss about fields, and their types. If we think of a template as a class, then fields are properties">
+Sitecore 8.2 (rev. 160729)
+In this post, let’s discuss about fields, and their types. If we think of a template as a class,">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -196,24 +199,30 @@ ga('send', 'pageview');
       
                 
         <h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
 <p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
-<p>How each property of the class has it’s own type, similarly each template field also has a field type. Field type determines, what type of content (normal text, rich text, image etc.) can be entered into the field, and what type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data, and also in what format the value is stored in the database.</p>
-<p>Out of the box Sitecore provides lot of field types, but based on the need, developers can also create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
-<p>We can categories field types as shown below,</p>
+<p>How each property of the class has its own type, similar way each template field also has its own field type. Field type determines, three things</p>
+<ol>
+<li>What type of content (normal text, rich text, image etc.) can be entered into the field,</li>
+<li>What type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data,</li>
+<li>In what format the value is stored in the database.</li>
+</ol>
+<p>Out of the box Sitecore provides lot of field types, but based on the requirement, developers can create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
+<p>We can classify/categorize field types as shown below,</p>
 <ul>
 <li>Simple types</li>
 <li>List types</li>
 <li>Link types</li>
 </ul>
-<p>Let’s look into types under Simple types,</p>
-<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, or an integer, or a date value.</p>
+<p>Let’s look into each type in detail,</p>
+<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, integer, or date value.</p>
 <p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
 <ul>
 <li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/single-line-text.png" alt=""></p>
 <ul>
-<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text/comments to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/multi-line-text.png" alt=""></p>
 <ul>
@@ -221,11 +230,11 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/rich-text.png" alt=""></p>
 <ul>
-<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/integer-field-type.png" alt=""></p>
 <ul>
-<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It is also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
+<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
 </ul>
 <p><img src="/css/images/number-type.png" alt=""></p>
 <ul>
@@ -237,7 +246,7 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/date-field-type.png" alt=""></p>
 <ul>
-<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and is similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
+<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and it’s similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
 </ul>
 <p><img src="/css/images/checkbox-field-type.png" alt=""></p>
 <ul>
@@ -245,11 +254,11 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/image-field-type.png" alt=""></p>
 <ul>
-<li><strong>File:</strong> The File field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the user opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
+<li><strong>File:</strong> This field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the content author opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
 </ul>
 <p><img src="/css/images/file-field-type.png" alt=""></p>
 <ul>
-<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
+<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE browser)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
 </ul>
 <p><img src="/css/images/word-document-field-type.png" alt=""></p>
 <p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
@@ -257,6 +266,7 @@ ga('send', 'pageview');
 <p><strong>References:</strong></p>
 <ul>
 <li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
 <li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
 </ul>
 
