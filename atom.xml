@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-01-28T02:36:19.679Z</updated>
+  <updated>2017-01-29T12:52:28.531Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,98 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Saturday Sitecore Learning - Templates Part 3</title>
+    <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/"/>
+    <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/</id>
+    <published>2017-01-28T02:47:00.000Z</published>
+    <updated>2017-01-29T12:52:28.531Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
+<p>In the last <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">post</a>, we discussed about Simple field types, in this post let’s look into <strong>List</strong> field types.</p>
+<h5 id="List_types_3A"><a href="#List_types_3A" class="headerlink" title="List types:"></a>List types:</h5><p>List type fields allow content authors to select one or multiple values, ex: countries, categories, etc.</p>
+<p><img src="/css/images/sitecore-list-types.png" alt=""></p>
+<ul>
+<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, no selectable items are shown. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, and XPath Query</li>
+</ul>
+<p><img src="/css/images/multilist-field-type.png" alt=""></p>
+<p><img src="/css/images/multilist-field-type-without-source.png" alt=""></p>
+<ul>
+<li><strong>Multilist with Search:</strong> This is similar to multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, and XPath Query</li>
+</ul>
+<p><img src="/css/images/multilist-with-search-field-type.png" alt=""></p>
+<ul>
+<li><strong>Treelist:</strong> This list type, lists all the selectable items in tree structure, including the parent item. If no source is specified, it will list whole Sitecore tree.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query, and query string</li>
+</ul>
+<p><img src="/css/images/treelist-field-type.png" alt=""></p>
+<p><img src="/css/images/treelist-field-type-without-source.png" alt=""></p>
+<ul>
+<li><strong>TreelistEx:</strong> This is pretty much similar to Treelist, except that for this field type, the selection option will be opened in a new browser window (pop up); when no source is specified, this also lists the entire tree. TreelistEx field type performance is better than Treelist field type, because for TreelistEx, the client renders only the list of selected items, and does not render the selection tree until the user clicks the Edit command which is present above the field.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query, and query string</li>
+</ul>
+<p><img src="/css/images/treelistex-field-type.png" alt=""></p>
+<ul>
+<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by the Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+</ul>
+<p><img src="/css/images/checklist-field-type.png" alt=""></p>
+<ul>
+<li><strong>Droplist:</strong> The Droplist field type allows the content author to select a single item from the list specified by the Source property of the field.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+</ul>
+<p><img src="/css/images/droplist-field-type.png" alt=""></p>
+<ul>
+<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by the Source property of the field. This type stores the name of the selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.GroupedDroplistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+</ul>
+<p><img src="/css/images/groupeddroplist-field-type.png" alt=""></p>
+<ul>
+<li><strong>Grouped Droplink:</strong> This is very much similar to Grouped Droplist field type, except that, The Grouped Droplink field type stores the GUID of the selected item.<br><em>Raw value:</em> GUID (ID of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.GroupedDroplinkField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+</ul>
+<p><img src="/css/images/groupeddroplink-field-type.png" alt=""></p>
+<ul>
+<li><strong>Name Value List:</strong> This field type allows the content authors to enter values in key-value pairs. When first key, value pair is entered, another row will appear to enter next set of values. Sitecore stores the values entered as a list of key=value pairs separated by ampersands (“&amp;”). I had seen this in real time for Brightcove media framework, where for each Brightcove video item, we have custom fields getting imported in name-value pairs.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><img src="/css/images/namevaluelist-field-type.png" alt=""></p>
+<ul>
+<li><strong>Name Lookup Value List:</strong> This field type is similar to Name Value List field type, in Name Value List, content author has to enter both key &amp; value pair, but here content authors enters keys, and for value choose an item from populated drop-down list.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
+</ul>
+<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
+<p>In next post, will look into Link types.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
+<li><a href="http://getfishtank.ca/blog/treelist-data-source-hidden-functionality" target="_blank" rel="external">http://getfishtank.ca/blog/treelist-data-source-hidden-functionality</a></li>
+<li><a href="https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/" target="_blank" rel="external">https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;List_Field_Types&quot;&gt;&lt;a href=&quot;#List_Field_Types&quot; class=&quot;headerlink&quot; title=&quot;List Field Types&quot;&gt;&lt;/a&gt;List Field Types&lt;/h4&gt;&lt;p&gt;This is the th
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore Fields" scheme="http://gopigujjula.com/tags/Sitecore-Fields/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Saturday Sitecore Learning - Templates Part 2</title>
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
     <published>2017-01-21T07:30:00.000Z</published>
-    <updated>2017-01-28T02:36:19.679Z</updated>
+    <updated>2017-01-28T02:48:27.181Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
@@ -113,6 +200,8 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore Fields" scheme="http://gopigujjula.com/tags/Sitecore-Fields/"/>
     
   </entry>
   
@@ -1124,54 +1213,6 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ASafaWeb - Automated Security Analyzer for ASP.NET Websites</title>
-    <link href="http://gopigujjula.com/2016/05/asp-net-security-analyser/"/>
-    <id>http://gopigujjula.com/2016/05/asp-net-security-analyser/</id>
-    <published>2016-05-21T17:14:00.000Z</published>
-    <updated>2016-11-05T11:55:13.660Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="ASafaWeb"><a href="#ASafaWeb" class="headerlink" title="ASafaWeb"></a><a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a></h3><p>Recently I am trying to improve my knowledge on both general security and web security concepts. I was going through technical articles, blogs, and pluralsight courses. Also started attending the monthly <a href="https://www.owasp.org/index.php/Bangalore#tab=Next_Meeting" target="_blank" rel="external">OWASP tech meetup</a>, where they mainly discuss on the security concepts and related technologies.</p>
-<p><img src="/css/images/asafeweb.png" alt=""></p>
-<p>In <a href="http://pluralsight.com" target="_blank" rel="external">Pluralsight</a>, there are lot of security courses authored by <a href="http://app.pluralsight.com/author/troy-hunt" target="_blank" rel="external">Troy Hunt</a>, where he clearly explains the concepts in a simple manner. Even in his <a href="https://www.troyhunt.com" target="_blank" rel="external">blog</a>, there are wonderful articles. I learned a lot from his courses and articles.</p>
-<p>This <a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a>, is the tool developed by Troy Hunt, for specifically analyzing the ASP.NET websites for any security risks. This tool can analyze the vulnerabilities of the hosted site, and also it doesn’t require any access to the code. It mainly send some extra HTTP requests to the given site URL, and give us the report by analyzing the responses.</p>
-<p>The security check is mainly done for the following,</p>
-<ol>
-<li>Tracing</li>
-<li>Custom Errors</li>
-<li>Stack Trace</li>
-<li>Request Validation</li>
-<li>HTTP to HTTPS redirect</li>
-<li>Hash DoS patch</li>
-<li>ELMAH log</li>
-<li>Excessive Headers</li>
-<li>HTTP only cookies</li>
-<li>Secure cookies</li>
-<li>Clickjacking</li>
-<li>View state MAC</li>
-</ol>
-<p>ASafaWeb only checks for the common configuration related vulnerabilities, but there are many other security related aspects, like SQL injection, Cross Site Scripting, and Cross-Site Request Forgery, etc..</p>
-<p>So for what are we waiting, just go to <a href="https://asafaweb.com/" target="_blank" rel="external">ASafaWeb</a>, and enter your ASP.NET website URL, and click on Scan to get the report. We can also Schedule the scans, but we need to register for that. Currently it is in Beta stage.</p>
-<p><img src="/css/images/asafeweb-1.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;ASafaWeb&quot;&gt;&lt;a href=&quot;#ASafaWeb&quot; class=&quot;headerlink&quot; title=&quot;ASafaWeb&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://asafaweb.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
-    
-    </summary>
-    
-      <category term="ASP.NET" scheme="http://gopigujjula.com/categories/ASP-NET/"/>
-    
-    
-      <category term="ASP.NET" scheme="http://gopigujjula.com/tags/ASP-NET/"/>
-    
-      <category term="Security" scheme="http://gopigujjula.com/tags/Security/"/>
-    
-      <category term="Tools" scheme="http://gopigujjula.com/tags/Tools/"/>
     
   </entry>
   
