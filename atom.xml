@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-04T06:46:08.130Z</updated>
+  <updated>2017-02-04T17:46:15.247Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Saturday Sitecore Learning - Templates Part 4</title>
+    <title>Saturday Sitecore Learning - Templates Part 4 (Link Field Types)</title>
     <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/"/>
     <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/</id>
     <published>2017-02-04T02:47:00.000Z</published>
-    <updated>2017-02-04T06:46:08.130Z</updated>
+    <updated>2017-02-04T17:46:15.247Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
@@ -85,11 +85,11 @@
   </entry>
   
   <entry>
-    <title>Saturday Sitecore Learning - Templates Part 3</title>
+    <title>Saturday Sitecore Learning - Templates Part 3 (List Field Types)</title>
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/</id>
     <published>2017-01-28T02:47:00.000Z</published>
-    <updated>2017-02-04T06:19:21.982Z</updated>
+    <updated>2017-02-04T17:48:06.526Z</updated>
     
     <content type="html"><![CDATA[<h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
@@ -172,11 +172,11 @@
   </entry>
   
   <entry>
-    <title>Saturday Sitecore Learning - Templates Part 2</title>
+    <title>Saturday Sitecore Learning - Templates Part 2 (Simple Field Types)</title>
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
     <published>2017-01-21T07:30:00.000Z</published>
-    <updated>2017-02-04T03:35:14.744Z</updated>
+    <updated>2017-02-04T17:48:01.959Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
