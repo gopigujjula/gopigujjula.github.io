@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-04T06:10:11.312Z</updated>
+  <updated>2017-02-04T06:46:08.130Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/"/>
     <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/</id>
     <published>2017-02-04T02:47:00.000Z</published>
-    <updated>2017-02-04T06:10:11.312Z</updated>
+    <updated>2017-02-04T06:46:08.130Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
@@ -58,8 +58,6 @@
 <ul>
 <li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
 <li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-<li><a href="http://getfishtank.ca/blog/treelist-data-source-hidden-functionality" target="_blank" rel="external">http://getfishtank.ca/blog/treelist-data-source-hidden-functionality</a></li>
-<li><a href="https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/" target="_blank" rel="external">https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/</a></li>
 </ul>
 ]]></content>
     
