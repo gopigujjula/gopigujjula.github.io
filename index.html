@@ -114,11 +114,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        52
+        53
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        19
+        23
         <span>tags</span>
       </div>
     </div>
@@ -145,6 +145,99 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Template-Part-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/">Saturday Sitecore Learning - Templates Part 4</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" style="text-align:right">
+      <time datetime="2017-02-04T02:47:00.000Z" itemprop="datePublished">February 04, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
+<p>In last two posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Simple field types</a> &amp; <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">List field types</a>, now let’s look into <strong>Link</strong> field types.</p>
+<h5 id="Link_types_3A"><a href="#Link_types_3A" class="headerlink" title="Link types:"></a>Link types:</h5><p>Link field types allow content authors to enter links to Sitecore internal items, external URLs, anchors, and email addresses.</p>
+<p><img src="/css/images/sitecore-link-types.png" alt=""></p>
+<ul>
+<li><strong>Droplink:</strong> Similar to the Droplist field type, which we had seen in the last <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">post</a>, this field type also allows the content author to select a single item from the list specified by the source property of the field. If the source is not set, no items are shown in the drop-down.<br><em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
+</ul>
+<p><img src="/css/images/droplink-field-type.png" alt=""></p>
+<p><img src="/css/images/droplink-field-type-without-source.png" alt=""></p>
+<ul>
+<li><strong>Droptree:</strong> This field type also allows the content author to select a single item from the list specified by the source property of the field. Items are shown in tree-view rather than the normal drop-down. If the source is not set, it shows the entire tree.<br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
+</ul>
+<p><img src="/css/images/droptree-field-type.png" alt=""></p>
+<p><img src="/css/images/droptree-field-type-without-source.png" alt=""></p>
+<ul>
+<li><strong>General Link:</strong> This is the most frequently used link field type. This type allows content authors to link to a Sitecore item, an external URL, an anchor, an email address, or a JavaScript function.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/general-link-field-type.png" alt=""></p>
+<ul>
+<li><strong>General Link with Search:</strong> This is similar to General Link field type, except that this one is having an extra link search functionality. Using this, content authors can search and link to items (for Internal link).<br><em>Recently we come across a scenario where clients want to search for an item to link, because it is tedious for them to navigate to that item, (we can use other field types, but they want to ) this field type came to our rescue :)</em><br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
+</ul>
+<p><img src="/css/images/general-link-with-search-field-type.png" alt=""></p>
+<p> <strong>Version Identity:</strong> and <strong>Version Link:</strong> field types are used by Sitecore for internal purposes.</p>
+<p>Till now we looked into Simple, List, and field types. But there are other field types which are not so frequently  used by developers.</p>
+<ul>
+<li>Analytics</li>
+<li>Social</li>
+<li>Developer Types</li>
+<li>System Types</li>
+</ul>
+<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
+<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
+<li><a href="http://getfishtank.ca/blog/treelist-data-source-hidden-functionality" target="_blank" rel="external">http://getfishtank.ca/blog/treelist-data-source-hidden-functionality</a></li>
+<li><a href="https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/" target="_blank" rel="external">https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" data-id="ciyodi4of0000c0mgegq8db0c" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Field-Types/">Sitecore Field Types</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Template-Part-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -186,37 +279,37 @@ ga('send', 'pageview');
 <h5 id="List_types_3A"><a href="#List_types_3A" class="headerlink" title="List types:"></a>List types:</h5><p>List type fields allow content authors to select one or multiple values, ex: countries, categories, etc.</p>
 <p><img src="/css/images/sitecore-list-types.png" alt=""></p>
 <ul>
-<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, no selectable items are shown. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, and XPath Query</li>
+<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, no selectable items are shown. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
 </ul>
 <p><img src="/css/images/multilist-field-type.png" alt=""></p>
 <p><img src="/css/images/multilist-field-type-without-source.png" alt=""></p>
 <ul>
-<li><strong>Multilist with Search:</strong> This is similar to multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, and XPath Query</li>
+<li><strong>Multilist with Search:</strong> This is similar to multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
 </ul>
 <p><img src="/css/images/multilist-with-search-field-type.png" alt=""></p>
 <ul>
-<li><strong>Treelist:</strong> This list type, lists all the selectable items in tree structure, including the parent item. If no source is specified, it will list whole Sitecore tree.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query, and query string</li>
+<li><strong>Treelist:</strong> This list type, lists all the selectable items in tree structure, including the parent item. If no source is specified, it will list whole Sitecore tree.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query, and query string</li>
 </ul>
 <p><img src="/css/images/treelist-field-type.png" alt=""></p>
 <p><img src="/css/images/treelist-field-type-without-source.png" alt=""></p>
 <ul>
-<li><strong>TreelistEx:</strong> This is pretty much similar to Treelist, except that for this field type, the selection option will be opened in a new browser window (pop up); when no source is specified, this also lists the entire tree. TreelistEx field type performance is better than Treelist field type, because for TreelistEx, the client renders only the list of selected items, and does not render the selection tree until the user clicks the Edit command which is present above the field.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query, and query string</li>
+<li><strong>TreelistEx:</strong> This is pretty much similar to Treelist, except that for this field type, the selection option will be opened in a new browser window (pop up); when no source is specified, this also lists the entire tree. TreelistEx field type performance is better than Treelist field type, because for TreelistEx, the client renders only the list of selected items, and does not render the selection tree until the user clicks the Edit command which is present above the field.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query, and query string</li>
 </ul>
 <p><img src="/css/images/treelistex-field-type.png" alt=""></p>
 <ul>
-<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by the Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by the Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/checklist-field-type.png" alt=""></p>
 <ul>
-<li><strong>Droplist:</strong> The Droplist field type allows the content author to select a single item from the list specified by the Source property of the field.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+<li><strong>Droplist:</strong> The Droplist field type allows the content author to select a single item from the list specified by the Source property of the field.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/droplist-field-type.png" alt=""></p>
 <ul>
-<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by the Source property of the field. This type stores the name of the selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.GroupedDroplistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by the Source property of the field. This type stores the name of the selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/groupeddroplist-field-type.png" alt=""></p>
 <ul>
-<li><strong>Grouped Droplink:</strong> This is very much similar to Grouped Droplist field type, except that, The Grouped Droplink field type stores the GUID of the selected item.<br><em>Raw value:</em> GUID (ID of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.GroupedDroplinkField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field:</em> GUID, Path, XPath Query</li>
+<li><strong>Grouped Droplink:</strong> This is very much similar to Grouped Droplist field type, except that, The Grouped Droplink field type stores the GUID of the selected item.<br><em>Raw value:</em> GUID (ID of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.ReferenceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/groupeddroplink-field-type.png" alt=""></p>
 <ul>
@@ -244,7 +337,7 @@ ga('send', 'pageview');
         <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Fields/">Sitecore Fields</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Field-Types/">Sitecore Field Types</a></li></ul>
 
     </footer>
   </div>
@@ -369,7 +462,7 @@ ga('send', 'pageview');
         <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Fields/">Sitecore Fields</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Field-Types/">Sitecore Field Types</a></li></ul>
 
     </footer>
   </div>
@@ -660,66 +753,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/">Saturday Sitecore Learning - Sitecore Code review check list</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" style="text-align:right">
-      <time datetime="2016-11-26T05:30:00.000Z" itemprop="datePublished">November 26, 2016</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation deck is part of the knowledge share session, I had delivered in office.</p>
-<p>This check list helps Sitecore developers to better enhance the Content Author experience in managing their content.</p>
-
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-</div>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/" data-id="ciw0n2d42000020mg9voh4f1u" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Presentation/">Presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -732,6 +765,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-link-types.png
+)" alt="Saturday Sitecore Learning - Templates Part 4" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+              <p class="item-title"><a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="title">Saturday Sitecore Learning - Templates Part 4</a></p>
+              <p class="item-date"><time datetime="2017-02-04T02:47:00.000Z" itemprop="datePublished">February 04, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -809,25 +861,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-default-homepage.png
-)" alt="Saturday Sitecore Learning - Default Home Page" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" class="title">Saturday Sitecore Learning - Default Home Page</a></p>
-              <p class="item-date"><time datetime="2016-12-03T05:30:00.000Z" itemprop="datePublished">December 03, 2016</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -837,7 +870,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
     </div>
   </div>
 
