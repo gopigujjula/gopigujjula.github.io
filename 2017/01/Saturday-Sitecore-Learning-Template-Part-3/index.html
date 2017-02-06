@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="List Field TypesThis is the third post as part of Sitecore Template series.
 Sitecore 8.2 (rev. 160729)
-In the last post, we discussed about Simple field types, in this post let’s look into List field">
+In the previous post, we discussed about Simple field types, in this post let’s look into List fi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Saturday Sitecore Learning - Templates Part 3 (List Field Types)">
 <meta property="og:url" content="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/index.html">
 <meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description" content="List Field TypesThis is the third post as part of Sitecore Template series.
 Sitecore 8.2 (rev. 160729)
-In the last post, we discussed about Simple field types, in this post let’s look into List field">
+In the previous post, we discussed about Simple field types, in this post let’s look into List fi">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-list-types.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/multilist-field-type.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/multilist-field-type-without-source.png">
@@ -27,12 +27,12 @@ In the last post, we discussed about Simple field types, in this post let’s lo
 <meta property="og:image" content="http://gopigujjula.com/css/images/groupeddroplist-field-type.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/groupeddroplink-field-type.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/namevaluelist-field-type.png">
-<meta property="og:updated_time" content="2017-02-04T17:48:06.526Z">
+<meta property="og:updated_time" content="2017-02-06T17:55:52.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saturday Sitecore Learning - Templates Part 3 (List Field Types)">
 <meta name="twitter:description" content="List Field TypesThis is the third post as part of Sitecore Template series.
 Sitecore 8.2 (rev. 160729)
-In the last post, we discussed about Simple field types, in this post let’s look into List field">
+In the previous post, we discussed about Simple field types, in this post let’s look into List fi">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -200,16 +200,16 @@ ga('send', 'pageview');
                 
         <h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In the last <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">post</a>, we discussed about Simple field types, in this post let’s look into <strong>List</strong> field types.</p>
+<p>In the previous <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">post</a>, we discussed about Simple field types, in this post let’s look into <strong>List</strong> field types.</p>
 <h5 id="List_types_3A"><a href="#List_types_3A" class="headerlink" title="List types:"></a>List types:</h5><p>List type fields allow content authors to select one or multiple values, ex: countries, categories, etc.</p>
 <p><img src="/css/images/sitecore-list-types.png" alt=""></p>
 <ul>
-<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, no selectable items are shown. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
+<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, selectable list becomes empty. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
 </ul>
 <p><img src="/css/images/multilist-field-type.png" alt=""></p>
 <p><img src="/css/images/multilist-field-type-without-source.png" alt=""></p>
 <ul>
-<li><strong>Multilist with Search:</strong> This is similar to multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
+<li><strong>Multilist with Search:</strong> This is similar to Multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
 </ul>
 <p><img src="/css/images/multilist-with-search-field-type.png" alt=""></p>
 <ul>
@@ -222,7 +222,7 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/treelistex-field-type.png" alt=""></p>
 <ul>
-<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by the Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
+<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/checklist-field-type.png" alt=""></p>
 <ul>
@@ -230,7 +230,7 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/droplist-field-type.png" alt=""></p>
 <ul>
-<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by the Source property of the field. This type stores the name of the selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
+<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by Source property of the field. This type stores the name of selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
 </ul>
 <p><img src="/css/images/groupeddroplist-field-type.png" alt=""></p>
 <ul>
@@ -238,7 +238,7 @@ ga('send', 'pageview');
 </ul>
 <p><img src="/css/images/groupeddroplink-field-type.png" alt=""></p>
 <ul>
-<li><strong>Name Value List:</strong> This field type allows the content authors to enter values in key-value pairs. When first key, value pair is entered, another row will appear to enter next set of values. Sitecore stores the values entered as a list of key=value pairs separated by ampersands (“&amp;”). I had seen this in real time for Brightcove media framework, where for each Brightcove video item, we have custom fields getting imported in name-value pairs.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
+<li><strong>Name Value List:</strong> This field type allows the content authors to enter values in key-value pairs. When first key, value pair is entered, another row will appear to enter next set of values. Sitecore stores the values entered as a list of key=value pairs separated by ampersands (“&amp;”). I had seen this in real time for Brightcove media framework, for each Brightcove video item, we have custom fields getting imported in name-value pairs.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
 </ul>
 <p><img src="/css/images/namevaluelist-field-type.png" alt=""></p>
 <ul>
