@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-13T10:11:40.582Z</updated>
+  <updated>2017-02-22T04:23:59.073Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore Web Content Management System with .NET</title>
+    <link href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/"/>
+    <id>http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/</id>
+    <published>2017-02-22T04:30:00.000Z</published>
+    <updated>2017-02-22T04:23:59.073Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
+<p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
+<p><img src="/css/images/dotnetblrQ1-2017.jpg" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the talk can be found <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">here</a></p>
+<p>Thanks to Surendra, <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> and <a href="https://twitter.com/anandgothe" target="_blank" rel="external">Anand Gothe</a> for their support and encouragement.</p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;First_presentation_in_-NET_User_Group_Bangalore&quot;&gt;&lt;a href=&quot;#First_presentation_in_-NET_User_Group_Bangalore&quot; class=&quot;headerlink&quot; title
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+    
+    
+      <category term=".NET User Group" scheme="http://gopigujjula.com/tags/NET-User-Group/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore - Frequently Asked Questions</title>
@@ -1212,55 +1252,6 @@
     
       &lt;p&gt;&lt;img src=&quot;/css/images/sitecore-launchpad.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Now we explore what are all the resources available for developers to learn 
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - About Sitecore</title>
-    <link href="http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-About-Sitecore/"/>
-    <id>http://gopigujjula.com/2016/06/Saturday-Sitecore-Learning-About-Sitecore/</id>
-    <published>2016-06-25T07:30:00.000Z</published>
-    <updated>2016-11-05T12:26:00.534Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/css/images/sitecore_logo.png" alt=""></p>
-<p>After learning about <strong>WCM</strong> platforms, now I am trying to understand more about <strong>Sitecore</strong> as a technology and as well as product, and it’s market position.<br>As a developer, it is very much crucial to know that, when we choose it as a career path/option, and to make sure we are investing our time on technologies which are having bright future.</p>
-<p>After going through several websites and posts, here is my notes,</p>
-<p>For seven years in a row, the <strong>Sitecore Experience Platform</strong> has been placed in the Leaders quadrant of <strong>Gartner’s Magic Quadrant for Web Content Management</strong>.</p>
-<p>In ranking Sitecore as a leader In CMS, <strong>Gartner</strong> cited the company’s strengths as:</p>
-<p><em>Sitecore has an industry-leading, compelling and executable vision for a “contextual delivery machine.” The Sitecore Experience Database (xDB), which promises to deliver the long-sought-after “360-degree view of the customer,” contributes to this vision.</em></p>
-<p><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a> is one of the leading enterprise-level Content Management System in .NET world, using which we can create both Intranet portals and enterprise web sites.</p>
-<p>It supports <strong>ASP.NET MVC</strong> and as well as <strong>Web Forms</strong>.</p>
-<p><strong>Sitecore company</strong> was started in Copenhagen in <strong>2001</strong> by five friends who saw a need for a better way to build and manage websites.</p>
-<p><strong>Sitecore product</strong> was mainly introduced as WCM platform, which combines the components dynamically on to page and deliver to the user. Later on it has evolved to fully digital marketing platform, and now it is called as <strong>Sitecore Experience Platform</strong>, which included Web Content Management, Customer Intelligence, and Cross-Channel Delivery.</p>
-<p>Sitecore is mainly trying to achieve, “<strong>To deliver the right content to the right person at the right time and on the right device.</strong>“</p>
-<p>Below pic depicts, what exactly Sitecore Experience Platform provides,</p>
-<p><img src="/css/images/sitecorexp.png" alt=""></p>
-<p>Please check this <a href="http://www.sitecore.net/en/products/sitecore-experience-platform" target="_blank" rel="external">link</a> to know more about the experience platform.</p>
-<p><em>“Sitecore is a high-performance, scalable, extensible ASP.NET web CMS that generates all output<br>dynamically and uses the same components and system architecture for both content and application<br>pages.”</em> – <strong><a href="https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog?tag=f1b992e4-4511-44a9-aa1a-7b48e5225d9a" target="_blank" rel="external">John West</a> (All time Sitecore MVP)</strong></p>
-<p>Current version of <strong>Sitecore is 8.2</strong>, which is going to be released on August - 2016.</p>
-<p>Sitecore continuously and very rapidly evolves as a product, to provide more options and features to the customers. It provides a variety of licensing option to clients.</p>
-<p>Sitecore code is not open source.</p>
-<p>There is a very good article <a href="http://www.cygnet-infotech.com/blog/8-reasons-why-many-enterprise-cmos-choose-sitecore" target="_blank" rel="external">8 Reasons Why Many Enterprise CMOs Choose Sitecore</a></p>
-<p>Credits:<br><a href="http://www.sitecore.net/" target="_blank" rel="external">Sitecore</a><br><a href="http://blogs.perficient.com/microsoft/2016/10/sitecore-named-a-leader-in-gartner-magic-quadrant-for-wcm/" target="_blank" rel="external">Perficient</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore_logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;After learning about &lt;strong&gt;WCM&lt;/strong&gt; platforms, now I am trying to understan
     
     </summary>
     
