@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-25T17:45:23.776Z</updated>
+  <updated>2017-02-25T21:03:14.108Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,14 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sitecore Enhancing Content Author Experience - Part 1 (Templates)</title>
+    <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/"/>
+    <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/</id>
+    <published>2017-02-25T21:05:00.000Z</published>
+    <updated>2017-02-25T21:03:14.108Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Template_level"><a href="#Enhancing_Content_Author_Experience_-_Template_level" class="headerlink" title="Enhancing Content Author Experience - Template level"></a>Enhancing Content Author Experience - Template level</h4><p>This is the first post as part of <a href="/categories/Sitecore/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
+<p>As a Sitecore developer, I always feel we have two primary users of our work; One is a website visitor, and second one is Content authors. Most of the time, we tend to give more importance to our site visitor, as they make the business happen, but we need to give equal importance to Content authors, to improve their overall experience of managing content.</p>
+<p>In this three post series, let’s explore some of the tips to enhance content author experience, in Template, Layout, and Content levels. As part of the this post, let’s look into templates.</p>
+<p><img src="/css/images/sitecore-templates-content-author-experience.png" alt=""></p>
+<h5 id="1-_Template_Icon"><a href="#1-_Template_Icon" class="headerlink" title="1. Template Icon"></a>1. Template Icon</h5><p>Template Icons help to visually separate semantically related content items. We can Visually provide clues to the type of item in the content tree, by choosing unique icon to each template.</p>
+<p><img src="/css/images/contenttree.png" alt=""></p>
+<p>Image Courtesy: <a href="https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/" target="_blank" rel="external">https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/</a></p>
+<p>As a content author, how do you feel, when you see the left side and right side content trees in above screen shot.<br>Definitely right side tree, is much more helpful, because by seeing the icons, we can understand what is type of item it is.</p>
+<p>Icons can be set at template level, or item level. Two ways we can set icons, one is by directly clicking on the template icon, another one is from configure tab.</p>
+<p><img src="/css/images/template-icon.png" alt=""></p>
+<p><img src="/css/images/template-icon-configure.png" alt=""></p>
+<h5 id="2-_Field_Type"><a href="#2-_Field_Type" class="headerlink" title="2. Field Type"></a>2. Field Type</h5><p>Selecting appropriate field type is key for managing the content, as field type effects, what control content author use to modify that field. Sitecore provides lot of in-build field types, and if we needed we can also create custom field types. Read here to know more about <a href="/tags/Sitecore-Field-Types/">field types</a>.</p>
+<p>For example, let’s take the case of Multlist or Multlist with search field types. Both provides a list of items, to choose, but second field type provides search option too, this is very much useful, when there are lot of selectable items.</p>
+<p><img src="/css/images/list-field-type.png" alt=""></p>
+<p><img src="/css/images/list-with-search-field-type.png" alt=""></p>
+<h5 id="3-_Field_Source"><a href="#3-_Field_Source" class="headerlink" title="3. Field Source"></a>3. Field Source</h5><p>For list field types, we can control the list of selectable items to be displayed, using field source property. Field source can be set using; Sitecore query, path, and GUID. When Treelist field type is used, and source is not set, full Sitecore tree is displayed in selectable items. Then it is very difficult for Content author, to navigate and select the appropriate item.</p>
+<p><img src="/css/images/without-field-source.png" alt=""></p>
+<p><img src="/css/images/with-field-source.png" alt=""></p>
+<h5 id="4-_Field_Help_Message"><a href="#4-_Field_Help_Message" class="headerlink" title="4. Field Help Message"></a>4. Field Help Message</h5><p>Help message gives extra information to Content Authors about particular field. Sitecore provides the ability to add help information to fields in three ways – using short description, long description, and help link. This three fields are part of the standard fields.<br>Short description is displayed beside the field title, Long description is visible on field title mouse over, Help link can be navigated, by clicking on field title.</p>
+<p><img src="/css/images/help-message.png" alt=""></p>
+<h5 id="5-_Field_Sorting"><a href="#5-_Field_Sorting" class="headerlink" title="5. Field Sorting"></a>5. Field Sorting</h5><p>For each page, or component, there may be lot of content fields to manage. But among all the fields, there may be few fields which gets changed very frequently. But if these fields are at bottom of the field list, every time content author has to scroll, to make any updates. It is better to place most frequently modified fields on top, using Sort order field, which is part of the standard fields. By default Sitecore will set sort order to 100 points.</p>
+<p><img src="/css/images/field-sort-order.png" alt=""></p>
+<h5 id="6-_Folder_Templates_-_Insert_Options"><a href="#6-_Folder_Templates_-_Insert_Options" class="headerlink" title="6. Folder Templates - Insert Options"></a>6. Folder Templates - Insert Options</h5><p>Folder templates are used for the purpose of organizing a collection of items. (ex: Rendering folder, Template Folder). The <strong>insert options</strong> configuration provides that the templates relevant to the folder are immediately available.<br>The default folder template for content items is <strong>/sitecore/templates/Common/Folder</strong>.<br>To create a custom folder template, we need to inherit from the default folder template, and then configure with custom insert options.</p>
+<p><img src="/css/images/folder-template.png" alt=""></p>
+<h5 id="7-_Parameter_Templates"><a href="#7-_Parameter_Templates" class="headerlink" title="7. Parameter Templates"></a>7. Parameter Templates</h5><p>There is a different between <strong>What</strong> &amp; <strong>How to</strong> content. What content means is the actual content on site, whereas How to content means, content which controls behavior of the content, example, Search page size, CSS class, number of carousel items.<br>Most of the time, we tend to mix <strong><em>How to</em></strong> content fields with <strong><em>What</em></strong> content fields, but it is very important to not to mix both, to make our content more cleaner.<br>On component level, we can manage “How to” content using key value pair section. But Content Authors may find difficult to remember, &amp; enter exact key names, to avoid this we can use parameter templates.</p>
+<p>Managing <strong>How to</strong> content becomes lot easier using parameter templates. We can create parameter templates, like any other templates, but these templates should inherit from <strong><em>/sitecore/templates/System/Layout/Rendering Parameters/Standard Rendering Parameters</em></strong></p>
+<p>Once parameter template is created, it can be added to component using <strong>Parameters Template</strong> on the rendering.</p>
+<p><img src="/css/images/parameter-template.png" alt=""></p>
+<p>Only one parameter template is allowed on one component, that is the reason inheritance is very important for the parameter templates.</p>
+<p>Once parameter template is added to component, Content can be modified from Control Properties which can be accessed using Page item Presentation details.</p>
+<p><img src="/css/images/parameter-template-content.png" alt=""></p>
+<p>Thank you for reading, in next post, will explore the tips from layout level.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Template_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Template_level&quot; class=&quot;headerl
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Sitecore-Templates/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)</title>
     <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/"/>
     <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/</id>
     <published>2017-02-25T05:47:00.000Z</published>
-    <updated>2017-02-25T17:45:23.776Z</updated>
+    <updated>2017-02-25T19:25:17.386Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Inheritance"><a href="#Template_Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h4><p>This is the fifth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
-<p>In last three posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">field types</a>, now let’s explore what is template Inheritance, and the benefits it provide.</p>
+<p>In last three posts, we discussed about <a href="/tags/Sitecore-Field-Types/">field types</a>, now let’s explore what is template Inheritance, and the benefits it provide.</p>
 <p>Template is a collection of fields, where fields can be defined on a template, or can be inherited from other templates. Similar to Object Oriented Programming, where a class can be inherited from another class, in Sitecore, a template can be inherited from another template.</p>
 <p>Each template can inherit fields, field sections, standard values, and potentially other properties from any number of other templates.</p>
 <p>Sitecore uses lot of template inheritance, for system templates. There is a <strong>Standard Template</strong>, which defines field sections, and fields common to all items.</p>
@@ -1255,33 +1315,6 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My Journey from Hotel Management student to Software Engineer</title>
-    <link href="http://gopigujjula.com/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/"/>
-    <id>http://gopigujjula.com/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/</id>
-    <published>2016-07-03T04:30:00.000Z</published>
-    <updated>2016-09-17T19:49:54.634Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/css/images/medium.png" alt=""></p>
-<p>Every journey has to start some where, I am going to start mine from my graduation.</p>
-<p>Why am I telling this now? As, I am celebrating my 6th year (1st July) work anniversary, want to go back to where i had started. Currently I am working as a Senior Engineer in an IT firm at Bangalore.</p>
-<p>I am a hotel management graduate(also a chemistry graduate), then went on to do a masters in computer science and later became a software engineer.</p>
-<p>Please read the full post <a href="https://goo.gl/rR0Ijv" target="_blank" rel="external">here</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/css/images/medium.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Every journey has to start some where, I am going to start mine from my graduation.&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="Career" scheme="http://gopigujjula.com/tags/Career/"/>
     
   </entry>
   
