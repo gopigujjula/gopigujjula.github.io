@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | Gopi Notes</title>
+  <title>Saturday Sitecore Learning - Templates Part 5 (Template Inheritance) | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gopi Notes">
-<meta property="og:url" content="http://gopigujjula.com/archives/2016/page/2/index.html">
+  <meta name="description" content="Template InheritanceThis is the fifth post as part of Sitecore Template series.
+In last three posts, we discussed about field types, now let’s explore what is template Inheritance, and the benefits it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)">
+<meta property="og:url" content="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/index.html">
 <meta property="og:site_name" content="Gopi Notes">
-<meta property="og:description">
+<meta property="og:description" content="Template InheritanceThis is the fifth post as part of Sitecore Template series.
+In last three posts, we discussed about field types, now let’s explore what is template Inheritance, and the benefits it">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-template-inheritance.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-template-inheritance-1.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-template-inheritance-2.png">
+<meta property="og:updated_time" content="2017-02-25T17:45:23.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gopi Notes">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)">
+<meta name="twitter:description" content="Template InheritanceThis is the fifth post as part of Sitecore Template series.
+In last three posts, we discussed about field types, now let’s explore what is template Inheritance, and the benefits it">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -144,241 +151,108 @@ ga('send', 'pageview');
 </aside>
 
       
-      <section id="main">
-      <div class="archive-year-wrap">
-        <a href="/archives/2016" class="archive-year">2016</a>
-      </div>
-      <section class="archives-wrap">
-        <div class="archives">
+      <section id="main"><article id="post-Saturday-Sitecore-Learning-Template-Part-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
     
-    <div class="archive-article-thumbnail">
-      <a href="/2016/10/Saturday-Sitecore-Learning-Launchpad/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-login.png
-)" alt="Saturday Sitecore Learning - Launchpad" class="thumbnail-image"></span>
-  
-</a>
-
-    </div>
     
-    <header class="archive-article-header">
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/Saturday-Sitecore-Learning-Launchpad/">Saturday Sitecore Learning - Launchpad</a>
+    <h1 class="article-title" itemprop="name">
+      Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)
     </h1>
   
 
-      
-        
-  <div class="archive-article-date">
+        <div class="article-meta">
+          
+  <div class="article-date">
     <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Launchpad/" style="text-align:right">
-      <time datetime="2016-10-29T05:30:00.000Z" itemprop="datePublished">October 29, 2016</time>
+    <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" style="text-align:right">
+      <time datetime="2017-02-25T05:47:00.000Z" itemprop="datePublished">February 25, 2017</time>
     </a>
   </div>
 
 
-      
-    </header>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a>
   </div>
-</article>
 
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
+        </div>
+      </header>
     
-    <div class="archive-article-thumbnail">
-      <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/SIM-home.png
-)" alt="Saturday Sitecore Learning - Sitecore Installation with SIM tool" class="thumbnail-image"></span>
-  
-</a>
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Template_Inheritance"><a href="#Template_Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h4><p>This is the fifth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+<p>In last three posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">field types</a>, now let’s explore what is template Inheritance, and the benefits it provide.</p>
+<p>Template is a collection of fields, where fields can be defined on a template, or can be inherited from other templates. Similar to Object Oriented Programming, where a class can be inherited from another class, in Sitecore, a template can be inherited from another template.</p>
+<p>Each template can inherit fields, field sections, standard values, and potentially other properties from any number of other templates.</p>
+<p>Sitecore uses lot of template inheritance, for system templates. There is a <strong>Standard Template</strong>, which defines field sections, and fields common to all items.</p>
+<p><img src="/css/images/sitecore-template-inheritance.png" alt=""></p>
+<p>Whenever we create any new template, it will always inherit from the <strong>Standard Template</strong>, and all the <strong>System Fields</strong> comes with it.</p>
+<p><strong>Why do we use Inheritance?</strong><br>In general, we use Inheritance, for <strong>reusability</strong>. Where we can define the properties, &amp; methods in one common place, and access it from all other places. for <strong>Maintainability</strong>, where it is easy to make modification at single location.</p>
+<p><strong>Sitecore Template Inheritance Benefits</strong></p>
+<ol>
+<li>Reusability: We define common fields in one template, and inherit in all other templates. This avoids duplication.</li>
+<li>Maintainability: Modify the fields in the main template, all the templates automatically gets the modifications.</li>
+</ol>
+<p><strong>Scenario:</strong><br>Let’s take a Scenario, where we have Article template, and Podcast template, both are having certain fields common, like <strong><em>Title, Date, and Description</em></strong> etc. What if we create a new base template, with all these common fields, and inherit this new base template, in both Article and Podcast template. In that way we remove the duplication, and increase the reusability.</p>
+<p><img src="/css/images/sitecore-template-inheritance-1.png" alt=""></p>
+<p><img src="/css/images/sitecore-template-inheritance-2.png" alt=""></p>
+<p><strong>Important points</strong></p>
+<ul>
+<li>If you directly or indirectly inherit from the same template more than once, Sitecore behaves as if you had inherited that template only once.<br>For example, Template B inherits from Template A, Template C inherits from both Template A &amp; B, here indirectly we are inheriting Template A (once directly, and another indirectly from B), multiple times. But Sitecore inherits Template A only once.</li>
+<li>One template, can only inherit one set of presentation details. If a template inherits from two templates, and both have presentation details, only the first template’s presentation details in the inheritance list will be used. (In the coming post, we will explore more about presentation details)</li>
+<li>If two templates are having same field section name, then when a template inherits from these two templates, similar field sections are merged, and all the fields under them are consolidated.</li>
+<li>We should avoid Circular templates. for example, Template A can inherit from Templates B and C. Template C can inherit from Template A, too.</li>
+</ul>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="http://gettingtoknowsitecore.blogspot.in/2010/01/inheritance-content-modeling-sitecore.html" target="_blank" rel="external">http://gettingtoknowsitecore.blogspot.in/2010/01/inheritance-content-modeling-sitecore.html</a></li>
+<li><a href="http://www.matthewdresser.com/sitecore/template-inheritance-best-practices" target="_blank" rel="external">http://www.matthewdresser.com/sitecore/template-inheritance-best-practices</a></li>
+<li><a href="http://www.amazon.in/Professional-Sitecore-Development-WROX-John/dp/812653673X" target="_blank" rel="external">Professional Sitecore Development</a></li>
+<li><a href="http://www.amazon.in/Professional-Sitecore-Development-Solutions-Practices/dp/1484222911" target="_blank" rel="external">Professional Sitecore 8 Development: A Complete Guide to Solutions and Best Practices</a></li>
+</ul>
 
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" data-id="cizkxmem70000ckmga0uk4ekf" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
     
-    <header class="archive-article-header">
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Saturday Sitecore Learning - Sitecore Installation with SIM tool</a>
-    </h1>
   
-
-      
-        
-  <div class="archive-article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" style="text-align:right">
-      <time datetime="2016-10-22T05:30:00.000Z" itemprop="datePublished">October 22, 2016</time>
+    <a href="/2017/02/Sitecore-Web-CMS-with-.NET/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Sitecore Web Content Management System with .NET</div>
     </a>
-  </div>
+  
+</nav>
 
 
-      
-    </header>
-  </div>
+  
 </article>
 
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/SIM1.png
-)" alt="Saturday Sitecore Learning - Sitecore Instance Manager (SIM) " class="thumbnail-image"></span>
-  
-</a>
 
-    </div>
-    
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/">Saturday Sitecore Learning - Sitecore Instance Manager (SIM) </a>
-    </h1>
-  
-
-      
-        
-  <div class="archive-article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-SIM-Installation/" style="text-align:right">
-      <time datetime="2016-10-15T05:30:00.000Z" itemprop="datePublished">October 15, 2016</time>
-    </a>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
+</section>
 
-
-      
-    </header>
-  </div>
-</article>
-
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecoredb.png
-)" alt="Saturday Sitecore Learning - Manual Installation" class="thumbnail-image"></span>
-  
-</a>
-
-    </div>
-    
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/">Saturday Sitecore Learning - Manual Installation</a>
-    </h1>
-  
-
-      
-        
-  <div class="archive-article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" style="text-align:right">
-      <time datetime="2016-10-08T03:30:00.000Z" itemprop="datePublished">October 08, 2016</time>
-    </a>
-  </div>
-
-
-      
-    </header>
-  </div>
-</article>
-
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-installation-1.png
-)" alt="Saturday Sitecore Learning - Sitecore Installation : Web Application Installer" class="thumbnail-image"></span>
-  
-</a>
-
-    </div>
-    
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/">Saturday Sitecore Learning - Sitecore Installation : Web Application Installer</a>
-    </h1>
-  
-
-      
-        
-  <div class="archive-article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/" style="text-align:right">
-      <time datetime="2016-10-01T03:30:00.000Z" itemprop="datePublished">October 01, 2016</time>
-    </a>
-  </div>
-
-
-      
-    </header>
-  </div>
-</article>
-
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/medium.png
-)" alt="My Journey from Hotel Management student to Software Engineer" class="thumbnail-image"></span>
-  
-</a>
-
-    </div>
-    
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/">My Journey from Hotel Management student to Software Engineer</a>
-    </h1>
-  
-
-      
-        
-  <div class="archive-article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/07/My-Journey-from-Hotel-Management-student-to-Software-Engineer/" style="text-align:right">
-      <time datetime="2016-07-03T04:30:00.000Z" itemprop="datePublished">July 03, 2016</time>
-    </a>
-  </div>
-
-
-      
-    </header>
-  </div>
-</article>
-
-  
-    </div></section>
-  
-      <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2016/">&laquo; Prev</a><a class="page-number" href="/archives/2016/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2016/page/3/">3</a><a class="page-number" href="/archives/2016/page/4/">4</a><a class="page-number" href="/archives/2016/page/5/">5</a><a class="extend next" rel="next" href="/archives/2016/page/3/">Next &raquo;</a>
-      </nav>
-    </section>
+</section>
       
         <aside id="sidebar">
   
@@ -519,7 +393,7 @@ ga('send', 'pageview');
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
