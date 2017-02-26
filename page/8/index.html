@@ -114,7 +114,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        59
+        60
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -145,6 +145,74 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-JQuery-Validations" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/JQuery-Validations/">JQuery Validations</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2014/09/JQuery-Validations/" style="text-align:right">
+      <time datetime="2014-09-25T19:09:00.000Z" itemprop="datePublished">September 26, 2014</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note : <em>This post is first published on Sep-2014 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<p>Code Snippet for validating the textbox, dropdownlist, and radiobuttonlist in ASP.NET page using Jquery.</p>
+<p><strong><em>To check Textbox value:</em></strong></p>
+<p>txtName is the textbox id:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ($.trim($(&#8220;#txtName&#8221;).val()).length == 0) &#123;&#10;  //Enter a name&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>To check Whether entered value is number or not:</em></strong></p>
+<p>$.isNumeric(value) method can be used to check for number</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var age = $.trim($(&#8220;#txtAge&#8221;).val());&#10;if ($.isNumeric(age)) &#123;&#10;   //Entered number is Numeric&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>To check whether any radio button is checked:</em></strong></p>
+<p>rdbGender is the Radiobuttonlist id:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ($(&#8220;#rdbGender input:checked&#8221;).length == 0) &#123;&#10;   //Gender is not selected&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>To check whether any dropdownlist value is checked:</em></strong></p>
+<p>ddlQualification is the Dropdownlist id:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ($(&#8220;#ddlQualification option:selected&#8221;).val() == 0) &#123;&#10;//Qualification is not selected&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>Total Source Code</em></strong></p>
+<script src="https://gist.github.com/gopigujjula/86ec2e3743d298b8caba.js"></script>
+
+<p><strong><em>Output Screen</em></strong><br><img src="/css/images/JqueryValidation.png" alt=""></p>
+<p><strong>Happy Coding :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2014/09/JQuery-Validations/" data-id="ciulhu2ik002qu4mgd1hf98t6" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2014/09/JQuery-Validations/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JQuery/">JQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-ASP-NET-Page-life-cycle" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -533,67 +601,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Program-to-Add-two-50-digit-numbers-in-C" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/Program-to-Add-two-50-digit-numbers-in-C/">Program to Add two 50 digit numbers in C#</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2013/04/Program-to-Add-two-50-digit-numbers-in-C/" style="text-align:right">
-      <time datetime="2013-04-18T12:26:00.000Z" itemprop="datePublished">April 18, 2013</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/C/">C#</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Note :<em>This post is first published on Apr-2013 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
-<p>Below code, without using BigInteger structure.</p>
-<script src="https://gist.github.com/gopigujjula/5412295.js"></script>
-
-<p><strong><em>Output</em></strong></p>
-<p><img src="/css/images/bignumber-addition.jpg" alt=""></p>
-<p><strong>Happy coding :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2013/04/Program-to-Add-two-50-digit-numbers-in-C/" data-id="ciulhu2g7002bu4mgq4ltt4m8" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2013/04/Program-to-Add-two-50-digit-numbers-in-C/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
       </nav>
@@ -606,6 +613,25 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-content-author-experience-content-level.png
+)" alt="Sitecore Enhancing Content Author Experience - Part 3 (Content)" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/" class="title">Sitecore Enhancing Content Author Experience - Part 3 (Content)</a></p>
+              <p class="item-date"><time datetime="2017-02-26T11:54:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -683,25 +709,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Sitecore-FAQ/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecoreexperienceplatform.png
-)" alt="Sitecore - Frequently Asked Questions" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/02/Sitecore-FAQ/" class="title">Sitecore - Frequently Asked Questions</a></p>
-              <p class="item-date"><time datetime="2017-02-12T07:30:00.000Z" itemprop="datePublished">February 12, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -711,7 +718,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">25</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
