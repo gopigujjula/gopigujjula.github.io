@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-26T16:41:06.344Z</updated>
+  <updated>2017-02-26T17:19:37.809Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/</id>
     <published>2017-02-26T11:54:00.000Z</published>
-    <updated>2017-02-26T16:41:06.344Z</updated>
+    <updated>2017-02-26T17:19:37.809Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <p>In last two posts, we had explored from both template &amp; layout level, in this post, let’s explore at Content level.</p>
 <p><img src="/css/images/sitecore-content-author-experience-content-level.png" alt=""></p>
-<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days we are seeing lot of Content Authors are using Experience editor to manage their content. To support their activities in Exp Editor, as a developer we need to take care of few things.</p>
+<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days we are seeing lot of Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
 <p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them from experience editor. That is the reason, we always need to output fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
 <p>Some of the examples:</p>
 <p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Text runat=&#34;server&#34; ID=&#34;Title&#34; Field=&#34;Name&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;Name&#34;)</span><br></pre></td></tr></table></figure></p>
