@@ -13,7 +13,7 @@ typeof is an operator, which cannot be overloaded.Used to obtain the System.Type
 <meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
 typeof is an operator, which cannot be overloaded.Used to obtain the System.Type object for">
-<meta property="og:updated_time" content="2016-11-05T11:59:13.993Z">
+<meta property="og:updated_time" content="2017-02-26T11:22:21.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="typeof">
 <meta name="twitter:description" content="Note : This post is first published on Mar-2014 in my previous blog Techkindle. Moving the content to here.
@@ -118,11 +118,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        58
+        59
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        30
+        31
         <span>tags</span>
       </div>
     </div>
@@ -191,6 +191,7 @@ ga('send', 'pageview');
 <p><strong>Examples:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof(int);//System.Int32&#10;typeof(List&#60;int&#62;);//System.Collections,Generic.List&#39;1[System.Int32]&#10;typefo(Dictionary&#60;,&#62;);//System.Collections,Generic.Dictionary&#39;2[TKey,TValue]&#10;typeof(void);//System.Void</span><br></pre></td></tr></table></figure></p>
 <p>The result of typeof(void) is the System.Type object that represents the absence of a type. This special type object is useful in class libraries that allow reflection onto methods in the language, where those methods wish to have a way to represent the return type of any method, including void methods, with an instance of System.Type.</p>
 <p><strong>Test:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Employee objEmployee = new Employee();&#10;System.Type t = typeof(objEmployee); //throws error, because typeof only works on types, not on variables.&#10;System.Type t = typeof(Employee) ; //it is fine.</span><br></pre></td></tr></table></figure></p>
+<p><strong>Happy Coding :)</strong></p>
 
       
     </div>
@@ -249,6 +250,25 @@ ga('send', 'pageview');
           <li>
             
             <div class="item-thumbnail">
+              <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-layouts-content-author-experience.png
+)" alt="Sitecore Enhancing Content Author Experience - Part 2 (Layouts)" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Layouts/">Layouts</a></p>
+              <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" class="title">Sitecore Enhancing Content Author Experience - Part 2 (Layouts)</a></p>
+              <p class="item-date"><time datetime="2017-02-26T04:54:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
               <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="thumbnail">
   
     <span style="background-image:url(/css/images/sitecore-templates-content-author-experience.png
@@ -259,7 +279,7 @@ ga('send', 'pageview');
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Sitecore-Templates/">Sitecore Templates</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Templates/">Templates</a></p>
               <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="title">Sitecore Enhancing Content Author Experience - Part 1 (Templates)</a></p>
               <p class="item-date"><time datetime="2017-02-25T21:05:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
             </div>
@@ -322,25 +342,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-link-types.png
-)" alt="Saturday Sitecore Learning - Templates Part 4 (Link Field Types)" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="title">Saturday Sitecore Learning - Templates Part 4 (Link Field Types)</a></p>
-              <p class="item-date"><time datetime="2017-02-04T02:47:00.000Z" itemprop="datePublished">February 04, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -350,7 +351,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">25</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-25T21:23:10.657Z</updated>
+  <updated>2017-02-26T11:06:06.741Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sitecore Enhancing Content Author Experience - Part 2 (Layouts)</title>
+    <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/"/>
+    <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/</id>
+    <published>2017-02-26T04:54:00.000Z</published>
+    <updated>2017-02-26T11:06:06.741Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
+<p>In last post, we had explored how can we enhance content author experience from template perspective, in this post, let’s explore at layouts level.</p>
+<p><img src="/css/images/sitecore-layouts-content-author-experience.png" alt=""></p>
+<h5 id="1-_Datasource_Location"><a href="#1-_Datasource_Location" class="headerlink" title="1. Datasource Location"></a>1. Datasource Location</h5><p>In Sitecore, each page is a collection of components. We can add any number of components to a page, and some of the components we add to the page, have their own associated content. Content authors can select the associated  content using data source. If we are not restricting data source location, then full content tree is shown in the selectable items list, then content authors have a tough time to navigate and select the associated content.</p>
+<p>Datasource location helps us in this situation, we can set selectable items location, while creating sub-layout/rendering using <strong>Datasource Location</strong> field.</p>
+<p><img src="/css/images/datasource-selection.png" alt=""></p>
+<p><strong><em>without data source location (full content tree is listed)</em></strong></p>
+<p><img src="/css/images/without-datasource-location.png" alt=""></p>
+<p><strong><em>with data source location (items shown, based on the location)</em></strong></p>
+<p><img src="/css/images/with-datasource-location.png" alt=""></p>
+<p><a href="http://firebreaksice.com/sitecore-rendering-datasource-locations/" target="_blank" rel="external">Here</a> you can read more information about data source location.</p>
+<h5 id="2-_Datasource_Template"><a href="#2-_Datasource_Template" class="headerlink" title="2. Datasource Template"></a>2. Datasource Template</h5><p>Once we specify data source location, still content author has to know, which is the associated content item to choose. If there are only similar content items present in the location, then it becomes easier. But what if there are different variety of content items are present, then it is our job to guide them, to select proper items.</p>
+<p>We can achieve this by using Datasource template, which can be set on sub-layout/rendering <strong>Datasource Template</strong> field.</p>
+<p><img src="/css/images/datasource-template-selection.png" alt=""></p>
+<p>Without Data source Template:</p>
+<ul>
+<li>Any content item can be selected.</li>
+<li><strong><em>Create New Content</em></strong> option is grayed out, because, Sitecore does not know, using which template it has to create new item. (I remember in Sitecore certification exam, there was a question on when does Create New Content is grayed out)</li>
+</ul>
+<p><img src="/css/images/without-datasource-template.png" alt=""></p>
+<p>With Data source template:</p>
+<ul>
+<li>Sitecore prompts with a message, when other template item is selected.</li>
+<li>Create New Item option is available, using which Content authors can create new content directly from here.</li>
+</ul>
+<p><img src="/css/images/with-datasource-template.png" alt=""></p>
+<h5 id="3-_Placeholder_Settings"><a href="#3-_Placeholder_Settings" class="headerlink" title="3. Placeholder Settings"></a>3. Placeholder Settings</h5><p>We can empower the Experience Editor using placeholder settings (Allowed Controls). It is very important to set allowed controls for each placeholder, other wise it would be difficult for content authors to know, which all the components can be placed on particular placeholder.</p>
+<p>Without allowed controls being set, content authors have to navigate and find the component to add.</p>
+<p><img src="/css/images/placeholder-settings.png" alt=""></p>
+<p><strong><em>Without Allowed controls being set</em></strong></p>
+<p><img src="/css/images/without-placeholder-settings.png" alt=""></p>
+<p><strong><em>With Allowed controls being set</em></strong></p>
+<p><img src="/css/images/with-placeholder-settings.png" alt=""></p>
+<h5 id="4-_Thumbnail"><a href="#4-_Thumbnail" class="headerlink" title="4. Thumbnail"></a>4. Thumbnail</h5><p>After allowed controls is being set, now content authors can see the list of renderings in <strong>Select a Rendering</strong> window. But wouldn’t be good to provide a visual clue, about what design they see on page, by selecting a particular component. Thumbnail is useful for this purpose.</p>
+<p>Thumbnail can be set at Rendering/sub-layout items. We have an option to take screen shot as well, or can select an image from media library.</p>
+<p><img src="/css/images/rendering-thumbnail.png" alt=""></p>
+<p>Below, we can observe that Article module is having thumbnail set, but Product module is not having any thumbnail.</p>
+<p><img src="/css/images/with-rendering-thumbnail.png" alt=""></p>
+<p>Thank you for reading, in next post, will explore the tips from content level.</p>
+<p><strong>Happy Coding :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Layouts_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Layouts_level&quot; class=&quot;headerlin
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Layouts" scheme="http://gopigujjula.com/categories/Sitecore/Layouts/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sitecore Enhancing Content Author Experience - Part 1 (Templates)</title>
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/</id>
     <published>2017-02-25T21:05:00.000Z</published>
-    <updated>2017-02-25T21:23:10.657Z</updated>
+    <updated>2017-02-26T11:04:34.893Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Template_level"><a href="#Enhancing_Content_Author_Experience_-_Template_level" class="headerlink" title="Enhancing Content Author Experience - Template level"></a>Enhancing Content Author Experience - Template level</h4><p>This is the first post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <p>As a Sitecore developer, I always feel we have two primary users of our work; One is a website visitor, and second one is Content authors. Most of the time, we tend to give more importance to our site visitor, as they make the business happen, but we need to give equal importance to Content authors, to improve their overall experience of managing content.</p>
@@ -29,12 +97,12 @@
 <h5 id="1-_Template_Icon"><a href="#1-_Template_Icon" class="headerlink" title="1. Template Icon"></a>1. Template Icon</h5><p>Template Icons help to visually separate semantically related content items. We can Visually provide clues to the type of item in the content tree, by choosing unique icon to each template.</p>
 <p><img src="/css/images/contenttree.png" alt=""></p>
 <p>Image Courtesy: <a href="https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/" target="_blank" rel="external">https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/</a></p>
-<p>As a content author, how do you feel, when you see the left side and right side content trees in above screen shot.<br>Definitely right side tree, is much more helpful, because by seeing the icons, we can understand what is type of item it is.</p>
+<p>As a content author, how do you feel, when you see the left side and right side content trees in above screen shot. Definitely left side tree, is much more helpful, because by seeing the icons, we can understand what type of item it is.</p>
 <p>Icons can be set at template level, or item level. Two ways we can set icons, one is by directly clicking on the template icon, another one is from configure tab.</p>
 <p><img src="/css/images/template-icon.png" alt=""></p>
 <p><img src="/css/images/template-icon-configure.png" alt=""></p>
-<h5 id="2-_Field_Type"><a href="#2-_Field_Type" class="headerlink" title="2. Field Type"></a>2. Field Type</h5><p>Selecting appropriate field type is key for managing the content, as field type effects, what control content author use to modify that field. Sitecore provides lot of in-build field types, and if we needed we can also create custom field types. Read here to know more about <a href="/tags/Sitecore-Field-Types/">field types</a>.</p>
-<p>For example, let’s take the case of Multlist or Multlist with search field types. Both provides a list of items, to choose, but second field type provides search option too, this is very much useful, when there are lot of selectable items.</p>
+<h5 id="2-_Field_Type"><a href="#2-_Field_Type" class="headerlink" title="2. Field Type"></a>2. Field Type</h5><p>Selecting appropriate field type is key for managing the content, as field type effects, what control content author use to modify that field content. Sitecore provides lot of in-build field types, and if we needed we can also create custom field types. Read here to know more about <a href="/tags/Sitecore-Field-Types/">field types</a>.</p>
+<p>For example, let’s take the case of Multlist or Multlist with search field types. Both provides a list of items, to choose, but second field type provides extra search option too, this is very much useful, when there are lot of selectable items, other wise it is difficult to scroll and select.</p>
 <p><img src="/css/images/list-field-type.png" alt=""></p>
 <p><img src="/css/images/list-with-search-field-type.png" alt=""></p>
 <h5 id="3-_Field_Source"><a href="#3-_Field_Source" class="headerlink" title="3. Field Source"></a>3. Field Source</h5><p>For list field types, we can control the list of selectable items to be displayed, using field source property. Field source can be set using; Sitecore query, path, and GUID. When Treelist field type is used, and source is not set, full Sitecore tree is displayed in selectable items. Then it is very difficult for Content author, to navigate and select the appropriate item.</p>
@@ -54,6 +122,7 @@
 <p>Once parameter template is added to component, Content can be modified from Control Properties which can be accessed using Page item Presentation details.</p>
 <p><img src="/css/images/parameter-template-content.png" alt=""></p>
 <p>Thank you for reading, in next post, will explore the tips from layout level.</p>
+<p><strong>Happy Coding :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -64,7 +133,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -80,9 +149,9 @@
     <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/"/>
     <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/</id>
     <published>2017-02-25T05:47:00.000Z</published>
-    <updated>2017-02-25T19:25:17.386Z</updated>
+    <updated>2017-02-26T11:06:07.023Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Template_Inheritance"><a href="#Template_Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h4><p>This is the fifth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+    <content type="html"><![CDATA[<h4 id="Template_Inheritance"><a href="#Template_Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h4><p>This is the fifth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p>In last three posts, we discussed about <a href="/tags/Sitecore-Field-Types/">field types</a>, now let’s explore what is template Inheritance, and the benefits it provide.</p>
 <p>Template is a collection of fields, where fields can be defined on a template, or can be inherited from other templates. Similar to Object Oriented Programming, where a class can be inherited from another class, in Sitecore, a template can be inherited from another template.</p>
 <p>Each template can inherit fields, field sections, standard values, and potentially other properties from any number of other templates.</p>
@@ -112,6 +181,7 @@
 <li><a href="http://www.amazon.in/Professional-Sitecore-Development-WROX-John/dp/812653673X" target="_blank" rel="external">Professional Sitecore Development</a></li>
 <li><a href="http://www.amazon.in/Professional-Sitecore-Development-Solutions-Practices/dp/1484222911" target="_blank" rel="external">Professional Sitecore 8 Development: A Complete Guide to Solutions and Best Practices</a></li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -124,7 +194,7 @@
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -180,7 +250,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-FAQ/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-FAQ/</id>
     <published>2017-02-12T07:30:00.000Z</published>
-    <updated>2017-02-13T10:11:40.582Z</updated>
+    <updated>2017-02-26T11:06:06.770Z</updated>
     
     <content type="html"><![CDATA[<p>Exactly one and half year back When I started learning Sitecore as a <strong>.Net developer</strong> few questions were in my mind. Now I feel like I’m able to answer all those by adding some more questions asked by participants in last week presentation in <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">Dotnet Bangalore user group</a>.</p>
 <h5 id="1-_What_is_CMS/WCMS_3F"><a href="#1-_What_is_CMS/WCMS_3F" class="headerlink" title="1. What is CMS/WCMS?"></a>1. What is CMS/WCMS?</h5><p>If we break CMS (Content Management System) into pieces,</p>
@@ -215,6 +285,7 @@
 <h5 id="19-_Where_does_Sitecore_stores_content_managed_Videos_3F"><a href="#19-_Where_does_Sitecore_stores_content_managed_Videos_3F" class="headerlink" title="19. Where does Sitecore stores content managed Videos?"></a>19. Where does Sitecore stores content managed Videos?</h5><p>Usually videos are integrated from external media platforms like Brightcove, Ooyala, YouTube, and Vimeo etc. Only Video information gets imported into Sitecore, not the Video file.</p>
 <h5 id="20-_Are_there_any_Sitecore_developer_certifications_3F"><a href="#20-_Are_there_any_Sitecore_developer_certifications_3F" class="headerlink" title="20. Are there any Sitecore developer certifications?"></a>20. Are there any Sitecore developer certifications?</h5><p>Yes, there is a <strong>Sitecore Professional Developer Certification</strong>, which developer get <strong>Sitecore Certified Professional Developer</strong> title.</p>
 <p>Will keep adding more questions and answers.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -237,9 +308,9 @@
     <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/"/>
     <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/</id>
     <published>2017-02-04T02:47:00.000Z</published>
-    <updated>2017-02-06T17:51:31.381Z</updated>
+    <updated>2017-02-26T11:06:06.996Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+    <content type="html"><![CDATA[<h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
 <p>In last two posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Simple field types</a> &amp; <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">List field types</a>, now let’s look into <strong>Link</strong> field types.</p>
 <h5 id="Link_types_3A"><a href="#Link_types_3A" class="headerlink" title="Link types:"></a>Link types:</h5><p>Link field types allow content authors to enter links to Sitecore internal items, external URLs, anchors, and email addresses.</p>
@@ -276,6 +347,7 @@
 <li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
 <li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -288,7 +360,7 @@
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -354,9 +426,9 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/</id>
     <published>2017-01-28T02:47:00.000Z</published>
-    <updated>2017-02-06T17:55:52.286Z</updated>
+    <updated>2017-02-26T11:06:06.973Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+    <content type="html"><![CDATA[<h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
 <p>In the previous <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">post</a>, we discussed about Simple field types, in this post let’s look into <strong>List</strong> field types.</p>
 <h5 id="List_types_3A"><a href="#List_types_3A" class="headerlink" title="List types:"></a>List types:</h5><p>List type fields allow content authors to select one or multiple values, ex: countries, categories, etc.</p>
@@ -411,6 +483,7 @@
 <li><a href="http://getfishtank.ca/blog/treelist-data-source-hidden-functionality" target="_blank" rel="external">http://getfishtank.ca/blog/treelist-data-source-hidden-functionality</a></li>
 <li><a href="https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/" target="_blank" rel="external">https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/</a></li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -423,7 +496,7 @@
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -441,9 +514,9 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
     <published>2017-01-21T07:30:00.000Z</published>
-    <updated>2017-02-04T17:48:01.959Z</updated>
+    <updated>2017-02-26T11:03:21.338Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Template series</a>.</p>
+    <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
 <p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
 <p>How each property of the class has its own type, similar way each template field also has its own field type. Field type determines, three things</p>
@@ -514,6 +587,7 @@
 <li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
 <li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -526,7 +600,7 @@
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -544,7 +618,7 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/</id>
     <published>2017-01-14T05:30:00.000Z</published>
-    <updated>2017-01-28T02:01:34.088Z</updated>
+    <updated>2017-02-26T07:24:26.853Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
 <p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
@@ -598,9 +672,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Talks/"/>
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -620,7 +692,7 @@
     <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/"/>
     <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/</id>
     <published>2016-12-10T07:30:00.000Z</published>
-    <updated>2017-01-28T02:04:09.932Z</updated>
+    <updated>2017-02-26T11:03:21.309Z</updated>
     
     <content type="html"><![CDATA[<p>As part of <a href="/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning series</a>, till now we looked into,</p>
 <ul>
@@ -659,6 +731,7 @@
 <ul>
 <li>Professional Sitecore 8 development - <a href="http://www.apress.com/us/book/9781484222911" target="_blank" rel="external">http://www.apress.com/us/book/9781484222911</a></li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -673,7 +746,7 @@
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
-      <category term="Sitecore Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/"/>
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
@@ -689,7 +762,7 @@
     <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/"/>
     <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/</id>
     <published>2016-12-03T05:30:00.000Z</published>
-    <updated>2016-12-03T13:00:53.228Z</updated>
+    <updated>2017-02-26T11:03:20.889Z</updated>
     
     <content type="html"><![CDATA[<p>As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Content Item etc. At last we will see how the Content Author can change the text using Content editor.</p>
 <p>Before we move further, few of you may not be convenient with terminology (template, layout, sub-layout) but no issues just follow the steps, we will discuss more about each topic in coming posts.</p>
@@ -731,6 +804,7 @@
 <h4 id="Hello_World"><a href="#Hello_World" class="headerlink" title="Hello World"></a>Hello World</h4><p>We will try changing the Title field content to <strong>Hello World</strong>, and verify that text is changing on home page or not. After making any change, we need to publish the item; As I discussed earlier our changes will save in to Master database. On Click of publish latest modifications/final content gets pushed to <strong>web</strong> database. Refer Below screenshot for final output we are expecting. Hello world is indeed appearing on home page.</p>
 <p><img src="/css/images/helloworld-content.png" alt=""></p>
 <p>Sitecore supports both ASP.NET web forms and MVC, but default home page comes with all web forms related code. Currently most of new Sitecore implementations are done in MVC. So in coming up posts, we will always try to see the code examples in MVC.<br>ASP.NET web forms is still very much in picture, because lot of implementations till now are done in web forms. Whenever we are maintaining those applications, web forms knowledge is very much required.<br>That’s all for this week.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -757,7 +831,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/</id>
     <published>2016-11-26T05:30:00.000Z</published>
-    <updated>2016-11-29T05:08:36.071Z</updated>
+    <updated>2017-02-26T11:03:21.107Z</updated>
     
     <content type="html"><![CDATA[<p>This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation deck is part of the knowledge share session, I had delivered in office.</p>
 <p>This check list helps Sitecore developers to better enhance the Content Author experience in managing their content.</p>
@@ -765,6 +839,7 @@
 	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
+<p><strong>Happy Learning :)</strong></p>
 </div>]]></content>
     
     <summary type="html">
@@ -793,7 +868,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/</id>
     <published>2016-11-19T05:30:00.000Z</published>
-    <updated>2016-11-29T04:54:11.671Z</updated>
+    <updated>2017-02-26T11:03:21.135Z</updated>
     
     <content type="html"><![CDATA[<p>By this time, we have Sitecore website running in our machine, and also ready with Visual Studio solution setup. From now, we will look into Sitecore concepts, in both theory and hands on as well.<br>As we all know Sitecore is a database driven CMS, in this post let’s look into Sitecore databases.</p>
 <h4 id="Sitecore_Databases_3A"><a href="#Sitecore_Databases_3A" class="headerlink" title="Sitecore Databases:"></a>Sitecore Databases:</h4><p>From developer’s perspective, until and unless any customization is required, we don’t directly deal with databases, we always access data using Sitecore Api’s. but it is very important to know about, what are all databases Sitecore uses.</p>
@@ -825,6 +900,7 @@
 </li>
 </ul>
 <h5 id="Reporting_Database_3A"><a href="#Reporting_Database_3A" class="headerlink" title="Reporting Database:"></a>Reporting Database:</h5><p>The reporting database is a SQL Server database that stores aggregated data from the collection database suitable for fast querying and reporting. This database contains aggregated data from collection DB.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -851,7 +927,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/</id>
     <published>2016-11-12T05:30:00.000Z</published>
-    <updated>2016-11-23T06:16:35.470Z</updated>
+    <updated>2017-02-26T11:03:21.262Z</updated>
     
     <content type="html"><![CDATA[<p>In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore more advanced,</p>
 <p>I am using <strong>Visual Studio 2015 community/professional</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
@@ -919,6 +995,7 @@
 <p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
 <p><img src="/css/images/VS-deploy-verify-2.png" alt=""></p>
 <p>That’s all, thanks for reading.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -945,7 +1022,7 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/</id>
     <published>2016-11-05T05:30:00.000Z</published>
-    <updated>2016-12-03T13:09:40.138Z</updated>
+    <updated>2017-02-26T11:03:21.227Z</updated>
     
     <content type="html"><![CDATA[<p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
 <p>There are mainly two approaches to create the project,</p>
@@ -998,6 +1075,7 @@
 </li>
 </ul>
 <p><strong>To be continued -having some trouble to setup</strong></p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -1025,7 +1103,7 @@
     <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/"/>
     <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/</id>
     <published>2016-10-29T05:30:00.000Z</published>
-    <updated>2016-11-05T12:26:00.558Z</updated>
+    <updated>2017-02-26T11:03:20.958Z</updated>
     
     <content type="html"><![CDATA[<p>By this time, we have latest version (8.2) of Sitecore running in local. It’s ok to install using either of the three approaches, web application installer, or manual installation, or using SIM.</p>
 <p>Before going ahead to create .NET web application, it’s good to have a look at Sitecore launch pad, different components, and the content tree structure.</p>
@@ -1059,6 +1137,7 @@
 </ul>
 <p><img src="/css/images/sitecore-experience-analytics.png" alt=""></p>
 <p>In the next post, we will look into how to create a .NET web project for Sitecore.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -1085,7 +1164,7 @@
     <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/"/>
     <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/</id>
     <published>2016-10-22T05:30:00.000Z</published>
-    <updated>2016-11-05T12:24:41.196Z</updated>
+    <updated>2017-02-26T11:03:21.193Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_Sitecore_with_SIM"><a href="#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM" class="headerlink" title="Saturday Sitecore Learning: Sitecore with SIM"></a>Saturday Sitecore Learning: Sitecore with SIM</h3><p>Last week, we had seen how to install Sitecore Instance Manager (SIM) tool. This week we will explore how to install Sitecore using SIM.</p>
 <p>Among all the three (<strong>Web Application Installer, Manual Installation, and SIM</strong>) available options, to choose, SIM is the most preferred choice among all the Sitecore developers. The Main reason for that is the flexibility it provides in managing the Sitecore sites.</p>
@@ -1120,6 +1199,7 @@
 <p><strong>Step 11:</strong><br>Once the installation is completed, you can check the listed options, and click on <em>Finish</em>.</p>
 <p><img src="/css/images/SIM-sitecore-installation-finish.png" alt=""></p>
 <p>See you on next <strong><em>Saturday</em></strong>.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -1146,7 +1226,7 @@
     <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/"/>
     <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/</id>
     <published>2016-10-15T05:30:00.000Z</published>
-    <updated>2016-11-05T12:26:00.433Z</updated>
+    <updated>2017-02-26T11:03:21.078Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_SIM_tool_Installation"><a href="#Saturday_Sitecore_Learning_3A_SIM_tool_Installation" class="headerlink" title="Saturday Sitecore Learning: SIM tool Installation"></a>Saturday Sitecore Learning: SIM tool Installation</h3><p>Sitecore Instance Manager (SIM), is the tool, using which we can install, maintain, and uninstall the Sitecore. Among Sitecore developers, this is the most preferred choice to maintain Sitecore installations.</p>
 <p>SIM provides rich set of choices, you can watch this wonderful <a href="https://www.youtube.com/watch?v=bqYhjoW83RE" target="_blank" rel="external">video</a>, in which <a href="https://twitter.com/vasiliyfomichev" target="_blank" rel="external">Vasiliy Fomichev</a> explains the main features.</p>
@@ -1174,6 +1254,7 @@
 <li><p>After the successful installation, SIM will check for any sitecore websites in the specified File System path. In my local I already have TestSitecore website, the same is listed below.<br><img src="/css/images/SIM12.png" alt=""></p>
 </li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -1200,7 +1281,7 @@
     <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/"/>
     <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/</id>
     <published>2016-10-08T03:30:00.000Z</published>
-    <updated>2016-11-05T12:26:00.408Z</updated>
+    <updated>2017-02-26T11:03:21.018Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
 <p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
@@ -1225,83 +1306,12 @@
 <p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
 <p><img src="/css/images/IIS-website.png" alt=""></p>
 <p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
+<p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_Manual_I
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Sitecore Installation : Web Application Installer</title>
-    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/"/>
-    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Web-Application-Installer/</id>
-    <published>2016-10-01T03:30:00.000Z</published>
-    <updated>2016-12-10T08:24:45.813Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.</em></p>
-<p>Again I am re-initiating it from this month. In learning series, till now we have seen what is Sitecore, resources, and certification information. From now onwards, we will look into Initial Setup, installation, and implementation parts.</p>
-<p>Sitecore installation can be done in three ways</p>
-<ol>
-<li>Sitecore web application installer</li>
-<li>Sitecore Zip (manual installation)</li>
-<li>Sitecore Instance Manager (SIM)</li>
-</ol>
-<p>Sitecore installation consists of mainly three steps.</p>
-<ol>
-<li>DB Setup</li>
-<li>Web site Deploy location</li>
-<li>IIS configuration for site</li>
-</ol>
-<p>In this post, we will look into first option.</p>
-<p><strong><em>Sitecore web application installer:</em></strong><br>Among all the three options, web application installer is the easiest one, as it is through exe. We just need to run .exe file and follow the instructions.</p>
-<p>Before installing Sitecore, we need to have following installed, with administrator access</p>
-<ul>
-<li>.NET framework 4.5 and above (for Sitecore 8.2)</li>
-<li>IIS</li>
-<li>Visual Studio - Community/Professional/Enterprise</li>
-<li>MS SQL Server or Oracle</li>
-<li>Mongo DB</li>
-</ul>
-<p>You can find more details <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a> about Sitecore compatibility.</p>
-<p>Download latest Sitecore exe file -version (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>.</p>
-<p><strong>Installation Steps</strong><br><strong>Step 1:</strong> Unzip the downloaded file, and run the <strong>Sitecore 8.2 rev. 160729.exe</strong> file, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-1.png" alt=""></p>
-<p><strong>Step 2:</strong> Accept the license agreement, and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-2.png" alt=""></p>
-<p><strong>Step 3:</strong> Select the type of installation. Here we have three options,<br>   <em>Complete:</em> both Sitecore web site and database.<br>   <em>Database Only:</em> It is useful when we already have web site setup, but need fresh DB.<br>   <em>Client Only:</em> It is useful if we are using the database from any other common server with in the organization.<br>If you are trying to install in personal mission then choose Complete option otherwise based on requirement choose the option and click on Next -&gt;.</p>
-<p><img src="/css/images/sitecore-installation-3.png" alt=""></p>
-<p><strong>Step 4:</strong> Give a unique name for this new instance and click on Next -&gt;.<br><img src="/css/images/sitecore-installation-4.png" alt=""></p>
-<p><strong>Step 5:</strong> Select the Sitecore license file. I do not have much information on how to get the license file. I am using my firm (Sitecore Platinum Partner) license file. I guess for individual developer, there is a Student trail license which is valid for one month.<br>Once license file is selected, it will auto populate the below details. Then click on Next -&gt;.<br><img src="/css/images/sitecore-installation-5.png" alt=""></p>
-<p><strong>Step 6:</strong> Both SQL Server and Oracle are supported. Select the database vendor from dropdown, give the Database server name, and credentials. On click of Advanced settings, we can change Database Prefix, which will be defaulted to previously given Sitecore instance name. <em>Imp Note: Login Id should have admin access enabled in DB server.</em><br>Click on OK to proceed.<br><img src="/css/images/sitecore-installation-6a.png" alt=""></p>
-<p><img src="/css/images/sitecore-installation-6b.png" alt=""></p>
-<p><strong>Step 7:</strong> Select the IIS root path/wwwroot folder location for Sitecore installation. From Advanced settings, can also select locations for Data, and Database. Click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-7a.png" alt=""></p>
-<p><img src="/css/images/sitecore-installation-7b.png" alt=""></p>
-<p><strong>Step 8:</strong> Give web site name, and click on Next -&gt; to proceed.<br><img src="/css/images/sitecore-installation-8.png" alt=""></p>
-<p><strong>Step 9:</strong> At last one more time review all the options, and click <strong>Install</strong>.<br><img src="/css/images/sitecore-installation-9.png" alt=""></p>
-<p><strong>Step 10:</strong> Sitecore will take some time to get installed, and after finishing the installation, select the Launch Sitecore check box, and click on Finish.<br><img src="/css/images/sitecore-installation-10a.png" alt=""></p>
-<p><img src="/css/images/sitecore-installation-10b.png" alt=""></p>
-<p><strong>Step 11:</strong> Now, you can see Sitecore home page in your default browser. You can login with default Sitecore credentials,<br><strong>User name: admin<br>Password: b</strong></p>
-<p><img src="/css/images/sitecore-installation-11.png" alt=""></p>
-<p>Cheers on successful installation.In my next post I will explain about Manual Installation.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;em&gt;My Apologies. Due to some unavoidable reasons, I couldn’t add any posts in the last two months.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Again I am re-initiating 
     
     </summary>
     

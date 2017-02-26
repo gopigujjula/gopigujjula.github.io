@@ -114,11 +114,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        58
+        59
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        30
+        31
         <span>tags</span>
       </div>
     </div>
@@ -145,6 +145,94 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-NUnit-Sample-Application" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/06/NUnit-Sample-Application/">NUnit Sample Application</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2011/06/NUnit-Sample-Application/" style="text-align:right">
+      <time datetime="2011-06-24T13:05:00.000Z" itemprop="datePublished">June 24, 2011</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note :<em>This post is first published on June-2011 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<h4 id="Steps_to_use_NUnit"><a href="#Steps_to_use_NUnit" class="headerlink" title="Steps to use NUnit"></a>Steps to use NUnit</h4><ul>
+<li>First download current version of NUnit <a href="http://www.nunit.org/index.php?p=download" target="_blank" rel="external">here</a>.</li>
+<li>Install it in your machine.</li>
+<li>Create one sample Class Library in visual studio, and name it <strong>Calculations</strong>.</li>
+<li>Now, we just write some small calculation methods like Addition and Subtraction etc..</li>
+</ul>
+<p>Code(.cs file) will be like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using System;&#10;using System.Collections.Generic;&#10;using System.Linq;&#10;using System.Text;&#10;&#10;namespace Calculations&#10;&#123;&#10;   public class Calc&#10;    &#123;&#10;        private int sum;&#10;        private int subtr;&#10;&#10;        public int Addition(int a, int b)&#10;        &#123;&#10;            sum = a + b;&#10;            return sum;&#10;        &#125;&#10;        public int Subtraction(int a, int b)&#10;        &#123;&#10;            subtr = a - b;&#10;            return subtr;&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>Then Create another class library, where we can write the test cases for the above methods.</p>
+<p>Let us assume it as a NunitSampleTest.cs</p>
+<ul>
+<li>For this Class library we need to add nunit reference.<br>If you have installed NUnit in C drive, You can find this reference from the below path<br>C:\Program Files\NUnit 2.5.10\bin\net-2.0\framework\nunit.framework.dll</li>
+<li>Then we need to add <strong><em>Calculations</em></strong> reference.</li>
+</ul>
+</li>
+</ul>
+<p>Now we need to write the test cases as below</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using System;&#10;using System.Collections.Generic;&#10;using System.Linq;&#10;using System.Text;&#10;using Calculations;&#10;using NUnit.Framework;&#10;&#10;namespace NUnitSampleTest&#10;&#123;&#10;    [TestFixture]&#10;   public class NUnitTestClass&#10;    &#123;&#10;        [Test]&#10;        public void AdditionTest()&#10;        &#123;&#10;            Calc newobj = new Calc();&#10;            int sum = newobj.Addition(20, 10);&#10;            Assert.AreEqual(30, sum);&#10;        &#125;&#10;        [Test]&#10;        public void SubtractionTest()&#10;        &#123;&#10;            Calc newobj = new Calc();&#10;            int subtr = newobj.Subtraction(20, 10);&#10;            Assert.AreEqual(10, subtr);&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>[Note: In the above code we can find out two new attributes, [<strong> TestFixture </strong> ] and [<strong> Test </strong> ] and one class <strong>Assert</strong>.<br>The <span style="font-weight:bold;">TestFixture<span style="font-style:italic;"></span></span> attribute is specified for the classes, When we attach this attribute to a class, the Test Runner application will scan it for test methods.<br>The only restrictions on classes that use the TestFixture attribute are that they must have a public default constructor (or no constructor which is the same thing).</p>
+<p>The <span style="font-weight:bold;">Test<span style="font-style:italic;"></span></span> attribute marks a specific method inside a class that has already been marked as a TestFixture, as a test method.</p>
+<p><span style="font-weight:bold;">Assert<span style="font-style:italic;"></span></span>ions are central to unit testing. The Assert claas provides a variety of static methods, using which we can test the result with the actual expected value.]</p>
+<p>this all completes the coding part</p>
+<p>Now to test this application, we need to open NUnit UI, this we can find out at the below  path<br>(C:\Program Files\NUnit 2.5.10\bin\net-2.0)<br>or<br>Goto start-&gt;All Programs -&gt;NUnit 2.5.10</p>
+<p>The window will be like as shown below</p>
+<p><img src="/css/images/NUnitFirst.JPG" alt=""></p>
+<p>Now Goto File-&gt;open Project , then Go to the path and click on the NunitSampleTest.Dll</p>
+<p><img src="/css/images/NUnitSecond.JPG" alt=""></p>
+<p>It will open the methods as shown below..</p>
+<p><img src="/css/images/NUnitThird.JPG" alt=""></p>
+<p>so right click on the individual methods or whole class and click on Run</p>
+<p><img src="/css/images/NUnitFourth.JPG" alt=""></p>
+<p>If all the test cases are passed successfully, then we can see the green color Line as shown below</p>
+<p><img src="/css/images/NUnitFifth.JPG" alt=""></p>
+<p>But if get Red color line, then it means TestCase is failed.</p>
+<p><img src="/css/images/NUnitSixth.JPG" alt=""></p>
+<p>The above figure indicates that we have an issue in Subtraction Method..</p>
+<p><em>Note: To Make things simpler we have hard coded the values in the TestCase methods.<br>Rather than hard coding the values, we can create one separate class with values and can pass them to respective methods.</em></p>
+<p><strong>Happy Coding :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2011/06/NUnit-Sample-Application/" data-id="ciulhu2gx002fu4mgp6329zp9" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2011/06/NUnit-Sample-Application/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Logging-Tool-Log4net" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -205,7 +293,9 @@ ga('send', 'pageview');
 <ul>
 <li><a href="http://logging.apache.org/log4j/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4j</span></a> for Java</li>
 <li><a href="http://logging.apache.org/log4cxx/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4cxx</span></a> for C++</li>
-<li><a href="http://logging.apache.org/log4php/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4php</span></a> for PHP</li>
+<li><p><a href="http://logging.apache.org/log4php/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4php</span></a> for PHP</p>
+<p><strong>Happy Learning :)</strong></p>
+</li>
 </ul>
 
       
@@ -269,6 +359,7 @@ ga('send', 'pageview');
 <p><img src="/css/images/XmlFile.jpeg" alt=""></p>
 <p><strong> Retrieved XML data: </strong></p>
 <p><img src="/css/images/XmlOutput.jpeg" alt=""></p>
+<p><strong>Happy Coding :)</strong></p>
 
       
     </div>
@@ -339,6 +430,7 @@ ga('send', 'pageview');
 <li>The edited HTML or CSS or JavaScript wont effect the existing code.</li>
 <li>There is also a <strong>Firebug Lite</strong> version for Internet Explorer, Opera and Safari.</li>
 </ul>
+<p><strong>Happy Learning :)</strong></p>
 
       
     </div>
@@ -409,7 +501,7 @@ ga('send', 'pageview');
         <a href="http://gopigujjula.com/2010/12/ColorCrop/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
 
     </footer>
   </div>
@@ -435,6 +527,25 @@ ga('send', 'pageview');
           <li>
             
             <div class="item-thumbnail">
+              <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/sitecore-layouts-content-author-experience.png
+)" alt="Sitecore Enhancing Content Author Experience - Part 2 (Layouts)" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Layouts/">Layouts</a></p>
+              <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" class="title">Sitecore Enhancing Content Author Experience - Part 2 (Layouts)</a></p>
+              <p class="item-date"><time datetime="2017-02-26T04:54:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
               <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="thumbnail">
   
     <span style="background-image:url(/css/images/sitecore-templates-content-author-experience.png
@@ -445,7 +556,7 @@ ga('send', 'pageview');
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Sitecore-Templates/">Sitecore Templates</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Templates/">Templates</a></p>
               <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="title">Sitecore Enhancing Content Author Experience - Part 1 (Templates)</a></p>
               <p class="item-date"><time datetime="2017-02-25T21:05:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
             </div>
@@ -508,25 +619,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-link-types.png
-)" alt="Saturday Sitecore Learning - Templates Part 4 (Link Field Types)" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" class="title">Saturday Sitecore Learning - Templates Part 4 (Link Field Types)</a></p>
-              <p class="item-date"><time datetime="2017-02-04T02:47:00.000Z" itemprop="datePublished">February 04, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -536,7 +628,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Sitecore-Templates/">Sitecore Templates</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">25</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
