@@ -6,22 +6,37 @@
   <title>Sitecore Enhancing Content Author Experience - Part 3 (Content) | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Enhancing Content Author Experience - Content levelThis is the third and final post as part of Sitecore Enhancing Content Author Experience series.
-In last two posts, we had explored from both templat">
+
+Template
+Layout
+Content
+
+In last two posts, we had">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sitecore Enhancing Content Author Experience - Part 3 (Content)">
 <meta property="og:url" content="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/index.html">
 <meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description" content="Enhancing Content Author Experience - Content levelThis is the third and final post as part of Sitecore Enhancing Content Author Experience series.
-In last two posts, we had explored from both templat">
+
+Template
+Layout
+Content
+
+In last two posts, we had">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-content-author-experience-content-level.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/custom-field-editor-button.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/rendering-custom-experience-button.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/Country-field-editor-button.png">
-<meta property="og:updated_time" content="2017-02-26T17:19:37.809Z">
+<meta property="og:updated_time" content="2017-02-28T05:20:23.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sitecore Enhancing Content Author Experience - Part 3 (Content)">
 <meta name="twitter:description" content="Enhancing Content Author Experience - Content levelThis is the third and final post as part of Sitecore Enhancing Content Author Experience series.
-In last two posts, we had explored from both templat">
+
+Template
+Layout
+Content
+
+In last two posts, we had">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -188,25 +203,30 @@ ga('send', 'pageview');
       
                 
         <h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
+<ol>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/">Layout</a></li>
+<li>Content</li>
+</ol>
 <p>In last two posts, we had explored from both template &amp; layout level, in this post, let’s explore at Content level.</p>
 <p><img src="/css/images/sitecore-content-author-experience-content-level.png" alt=""></p>
-<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days we are seeing lot of Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
-<p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them from experience editor. That is the reason, we always need to output fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
+<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days almost all Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
+<p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them using experience editor. That’s the reason, we always need to render fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
 <p>Some of the examples:</p>
 <p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Text runat=&#34;server&#34; ID=&#34;Title&#34; Field=&#34;Name&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;Name&#34;)</span><br></pre></td></tr></table></figure></p>
 <p><strong>Image:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Image runat=&#34;server&#34; ID=&#34;ListingImage&#34; Field=&#34;Listing Image&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;Listing Image&#34;)</span><br></pre></td></tr></table></figure></p>
 <p><strong>General Link:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Link runat=&#34;server&#34; ID=&#34;CTA&#34; Field=&#34;CTA&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;CTA&#34;)</span><br></pre></td></tr></table></figure></p>
-<h5 id="2-_Custom_Experience_Editor_Button"><a href="#2-_Custom_Experience_Editor_Button" class="headerlink" title="2. Custom Experience Editor Button"></a>2. Custom Experience Editor Button</h5><p>Sitecore does not support in-line editing for Checkbox, Multilist, TreeList, and other fields. There are no specific Sitecore controls to support this. By utilizing <strong>Custom Experience buttons</strong>, we can provide editing option in experience editor for these fields. In this post let’s explore, how to do achieve it with Field Editor button.</p>
-<p><strong>Field Editor Button:</strong><br>We can find all the experience buttons in core database, under the <strong><em>/sitecore/Content/Applications/WebEdit</em></strong> item. Following are the steps, to configure a field editor button,<br><strong>Step 1:</strong> Switch to the Core database, navigate to <strong><em>/sitecore/Content/Applications/WebEdit/Custom Experience Buttons</em></strong> item.<br><strong>Step 2:</strong> Create a new button item, using <strong><em>/sitecore/templates/System/WebEdit/Field Editor Button</em></strong> template.<br><strong>Step 3:</strong> Fill out all four fields, Header, Icon, Fields, Tooltip. Fields is the important one here, as we need to add the field title name. (In our case <strong><em>Country</em></strong> is the field which is of Multilist field type)</p>
+<h5 id="2-_Custom_Experience_Editor_Button"><a href="#2-_Custom_Experience_Editor_Button" class="headerlink" title="2. Custom Experience Editor Button"></a>2. Custom Experience Editor Button</h5><p>Sitecore does not support in-line editing for Checkbox, Multilist, TreeList, and other fields. There are no specific Sitecore controls to support these field types. By utilizing <strong>Custom Experience Editor buttons</strong>, we can provide editing option in experience editor for these fields. In this post let’s explore, how do we achieve it with Field Editor button.</p>
+<p><strong>Field Editor Button:</strong><br>We can find all experience editor buttons in core database, under <strong><em>/sitecore/Content/Applications/WebEdit</em></strong> item.<br>Following are the steps, to configure a field editor button,<br><strong>Step 1:</strong> Switch to the Core database, navigate to <strong><em>/sitecore/Content/Applications/WebEdit/Custom Experience Buttons</em></strong> items in content editor.<br><strong>Step 2:</strong> Create a new button item, using <strong><em>/sitecore/templates/System/WebEdit/Field Editor Button</em></strong> template.<br><strong>Step 3:</strong> Fill out all four fields, Header, Icon, Fields, Tooltip. Fields is the important one here, as we need to add the field title name. (In our case <strong><em>Country</em></strong> is the field which is of Multilist field type)</p>
 <p><img src="/css/images/custom-field-editor-button.png" alt=""></p>
 <p><strong>Step 4:</strong> Switch to master database, and navigate to the component (sub-layout/rendering), and map the newly created button using <strong>Experience Editor Buttons</strong> field.</p>
 <p><img src="/css/images/rendering-custom-experience-button.png" alt=""></p>
-<p><strong>Step 5:</strong> Now go to experience editor, and try to edit the component, we will be seeing new button, using which we can edit Country Multilist field.</p>
+<p><strong>Step 5:</strong> Now go to experience editor, and edit the component, we can see new Edit button, using which we can edit Country Multilist field.</p>
 <p><img src="/css/images/Country-field-editor-button.png" alt=""></p>
-<p>We can also use, <strong>Edit frames</strong> to achieve this.</p>
-<p>In Summary, being a developer, some times we often overlook the importance of Content Authors experience to manage their content. It is very important to put ourselves into Content Author’s position, and think how easy/difficult do they feel while managing the content.<br>Even after knowing all the topics, we tend to miss few of the things, because of the tight deadlines, or for some other reasons. But it is better to have a <strong>check list</strong>, and do a self review on these points, before closing out on any component development.</p>
+<p>We can use, <strong>Edit frames</strong> to achieve the same.</p>
+<p>In Summary, being a developer, sometimes we often overlook the importance of Content Authors experience to manage their content. It is very important to imagine ourselves as Content Author position, and think how difficult they feel while managing the content.<br>Even after knowing all the topics, we tend to miss few of the things, because of the tight deadlines, or for some other reasons. But it is better to have a <strong>check list</strong>, and do a self-review on these points, before moving any component development to next environment.</p>
 <p>Thank you, and that’s all for now.</p>
-<p><strong>Happy Coding :)</strong></p>
+<p><strong>Happy Learning :)</strong></p>
 
       
     </div>

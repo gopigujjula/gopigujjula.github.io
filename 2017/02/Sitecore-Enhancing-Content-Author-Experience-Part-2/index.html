@@ -6,13 +6,23 @@
   <title>Sitecore Enhancing Content Author Experience - Part 2 (Layouts) | Gopi Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Enhancing Content Author Experience - Layouts levelThis is the second post as part of Sitecore Enhancing Content Author Experience series.
-In previous post, we had explored how can we enhance content">
+
+Template
+Layout
+Content
+
+In previous post, we had explored h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sitecore Enhancing Content Author Experience - Part 2 (Layouts)">
 <meta property="og:url" content="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/index.html">
 <meta property="og:site_name" content="Gopi Notes">
 <meta property="og:description" content="Enhancing Content Author Experience - Layouts levelThis is the second post as part of Sitecore Enhancing Content Author Experience series.
-In previous post, we had explored how can we enhance content">
+
+Template
+Layout
+Content
+
+In previous post, we had explored h">
 <meta property="og:image" content="http://gopigujjula.com/css/images/sitecore-layouts-content-author-experience.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/datasource-selection.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/without-datasource-location.png">
@@ -25,11 +35,16 @@ In previous post, we had explored how can we enhance content">
 <meta property="og:image" content="http://gopigujjula.com/css/images/with-placeholder-settings.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/rendering-thumbnail.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/with-rendering-thumbnail.png">
-<meta property="og:updated_time" content="2017-02-26T11:56:07.411Z">
+<meta property="og:updated_time" content="2017-02-28T05:19:58.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sitecore Enhancing Content Author Experience - Part 2 (Layouts)">
 <meta name="twitter:description" content="Enhancing Content Author Experience - Layouts levelThis is the second post as part of Sitecore Enhancing Content Author Experience series.
-In previous post, we had explored how can we enhance content">
+
+Template
+Layout
+Content
+
+In previous post, we had explored h">
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
@@ -196,17 +211,22 @@ ga('send', 'pageview');
       
                 
         <h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
+<ol>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
+<li>Layout</li>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/">Content</a></li>
+</ol>
 <p>In previous post, we had explored how can we enhance content author experience from template perspective, in this post, let’s explore at layouts level.</p>
 <p><img src="/css/images/sitecore-layouts-content-author-experience.png" alt=""></p>
-<h5 id="1-_Datasource_Location"><a href="#1-_Datasource_Location" class="headerlink" title="1. Datasource Location"></a>1. Datasource Location</h5><p>In Sitecore, each page is a collection of components. We can add any number of components to a page, and some of the components we add to the page, have their own associated content. Content authors can select the associated  content using data source. If we are not restricting data source location, then full content tree is shown in the selectable items list, then content authors have a tough time to navigate and select the associated content.</p>
-<p>Datasource location helps us in this situation, we can set selectable items location, while creating sub-layout/rendering using <strong>Datasource Location</strong> field.</p>
+<h5 id="1-_Data_source_Location"><a href="#1-_Data_source_Location" class="headerlink" title="1. Data source Location"></a>1. Data source Location</h5><p>In Sitecore, each page is a collection of components. We can add any number of components to a page, and some of the components we add to the page, have their own associated content. Content authors can select the associated  content using data source. If we are not restricting data source location, then full content tree is shown in the selectable items list, then content authors have a tough time to navigate and select the associated content.</p>
+<p>Giving proper Datasource location helps in this situation, we can set selectable items location, while creating sub-layout/rendering using <strong>Datasource Location</strong> field.</p>
 <p><img src="/css/images/datasource-selection.png" alt=""></p>
-<p><strong><em>without data source location (full content tree is listed)</em></strong></p>
+<p><strong><em>without data source location (full content tree is listed as bel)</em></strong></p>
 <p><img src="/css/images/without-datasource-location.png" alt=""></p>
 <p><strong><em>with data source location (items shown, based on the location)</em></strong></p>
 <p><img src="/css/images/with-datasource-location.png" alt=""></p>
 <p><a href="http://firebreaksice.com/sitecore-rendering-datasource-locations/" target="_blank" rel="external">Here</a> you can read more information about data source location.</p>
-<h5 id="2-_Datasource_Template"><a href="#2-_Datasource_Template" class="headerlink" title="2. Datasource Template"></a>2. Datasource Template</h5><p>Once we specify data source location, still content author has to know, which is the associated content item to choose. If there are only similar content items present in the location, then it becomes easier. But what if there are different variety of content items are present, then it is our job to guide them, to select proper items.</p>
+<h5 id="2-_Data_source_Template"><a href="#2-_Data_source_Template" class="headerlink" title="2. Data source Template"></a>2. Data source Template</h5><p>Once we specify data source location, still content author has to know, What’s the associated content item to choose. If there are only similar content items present in the location, then it becomes easier. But what if there are different variety of content items are present, then it is our job to guide them, to select proper items.</p>
 <p>We can achieve this by using Datasource template, which can be set on sub-layout/rendering <strong>Datasource Template</strong> field.</p>
 <p><img src="/css/images/datasource-template-selection.png" alt=""></p>
 <p>Without Data source Template:</p>
@@ -221,20 +241,20 @@ ga('send', 'pageview');
 <li>Create New Item option is available, using which Content authors can create new content directly from here.</li>
 </ul>
 <p><img src="/css/images/with-datasource-template.png" alt=""></p>
-<h5 id="3-_Placeholder_Settings"><a href="#3-_Placeholder_Settings" class="headerlink" title="3. Placeholder Settings"></a>3. Placeholder Settings</h5><p>We can empower the Experience Editor using placeholder settings (Allowed Controls). It is very important to set allowed controls for each placeholder, other wise it would be difficult for content authors to know, which all the components can be placed on particular placeholder.</p>
-<p>Without allowed controls being set, content authors have to navigate and find the component to add.</p>
+<h5 id="3-_Placeholder_Settings"><a href="#3-_Placeholder_Settings" class="headerlink" title="3. Placeholder Settings"></a>3. Placeholder Settings</h5><p>We can empower the Experience Editor using placeholder settings (Allowed Controls). It is very important to set allowed controls for each placeholder, otherwise it would be difficult for content authors to know, What are all components can be placed on particular placeholder.</p>
+<p>Without allowed controls being set, content authors have to navigate from root and find exact component to add.</p>
 <p><img src="/css/images/placeholder-settings.png" alt=""></p>
 <p><strong><em>Without Allowed controls being set</em></strong></p>
 <p><img src="/css/images/without-placeholder-settings.png" alt=""></p>
 <p><strong><em>With Allowed controls being set</em></strong></p>
 <p><img src="/css/images/with-placeholder-settings.png" alt=""></p>
-<h5 id="4-_Thumbnail"><a href="#4-_Thumbnail" class="headerlink" title="4. Thumbnail"></a>4. Thumbnail</h5><p>After allowed controls is being set, now content authors can see the list of renderings in <strong>Select a Rendering</strong> window. But wouldn’t be good to provide a visual clue, about what design they see on page, by selecting a particular component. Thumbnail is useful for this purpose.</p>
-<p>Thumbnail can be set at Rendering/sub-layout items. We have an option to take screen shot as well, or can select an image from media library.</p>
+<h5 id="4-_Thumbnail"><a href="#4-_Thumbnail" class="headerlink" title="4. Thumbnail"></a>4. Thumbnail</h5><p>After allowed controls is being set, now content authors can see the list of renderings in <strong>Select a Rendering</strong> window. But there is no visual clue, about what design they see on page, by selecting a particular component. Thumbnail is useful for this purpose.</p>
+<p>Thumbnail can be set at Rendering/sub-layout items. We have an option to take screen shot as well, or select an image from media library.</p>
 <p><img src="/css/images/rendering-thumbnail.png" alt=""></p>
-<p>Below, we can observe that Article module is having thumbnail set, but Product module is not having any thumbnail.</p>
+<p>Below, we can observe that “Article module” is having thumbnail view, but Product module is not having any thumbnail view.</p>
 <p><img src="/css/images/with-rendering-thumbnail.png" alt=""></p>
 <p>Thank you for reading, in next post, will explore the tips from content level.</p>
-<p><strong>Happy Coding :)</strong></p>
+<p><strong>Happy Learning :)</strong></p>
 
       
     </div>
