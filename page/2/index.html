@@ -114,11 +114,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        60
+        63
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        31
+        33
         <span>tags</span>
       </div>
     </div>
@@ -145,6 +145,243 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Template-Part-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/">Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" style="text-align:right">
+      <time datetime="2017-02-25T05:47:00.000Z" itemprop="datePublished">February 25, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Template_Inheritance"><a href="#Template_Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h4><p>This is the fifth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
+<p>In last three posts, we discussed about <a href="/tags/Sitecore-Field-Types/">field types</a>, now let’s explore what is template Inheritance, and the benefits it provide.</p>
+<p>Template is a collection of fields, where fields can be defined on a template, or can be inherited from other templates. Similar to Object Oriented Programming, where a class can be inherited from another class, in Sitecore, a template can be inherited from another template.</p>
+<p>Each template can inherit fields, field sections, standard values, and potentially other properties from any number of other templates.</p>
+<p>Sitecore uses lot of template inheritance, for system templates. There is a <strong>Standard Template</strong>, which defines field sections, and fields common to all items.</p>
+<p><img src="/css/images/sitecore-template-inheritance.png" alt=""></p>
+<p>Whenever we create any new template, it will always inherit from the <strong>Standard Template</strong>, and all the <strong>System Fields</strong> comes with it.</p>
+<p><strong>Why do we use Inheritance?</strong><br>In general, we use Inheritance, for <strong>reusability</strong>. Where we can define the properties, &amp; methods in one common place, and access it from all other places. for <strong>Maintainability</strong>, where it is easy to make modification at single location.</p>
+<p><strong>Sitecore Template Inheritance Benefits</strong></p>
+<ol>
+<li>Reusability: We define common fields in one template, and inherit in all other templates. This avoids duplication.</li>
+<li>Maintainability: Modify the fields in the main template, all the templates automatically gets the modifications.</li>
+</ol>
+<p><strong>Scenario:</strong><br>Let’s look into a Scenario, where we have Article template, and Podcast template, both are having certain fields common, like <strong><em>Title, Date, and Description</em></strong> etc. What if we create a new base template, with all these common fields, and inherit it, in both Article and Podcast template. In this way we can remove the duplication, and increase the reusability.</p>
+<p><img src="/css/images/sitecore-template-inheritance-1.png" alt=""></p>
+<p><img src="/css/images/sitecore-template-inheritance-2.png" alt=""></p>
+<p><strong>Important points</strong></p>
+<ul>
+<li>If you directly or indirectly inherit from the same template more than once, Sitecore behaves as if you had inherited that template only once.<br>For example, Template B inherits from Template A, Template C inherits from both Template A &amp; B, here indirectly we are inheriting Template A (once directly, and another indirectly from B), multiple times. But Sitecore inherits Template A only once.</li>
+<li>One template, can only inherit one set of presentation details. If a template inherits from two templates, and both have presentation details, only the first template’s presentation details in the inheritance list will be used. (In the coming post, we will explore more about presentation details)</li>
+<li>If two templates are having same field section name, then when a template inherits from these two templates, similar field sections are merged, and all the fields under them are consolidated.</li>
+<li>We should avoid Circular templates. for example, Template A can inherit from Templates B and C. Template C can inherit from Template A, too.</li>
+</ul>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="http://gettingtoknowsitecore.blogspot.in/2010/01/inheritance-content-modeling-sitecore.html" target="_blank" rel="external">http://gettingtoknowsitecore.blogspot.in/2010/01/inheritance-content-modeling-sitecore.html</a></li>
+<li><a href="http://www.matthewdresser.com/sitecore/template-inheritance-best-practices" target="_blank" rel="external">http://www.matthewdresser.com/sitecore/template-inheritance-best-practices</a></li>
+<li><a href="http://www.amazon.in/Professional-Sitecore-Development-WROX-John/dp/812653673X" target="_blank" rel="external">Professional Sitecore Development</a></li>
+<li><a href="http://www.amazon.in/Professional-Sitecore-Development-Solutions-Practices/dp/1484222911" target="_blank" rel="external">Professional Sitecore 8 Development: A Complete Guide to Solutions and Best Practices</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" data-id="cizkxmem70000ckmga0uk4ekf" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-5/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Sitecore-Web-CMS-with-.NET" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/Sitecore-Web-CMS-with-.NET/">Sitecore Web Content Management System with .NET</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/02/Sitecore-Web-CMS-with-.NET/" style="text-align:right">
+      <time datetime="2017-02-22T04:30:00.000Z" itemprop="datePublished">February 22, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
+<p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
+<p><img src="/css/images/dotnetblrQ1-2017.jpg" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the talk can be found <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">here</a></p>
+<p>Thanks to Surendra, <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> and <a href="https://twitter.com/anandgothe" target="_blank" rel="external">Anand Gothe</a> for their support and encouragement.</p>
+</div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/" data-id="cizfjee8z0006ikmgx3rl38gu" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NET-User-Group/">.NET User Group</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Presentation/">Presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Sitecore-FAQ" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/Sitecore-FAQ/">Sitecore - Frequently Asked Questions</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/02/Sitecore-FAQ/" style="text-align:right">
+      <time datetime="2017-02-12T07:30:00.000Z" itemprop="datePublished">February 12, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Exactly one and half year back When I started learning Sitecore as a <strong>.Net developer</strong> few questions were in my mind. Now I feel like I’m able to answer all those by adding some more questions asked by participants in last week presentation in <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">Dotnet Bangalore user group</a>.</p>
+<h5 id="1-_What_is_CMS/WCMS_3F"><a href="#1-_What_is_CMS/WCMS_3F" class="headerlink" title="1. What is CMS/WCMS?"></a>1. What is CMS/WCMS?</h5><p>If we break CMS (Content Management System) into pieces,</p>
+<p><strong>Content:</strong> Content is a resource; it can be document, pdf, image, audio, or video file etc.<br><strong>Management:</strong> Organizing (add/update/delete) the content.<br><strong>System:</strong> Application/Platform which helps to manage the content.</p>
+<p>Let’s combine 3 pieces for definition,<br><strong>Content Management System (CMS):</strong> CMS is a system which helps to manage the content.<br><strong>Web Content Management System (CMS):</strong> WCMS is a system which helps to manage the content, via web interface.</p>
+<h5 id="2-_What_problem_Content_Management_systems_are_trying_to_solve_3F"><a href="#2-_What_problem_Content_Management_systems_are_trying_to_solve_3F" class="headerlink" title="2. What problem Content Management systems are trying to solve?"></a>2. What problem Content Management systems are trying to solve?</h5><p>In very high level note, we can categorize websites into <strong>Static</strong> &amp; <strong>Dynamic</strong> sites,<br>In Static Sites content is not changed so frequently, but whereas in Dynamic sites, content need to be updated very frequently.<br>There is no easy way for business people to update the content. As a developer, we can provide an option to business users to update the content by providing them Admin interfaces. But with this option, there is a risk of building and maintaining the Admin interfaces, and there is a lot of time involved in it. What if someone else provide the interfaces, we can concentrate on core development of building the website.<br>This is where <strong>Content Management Systems</strong> come into picture. Content Management System helps business users (non-technical) to easily manage their content via web interface.</p>
+<h5 id="3-_What_is_Sitecore_3F"><a href="#3-_What_is_Sitecore_3F" class="headerlink" title="3. What is Sitecore?"></a>3. What is Sitecore?</h5><p>Sitecore at its essence is a Content Management System, but it is much more than that. “Sitecore Experience Platform is a ‘blended’ solution – it combines web content management with a marketing platform.”<br>Sitecore provides an end to end solution which deals with Content management system and Digital marketing system under one platform as per corporate needs.<br><img src="/css/images/sitecoreexperienceplatform.png" alt=""></p>
+<h5 id="4-_I_am_a_-NET_developer_2C_am_I_suitable_for_Sitecore_development_3F"><a href="#4-_I_am_a_-NET_developer_2C_am_I_suitable_for_Sitecore_development_3F" class="headerlink" title="4. I am a .NET developer, am I suitable for Sitecore development?"></a>4. I am a .NET developer, am I suitable for Sitecore development?</h5><p>Yes, As Sitecore is built on .NET stack, it is best suited for .NET developer to learn and work on Sitecore implementations.</p>
+<h5 id="5-_As_a_-NET_developer_2C_how_does_it_benefit_to_learn_Sitecore_3F"><a href="#5-_As_a_-NET_developer_2C_how_does_it_benefit_to_learn_Sitecore_3F" class="headerlink" title="5. As a .NET developer, how does it benefit to learn Sitecore?"></a>5. As a .NET developer, how does it benefit to learn Sitecore?</h5><p>There are around <strong>4,900+</strong> brands are using Sitecore, and more and more brands are embracing Sitecore. So, more demand for Sitecore developers. As a developer it is good career option to explore, and importantly, you will still be working on .NET tech stack.</p>
+<h5 id="6-_Pre-requisites_to_start_learning_Sitecore_3F"><a href="#6-_Pre-requisites_to_start_learning_Sitecore_3F" class="headerlink" title="6. Pre-requisites to start learning Sitecore?"></a>6. Pre-requisites to start learning Sitecore?</h5><p>Decent amount of knowledge on the .NET technologies, like ASP.NET MVC/Web forms, C#, SQL server (although mostly we don’t write SQL queries), and basic understanding of HTML, JavaScript and JQuery.</p>
+<h5 id="7-_Where_will_I_get_Sitecore_documentation_3F"><a href="#7-_Where_will_I_get_Sitecore_documentation_3F" class="headerlink" title="7. Where will I get Sitecore documentation?"></a>7. Where will I get Sitecore documentation?</h5><p>Please refer official <a href="https://doc.sitecore.net/" target="_blank" rel="external">Sitecore documentation</a>.</p>
+<h5 id="8-_Sitecore_2C_Is_it_free_3F"><a href="#8-_Sitecore_2C_Is_it_free_3F" class="headerlink" title="8. Sitecore, Is it free?"></a>8. Sitecore, Is it free?</h5><p>No, it comes with license fee. Code is also not open source.</p>
+<h5 id="10-_Some_of_the_Indian_companies_2C_where_they_recruit_Sitecore_developers_3F"><a href="#10-_Some_of_the_Indian_companies_2C_where_they_recruit_Sitecore_developers_3F" class="headerlink" title="10. Some of the Indian companies, where they recruit Sitecore developers?"></a>10. Some of the Indian companies, where they recruit Sitecore developers?</h5><p>As per my knowledge, following are some of the organizations,</p>
+<ul>
+<li>Verndale</li>
+<li>Epsilon</li>
+<li>Sapient</li>
+<li>Accenture</li>
+<li>Mindtree</li>
+<li>HCL</li>
+<li>Unicolumn Software PVT LTD,</li>
+<li>Horizontal Integration<br>  For more info, explore <a href="http://www.sitecore.net/en/getting-started/partners/search-partners" target="_blank" rel="external">http://www.sitecore.net/en/getting-started/partners/search-partners</a></li>
+</ul>
+<h5 id="11-_From_-NET_background_2C_where_should_I_start_learning_Sitecore_3F"><a href="#11-_From_-NET_background_2C_where_should_I_start_learning_Sitecore_3F" class="headerlink" title="11. From .NET background, where should I start learning Sitecore?"></a>11. From .NET background, where should I start learning Sitecore?</h5><p>Sitecore recently launched a foundation course called <strong><a href="https://elearning.sitecore.net/public/ContentDetails.aspx?id=7B781B1C3510447BBA22D7B0BF3251A2" target="_blank" rel="external">Sitecore Developer Foundations</a></strong>, which is free, and covers Sitecore basics. Although course is free, you need a license to practice, you can approach Sitecore sales/support to get further information on trial license.</p>
+<h5 id="12-_Can_I_develop_my_personal_website_on_Sitecore_3F"><a href="#12-_Can_I_develop_my_personal_website_on_Sitecore_3F" class="headerlink" title="12. Can I develop my personal website on Sitecore?"></a>12. Can I develop my personal website on Sitecore?</h5><p>Sitecore XP is an Enterprise level Content Management system, it is overkill to use it for personal websites. It is not free; you need to pay license fee.</p>
+<h5 id="13-_What_are_all_the_Sitecore_databases_3F"><a href="#13-_What_are_all_the_Sitecore_databases_3F" class="headerlink" title="13. What are all the Sitecore databases?"></a>13. What are all the Sitecore databases?</h5><p>On very light node Sitecore uses both SQL Server (minimal support to Oracle) and Mongo DB databases; SQL Server databases are for content, and Mongo DB databases for analytics. You can find more details <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">here</a>.</p>
+<h5 id="14-_Can_I_modify_Sitecore_databases_Schema_3F"><a href="#14-_Can_I_modify_Sitecore_databases_Schema_3F" class="headerlink" title="14. Can I modify Sitecore databases Schema?"></a>14. Can I modify Sitecore databases Schema?</h5><p>It is not advisable, if any extra tables are required we can create a custom database, and use it.</p>
+<h5 id="15-_Can_Sitecore_solutions_be_deployed_on_Cloud_3F"><a href="#15-_Can_Sitecore_solutions_be_deployed_on_Cloud_3F" class="headerlink" title="15. Can Sitecore solutions be deployed on Cloud?"></a>15. Can Sitecore solutions be deployed on Cloud?</h5><p>Yes, previously you can do it only using Infrastructure As a Service (IAAS), but recently Sitecore by collaborating with Microsoft, released Platform As a Service (PAAS) tools. Now we can easily deploy using PAAS as well.</p>
+<h5 id="16-_Is_Sitecore_available_as_Software_As_a_Service__28SAAS_29_3F"><a href="#16-_Is_Sitecore_available_as_Software_As_a_Service__28SAAS_29_3F" class="headerlink" title="16. Is Sitecore available as Software As a Service (SAAS)?"></a>16. Is Sitecore available as Software As a Service (SAAS)?</h5><p>No, Sitecore is not a portal kind of solution, which can be used as SAAS. Sitecore provides a platform for developers to implement Sitecore solutions, clients can not directly use Sitecore vanilla version.</p>
+<h5 id="17-_How_can_I_create_user_input_forms_in_Sitecore_3F"><a href="#17-_How_can_I_create_user_input_forms_in_Sitecore_3F" class="headerlink" title="17. How can I create user input forms in Sitecore?"></a>17. How can I create user input forms in Sitecore?</h5><p>Sitecore provides Web Forms For Marketers (WFFM) module, using which you can create simple web forms that record and report information provided by visitors to your website.</p>
+<h5 id="18-_Where_does_Sitecore_stores_content_managed_images_3F"><a href="#18-_Where_does_Sitecore_stores_content_managed_images_3F" class="headerlink" title="18. Where does Sitecore stores content managed images?"></a>18. Where does Sitecore stores content managed images?</h5><p>Sitecore provides two options; In Database or file system; Options are configurable.</p>
+<h5 id="19-_Where_does_Sitecore_stores_content_managed_Videos_3F"><a href="#19-_Where_does_Sitecore_stores_content_managed_Videos_3F" class="headerlink" title="19. Where does Sitecore stores content managed Videos?"></a>19. Where does Sitecore stores content managed Videos?</h5><p>Usually videos are integrated from external media platforms like Brightcove, Ooyala, YouTube, and Vimeo etc. Only Video information gets imported into Sitecore, not the Video file.</p>
+<h5 id="20-_Are_there_any_Sitecore_developer_certifications_3F"><a href="#20-_Are_there_any_Sitecore_developer_certifications_3F" class="headerlink" title="20. Are there any Sitecore developer certifications?"></a>20. Are there any Sitecore developer certifications?</h5><p>Yes, there is a <strong>Sitecore Professional Developer Certification</strong>, which developer get <strong>Sitecore Certified Professional Developer</strong> title.</p>
+<p>Will keep adding more questions and answers.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Sitecore-FAQ/" data-id="ciz2l3lzz0000k4mgido45hno" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Sitecore-FAQ/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Template-Part-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -422,322 +659,8 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Template-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Saturday Sitecore Learning - Templates Part 2 (Simple Field Types)</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" style="text-align:right">
-      <time datetime="2017-01-21T07:30:00.000Z" itemprop="datePublished">January 21, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
-<p>How each property of the class has its own type, similar way each template field also has its own field type. Field type determines, three things</p>
-<ol>
-<li>What type of content (normal text, rich text, image etc.) can be entered into the field,</li>
-<li>What type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data,</li>
-<li>In what format the value is stored in the database.</li>
-</ol>
-<p>Out of the box Sitecore provides lot of field types, but based on the requirement, developers can create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
-<p>We can classify/categorize field types as shown below,</p>
-<ul>
-<li>Simple types</li>
-<li>List types</li>
-<li>Link types</li>
-</ul>
-<p>Let’s look into each type in detail,</p>
-<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, integer, or date value.</p>
-<p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
-<ul>
-<li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/single-line-text.png" alt=""></p>
-<ul>
-<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text/comments to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/multi-line-text.png" alt=""></p>
-<ul>
-<li><strong>Rich Text:</strong> This field type allows content authors to enter large text with media items, and also allows to modify HTML. This is similar to WYSIWYG editor.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/rich-text.png" alt=""></p>
-<ul>
-<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/integer-field-type.png" alt=""></p>
-<ul>
-<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/number-type.png" alt=""></p>
-<ul>
-<li><strong>Password:</strong> This field type is used for passwords, where characters in the field are masked. It is similar to HTML input control with password type.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField</li>
-</ul>
-<p><img src="/css/images/password-field-type.png" alt=""></p>
-<ul>
-<li><strong>Date &amp; Date Time:</strong> As the name suggests both of these field types are used for date &amp; date time respectively. This field types allow content authors to select or manually enter the data and time. These are similar to HTML input control with date type.<br><em>Raw value:</em> string (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601</a> formatted date-time, <strong>yyyyMMddThhmmss</strong>)<br><em>Field type class:</em> Sitecore.Data.Fields.DateField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/date-field-type.png" alt=""></p>
-<ul>
-<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and it’s similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><img src="/css/images/checkbox-field-type.png" alt=""></p>
-<ul>
-<li><strong>Image:</strong> This field type allows content authors to select an image from the media library and specify image properties.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.ImageField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/image-field-type.png" alt=""></p>
-<ul>
-<li><strong>File:</strong> This field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the content author opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><img src="/css/images/file-field-type.png" alt=""></p>
-<ul>
-<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE browser)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
-</ul>
-<p><img src="/css/images/word-document-field-type.png" alt=""></p>
-<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
-<p>In coming posts, will look into List and Link types.</p>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
-<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-<li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/" data-id="ciy6te1uf0000xgmg7kpnxel4" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Field-Types/">Sitecore Field Types</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/">Saturday Sitecore Learning - Sitecore Enhancing Content Author Experience</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/" style="text-align:right">
-      <time datetime="2017-01-14T05:30:00.000Z" itemprop="datePublished">January 14, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
-<p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
-<p>I regularly participate in technical user groups, in and around Bangalore, and also in some of the virtual user groups (webinars). This expands my knowledge, helps in understanding new trends, buzzwords, and also to update my skills.</p>
-<p>In last November, I had given a Sitecore knowledge share session in my organization. As my friends were also interested in the topic, then got the idea of why not give this session in Sitecore user group, but this is completely out of my comfort zone.</p>
-<p>Lot of thoughts runs in my mind, previously also many times got the same idea, but every time dropped it because of my discomfort. This time there was an urge to do it at any cost.</p>
-<blockquote><p>Always do what you are afraid to do.</p>
-<footer><strong>-Ralph Waldo Emerson</strong></footer></blockquote>
-<p><img src="/css/images/firsttechtalkwebinar.jpg" alt=""></p>
-<p>After much deliberation, one day mailed my willingness to present, and other relevant information to SUG Bangalore. <a href="https://techmusingz.wordpress.com/" target="_blank" rel="external">Annie</a> was very encouraging, and also gave some tips on presentation. After a short communication through emails we decided on a date (07-January-2017) and announced it. By that time, I had finished with presentation deck, and local demo site, and also practiced the talk to follow time constraint (should have practiced more).</p>
-<p>As it is a Webinar, one day before, we did a dry run in my system, and all set for go live. On 7th morning when I woke up to practice once more, my demo site is down. It was just 2 hours before the session, there are only two options, either setup the site again, or make the existing site up. I choose the first option, as there was not much time in digging the issue. Quickly I had setup the site again (thanks to Sitecore Instance Manager), and created all the necessary items.</p>
-<p>In my area power is not so reliable, so decided to give the talk from office. Going to office on Saturdays is completely different experience, thanks to <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> for accompanying me. When session started, I was lot nervous, slowly getting into comfort zone with ease. As it is a webinar (can’t see audience faces), I couldn’t decide exactly on where I need to slow down, or increase my speed, and same case with screen zoom in or zoom out. But somehow I was able to finish up within the time.</p>
-<p>Only two things are in my mind while preparing &amp; giving the presentation,</p>
-<ul>
-<li>Should not give any misleading or false information.</li>
-<li>Try to be relevant to the targeted audience as much as possible.</li>
-</ul>
-<p>I hope my session was useful at least to one person, then my target is accomplished.</p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/3DXip4c4eVm2Rq" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Webinar_Video_3A"><a href="#Webinar_Video_3A" class="headerlink" title="Webinar Video:"></a>Webinar Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/z1XlDGEZk6w" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the talk can be found <a href="http://sitecoreug.org/en/usergroups/bangalore-sitecore-user-group/events/january-2017/" target="_blank" rel="external">here</a></p>
-<p>In coming months, some of the topics I am thinking of presenting are,</p>
-<ul>
-<li>Sitecore Media Framework with Brightcove (Two parts)</li>
-<li>Sitecore Goals from Developer perspective</li>
-<li>Search: Absolute basics</li>
-<li>Niche topics: Sitemap, SEO Metadata, URL redirects, 400 not found, 500 server error page, and RSS feeds.</li>
-<li>Sitecore What, Why &amp; How: For .NET developers who never heard of Sitecore.</li>
-<li>T4 templates &amp; code generation.</li>
-</ul>
-<p>User groups I regularly participate are,</p>
-<ul>
-<li><a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/" target="_blank" rel="external">Sitecore User Group Bangalore</a></li>
-<li><a href="https://www.facebook.com/groups/BDotNet/" target="_blank" rel="external">BDotnet</a></li>
-<li><a href="https://www.meetup.com/dotnetblr/" target="_blank" rel="external">Dotnet Bangalore</a></li>
-<li><a href="https://www.meetup.com/SoftwareArchitectsBangalore/" target="_blank" rel="external">Software Architects Bangalore</a></li>
-<li><a href="https://www.meetup.com/Microsoft-Azure-Bangalore/" target="_blank" rel="external">Microsoft Azure User Group-Bangalore</a></li>
-<li><a href="https://www.meetup.com/ScrumBangalore/" target="_blank" rel="external">Scrum Bangalore</a></li>
-</ul>
-<p>Thanks to <a href="https://techmusingz.wordpress.com/" target="_blank" rel="external">Annie</a> &amp; <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> for their support and encouragement.</p>
-</div>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/" data-id="cixww7fvw0000esmgx2zo4ebi" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Presentation/">Presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-User-Group/">Sitecore User Group</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Saturday-Sitecore-Learning-Template-Part-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/">Saturday Sitecore Learning - Templates Part-1</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" style="text-align:right">
-      <time datetime="2016-12-10T07:30:00.000Z" itemprop="datePublished">December 10, 2016</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>As part of <a href="/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning series</a>, till now we looked into,</p>
-<ul>
-<li><a href="/2016/06/Saturday-Sitecore-Learning-CMS/">What is CMS?</a></li>
-<li><a href="/2016/06/Saturday-Sitecore-Learning-About-Sitecore/">What is Sitecore?</a></li>
-<li><a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a> (I prefer using SIM)</li>
-<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> (Outside webroot)</li>
-<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">About Sitecore Databases</a></li>
-<li><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Exploring Default home page</a></li>
-</ul>
-<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not, please go through these two posts, <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a>, <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> and try setting them up.</p>
-<p>From now onwards we will look into core Sitecore concepts in more detail manner.</p>
-<p>First let’s explore one of the important part of Sitecore, which are Templates. Understanding the Templates, is very important for developers, as selecting the correct template type, dictates overall experience of managing content. Templates is a very vast topic, and can’t be covered in a single post, so it will be spanning across multiple posts.</p>
-<h4 id="Template_Fundamentals"><a href="#Template_Fundamentals" class="headerlink" title="Template Fundamentals"></a>Template Fundamentals</h4><p>Templates, also commonly referred as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
-<p>To understand it better, Templates can be compared to Class (In object oriented programming) definitions,</p>
-<ul>
-<li>Each Class contain fields with their respective data types, similarly every Template contain fields, with their respective field types. (Ex: <em>Single-line text</em>)</li>
-<li>Any number of instances can be created based on a class, similarly we can create any number of content items based on a single template.</li>
-<li>Class supports inheritance, similarly templates also supports inheritance, in which a single template can inherit from multiple base templates, to mainly share the common fields.</li>
-</ul>
-<p>Before creating any content, first we need to create a Template with fields and their types. In a nutshell, Templates specify the data fields and many other settings that can be applied to content upon creation.</p>
-<p>All Templates are defined under <em>/sitecore/templates</em> in Sitecore tree structure.</p>
-<p><img src="/css/images/templates-tree.png" alt=""></p>
-<p>To open templates, we can open them either from Content Editor, or from Template Navigator, which is present in Start menu. (Start menu is available in Desktop mode)</p>
-<p><img src="/css/images/template-manager.png" alt=""></p>
-<p>While exploring <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">default home page</a>, we noticed that home page content item, is using Sample item template, which can be found in <em>/sitecore/templates/Sample/Sample Item</em><br><img src="/css/images/default-home-template.png" alt=""></p>
-<p>Following are some of the terms, we need to understand, before we do hands on creating templates. Let’s look into each of them more detail in coming up posts.</p>
-<ul>
-<li>Fields - Field Sections, Field Types, Field Source, and Field Validation.</li>
-<li>Template Inheritance</li>
-<li>Standard Values</li>
-<li>Template types</li>
-</ul>
-<p>In next post we will look into Sitecore fields.</p>
-<p><strong>References</strong></p>
-<ul>
-<li>Professional Sitecore 8 development - <a href="http://www.apress.com/us/book/9781484222911" target="_blank" rel="external">http://www.apress.com/us/book/9781484222911</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/" data-id="ciwkbx97n000gyomgzzkg031m" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
       </nav>
     </section>
       
@@ -748,6 +671,63 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/brightcove-video-cloud-connector.png
+)" alt="Sitecore - Media Framework with Brightcove - Part 2 Webinar" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a></p>
+              <p class="item-title"><a href="/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/" class="title">Sitecore - Media Framework with Brightcove - Part 2 Webinar</a></p>
+              <p class="item-date"><time datetime="2017-03-19T12:30:00.000Z" itemprop="datePublished">March 19, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/SUG-Hyd-March-Meetup.png
+)" alt="Sitecore : Brightcove Video Cloud Connector" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a></p>
+              <p class="item-title"><a href="/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/" class="title">Sitecore : Brightcove Video Cloud Connector</a></p>
+              <p class="item-date"><time datetime="2017-03-13T12:30:00.000Z" itemprop="datePublished">March 13, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/brightcove-video-cloud-connector.png
+)" alt="Sitecore - Media Framework with Brightcove - Part 1 Webinar" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a></p>
+              <p class="item-title"><a href="/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/" class="title">Sitecore - Media Framework with Brightcove - Part 1 Webinar</a></p>
+              <p class="item-date"><time datetime="2017-03-05T14:30:00.000Z" itemprop="datePublished">March 05, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -787,63 +767,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-templates-content-author-experience.png
-)" alt="Sitecore Enhancing Content Author Experience - Part 1 (Templates)" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Templates/">Templates</a></p>
-              <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/" class="title">Sitecore Enhancing Content Author Experience - Part 1 (Templates)</a></p>
-              <p class="item-date"><time datetime="2017-02-25T21:05:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/sitecore-template-inheritance.png
-)" alt="Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
-              <p class="item-title"><a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/" class="title">Saturday Sitecore Learning - Templates Part 5 (Template Inheritance)</a></p>
-              <p class="item-date"><time datetime="2017-02-25T05:47:00.000Z" itemprop="datePublished">February 25, 2017</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2017/02/Sitecore-Web-CMS-with-.NET/" class="thumbnail">
-  
-    <span style="background-image:url(/css/images/dotnetblrQ1-2017.jpg
-)" alt="Sitecore Web Content Management System with .NET" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a></p>
-              <p class="item-title"><a href="/2017/02/Sitecore-Web-CMS-with-.NET/" class="title">Sitecore Web Content Management System with .NET</a></p>
-              <p class="item-date"><time datetime="2017-02-22T04:30:00.000Z" itemprop="datePublished">February 22, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -853,7 +776,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 

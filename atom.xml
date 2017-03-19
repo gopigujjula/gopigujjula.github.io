@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-02-28T05:20:23.912Z</updated>
+  <updated>2017-03-19T13:03:39.654Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,113 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore - Media Framework with Brightcove - Part 2 Webinar</title>
+    <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
+    <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
+    <published>2017-03-19T12:30:00.000Z</published>
+    <updated>2017-03-19T13:03:39.654Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the talk can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-2/" target="_blank" rel="external">here</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2&quot; class=&quot;heade
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+    
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore : Brightcove Video Cloud Connector</title>
+    <link href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/"/>
+    <id>http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/</id>
+    <published>2017-03-13T12:30:00.000Z</published>
+    <updated>2017-03-19T12:56:50.451Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/HDnATMkuSkn5g5" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><p>No Recorded video.</p>
+<p>More details about the talk can be found <a href="https://www.meetup.com/Sitecore-User-Group-Hyderabad/events/238207641/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sitecore__3A_Brightcove_Video_Cloud_Connector&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Brightcove_Video_Cloud_Connector&quot; class=&quot;headerlink&quot; title=&quot;Si
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+    
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="SUG Hyderabad" scheme="http://gopigujjula.com/tags/SUG-Hyderabad/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore - Media Framework with Brightcove - Part 1 Webinar</title>
+    <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
+    <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
+    <published>2017-03-05T14:30:00.000Z</published>
+    <updated>2017-03-19T12:56:52.166Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the talk can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-1/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1&quot; class=&quot;heade
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+    
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore Enhancing Content Author Experience - Part 3 (Content)</title>
@@ -680,7 +787,7 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/</id>
     <published>2017-01-14T05:30:00.000Z</published>
-    <updated>2017-02-26T07:24:26.853Z</updated>
+    <updated>2017-03-19T12:10:16.237Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
 <p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
@@ -740,6 +847,8 @@
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
@@ -1144,184 +1253,6 @@
     
       &lt;p&gt;In this post we will look into creating Visual Studio project for the installed Sitecore.&lt;/p&gt;
 &lt;p&gt;There are mainly two approaches to creat
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Launchpad</title>
-    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/"/>
-    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Launchpad/</id>
-    <published>2016-10-29T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:20.958Z</updated>
-    
-    <content type="html"><![CDATA[<p>By this time, we have latest version (8.2) of Sitecore running in local. It’s ok to install using either of the three approaches, web application installer, or manual installation, or using SIM.</p>
-<p>Before going ahead to create .NET web application, it’s good to have a look at Sitecore launch pad, different components, and the content tree structure.</p>
-<p>For any application, to open Sitecore, we need to append <strong><em>/sitecore</em></strong> to the URL. In my case, URL is <a href="http://testsitecore/" target="_blank" rel="external">http://testsitecore/</a>, so to open Sitecore click on <a href="http://testsitecore/sitecore" target="_blank" rel="external">http://testsitecore/sitecore</a>.</p>
-<p><img src="/css/images/sitecore-login.png" alt=""></p>
-<p>To login to Sitecore, default Administrator credentials are as below<br><strong><em>username: admin<br>password: b</em></strong></p>
-<p>Once we login, we can see the Sitecore Launchpad,</p>
-<p><img src="/css/images/sitecore-latest-launchpad.png" alt=""></p>
-<p>In the Launchpad, we can see there are 4 sections,</p>
-<ul>
-<li><p><strong><em>Marketing Applications:</em></strong> This section contains, all the components relate to Digital Marketing suite. These are the main components using which marketers can connect better with customers.</p>
-</li>
-<li><p><strong><em>Content Editing:</em></strong> This section is the main heart of the CMS. Using these components, Content Authors can add, edit, or delete the content.</p>
-</li>
-<li><p><strong><em>Control Panel:</em></strong> As the name suggests, using these components, we can do the administrative activities, like Search indexing manager, clean up databases, and localization.. etc.</p>
-</li>
-<li><p><strong><em>Access Management:</em></strong> This section contains all the user, role, and security related components.</p>
-</li>
-</ul>
-<p>Now we look into some of the main components,</p>
-<ul>
-<li><strong><em>Content Editor:</em></strong> This is where Content Authors manage content. They can either add, edit, or delete the content. As a <em>developer</em>, we frequently access this to create templates, rendering, and placeholders etc. In this all items are displayed in tree structure.</li>
-</ul>
-<p><img src="/css/images/sitecore-content-editor.png" alt=""></p>
-<ul>
-<li><strong><em>Experience Editor:</em></strong> Here Content Authors can create/modify the content in the live mode. In previous Sitecore versions this was called Page Editor.</li>
-</ul>
-<p><img src="/css/images/sitecore-experience-editor.png" alt=""></p>
-<ul>
-<li><strong><em>Experience Analytics:</em></strong> This section contains more of reports, like Channel groups by visits, Top campaigns by value, Top goals by conversions, etc.</li>
-</ul>
-<p><img src="/css/images/sitecore-experience-analytics.png" alt=""></p>
-<p>In the next post, we will look into how to create a .NET web project for Sitecore.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;By this time, we have latest version (8.2) of Sitecore running in local. It’s ok to install using either of the three approaches, web app
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Sitecore Installation with SIM tool</title>
-    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/"/>
-    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/</id>
-    <published>2016-10-22T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.193Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_Sitecore_with_SIM"><a href="#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM" class="headerlink" title="Saturday Sitecore Learning: Sitecore with SIM"></a>Saturday Sitecore Learning: Sitecore with SIM</h3><p>Last week, we had seen how to install Sitecore Instance Manager (SIM) tool. This week we will explore how to install Sitecore using SIM.</p>
-<p>Among all the three (<strong>Web Application Installer, Manual Installation, and SIM</strong>) available options, to choose, SIM is the most preferred choice among all the Sitecore developers. The Main reason for that is the flexibility it provides in managing the Sitecore sites.</p>
-<p>Let’s dive into step by step Sitecore installation,</p>
-<p><strong>Step 1:</strong><br>If we remember in the last post, while installing SIM, we configured <em>4 settings</em>, these are very crucial while installing Sitecore. Before proceeding any further, we need to double check on these settings, and if it is required, make any necessary changes.</p>
-<ul>
-<li>Instance Root Folder</li>
-<li>SQL Server Connection String</li>
-<li>Sitecore License File</li>
-<li>Local repository (Make sure to place downloaded Sitecore zip folder inside this path)</li>
-</ul>
-<p>To verify the 4 options, open the Home tab, and click on the Settings</p>
-<p><img src="/css/images/SIM-home.png" alt=""><br><img src="/css/images/SIM-settings.png" alt=""></p>
-<p><strong>Step 2:</strong><br>For additional settings, click on Advanced Settings. But before making any changes, please go through the <a href="https://github.com/sitecore/sitecore-instance-manager/wiki/Advanced" target="_blank" rel="external">documentation</a> very carefully.</p>
-<p><img src="/css/images/SIM-advanced-settings.png" alt=""></p>
-<p><strong>Step 3:</strong><br>Click on the Install Instance<br><img src="/css/images/SIM-install-instance.png" alt=""></p>
-<p><img src="/css/images/SIM-install-new-instance.png" alt=""></p>
-<p><strong>Step 4:</strong><br>Make all the necessary changes, Site Name, and Host name. Location value is prepopulated from the settings <em>Instance Root Folder</em>. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-new-sitecore.png" alt=""></p>
-<p><strong>Step 5:</strong><br>Some more options for instance details. Better to keep the default values, until and unless you are fully aware of the modifications. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-instance-details.png" alt=""></p>
-<p><strong>Step 6:</strong><br>If any of the Sitecore modules are present in the <em>Instance Root Folder</em>, those all are going to be listed here. We can select the modules, to install with Sitecore. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-module-list.png" alt=""></p>
-<p><strong>Step 7:</strong><br>You can select any available custom packages, and click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-custom-packages.png" alt=""></p>
-<p><strong>Step 8:</strong><br>Select any Configuration presets, and click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-configuration-presets.png" alt=""></p>
-<p><strong>Step 9:</strong><br>Finally all the selected modules, and custom packages, will be listed for review. Make any final modification and click on <em>Install</em>.</p>
-<p><img src="/css/images/SIM-instance-review.png" alt=""></p>
-<p><strong>Step 10:</strong><br>Now Sitecore is getting installed.</p>
-<p><img src="/css/images/SIM-sitecore-installation.png" alt=""></p>
-<p><strong>Step 11:</strong><br>Once the installation is completed, you can check the listed options, and click on <em>Finish</em>.</p>
-<p><img src="/css/images/SIM-sitecore-installation-finish.png" alt=""></p>
-<p>See you on next <strong><em>Saturday</em></strong>.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_Sitecore_with_SIM&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Sitecore Instance Manager (SIM) </title>
-    <link href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/"/>
-    <id>http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-SIM-Installation/</id>
-    <published>2016-10-15T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.078Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Saturday_Sitecore_Learning_3A_SIM_tool_Installation"><a href="#Saturday_Sitecore_Learning_3A_SIM_tool_Installation" class="headerlink" title="Saturday Sitecore Learning: SIM tool Installation"></a>Saturday Sitecore Learning: SIM tool Installation</h3><p>Sitecore Instance Manager (SIM), is the tool, using which we can install, maintain, and uninstall the Sitecore. Among Sitecore developers, this is the most preferred choice to maintain Sitecore installations.</p>
-<p>SIM provides rich set of choices, you can watch this wonderful <a href="https://www.youtube.com/watch?v=bqYhjoW83RE" target="_blank" rel="external">video</a>, in which <a href="https://twitter.com/vasiliyfomichev" target="_blank" rel="external">Vasiliy Fomichev</a> explains the main features.</p>
-<p>In this post, we will look into SIM installation, in the next we will look into Sitecore installation using SIM.</p>
-<p>Installation Steps</p>
-<ul>
-<li><p>Download SIM tool from [Sitecore Marketplace] (<a href="https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx" target="_blank" rel="external">https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx</a>).<br><img src="/css/images/SIM1.png" alt=""></p>
-</li>
-<li><p>Click on the <strong>Link</strong> to get the ClickOnce version of SIM.<br><img src="/css/images/SIM2.png" alt=""></p>
-</li>
-<li><p>It will be redirected to <a href="http://dl.sitecore.net/updater/sim/" target="_blank" rel="external">http://dl.sitecore.net/updater/sim/</a>. From here click on <strong>Install and Launch</strong>.<br><img src="/css/images/SIM3.png" alt=""></p>
-</li>
-<li><p>Click on the downloaded <strong>SIM.Tool.application</strong><br><img src="/css/images/SIM4.png" alt=""></p>
-</li>
-<li><p>On the Initial Configuration Wizard, click on Next to proceed.<br><img src="/css/images/SIM5.png" alt=""></p>
-</li>
-<li><p>Click on Next to proceed.<br><img src="/css/images/SIM6.png" alt=""></p>
-</li>
-<li><p>In the previous post, we had downloaded latest Sitecore Zip (<strong>Sitecore 8.2 rev. 160729</strong>) file. For local repository point to the location of Sitecore folder, and point the local path for Sitecore License file.<br><img src="/css/images/SIM7.png" alt=""></p>
-</li>
-<li><p>Here give a SQL connection string, with <strong>(Data Source, User ID and Password)</strong> values.<br><img src="/css/images/SIM8.png" alt=""></p>
-</li>
-<li><p>Specify the File system path, and make sure to give the Network Service access, by clicking on the <strong>Grant</strong> button.<br><img src="/css/images/SIM9.png" alt=""><br><img src="/css/images/SIM10.png" alt=""><br><img src="/css/images/SIM11.png" alt=""></p>
-</li>
-<li><p>After the successful installation, SIM will check for any sitecore websites in the specified File System path. In my local I already have TestSitecore website, the same is listed below.<br><img src="/css/images/SIM12.png" alt=""></p>
-</li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Saturday_Sitecore_Learning_3A_SIM_tool_Installation&quot;&gt;&lt;a href=&quot;#Saturday_Sitecore_Learning_3A_SIM_tool_Installation&quot; class=&quot;headerlin
     
     </summary>
     
