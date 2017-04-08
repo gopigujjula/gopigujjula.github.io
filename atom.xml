@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-03-22T04:28:16.105Z</updated>
+  <updated>2017-04-08T15:13:23.002Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,15 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Saturday Sitecore Learning - Templates Part 6 (Standard Values)</title>
+    <link href="http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/"/>
+    <id>http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/</id>
+    <published>2017-04-08T04:54:00.000Z</published>
+    <updated>2017-04-08T15:13:23.002Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Standard_Values"><a href="#Standard_Values" class="headerlink" title="Standard Values"></a>Standard Values</h4><p>This is the sixth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
+<p>In previous posts, we learned about template fields, different field types and importance of template inheritance, in this post, let’s explore <strong>Standard Values</strong>.</p>
+<p>Standard Values are a way to provide default values to template fields. Once we create a Standard Values for a template, and set the default values for fields, any item which is created from this template gets the default values, later content author can also modify the values, on item level.</p>
+<p>Standard Values are also useful to have a complete picture of what are all the fields a template has, including the inherited fields.</p>
+<p>We can also set default presentation details, and insert options on Standard values.</p>
+<p>By looking at Standard Values, we can understand what all the fields a template contains, including the inherited fields.</p>
+<p>Let’s take the example of three templates, which are created based on <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/">previous post</a></p>
+<p><img src="/css/images/template-inheritance.png" alt=""></p>
+<p><strong>Add Standard Value</strong></p>
+<p>Let’s explore how to add a Standard Value to Article Template,</p>
+<p><strong>Step 1.</strong> Open the Content Editor, navigate to Templates &amp; select the Article Template.</p>
+<p> <img src="/css/images/template-standard-values-1.png" alt=""></p>
+<p><strong>Step 2.</strong> Select the <strong>Builder Options</strong> menu from ribbon, and click on the <strong>Standard Values</strong>. (To view the Builder Options menu, on template level, we need to select the <strong>Builder</strong> tab)</p>
+<p><img src="/css/images/template-standard-values-2.png" alt=""></p>
+<p><strong>Step 3.</strong> Now we should be able to see <strong>__Standard Values</strong> item under the Article template.</p>
+<p><img src="/css/images/template-standard-values-3.png" alt=""></p>
+<p><strong>Step 4.</strong> If we look at newly created <strong>__Standard Values</strong> template, we can observe that there are Article template fields, as well as the inherited fields from Base Content template.</p>
+<p><img src="/css/images/template-standard-values-4.png" alt=""></p>
+<p><strong>Adding Default Values:</strong></p>
+<p>We can add default value to a field, statically or dynamically (with tokens), for the simplicity now let’s add a static value.</p>
+<p><strong>Step 1:</strong> Open the Article template Standard Values, and select a today’s date for Date field, and save it.</p>
+<p><img src="/css/images/template-standard-values-5.png" alt=""></p>
+<p><strong>Step 2:</strong> Create a new Article item under Home node.</p>
+<p><img src="/css/images/template-field-default-value.png" alt=""></p>
+<p><strong>Step 3:</strong> In newly created <em>Test Article</em>, we can see the Date field value has today’s date, and all other fields are empty. Observe that there is a <em>Standard Value</em> text just beside the Date field name.</p>
+<p><img src="/css/images/field-item-default-value.png" alt=""></p>
+<p><strong>Step 4:</strong> Let’s change the Date field value. Now observe that Standard Value text is disappeared, that means we have broken the Default value inheritance.</p>
+<p><img src="/css/images/field-item-default-value-change.png" alt=""></p>
+<p>In next post, let’s explore different template types.</p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Standard_Values&quot;&gt;&lt;a href=&quot;#Standard_Values&quot; class=&quot;headerlink&quot; title=&quot;Standard Values&quot;&gt;&lt;/a&gt;Standard Values&lt;/h4&gt;&lt;p&gt;This is the sixth 
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sitecore - Media Framework with Brightcove - Part 2 Webinar</title>
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
     <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-03-22T04:28:16.105Z</updated>
+    <updated>2017-03-28T17:28:22.494Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/toDc9toW1ncHoU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/toDc9toW1ncHoU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
@@ -57,11 +117,11 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/</id>
     <published>2017-03-13T12:30:00.000Z</published>
-    <updated>2017-03-22T04:28:51.267Z</updated>
+    <updated>2017-03-28T16:58:07.631Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/HDnATMkuSkn5g5" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/HDnATMkuSkn5g5" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><p>No Recorded video.</p>
@@ -94,15 +154,15 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
     <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-03-19T12:56:52.166Z</updated>
+    <updated>2017-03-28T17:28:22.531Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the talk can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-1/" target="_blank" rel="external">here</a></p>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-1/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
     <summary type="html">
@@ -383,13 +443,13 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/</id>
     <published>2017-02-22T04:30:00.000Z</published>
-    <updated>2017-02-22T04:23:59.073Z</updated>
+    <updated>2017-03-28T17:28:22.436Z</updated>
     
     <content type="html"><![CDATA[<h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
 <p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
 <p><img src="/css/images/dotnetblrQ1-2017.jpg" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
@@ -791,7 +851,7 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/</id>
     <published>2017-01-14T05:30:00.000Z</published>
-    <updated>2017-03-19T12:10:16.237Z</updated>
+    <updated>2017-03-28T17:28:22.586Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
 <p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
@@ -811,7 +871,7 @@
 </ul>
 <p>I hope my session was useful at least to one person, then my target is accomplished.</p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/3DXip4c4eVm2Rq" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/3DXip4c4eVm2Rq" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <h5 id="Webinar_Video_3A"><a href="#Webinar_Video_3A" class="headerlink" title="Webinar Video:"></a>Webinar Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/z1XlDGEZk6w" frameborder="0" allowfullscreen></iframe></div>
@@ -1006,12 +1066,12 @@
     <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/"/>
     <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/</id>
     <published>2016-11-26T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.107Z</updated>
+    <updated>2017-03-28T17:28:22.557Z</updated>
     
     <content type="html"><![CDATA[<p>This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation deck is part of the knowledge share session, I had delivered in office.</p>
 <p>This check list helps Sitecore developers to better enhance the Content Author experience in managing their content.</p>
 
-	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
 <p><strong>Happy Learning :)</strong></p>
@@ -1176,87 +1236,6 @@
     <summary type="html">
     
       &lt;p&gt;In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Visual Studio - Project - Inside Web root</title>
-    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/"/>
-    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Inside-webroot/</id>
-    <published>2016-11-05T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.227Z</updated>
-    
-    <content type="html"><![CDATA[<p>In this post we will look into creating Visual Studio project for the installed Sitecore.</p>
-<p>There are mainly two approaches to create the project,</p>
-<ol>
-<li><strong>Inside the web root</strong><br>Here both deployed files, and solution files in same location. Setting up is pretty straight forward, and good for small POC’s, but not recommended for real time projects.</li>
-<li><strong>Outside the web root</strong><br>This is the most preferred one, as it separates the Sitecore, and our code and Sitecore in different locations, and easy to version Control. This is the <em>recommended</em> approach from core Sitecore team.</li>
-</ol>
-<p>In this post we will look into the first approach, I am using <strong>Visual Studio 2015</strong> edition.</p>
-<p><strong>Inside the web root Setup steps:</strong></p>
-<ul>
-<li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
-</ul>
-<p><img src="/css/images/VS-new-project.png" alt=""></p>
-<ul>
-<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
-</li>
-<li><p>Enter the <strong>Name</strong> of the project, and in <strong>Location</strong> field specify the newly installed Sitecore web root path (in our case <em>F:\inetpub\wwwroot\SIMSitecore\Website</em>), and make sure to uncheck the <strong>Create directory for solution</strong> checkbox, and then click on OK button.</p>
-</li>
-</ul>
-<p><img src="/css/images/VS-new-project-name.png" alt=""></p>
-<ul>
-<li>Now we get another dialog, to select the project template. Here select <strong>Empty</strong> template present under <strong>ASP.NET 4.5.2 Templates</strong> section, and check the MVC checkbox as shown below, and click OK to proceed.</li>
-</ul>
-<p><img src="/css/images/VS-MVC-project.png" alt=""></p>
-<ul>
-<li>Once the project is created, solution contains the files/folders as shown below.</li>
-</ul>
-<p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
-<ul>
-<li>If we go to the web root, we can observe there is a new folder created with the specified project name, and also new solution file (.sln) with the same name.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot.png" alt=""></p>
-<ul>
-<li>Drill down the newly created folder (SIMSitecore), to see the files, which are same as shown in the VS solution explorer.</li>
-</ul>
-<p><img src="/css/images/project-drilldown.png" alt=""></p>
-<ul>
-<li>Close the VS solution. Copy the Properties directory, SIMSitecore.csproj, and SIMSitecore.csproj.user files to the main web root directory.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-files.png" alt=""></p>
-<ul>
-<li>Now delete the <strong><em>SIMSitecore subdirectory</em></strong>, which is present inside the Website directory.</li>
-<li>Open the SIMSitecore.csproj file in Visual studio, and delete all the missing files from project.</li>
-</ul>
-<p><img src="/css/images/VS-remove-files.png" alt=""></p>
-<ul>
-<li><p>Add references to <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong> files which are in Website-&gt;bin directory.<br><img src="/css/images/VS-sitecore-kernerl.png" alt=""></p>
-</li>
-<li><p>Navigate to the Sitecore references</p>
-</li>
-</ul>
-<p><strong>To be continued -having some trouble to setup</strong></p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;In this post we will look into creating Visual Studio project for the installed Sitecore.&lt;/p&gt;
-&lt;p&gt;There are mainly two approaches to creat
     
     </summary>
     
