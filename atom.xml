@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-04-14T12:38:18.497Z</updated>
+  <updated>2017-04-14T13:27:26.680Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,20 +20,18 @@
     <link href="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/"/>
     <id>http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/</id>
     <published>2017-04-14T17:25:00.000Z</published>
-    <updated>2017-04-14T12:38:18.497Z</updated>
+    <updated>2017-04-14T13:27:26.680Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Computed_field_return_value"><a href="#Computed_field_return_value" class="headerlink" title="Computed field return value"></a>Computed field return value</h4><p>Computed field helps us in doing some extra processing before adding the value to index.</p>
-<p>While creating a computed field, always try to return null, rather than <em>String.Empty</em>(unless it is important to have an empty value), because <em>String.Empty</em> takes <strong>space</strong> in the index, whereas when it is null, it is not added to the index.</p>
-<p><strong>References</strong></p>
-<ul>
-<li><a href="https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields</a>﻿</li>
-</ul>
+    <content type="html"><![CDATA[<p>Computed field helps us in doing some extra processing before adding the value to index.</p>
+<p>While creating a computed index field, always try to return null, rather than <em>String.Empty</em>(unless it is important to have an empty value), because <em>String.Empty</em> takes <strong>space</strong> in the index, whereas when it is null, it is not added to the index.</p>
+<p>By returning null value, we can save the space in the index.</p>
 <p><strong>Happy Learning :)</strong></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;Computed_field_return_value&quot;&gt;&lt;a href=&quot;#Computed_field_return_value&quot; class=&quot;headerlink&quot; title=&quot;Computed field return value&quot;&gt;&lt;/a&gt;Compu
+      &lt;p&gt;Computed field helps us in doing some extra processing before adding the value to index.&lt;/p&gt;
+&lt;p&gt;While creating a computed index field, al
     
     </summary>
     
