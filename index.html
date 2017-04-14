@@ -114,11 +114,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        64
+        65
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        30
+        32
         <span>tags</span>
       </div>
     </div>
@@ -145,6 +145,67 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Sitecore-search-tips-computed-field-return-value" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/Sitecore-search-tips-computed-field-return-value/">Search Tips: Computed Index Field return value</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/04/Sitecore-search-tips-computed-field-return-value/" style="text-align:right">
+      <time datetime="2017-04-14T17:25:00.000Z" itemprop="datePublished">April 14, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Computed_field_return_value"><a href="#Computed_field_return_value" class="headerlink" title="Computed field return value"></a>Computed field return value</h4><p>Computed field helps us in doing some extra processing before adding the value to index.</p>
+<p>While creating a computed field, always try to return null, rather than <em>String.Empty</em>(unless it is important to have an empty value), because <em>String.Empty</em> takes <strong>space</strong> in the index, whereas when it is null, it is not added to the index.</p>
+<p><strong>References</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields</a>﻿</li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/" data-id="cj1hgsfwe0012ismg5hdr7ecw" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Computed-Index/">Computed Index</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Search/">Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Template-Part-6" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -491,105 +552,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Sitecore-Enhancing-Content-Author-Experience-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/">Sitecore Enhancing Content Author Experience - Part 2 (Layouts)</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" style="text-align:right">
-      <time datetime="2017-02-26T04:54:00.000Z" itemprop="datePublished">February 26, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Layouts/">Layouts</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
-<ol>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
-<li>Layout</li>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/">Content</a></li>
-</ol>
-<p>In previous post, we had explored how can we enhance content author experience from template perspective, in this post, let’s explore at layouts level.</p>
-<p><img src="/css/images/sitecore-layouts-content-author-experience.png" alt=""></p>
-<h5 id="1-_Data_source_Location"><a href="#1-_Data_source_Location" class="headerlink" title="1. Data source Location"></a>1. Data source Location</h5><p>In Sitecore, each page is a collection of components. We can add any number of components to a page, and some of the components we add to the page, have their own associated content. Content authors can select the associated  content using data source. If we are not restricting data source location, then full content tree is shown in the selectable items list, then content authors have a tough time to navigate and select the associated content.</p>
-<p>Giving proper Datasource location helps in this situation, we can set selectable items location, while creating sub-layout/rendering using <strong>Datasource Location</strong> field.</p>
-<p><img src="/css/images/datasource-selection.png" alt=""></p>
-<p><strong><em>without data source location (full content tree is listed as bel)</em></strong></p>
-<p><img src="/css/images/without-datasource-location.png" alt=""></p>
-<p><strong><em>with data source location (items shown, based on the location)</em></strong></p>
-<p><img src="/css/images/with-datasource-location.png" alt=""></p>
-<p><a href="http://firebreaksice.com/sitecore-rendering-datasource-locations/" target="_blank" rel="external">Here</a> you can read more information about data source location.</p>
-<h5 id="2-_Data_source_Template"><a href="#2-_Data_source_Template" class="headerlink" title="2. Data source Template"></a>2. Data source Template</h5><p>Once we specify data source location, still content author has to know, What’s the associated content item to choose. If there are only similar content items present in the location, then it becomes easier. But what if there are different variety of content items are present, then it is our job to guide them, to select proper items.</p>
-<p>We can achieve this by using Datasource template, which can be set on sub-layout/rendering <strong>Datasource Template</strong> field.</p>
-<p><img src="/css/images/datasource-template-selection.png" alt=""></p>
-<p>Without Data source Template:</p>
-<ul>
-<li>Any content item can be selected.</li>
-<li><strong><em>Create New Content</em></strong> option is grayed out, because, Sitecore does not know, using which template it has to create new item. (I remember in Sitecore certification exam, there was a question on when does Create New Content is grayed out)</li>
-</ul>
-<p><img src="/css/images/without-datasource-template.png" alt=""></p>
-<p>With Data source template:</p>
-<ul>
-<li>Sitecore prompts with a message, when other template item is selected.</li>
-<li>Create New Item option is available, using which Content authors can create new content directly from here.</li>
-</ul>
-<p><img src="/css/images/with-datasource-template.png" alt=""></p>
-<h5 id="3-_Placeholder_Settings"><a href="#3-_Placeholder_Settings" class="headerlink" title="3. Placeholder Settings"></a>3. Placeholder Settings</h5><p>We can empower the Experience Editor using placeholder settings (Allowed Controls). It is very important to set allowed controls for each placeholder, otherwise it would be difficult for content authors to know, What are all components can be placed on particular placeholder.</p>
-<p>Without allowed controls being set, content authors have to navigate from root and find exact component to add.</p>
-<p><img src="/css/images/placeholder-settings.png" alt=""></p>
-<p><strong><em>Without Allowed controls being set</em></strong></p>
-<p><img src="/css/images/without-placeholder-settings.png" alt=""></p>
-<p><strong><em>With Allowed controls being set</em></strong></p>
-<p><img src="/css/images/with-placeholder-settings.png" alt=""></p>
-<h5 id="4-_Thumbnail"><a href="#4-_Thumbnail" class="headerlink" title="4. Thumbnail"></a>4. Thumbnail</h5><p>After allowed controls is being set, now content authors can see the list of renderings in <strong>Select a Rendering</strong> window. But there is no visual clue, about what design they see on page, by selecting a particular component. Thumbnail is useful for this purpose.</p>
-<p>Thumbnail can be set at Rendering/sub-layout items. We have an option to take screen shot as well, or select an image from media library.</p>
-<p><img src="/css/images/rendering-thumbnail.png" alt=""></p>
-<p>Below, we can observe that “Article module” is having thumbnail view, but Product module is not having any thumbnail view.</p>
-<p><img src="/css/images/with-rendering-thumbnail.png" alt=""></p>
-<p>Thank you for reading, in next post, will explore the tips from content level.</p>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/" data-id="cj19eywwr003amsmg9lr87tb4" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Content-Author-Experience/">Content Author Experience</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -602,6 +564,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/04/Sitecore-search-tips-computed-field-return-value/" class="title">Search Tips: Computed Index Field return value</a></p>
+              <p class="item-date"><time datetime="2017-04-14T17:25:00.000Z" itemprop="datePublished">April 14, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -639,15 +610,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/" class="title">Sitecore Enhancing Content Author Experience - Part 3 (Content)</a></p>
-              <p class="item-date"><time datetime="2017-02-26T11:54:00.000Z" itemprop="datePublished">February 26, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -658,7 +620,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">30</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">31</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 

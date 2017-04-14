@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-04-08T15:13:23.002Z</updated>
+  <updated>2017-04-14T12:38:18.497Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Search Tips: Computed Index Field return value</title>
+    <link href="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/"/>
+    <id>http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/</id>
+    <published>2017-04-14T17:25:00.000Z</published>
+    <updated>2017-04-14T12:38:18.497Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Computed_field_return_value"><a href="#Computed_field_return_value" class="headerlink" title="Computed field return value"></a>Computed field return value</h4><p>Computed field helps us in doing some extra processing before adding the value to index.</p>
+<p>While creating a computed field, always try to return null, rather than <em>String.Empty</em>(unless it is important to have an empty value), because <em>String.Empty</em> takes <strong>space</strong> in the index, whereas when it is null, it is not added to the index.</p>
+<p><strong>References</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/sitecoremartina_blog/posts/sitecore-7-search-tips-computed-fields</a>﻿</li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Computed_field_return_value&quot;&gt;&lt;a href=&quot;#Computed_field_return_value&quot; class=&quot;headerlink&quot; title=&quot;Computed field return value&quot;&gt;&lt;/a&gt;Compu
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Tech Tips" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Tips/"/>
+    
+    
+      <category term="Computed Index" scheme="http://gopigujjula.com/tags/Computed-Index/"/>
+    
+      <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Templates Part 6 (Standard Values)</title>
@@ -1141,101 +1176,6 @@
     <summary type="html">
     
       &lt;p&gt;By this time, we have Sitecore website running in our machine, and also ready with Visual Studio solution setup. From now, we will look i
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Visual Studio - Project - Outside Web root</title>
-    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/"/>
-    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/</id>
-    <published>2016-11-12T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.262Z</updated>
-    
-    <content type="html"><![CDATA[<p>In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside web root option is more useful. In this post let’s explore more advanced,</p>
-<p>I am using <strong>Visual Studio 2015 community/professional</strong> edition, and <strong>Sitecore 8.2</strong>.</p>
-<p><strong>Outside web root setup steps:</strong></p>
-<ul>
-<li>Open the Visual Studio, and navigate to <strong>File -&gt; New -&gt; Project</strong>, to create new project.</li>
-</ul>
-<p><img src="/css/images/VS-new-project.png" alt=""></p>
-<ul>
-<li><p>Select the <strong>.NET Framework</strong> (in our case 4.5.2) version, and select the <strong>ASP.NET web application</strong> template.</p>
-</li>
-<li><p>Enter the <strong>Name</strong> of the project, specify the <strong>Location</strong> field, and then click on OK to continue.</p>
-</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-MVC-project.png" alt=""></p>
-<ul>
-<li>Now we get another dialog, to select the project template. Here select <strong>Empty</strong> template present under <strong>ASP.NET 4.5.2 Templates</strong> section, and check the MVC checkbox as shown below, and click OK to proceed.</li>
-</ul>
-<p><img src="/css/images/VS-MVC-project.png" alt=""></p>
-<ul>
-<li>Once the project is created, solution contains the files as shown below.</li>
-</ul>
-<p><img src="/css/images/VS-solution-explorer.png" alt=""></p>
-<ul>
-<li>Now from the project, remove <strong>Web.config</strong>, and <strong>Global.asax</strong> files, otherwise while publishing, these files will override the respective Sitecore files.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-file-delete.png" alt=""></p>
-<ul>
-<li>Once after deleted, we need to copy both <strong>Web.config</strong> and <strong>Global.asax</strong> from web root into the project.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-file-paste.png" alt=""></p>
-<ul>
-<li>Create a folder with name <strong>App_Config</strong>, then copy the <strong>ConnectionStrings.config</strong> &amp; <strong>Sitecore.config</strong> files from web root to the project.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-config files.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-config files-copy.png" alt=""></p>
-<ul>
-<li>Next step is to add Sitecore references. We need both <strong>Sitecore.Kernel.dll</strong> &amp; <strong>Sitecore.MVC.dll</strong>, Let’s grab these files from web root. Create a directory in Project file system, let’s call that <strong>Assemblies</strong>, and copy the two dll’s to inside the directory.</li>
-</ul>
-<p><img src="/css/images/VS-inside-webroot-dll.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-copy-1.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-copy-2.png" alt=""></p>
-<p><img src="/css/images/VS-inside-webroot-dll-reference.png" alt=""></p>
-<ul>
-<li>Please double check on the Mvc version compatibility <a href="https://kb.sitecore.net/articles/087164" target="_blank" rel="external">here</a>, and make sure you are using correct .NET Mvc version. We can verify the MVC version in <strong>Web.config</strong> file as shown below.</li>
-</ul>
-<p><img src="/css/images/VS-mvc-version.png" alt=""></p>
-<ul>
-<li>Now our project is all set. To deploy we need to create a publishing profile. Select <strong>Publishing Method</strong> as <strong>File System</strong> and specify the local Sitecore instance web root path.</li>
-</ul>
-<p><img src="/css/images/VS-publish-profile.png" alt=""></p>
-<p><img src="/css/images/VS-publish-profile-2.png" alt=""></p>
-<p><img src="/css/images/VS-publish-profile-3.png" alt=""></p>
-<ul>
-<li>At last, click on the <strong>Publish</strong> button, we can see the Site is published to web root folder.</li>
-</ul>
-<p><img src="/css/images/VS-publish-profile-4.png" alt=""></p>
-<ul>
-<li>To confirm the publish to web root folder, we can navigate to bin folder in web root folder, and see that <strong>SIMSitecore.dll</strong> is copied over.</li>
-</ul>
-<p><img src="/css/images/VS-publish-verification.png" alt=""></p>
-<ul>
-<li>Now try to load the site, and check whether we are able to login to Sitecore or not.</li>
-</ul>
-<p><img src="/css/images/VS-deploy-verify-1.png" alt=""></p>
-<p><img src="/css/images/VS-deploy-verify-2.png" alt=""></p>
-<p>That’s all, thanks for reading.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;In recent post we had seen, how to set up project inside the web root. But this option is only useful for POC’s. Most of the time outside
     
     </summary>
     
