@@ -101,6 +101,42 @@
   </entry>
   
   <entry>
+    <title>Dependency Injection In Sitecore</title>
+    <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
+    <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
+    <published>2017-04-23T14:30:00.000Z</published>
+    <updated>2017-05-03T15:13:32.860Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/MghGijxFyaI" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/april-2017-3/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Dependency_Injection_In_Sitecore&quot;&gt;&lt;a href=&quot;#Dependency_Injection_In_Sitecore&quot; class=&quot;headerlink&quot; title=&quot;Dependency Injection In Site
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+    
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Search Tips: Computed Index Field return value</title>
     <link href="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/"/>
     <id>http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/</id>
@@ -199,7 +235,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
     <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-03-28T17:28:22.494Z</updated>
+    <updated>2017-05-03T15:12:19.672Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -207,7 +243,7 @@
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-2/" target="_blank" rel="external">here</a></p>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-2/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
     <summary type="html">
@@ -273,7 +309,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
     <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-03-28T17:28:22.531Z</updated>
+    <updated>2017-05-03T15:12:00.730Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -281,7 +317,7 @@
 
 
 <h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/bangalore-sitecore-user-group/events/march-2017-1/" target="_blank" rel="external">here</a></p>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-1/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
     <summary type="html">
@@ -970,7 +1006,7 @@
     <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/"/>
     <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Enhancing-Content-Author-Experience/</id>
     <published>2017-01-14T05:30:00.000Z</published>
-    <updated>2017-03-28T17:28:22.586Z</updated>
+    <updated>2017-05-03T15:11:34.380Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore"><a href="#Experience_on_giving_first_talk_in_Sitecore_User_Group_Bangalore" class="headerlink" title="Experience on giving first talk in Sitecore User Group Bangalore"></a>Experience on giving first talk in Sitecore User Group Bangalore</h4><p>Back after a month break, from next week we will restart our <a href="/categories/Sitecore/Saturday-Sitecore-Learning/">Sitecore Saturday learning series</a>. This week I am going to share my experiences on giving first ever presentation in any technical user group.</p>
 <p>Previously I had experience on giving presentations either within the team, or within the organization, but never in any technical user group.</p>
@@ -994,7 +1030,7 @@
 
 
 <h5 id="Webinar_Video_3A"><a href="#Webinar_Video_3A" class="headerlink" title="Webinar Video:"></a>Webinar Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/z1XlDGEZk6w" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the talk can be found <a href="http://sitecoreug.org/en/usergroups/bangalore-sitecore-user-group/events/january-2017/" target="_blank" rel="external">here</a></p>
+<p>More details about the talk can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/january-2017/" target="_blank" rel="external">here</a></p>
 <p>In coming months, some of the topics I am thinking of presenting are,</p>
 <ul>
 <li>Sitecore Media Framework with Brightcove (Two parts)</li>
@@ -1173,43 +1209,6 @@
     
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Sitecore Code review check list</title>
-    <link href="http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/"/>
-    <id>http://gopigujjula.com/2016/11/Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist/</id>
-    <published>2016-11-26T05:30:00.000Z</published>
-    <updated>2017-03-28T17:28:22.557Z</updated>
-    
-    <content type="html"><![CDATA[<p>This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation deck is part of the knowledge share session, I had delivered in office.</p>
-<p>This check list helps Sitecore developers to better enhance the Content Author experience in managing their content.</p>
-
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/xBecChQ8JHkFDL" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<p><strong>Happy Learning :)</strong></p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This week, I am going away from our series, and sharing the presentation on the Sitecore basic code review check list. This presentation 
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
