@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-05-03T13:33:57.188Z</updated>
+  <updated>2017-05-10T16:00:09.549Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Part-1/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Part-1/</id>
     <published>2017-05-03T13:33:00.000Z</published>
-    <updated>2017-05-03T13:33:57.188Z</updated>
+    <updated>2017-05-10T16:00:09.549Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework"><a href="#Sitecore_Media_Framework" class="headerlink" title="Sitecore Media Framework"></a>Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
 <p>Prior to Media Framework, some of the most commonly used approaches to map videos into site,</p>
@@ -45,7 +45,7 @@
 </ul>
 <p>To integrate media, we require Sitecore media framework module, and hosting provider (Brightcove or Ooyala) connector which is built on top of the media framework.</p>
 <h4 id="Sitecore_Mediaframework_module_Installation"><a href="#Sitecore_Mediaframework_module_Installation" class="headerlink" title="Sitecore Mediaframework module Installation"></a>Sitecore Mediaframework module Installation</h4><ol>
-<li>Select and download the respective Media Framework module from <a href="https://dev.sitecore.net/Downloads/Sitecore_Media_Framework" target="_blank" rel="external">Sitecore</a>. For this demo, I have downloaded Media Framework 2.1 module (for Sitecore 8.1)</li>
+<li>Select and download the respective Media Framework module from <a href="https://dev.sitecore.net/Downloads/Sitecore_Media_Framework" target="_blank" rel="external">Sitecore</a>. For this demo, I have downloaded <em>Media Framework 2.1 module</em> (for <strong>Sitecore 8.1</strong>)</li>
 <li>Install the module from Installation wizard.</li>
 <li>Open the Sitecore Workbox &amp; Select the Analytics Workflow, Deploy &amp; publish the playback page events (<em>Playback Changed</em>, <em>Playback Completed</em>, <em>Playback Error</em> &amp; <em>Playback Started</em>)</li>
 <li>Reporting DB configurations</li>
@@ -65,13 +65,20 @@
 <p>Check all the Playback related events, and click on <strong>Deploy(selected)</strong></p>
 <p><img src="/css/images/Sitecore-mediaframework-9.png" alt=""></p>
 <p>After the installation, we can observe new items under template, layout, and media library</p>
-<p>Templates:</p>
+<p><strong>Templates:</strong></p>
 <p><img src="/css/images/Sitecore-mediaframework-template.png" alt=""></p>
-<p>Layout:</p>
+<p><strong>Layout:</strong></p>
 <p><img src="/css/images/Sitecore-mediaframework-layout.png" alt=""></p>
-<p>Media Library:</p>
+<p><strong>Media Library:</strong></p>
 <p><img src="/css/images/Sitecore-mediaframework-medialibrary.png" alt=""></p>
-<p><em>At the end, publish Site to web.</em></p>
+<p><em>At the end, publish Site to web database.</em></p>
+<p><strong>Reporting DB configuration</strong><br>Sitecore uses couple of new database tables for storing anaytics related data with respective to videos. We need to run a SQL script on reporting database. We can download the script  <a href="https://dev.sitecore.net/Downloads/Sitecore_Media_Framework/21/Sitecore_Media_Framework_21.aspx" target="_blank" rel="external">here</a>. This script creates following tables in reporting database,</p>
+<ul>
+<li>MediaFrameworkMedia</li>
+<li>Fact_MediaFrameworkEvents</li>
+</ul>
+<p><img src="/css/images/mediaframeworkmedia.png" alt=""></p>
+<p><img src="/css/images/fact_mediaframeworkevents.png" alt=""></p>
 <p><strong>References:</strong></p>
 <ul>
 <li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
@@ -90,13 +97,13 @@
       <category term="Media Framework with Brightcove" scheme="http://gopigujjula.com/categories/Sitecore/Media-Framework-with-Brightcove/"/>
     
     
-      <category term="Beginnere" scheme="http://gopigujjula.com/tags/Beginnere/"/>
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
       <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
+    
+      <category term="Beginnere" scheme="http://gopigujjula.com/tags/Beginnere/"/>
     
   </entry>
   
@@ -105,13 +112,13 @@
     <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
     <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
     <published>2017-04-23T14:30:00.000Z</published>
-    <updated>2017-05-03T15:13:32.860Z</updated>
+    <updated>2017-05-03T15:13:33.697Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/MghGijxFyaI" frameborder="0" allowfullscreen></iframe></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/april-2017-3/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -126,13 +133,13 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
@@ -162,11 +169,11 @@
       <category term="Tech Tips" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Tips/"/>
     
     
-      <category term="Computed Index" scheme="http://gopigujjula.com/tags/Computed-Index/"/>
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+      <category term="Computed Index" scheme="http://gopigujjula.com/tags/Computed-Index/"/>
     
   </entry>
   
@@ -222,11 +229,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -242,7 +249,7 @@
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/toDc9toW1ncHoU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-2/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -257,13 +264,13 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
@@ -294,13 +301,13 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="SUG Hyderabad" scheme="http://gopigujjula.com/tags/SUG-Hyderabad/"/>
-    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Hyderabad" scheme="http://gopigujjula.com/tags/SUG-Hyderabad/"/>
     
   </entry>
   
@@ -316,7 +323,7 @@
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-1/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -331,13 +338,13 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
@@ -359,9 +366,9 @@
 <h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days almost all Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
 <p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them using experience editor. That’s the reason, we always need to render fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
 <p>Some of the examples:</p>
-<p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Text runat=&#34;server&#34; ID=&#34;Title&#34; Field=&#34;Name&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;Name&#34;)</span><br></pre></td></tr></table></figure></p>
-<p><strong>Image:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Image runat=&#34;server&#34; ID=&#34;ListingImage&#34; Field=&#34;Listing Image&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;Listing Image&#34;)</span><br></pre></td></tr></table></figure></p>
-<p><strong>General Link:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;sc:Link runat=&#34;server&#34; ID=&#34;CTA&#34; Field=&#34;CTA&#34; /&#62;&#10;or&#10;@Html.Sitecore().Field(&#34;CTA&#34;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Text runat=&quot;server&quot; ID=&quot;Title&quot; Field=&quot;Name&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Name&quot;)</div></pre></td></tr></table></figure></p>
+<p><strong>Image:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Image runat=&quot;server&quot; ID=&quot;ListingImage&quot; Field=&quot;Listing Image&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Listing Image&quot;)</div></pre></td></tr></table></figure></p>
+<p><strong>General Link:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Link runat=&quot;server&quot; ID=&quot;CTA&quot; Field=&quot;CTA&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;CTA&quot;)</div></pre></td></tr></table></figure></p>
 <h5 id="2-_Custom_Experience_Editor_Button"><a href="#2-_Custom_Experience_Editor_Button" class="headerlink" title="2. Custom Experience Editor Button"></a>2. Custom Experience Editor Button</h5><p>Sitecore does not support in-line editing for Checkbox, Multilist, TreeList, and other fields. There are no specific Sitecore controls to support these field types. By utilizing <strong>Custom Experience Editor buttons</strong>, we can provide editing option in experience editor for these fields. In this post let’s explore, how do we achieve it with Field Editor button.</p>
 <p><strong>Field Editor Button:</strong><br>We can find all experience editor buttons in core database, under <strong><em>/sitecore/Content/Applications/WebEdit</em></strong> item.<br>Following are the steps, to configure a field editor button,<br><strong>Step 1:</strong> Switch to the Core database, navigate to <strong><em>/sitecore/Content/Applications/WebEdit/Custom Experience Buttons</em></strong> items in content editor.<br><strong>Step 2:</strong> Create a new button item, using <strong><em>/sitecore/templates/System/WebEdit/Field Editor Button</em></strong> template.<br><strong>Step 3:</strong> Fill out all four fields, Header, Icon, Fields, Tooltip. Fields is the important one here, as we need to add the field title name. (In our case <strong><em>Country</em></strong> is the field which is of Multilist field type)</p>
 <p><img src="/css/images/custom-field-editor-button.png" alt=""></p>
@@ -384,11 +391,11 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -457,11 +464,11 @@
       <category term="Layouts" scheme="http://gopigujjula.com/categories/Sitecore/Layouts/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -524,11 +531,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -585,11 +592,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -607,7 +614,7 @@
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
 <p>More details about the talk can be found <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">here</a></p>
 <p>Thanks to Surendra, <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> and <a href="https://twitter.com/anandgothe" target="_blank" rel="external">Anand Gothe</a> for their support and encouragement.</p>
 </div>]]></content>
@@ -623,13 +630,13 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
-      <category term=".NET User Group" scheme="http://gopigujjula.com/tags/NET-User-Group/"/>
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+      <category term=".NET User Group" scheme="http://gopigujjula.com/tags/NET-User-Group/"/>
     
   </entry>
   
@@ -685,9 +692,9 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
     
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
   </entry>
   
@@ -751,11 +758,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
     
@@ -778,7 +785,7 @@
 <p><strong>First time 10km walk</strong> After initial days of the challenge are over, understood that 5km are not going to be enough. One day wanted to try for 10km, I know that It’s very long for a single workout. Somehow believed, I could make it. By the time I reached 7-8 km, my legs are paining like hell, thought of giving up there, but don’t know what happened, I was determined to finish that 10kms. Pushed myself for another 2kms, and was able to finish 10 km. This is one of the most memorable experience, in the whole journey. Looking back, I feel proud of myself, that I could cross that 10kms.<br><img src="/css/images/endomondo-1.png" alt=""></p>
 <p>Later 10km became a regular distance for my workout. As the days are passing, intensity in the competition has also increased, I also needed to keep up my pace.</p>
 <p><strong>Lake park:</strong> I like walking beside the lake, love the morning breeze, sunrise, and everything around there. Every day I had some wonderful experience there, like meeting new people, and inspired by some of their determination. When I go for walk in other parks, I couldn’t spend so much time there, as I don’t get the same breeze, always wish to go to lake park.</p>
-<p><strong>Music &amp; Podcasts:</strong> Power beats are very useful in this journey. While walking, I love to listen Music, especially Telugu (mother tongue) songs. But this time I also explored another stream which are podcasts. I know about podcasts before, but here and there I used to listen only an episode from <a href="/(http://hanselminutes.com/">Hansel minutes</a>) podcast. This time, as I am walking long distances, wanted to explore podcasts fully. I listened to some of the wonderful episodes from different podcasts, and now I am following lot of good podcasts like,</p>
+<p><strong>Music &amp; Podcasts:</strong> Power beats are very useful in this journey. While walking, I love to listen Music, especially Telugu (mother tongue) songs. But this time I also explored another stream which are podcasts. I know about podcasts before, but here and there I used to listen only an episode from <a href="/(http:/hanselminutes.com/">Hansel minutes</a>) podcast. This time, as I am walking long distances, wanted to explore podcasts fully. I listened to some of the wonderful episodes from different podcasts, and now I am following lot of good podcasts like,</p>
 <ul>
 <li><a href="https://coresampler.fireside.fm/" target="_blank" rel="external">CoreSampler</a></li>
 <li><a href="http://hanselminutes.com/" target="_blank" rel="external">Hansel Minutes</a></li>
@@ -887,11 +894,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
     
@@ -991,11 +998,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
     
@@ -1029,7 +1036,7 @@
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/3DXip4c4eVm2Rq" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Webinar_Video_3A"><a href="#Webinar_Video_3A" class="headerlink" title="Webinar Video:"></a>Webinar Video:</h5><div class="video-container"><iframe src="https://www.youtube.com/embed/z1XlDGEZk6w" frameborder="0" allowfullscreen></iframe></div>
+<h5 id="Webinar_Video_3A"><a href="#Webinar_Video_3A" class="headerlink" title="Webinar Video:"></a>Webinar Video:</h5><div class="video-container"></div>
 <p>More details about the talk can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/january-2017/" target="_blank" rel="external">here</a></p>
 <p>In coming months, some of the topics I am thinking of presenting are,</p>
 <ul>
@@ -1063,17 +1070,17 @@
       <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
     
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
       <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
     
   </entry>
   
@@ -1139,11 +1146,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
@@ -1208,11 +1215,11 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
     
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
   </entry>
   
