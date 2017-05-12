@@ -111,7 +111,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        67
+        68
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -142,6 +142,96 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Sitecore-Media-Framework-With-Brightcove-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/">Sitecore : Media Framework With Brightcove - Part 2</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/" style="text-align:right">
+      <time datetime="+022017-05-03T08:30:00.000Z" itemprop="datePublished">May 03, 22017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
+<p>Some of the key features:</p>
+<ul>
+<li>Video CMS</li>
+<li>Analytics</li>
+<li>Monetization</li>
+</ul>
+<p><img src="/css/images/brightcove.png" alt=""></p>
+<h4 id="Sitecore__26amp_3B_Brightcove_Partnership_3A"><a href="#Sitecore__26amp_3B_Brightcove_Partnership_3A" class="headerlink" title="Sitecore &amp; Brightcove Partnership:"></a>Sitecore &amp; Brightcove Partnership:</h4><p>Sitecore partnered with both Brightcove &amp; Ooyala video hosting platforms, to implement connectors on top of the media framework. Till Aug-2016, Sitecore maintained, and supported both these connectors, after that Sitecore open-sourced the code, and stopped supporting these connectors. Now it is upto community, or the hosting provides to keep the connectors up to date, and give support.</p>
+<p>At present Brightcove is fully supporting its connector, maintaining and making changes to support latest Sitecore versions.</p>
+<h4 id="Brightcove_Connector_Installation"><a href="#Brightcove_Connector_Installation" class="headerlink" title="Brightcove Connector Installation"></a>Brightcove Connector Installation</h4><p>Just keep in mind that, first we need to install the Media Framework module, then only we can go ahead with the connector installation.</p>
+<ol>
+<li>Download the related connector package from <a href="https://support.brightcove.com/en/video-cloud/docs/getting-started-brightcove-video-connect-sitecore-experience-platform" target="_blank" rel="external">here</a></li>
+<li>Install the module from Installation wizard.</li>
+</ol>
+<p>Login to Sitecore, and select the Development Tools -&gt; Installation Wizard from startup menu,</p>
+<p><img src="/css/images/installationwizard.png" alt=""></p>
+<p>Upload the Sitecore Media Framework Brightcove Edition package, click next to proceed,</p>
+<p><img src="/css/images/brightcove-edition-1.png" alt=""></p>
+<p>copy the post installation steps,</p>
+<p><img src="/css/images/brightcove-edition-2.png" alt=""></p>
+<p>Click on Install to proceed,</p>
+<p><img src="/css/images/brightcove-edition-3.png" alt=""></p>
+<p>After the successful installation, check Restart the Sitecore Client, and click on close.</p>
+<p><img src="/css/images/Sitecore-mediaframework-6.png" alt=""></p>
+<h5 id="Configuration_changes__28Post_Installation_steps_29_3A"><a href="#Configuration_changes__28Post_Installation_steps_29_3A" class="headerlink" title="Configuration changes (Post Installation steps):"></a>Configuration changes (Post Installation steps):</h5><p><strong>Step 1:</strong> Navigate to webroot, App_Config\Include directory, In my case, <em>brightcovedemo.local.com\Website\App_Config\Include</em></p>
+<p><img src="/css/images/brightcove-configuration-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Rename config file “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled</em>“ to “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config</em>“.</p>
+<p><img src="/css/images/brightcove-configuration-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Open file “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config</em>“, navigate to section “<em>Brightcove.StorageService</em>“ and change the “[PUT YOUR WEB SITE URL HERE]” value with your website URL e.g. <a href="http://your-website.com" target="_blank" rel="external">http://your-website.com</a>.</p>
+<p><img src="/css/images/brightcove-configuration-3.png" alt=""></p>
+<p><strong>Step 4:</strong> Verify “<em>ContentDatabaseName</em>“ and “<em>PublishDatabaseName</em>“ element values.</p>
+<p><img src="/css/images/brightcove-configuration-4.png" alt=""></p>
+<p><strong>Step 5:</strong> Save and close the file.</p>
+<p>By this, we have completed, both Media Framework module setup, as well as the Brightcove connector installation. In next post, let’s explore the Brightcove account, and how can we connect to the same from Sitecore.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/" data-id="cj2j8z7300000usmg4vf7ve73" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brightcove/">Brightcove</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Media-Framework/">Sitecore Media Framework</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Sitecore-Media-Framework-With-Brightcove-Part-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -522,67 +612,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Sitecore-Brightcove-Video-Cloud-Connector" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/">Sitecore : Brightcove Video Cloud Connector</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/" style="text-align:right">
-      <time datetime="2017-03-13T12:30:00.000Z" itemprop="datePublished">March 13, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Talks/">Talks</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/HDnATMkuSkn5g5" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><p>No Recorded video.</p>
-<p>More details about the session can be found <a href="https://www.meetup.com/Sitecore-User-Group-Hyderabad/events/238207641/" target="_blank" rel="external">here</a></p>
-</div>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/" data-id="cj19eywxx003omsmgypremujc" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Presentation/">Presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SUG-Hyderabad/">SUG Hyderabad</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-User-Group/">Sitecore User Group</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -595,6 +624,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/" class="title">Sitecore : Media Framework With Brightcove - Part 2</a></p>
+              <p class="item-date"><time datetime="+022017-05-03T08:30:00.000Z" itemprop="datePublished">May 03, 22017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -632,15 +670,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/" class="title">Sitecore - Media Framework with Brightcove - Part 2 Webinar</a></p>
-              <p class="item-date"><time datetime="2017-03-19T12:30:00.000Z" itemprop="datePublished">March 19, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -651,7 +680,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">33</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">34</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 

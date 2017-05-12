@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-05-10T16:00:09.549Z</updated>
+  <updated>2017-05-12T05:48:21.591Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore : Media Framework With Brightcove - Part 2</title>
+    <link href="http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/"/>
+    <id>http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/</id>
+    <published>+022017-05-03T08:30:00.000Z</published>
+    <updated>2017-05-12T05:48:21.591Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
+<p>Some of the key features:</p>
+<ul>
+<li>Video CMS</li>
+<li>Analytics</li>
+<li>Monetization</li>
+</ul>
+<p><img src="/css/images/brightcove.png" alt=""></p>
+<h4 id="Sitecore__26amp_3B_Brightcove_Partnership_3A"><a href="#Sitecore__26amp_3B_Brightcove_Partnership_3A" class="headerlink" title="Sitecore &amp; Brightcove Partnership:"></a>Sitecore &amp; Brightcove Partnership:</h4><p>Sitecore partnered with both Brightcove &amp; Ooyala video hosting platforms, to implement connectors on top of the media framework. Till Aug-2016, Sitecore maintained, and supported both these connectors, after that Sitecore open-sourced the code, and stopped supporting these connectors. Now it is upto community, or the hosting provides to keep the connectors up to date, and give support.</p>
+<p>At present Brightcove is fully supporting its connector, maintaining and making changes to support latest Sitecore versions.</p>
+<h4 id="Brightcove_Connector_Installation"><a href="#Brightcove_Connector_Installation" class="headerlink" title="Brightcove Connector Installation"></a>Brightcove Connector Installation</h4><p>Just keep in mind that, first we need to install the Media Framework module, then only we can go ahead with the connector installation.</p>
+<ol>
+<li>Download the related connector package from <a href="https://support.brightcove.com/en/video-cloud/docs/getting-started-brightcove-video-connect-sitecore-experience-platform" target="_blank" rel="external">here</a></li>
+<li>Install the module from Installation wizard.</li>
+</ol>
+<p>Login to Sitecore, and select the Development Tools -&gt; Installation Wizard from startup menu,</p>
+<p><img src="/css/images/installationwizard.png" alt=""></p>
+<p>Upload the Sitecore Media Framework Brightcove Edition package, click next to proceed,</p>
+<p><img src="/css/images/brightcove-edition-1.png" alt=""></p>
+<p>copy the post installation steps,</p>
+<p><img src="/css/images/brightcove-edition-2.png" alt=""></p>
+<p>Click on Install to proceed,</p>
+<p><img src="/css/images/brightcove-edition-3.png" alt=""></p>
+<p>After the successful installation, check Restart the Sitecore Client, and click on close.</p>
+<p><img src="/css/images/Sitecore-mediaframework-6.png" alt=""></p>
+<h5 id="Configuration_changes__28Post_Installation_steps_29_3A"><a href="#Configuration_changes__28Post_Installation_steps_29_3A" class="headerlink" title="Configuration changes (Post Installation steps):"></a>Configuration changes (Post Installation steps):</h5><p><strong>Step 1:</strong> Navigate to webroot, App_Config\Include directory, In my case, <em>brightcovedemo.local.com\Website\App_Config\Include</em></p>
+<p><img src="/css/images/brightcove-configuration-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Rename config file “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled</em>“ to “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config</em>“.</p>
+<p><img src="/css/images/brightcove-configuration-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Open file “<em>Sitecore.MediaFramework.Services.Brightcove.Extended.config</em>“, navigate to section “<em>Brightcove.StorageService</em>“ and change the “[PUT YOUR WEB SITE URL HERE]” value with your website URL e.g. <a href="http://your-website.com" target="_blank" rel="external">http://your-website.com</a>.</p>
+<p><img src="/css/images/brightcove-configuration-3.png" alt=""></p>
+<p><strong>Step 4:</strong> Verify “<em>ContentDatabaseName</em>“ and “<em>PublishDatabaseName</em>“ element values.</p>
+<p><img src="/css/images/brightcove-configuration-4.png" alt=""></p>
+<p><strong>Step 5:</strong> Save and close the file.</p>
+<p>By this, we have completed, both Media Framework module setup, as well as the Brightcove connector installation. In next post, let’s explore the Brightcove account, and how can we connect to the same from Sitecore.</p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;What_is_Brightcove_3F&quot;&gt;&lt;a href=&quot;#What_is_Brightcove_3F&quot; class=&quot;headerlink&quot; title=&quot;What is Brightcove?&quot;&gt;&lt;/a&gt;What is Brightcove?&lt;/h4&gt;&lt;
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Media Framework with Brightcove" scheme="http://gopigujjula.com/categories/Sitecore/Media-Framework-with-Brightcove/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
+    
+      <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore : Media Framework With Brightcove - Part 1</title>
@@ -1144,75 +1210,6 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Default Home Page</title>
-    <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/"/>
-    <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/</id>
-    <published>2016-12-03T05:30:00.000Z</published>
-    <updated>2017-02-26T11:03:20.889Z</updated>
-    
-    <content type="html"><![CDATA[<p>As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Content Item etc. At last we will see how the Content Author can change the text using Content editor.</p>
-<p>Before we move further, few of you may not be convenient with terminology (template, layout, sub-layout) but no issues just follow the steps, we will discuss more about each topic in coming posts.</p>
-<p>If we load the newly installed Sitecore website, we can see the below page, as the website home page.</p>
-<p><img src="/css/images/sitecore-default-homepage.png" alt=""></p>
-<p>Now let’s look into each and every aspect from Sitecore side, first let’s login into Sitecore using <strong>admin/b</strong> credentials,</p>
-<p>From Launch pad, navigate to Content Editor, by directly clicking on the <strong>Content Editor</strong> option, or through <strong>Desktop</strong> option, it is a good practice to go from Desktop, as we can open multiple windows, and navigate among them, similar to windows desktop, and also having start menu. This is not possible by directly selecting Content Editor option from Launch pad.</p>
-<p><img src="/css/images/sitecore-desktop.png" alt=""></p>
-<p>If you click on Desktop mode, select Sitecore logo/start button and select “Content Editor” option.</p>
-<p><img src="/css/images/start-menu.png" alt=""></p>
-<p>In Content Editor, navigate to the Home content item (<strong>/sitecore/content/Home</strong>),</p>
-<p><img src="/css/images/default-home-content.png" alt=""></p>
-<h4 id="Data_Template_3A"><a href="#Data_Template_3A" class="headerlink" title="Data Template:"></a>Data Template:</h4><p>In Sitecore, every content item is created from Template. Template contains field definition, and presentation information. Some say <em>“Templates are like class definitions. Content is like an instance of that class.”</em><br>In Sitecore tree, all the templates are present under <strong>sitecore/Templates</strong></p>
-<p>For the default “Home” page Template is already present in Templates section. We can see the Template name, In Quick Info section, which is <strong>Sample Item</strong> in this case. By clicking on the template name, we can navigate to the template item.(if you opened in Desktop mode, Template will be opened in new window, else on the same window) or we can navigate to the template using its path <strong>/sitecore/templates/Sample/Sample Item</strong>.</p>
-<p><img src="/css/images/template-structure.png" alt=""></p>
-<p>By looking into <strong>Sample Item</strong> Template’s <strong>Builder</strong> tab, we can understand that there are two fields defined in it, which are <strong>Title</strong> (text Type) and <strong>Text</strong> (Rich Text Type). <strong>Field Type</strong> determines the control to manage the content by content author using the editing interface.</p>
-<p><img src="/css/images/template-fields.png" alt=""></p>
-<p><strong>Standard Values</strong> for a particular template, lists all the fields including inherited fields. All the presentation details are assigned on Standard values.<br>For all the page templates, we have a presentation, where we can assign a layout and components (sub-layouts). On request of a web page, Sitecore assembles the page dynamically from it’s content and the presentation components.</p>
-<p><img src="/css/images/template-presentation.png" alt=""></p>
-<h4 id="Presentation_3A"><a href="#Presentation_3A" class="headerlink" title="Presentation:"></a>Presentation:</h4><p>Now let’s look into presentation components, both layout, and sub layouts. All the layouts, sub layouts, renderings (in MVC), will be present under <strong>sitecore/Layout</strong> in the Sitecore tree.</p>
-<p><img src="/css/images/layoust.png" alt=""></p>
-<p>From <strong>Sample Item</strong> template presentation, we can see that there is one layout <strong>(Sample Layout)</strong>, and three components <strong>(Sample Sublayout, Sample Inner Sublayout,</strong> and <strong>Sample Rendering)</strong>.</p>
-<p><img src="/css/images/presentation.png" alt=""></p>
-<p>Let’s explore Sample Layout first, which is present in <strong>sitecore/Layout/Layouts/</strong> path. Layout is kind of master page in ASP.NET terminology, where we have basic html tags are added, and placeholders are defined. On Click of Sample Layout item, we can see the <strong>Path</strong> field, there is a .aspx page path is given, which contains all the HTML code with respect to the page.</p>
-<p><img src="/css/images/main-layout.png" alt=""></p>
-<p><img src="/css/images/layout-path.png" alt=""></p>
-<p>If we observe the layout code, we can see that HTML tags are present and also a placeholder with key as <strong>main</strong> is added. This is the placeholder where, other page components are going to be embedded.</p>
-<p><img src="/css/images/layout-code.png" alt=""></p>
-<p>Similar way if we look at <strong>Sample Sublayout</strong> item, which is under <strong>/sitecore/Layout/Sublayouts</strong>. This is an .ascx file.</p>
-<p><img src="/css/images/sublayout.png" alt=""></p>
-<p><img src="/css/images/sublayout-code.png" alt=""></p>
-<p>Similar to this component, other page components also have code files with respect to them.<br>ASP.NET webforms -&gt; <strong>.ascx</strong> files<br>ASP.NET MVC -&gt; <strong>Controller</strong> rendering, or <strong>View</strong> rendering.<br>XSLT -&gt; XSL Rendering</p>
-<p>If we look at the Sample rendering which is a xsl rendering, this is where we are rendering both the fields, <strong>‘title’ &amp; ‘text’</strong>, which are created in template.</p>
-<p><img src="/css/images/xslrendering.png" alt=""></p>
-<p><img src="/css/images/xslrenderingcode.png" alt=""></p>
-<p>Now let’s get back to our home item, where we have already content present for both the fields, which we can see on home page.</p>
-<p><img src="/css/images/conten-output.png" alt=""></p>
-<p>Till now we have seen Templates, Standard values, presentation, layout, sub-layout and renderings. Stay tune to this space for my next posts to discuss more detail on each item we used in home page.</p>
-<h4 id="Hello_World"><a href="#Hello_World" class="headerlink" title="Hello World"></a>Hello World</h4><p>We will try changing the Title field content to <strong>Hello World</strong>, and verify that text is changing on home page or not. After making any change, we need to publish the item; As I discussed earlier our changes will save in to Master database. On Click of publish latest modifications/final content gets pushed to <strong>web</strong> database. Refer Below screenshot for final output we are expecting. Hello world is indeed appearing on home page.</p>
-<p><img src="/css/images/helloworld-content.png" alt=""></p>
-<p>Sitecore supports both ASP.NET web forms and MVC, but default home page comes with all web forms related code. Currently most of new Sitecore implementations are done in MVC. So in coming up posts, we will always try to see the code examples in MVC.<br>ASP.NET web forms is still very much in picture, because lot of implementations till now are done in web forms. Whenever we are maintaining those applications, web forms knowledge is very much required.<br>That’s all for this week.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
