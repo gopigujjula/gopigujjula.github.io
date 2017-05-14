@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-05-12T05:48:21.591Z</updated>
+  <updated>2017-05-14T10:12:23.955Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Part 2</title>
-    <link href="http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/"/>
-    <id>http://gopigujjula.com/22017/05/Sitecore-Media-Framework-With-Brightcove-Part-2/</id>
-    <published>+022017-05-03T08:30:00.000Z</published>
-    <updated>2017-05-12T05:48:21.591Z</updated>
+    <title>Sitecore : Media Framework With Brightcove - Integrating Brightcove Account In Sitecore</title>
+    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/"/>
+    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/</id>
+    <published>2017-05-14T11:30:00.000Z</published>
+    <updated>2017-05-14T10:12:23.955Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Brightcove_Account"><a href="#Brightcove_Account" class="headerlink" title="Brightcove Account"></a>Brightcove Account</h4><p>In previous posts, we had looked into, how to install both Media framework module, as well as the Brightcove connector. In this post, let’s explore how to make a connection between Sitecore and Brightcove account.</p>
+<p>To make a connection between Sitecore and Brightcove, we need to have a enterprise account in Brightcove. We can also create a trail account, but trail account does not have privileges to make a connection from external system, so we must have an enterprise account.</p>
+<p><strong>Step 1:</strong><br>Once we have a Brightcove account, we need to collect three values</p>
+<ul>
+<li>Publisher ID</li>
+<li>Client Id</li>
+<li>Client Secret<br><img src="/css/images/brightcove-account-details.png" alt=""></li>
+</ul>
+<p><strong>Step 2:</strong><br>Login to Brightcove account, and copy the Account ID, which would be our Publisher ID,</p>
+<p><img src="/css/images/brightcove-account-1.png" alt=""></p>
+<p><strong>Step 3:</strong><br>Next we need to create an Application, to get the Client ID, and Client Secret values,</p>
+<p><img src="/css/images/brightcove-account-2.png" alt=""></p>
+<p><img src="/css/images/brightcove-account-3.png" alt=""></p>
+<p><img src="/css/images/brightcove-account-4.png" alt=""></p>
+<p><img src="/css/images/brightcove-account-5.png" alt=""></p>
+<p><img src="/css/images/brightcove-account-6.png" alt=""></p>
+<p><strong>Step 4:</strong><br>Once we have three values, login to Sitecore client, and navigate to <em>/sitecore/media library/Media Framework/Accounts</em> item, and create a new Brightcove Account Item under it.</p>
+<p><img src="/css/images/brightcove-account-7.png" alt=""></p>
+<p><strong>Step 5:</strong><br>Input the three values, and save the item.</p>
+<p><img src="/css/images/brightcove-account-8.png" alt=""></p>
+<p><strong>Step 6:</strong><br>Next, navigate to the <em>Media Framework</em> menu in toolbar, and click on <em>Import All</em> button,</p>
+<p><img src="/css/images/brightcove-account-9.png" alt=""></p>
+<p><strong>Step 7:</strong><br>Once the import is completed, we can navigate to newly created Brightcove account, and have a look at the bucket list for the media items imported from Brightcove.</p>
+<p><img src="/css/images/brightcove-account-10.png" alt=""></p>
+<p>Now Content Author can search and select the videos, similar like any other Sitecore item.</p>
+<p><img src="/css/images/brightcove-account-11.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Brightcove_Account&quot;&gt;&lt;a href=&quot;#Brightcove_Account&quot; class=&quot;headerlink&quot; title=&quot;Brightcove Account&quot;&gt;&lt;/a&gt;Brightcove Account&lt;/h4&gt;&lt;p&gt;In pre
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Media Framework with Brightcove" scheme="http://gopigujjula.com/categories/Sitecore/Media-Framework-with-Brightcove/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
+    
+      <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore : Media Framework With Brightcove - Installing Brightcove Connector</title>
+    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/"/>
+    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/</id>
+    <published>2017-05-12T05:30:00.000Z</published>
+    <updated>2017-05-12T10:09:03.830Z</updated>
     
     <content type="html"><![CDATA[<h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
 <p>Some of the key features:</p>
@@ -82,11 +138,11 @@
   </entry>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Part 1</title>
-    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Part-1/"/>
-    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Part-1/</id>
+    <title>Sitecore : Media Framework With Brightcove - Installing Media Framework Module</title>
+    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/"/>
+    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/</id>
     <published>2017-05-03T13:33:00.000Z</published>
-    <updated>2017-05-10T16:00:09.549Z</updated>
+    <updated>2017-05-12T10:09:21.529Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework"><a href="#Sitecore_Media_Framework" class="headerlink" title="Sitecore Media Framework"></a>Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
 <p>Prior to Media Framework, some of the most commonly used approaches to map videos into site,</p>
@@ -165,11 +221,11 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
       <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
     
       <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
-    
-      <category term="Beginnere" scheme="http://gopigujjula.com/tags/Beginnere/"/>
     
   </entry>
   
@@ -1145,76 +1201,6 @@
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
     
       <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Templates Part-1</title>
-    <link href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/"/>
-    <id>http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Template-Part-1/</id>
-    <published>2016-12-10T07:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.309Z</updated>
-    
-    <content type="html"><![CDATA[<p>As part of <a href="/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning series</a>, till now we looked into,</p>
-<ul>
-<li><a href="/2016/06/Saturday-Sitecore-Learning-CMS/">What is CMS?</a></li>
-<li><a href="/2016/06/Saturday-Sitecore-Learning-About-Sitecore/">What is Sitecore?</a></li>
-<li><a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a> (I prefer using SIM)</li>
-<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> (Outside webroot)</li>
-<li><a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">About Sitecore Databases</a></li>
-<li><a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Exploring Default home page</a></li>
-</ul>
-<p>By this time, I assume that you have both Sitecore and Visual Studio project setups in your machine, If not, please go through these two posts, <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Sitecore installation</a>, <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore8.2-VS2015-Project-Outside-webroot/">Setting up Visual Studio Solution</a> and try setting them up.</p>
-<p>From now onwards we will look into core Sitecore concepts in more detail manner.</p>
-<p>First let’s explore one of the important part of Sitecore, which are Templates. Understanding the Templates, is very important for developers, as selecting the correct template type, dictates overall experience of managing content. Templates is a very vast topic, and can’t be covered in a single post, so it will be spanning across multiple posts.</p>
-<h4 id="Template_Fundamentals"><a href="#Template_Fundamentals" class="headerlink" title="Template Fundamentals"></a>Template Fundamentals</h4><p>Templates, also commonly referred as <strong>Data Templates</strong>, which are basic building blocks of any content in Sitecore. Every piece of content (page or components) in Sitecore needs a data template to define what it is.</p>
-<p>To understand it better, Templates can be compared to Class (In object oriented programming) definitions,</p>
-<ul>
-<li>Each Class contain fields with their respective data types, similarly every Template contain fields, with their respective field types. (Ex: <em>Single-line text</em>)</li>
-<li>Any number of instances can be created based on a class, similarly we can create any number of content items based on a single template.</li>
-<li>Class supports inheritance, similarly templates also supports inheritance, in which a single template can inherit from multiple base templates, to mainly share the common fields.</li>
-</ul>
-<p>Before creating any content, first we need to create a Template with fields and their types. In a nutshell, Templates specify the data fields and many other settings that can be applied to content upon creation.</p>
-<p>All Templates are defined under <em>/sitecore/templates</em> in Sitecore tree structure.</p>
-<p><img src="/css/images/templates-tree.png" alt=""></p>
-<p>To open templates, we can open them either from Content Editor, or from Template Navigator, which is present in Start menu. (Start menu is available in Desktop mode)</p>
-<p><img src="/css/images/template-manager.png" alt=""></p>
-<p>While exploring <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">default home page</a>, we noticed that home page content item, is using Sample item template, which can be found in <em>/sitecore/templates/Sample/Sample Item</em><br><img src="/css/images/default-home-template.png" alt=""></p>
-<p>Following are some of the terms, we need to understand, before we do hands on creating templates. Let’s look into each of them more detail in coming up posts.</p>
-<ul>
-<li>Fields - Field Sections, Field Types, Field Source, and Field Validation.</li>
-<li>Template Inheritance</li>
-<li>Standard Values</li>
-<li>Template types</li>
-</ul>
-<p>In next post we will look into Sitecore fields.</p>
-<p><strong>References</strong></p>
-<ul>
-<li>Professional Sitecore 8 development - <a href="http://www.apress.com/us/book/9781484222911" target="_blank" rel="external">http://www.apress.com/us/book/9781484222911</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;As part of &lt;a href=&quot;/Sitecore/Saturday-Sitecore-Learning/&quot;&gt;Saturday Sitecore Learning series&lt;/a&gt;, till now we looked into,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
