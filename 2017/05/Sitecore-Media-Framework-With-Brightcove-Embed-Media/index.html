@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website | Gopi Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Sitecore Media Framework with Brightcove Series Installing Media Framework Module Installing Brightcove Connector Integrating Brightcove Account In Sitecore Embed Media Into Sitecore Website  Embed Me">
+<meta name="keywords" content="Sitecore,Beginner,Brightcove,Sitecore Media Framework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website">
+<meta property="og:url" content="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="Sitecore Media Framework with Brightcove Series Installing Media Framework Module Installing Brightcove Connector Integrating Brightcove Account In Sitecore Embed Media Into Sitecore Website  Embed Me">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-RTE-buttons.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-1.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-2.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-3.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-4.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-5.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-6.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-7.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-8.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-9.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/mediaframework-embedmedia-module.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-10.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-11.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-12.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-13.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-14.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-15.png">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-embed-media-16.png">
+<meta property="og:updated_time" content="2017-05-16T06:15:56.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website">
+<meta name="twitter:description" content="Sitecore Media Framework with Brightcove Series Installing Media Framework Module Installing Brightcove Connector Integrating Brightcove Account In Sitecore Embed Media Into Sitecore Website  Embed Me">
+<meta name="twitter:image" content="http://gopigujjula.com/css/images/brightcove-RTE-buttons.png">
+<link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
+  
+  
+    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo">
+        <span class="site-title">Gopi Notes</span>
+      </a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+    <!--  <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+        
+      </div> -->
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <!--
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://gopigujjula.com"></form>
+          
+        </td>-->
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://www.gravatar.com/avatar/79497f3bbe86c1ca72aa6edb04808a29">
+      <h2 id="name">Gopikrishna Gujjula</h2>
+      <h3 id="title">.NET &amp; Sitecore Certified Developer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Bangalore, India</span>
+      <a id="follow" target="_blank" href="https://twitter.com/gopigujjula">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        70
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        35
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/gopigujjula" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/gopigujjula" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/gopikreddy.gn" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+          <td><a href="/atom.xml" target="_blank" title="rss"><i class="fa fa-rss"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main"><article id="post-Sitecore-Media-Framework-With-Brightcove-Embed-Media" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" style="text-align:right">
+      <time datetime="2017-05-14T11:30:00.000Z" itemprop="datePublished">May 14, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
+<li><strong>Embed Media Into Sitecore Website</strong></li>
+</ul>
+<h4 id="Embed_Media_Into_Sitecore"><a href="#Embed_Media_Into_Sitecore" class="headerlink" title="Embed Media Into Sitecore"></a>Embed Media Into Sitecore</h4><p>After integrating Brightcove account, within Sitecore, now content authors can search and select the videos, similar to any other Sitecore item.</p>
+<p>Media framework module, provides multiple ways for integrating Videos onto website pages,</p>
+<ol>
+<li>RTE</li>
+<li>Module (Rendering)</li>
+</ol>
+<h4 id="1-_RTE__28Rich_Text_Editor_29"><a href="#1-_RTE__28Rich_Text_Editor_29" class="headerlink" title="1. RTE (Rich Text Editor)"></a>1. RTE (Rich Text Editor)</h4><p>When we install Media framework module, there would be two new buttons are added into Rich Text Editor ribbon.</p>
+<ul>
+<li>Embed Media</li>
+<li>Embed Media Link</li>
+</ul>
+<p><img src="/css/images/brightcove-RTE-buttons.png" alt=""></p>
+<p>Using both these new buttons, Content Authors, can embed videos into rich text.</p>
+<h4 id="Using_Embed_Media_Button"><a href="#Using_Embed_Media_Button" class="headerlink" title="Using Embed Media Button"></a>Using Embed Media Button</h4><p><strong>Step 1:</strong> Click on <em>Embed Media</em> button in RTE ribbon,</p>
+<p><img src="/css/images/brightcove-embed-media-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Click on <em>Next</em> button to proceed,</p>
+<p><img src="/css/images/brightcove-embed-media-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Filter the items, by selecting brightcovevideo template,</p>
+<p><img src="/css/images/brightcove-embed-media-3.png" alt=""></p>
+<p><strong>Step 4:</strong> Select a video from the results, and click on <em>Next</em> to proceed,</p>
+<p><img src="/css/images/brightcove-embed-media-4.png" alt=""></p>
+<p><strong>Step 5:</strong> In Properties window, fill out the required Width, Height values, select a media player, and click on close.</p>
+<p><img src="/css/images/brightcove-embed-media-5.png" alt=""></p>
+<p><strong>Step 6:</strong> Now you can observe that, selected video is embedded.</p>
+<p><img src="/css/images/brightcove-embed-media-6.png" alt=""></p>
+<h4 id="Using_Embed_Media_Link"><a href="#Using_Embed_Media_Link" class="headerlink" title="Using Embed Media Link"></a>Using Embed Media Link</h4><p><strong>Step 1:</strong> Click on Embed Media Link button in RTE ribbon, This functionality is pretty much similar to the Embed Media button, except here it provides an option, to play the video in pop-up window.</p>
+<p>In Properties window, fill out the Link Title, Width, Height values, select a media player, and click on close. Compared to Embed Media, here we get extra field, to specify the <em>Link Title</em>.</p>
+<p><img src="/css/images/brightcove-embed-media-7.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-8.png" alt=""></p>
+<p><strong>Step 2:</strong> Now you can observe that, <em>Media Link Demo</em> is added on the page.</p>
+<p><img src="/css/images/brightcove-embed-media-9.png" alt=""></p>
+<h4 id="2-_Module__28Rendering_29"><a href="#2-_Module__28Rendering_29" class="headerlink" title="2. Module (Rendering)"></a>2. Module (Rendering)</h4><p>When we install Media Framework module, we can notice that, there are three new items added in Layouts, each one under rendering, sublayouts, and placeholder settings.</p>
+<p><img src="/css/images/mediaframework-embedmedia-module.png" alt=""></p>
+<p>By adding Embed Media module (rendering/sublayout) to the page presentation, we can place a video on the particular page.</p>
+<p>In this example, let’s have a look at, how can we add it from Experience Editor,</p>
+<p><strong>Step:1</strong> Open page template presentation, and add <em>embedMedia</em> placeholder settings item.</p>
+<p><img src="/css/images/brightcove-embed-media-10.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-11.png" alt=""></p>
+<p><strong>Step 2:</strong> Open the page item in Experience Editor, &amp; add new module, by selecting Embed Media rendering,</p>
+<p><img src="/css/images/brightcove-embed-media-12.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-13.png" alt=""></p>
+<p><strong>Step 3:</strong> Now once the module is added on to the page, we can search &amp; select the video, using the new custom experience editor buttons (<strong><em>Embed Media Element</em></strong>, <strong><em>Update Media Parameters</em></strong>). <em>After clicking on button, functionality is pretty similar to the way we select the videos from Embed Media button in RTE</em></p>
+<p><img src="/css/images/brightcove-embed-media-14.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-15.png" alt=""></p>
+<p><strong>Step 4:</strong> Finally when we browse the page, we can see that there is a new video added on to the page.</p>
+<p><img src="/css/images/brightcove-embed-media-16.png" alt=""></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" data-id="cj2q0gn4700076cmg31ritrt0" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brightcove/">Brightcove</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Media-Framework/">Sitecore Media Framework</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Sitecore : Media Framework With Brightcove - Integrating Brightcove Account In Sitecore</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" class="title">Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website</a></p>
+              <p class="item-date"><time datetime="2017-05-14T11:30:00.000Z" itemprop="datePublished">May 14, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/" class="title">Sitecore : Media Framework With Brightcove - Integrating Brightcove Account In Sitecore</a></p>
+              <p class="item-date"><time datetime="2017-05-14T11:30:00.000Z" itemprop="datePublished">May 14, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/" class="title">Sitecore : Media Framework With Brightcove - Installing Brightcove Connector</a></p>
+              <p class="item-date"><time datetime="2017-05-12T05:30:00.000Z" itemprop="datePublished">May 12, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/" class="title">Sitecore : Media Framework With Brightcove - Installing Media Framework Module</a></p>
+              <p class="item-date"><time datetime="2017-05-03T13:33:00.000Z" itemprop="datePublished">May 03, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/04/Dependency-Injection-In-Sitecore-Webinar/" class="title">Dependency Injection In Sitecore</a></p>
+              <p class="item-date"><time datetime="2017-04-23T14:30:00.000Z" itemprop="datePublished">April 23, 2017</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">36</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Gopikrishna Gujjula<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+  </div>
+</footer>
+
+    
+
+<script>
+  var disqus_shortname = 'gopigujjula';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

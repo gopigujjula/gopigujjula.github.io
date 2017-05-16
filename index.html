@@ -111,7 +111,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        69
+        70
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -142,6 +142,117 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Sitecore-Media-Framework-With-Brightcove-Embed-Media" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" style="text-align:right">
+      <time datetime="2017-05-14T11:30:00.000Z" itemprop="datePublished">May 14, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
+<li><strong>Embed Media Into Sitecore Website</strong></li>
+</ul>
+<h4 id="Embed_Media_Into_Sitecore"><a href="#Embed_Media_Into_Sitecore" class="headerlink" title="Embed Media Into Sitecore"></a>Embed Media Into Sitecore</h4><p>After integrating Brightcove account, within Sitecore, now content authors can search and select the videos, similar to any other Sitecore item.</p>
+<p>Media framework module, provides multiple ways for integrating Videos onto website pages,</p>
+<ol>
+<li>RTE</li>
+<li>Module (Rendering)</li>
+</ol>
+<h4 id="1-_RTE__28Rich_Text_Editor_29"><a href="#1-_RTE__28Rich_Text_Editor_29" class="headerlink" title="1. RTE (Rich Text Editor)"></a>1. RTE (Rich Text Editor)</h4><p>When we install Media framework module, there would be two new buttons are added into Rich Text Editor ribbon.</p>
+<ul>
+<li>Embed Media</li>
+<li>Embed Media Link</li>
+</ul>
+<p><img src="/css/images/brightcove-RTE-buttons.png" alt=""></p>
+<p>Using both these new buttons, Content Authors, can embed videos into rich text.</p>
+<h4 id="Using_Embed_Media_Button"><a href="#Using_Embed_Media_Button" class="headerlink" title="Using Embed Media Button"></a>Using Embed Media Button</h4><p><strong>Step 1:</strong> Click on <em>Embed Media</em> button in RTE ribbon,</p>
+<p><img src="/css/images/brightcove-embed-media-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Click on <em>Next</em> button to proceed,</p>
+<p><img src="/css/images/brightcove-embed-media-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Filter the items, by selecting brightcovevideo template,</p>
+<p><img src="/css/images/brightcove-embed-media-3.png" alt=""></p>
+<p><strong>Step 4:</strong> Select a video from the results, and click on <em>Next</em> to proceed,</p>
+<p><img src="/css/images/brightcove-embed-media-4.png" alt=""></p>
+<p><strong>Step 5:</strong> In Properties window, fill out the required Width, Height values, select a media player, and click on close.</p>
+<p><img src="/css/images/brightcove-embed-media-5.png" alt=""></p>
+<p><strong>Step 6:</strong> Now you can observe that, selected video is embedded.</p>
+<p><img src="/css/images/brightcove-embed-media-6.png" alt=""></p>
+<h4 id="Using_Embed_Media_Link"><a href="#Using_Embed_Media_Link" class="headerlink" title="Using Embed Media Link"></a>Using Embed Media Link</h4><p><strong>Step 1:</strong> Click on Embed Media Link button in RTE ribbon, This functionality is pretty much similar to the Embed Media button, except here it provides an option, to play the video in pop-up window.</p>
+<p>In Properties window, fill out the Link Title, Width, Height values, select a media player, and click on close. Compared to Embed Media, here we get extra field, to specify the <em>Link Title</em>.</p>
+<p><img src="/css/images/brightcove-embed-media-7.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-8.png" alt=""></p>
+<p><strong>Step 2:</strong> Now you can observe that, <em>Media Link Demo</em> is added on the page.</p>
+<p><img src="/css/images/brightcove-embed-media-9.png" alt=""></p>
+<h4 id="2-_Module__28Rendering_29"><a href="#2-_Module__28Rendering_29" class="headerlink" title="2. Module (Rendering)"></a>2. Module (Rendering)</h4><p>When we install Media Framework module, we can notice that, there are three new items added in Layouts, each one under rendering, sublayouts, and placeholder settings.</p>
+<p><img src="/css/images/mediaframework-embedmedia-module.png" alt=""></p>
+<p>By adding Embed Media module (rendering/sublayout) to the page presentation, we can place a video on the particular page.</p>
+<p>In this example, let’s have a look at, how can we add it from Experience Editor,</p>
+<p><strong>Step:1</strong> Open page template presentation, and add <em>embedMedia</em> placeholder settings item.</p>
+<p><img src="/css/images/brightcove-embed-media-10.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-11.png" alt=""></p>
+<p><strong>Step 2:</strong> Open the page item in Experience Editor, &amp; add new module, by selecting Embed Media rendering,</p>
+<p><img src="/css/images/brightcove-embed-media-12.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-13.png" alt=""></p>
+<p><strong>Step 3:</strong> Now once the module is added on to the page, we can search &amp; select the video, using the new custom experience editor buttons (<strong><em>Embed Media Element</em></strong>, <strong><em>Update Media Parameters</em></strong>). <em>After clicking on button, functionality is pretty similar to the way we select the videos from Embed Media button in RTE</em></p>
+<p><img src="/css/images/brightcove-embed-media-14.png" alt=""></p>
+<p><img src="/css/images/brightcove-embed-media-15.png" alt=""></p>
+<p><strong>Step 4:</strong> Finally when we browse the page, we can see that there is a new video added on to the page.</p>
+<p><img src="/css/images/brightcove-embed-media-16.png" alt=""></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" data-id="cj2q0gn4700076cmg31ritrt0" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brightcove/">Brightcove</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Media-Framework/">Sitecore Media Framework</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -177,7 +288,13 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <h4 id="Brightcove_Account"><a href="#Brightcove_Account" class="headerlink" title="Brightcove Account"></a>Brightcove Account</h4><p>In previous posts, we had looked into, how to install both Media framework module, as well as the Brightcove connector. In this post, let’s explore how to make a connection between Sitecore and Brightcove account.</p>
+        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
+<li><strong>Integrating Brightcove Account In Sitecore</strong></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+</ul>
+<h4 id="Brightcove_Account"><a href="#Brightcove_Account" class="headerlink" title="Brightcove Account"></a>Brightcove Account</h4><p>In previous posts, we had looked into, how to install both Media framework module, as well as the Brightcove connector. In this post, let’s explore how to make a connection between Sitecore and Brightcove account.</p>
 <p>To make a connection between Sitecore and Brightcove, we need to have a enterprise account in Brightcove. We can also create a trail account, but trail account does not have privileges to make a connection from external system, so we must have an enterprise account.</p>
 <p><strong>Step 1:</strong><br>Once we have a Brightcove account, we need to collect three values</p>
 <ul>
@@ -203,6 +320,11 @@ ga('send', 'pageview');
 <p><img src="/css/images/brightcove-account-10.png" alt=""></p>
 <p>Now Content Author can search and select the videos, similar like any other Sitecore item.</p>
 <p><img src="/css/images/brightcove-account-11.png" alt=""></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
 
       
     </div>
@@ -257,22 +379,28 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
-<p>Some of the key features:</p>
+        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
+<li><strong>Installing Brightcove Connector</strong></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+</ul>
+<h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
+<p>Some of the key features are:</p>
 <ul>
 <li>Video CMS</li>
 <li>Analytics</li>
 <li>Monetization</li>
 </ul>
 <p><img src="/css/images/brightcove.png" alt=""></p>
-<h4 id="Sitecore__26amp_3B_Brightcove_Partnership_3A"><a href="#Sitecore__26amp_3B_Brightcove_Partnership_3A" class="headerlink" title="Sitecore &amp; Brightcove Partnership:"></a>Sitecore &amp; Brightcove Partnership:</h4><p>Sitecore partnered with both Brightcove &amp; Ooyala video hosting platforms, to implement connectors on top of the media framework. Till Aug-2016, Sitecore maintained, and supported both these connectors, after that Sitecore open-sourced the code, and stopped supporting these connectors. Now it is upto community, or the hosting provides to keep the connectors up to date, and give support.</p>
-<p>At present Brightcove is fully supporting its connector, maintaining and making changes to support latest Sitecore versions.</p>
-<h4 id="Brightcove_Connector_Installation"><a href="#Brightcove_Connector_Installation" class="headerlink" title="Brightcove Connector Installation"></a>Brightcove Connector Installation</h4><p>Just keep in mind that, first we need to install the Media Framework module, then only we can go ahead with the connector installation.</p>
+<h4 id="Sitecore__26amp_3B_Brightcove_Partnership_3A"><a href="#Sitecore__26amp_3B_Brightcove_Partnership_3A" class="headerlink" title="Sitecore &amp; Brightcove Partnership:"></a>Sitecore &amp; Brightcove Partnership:</h4><p>Sitecore partnered with both Brightcove &amp; Ooyala video hosting platforms, to implement connectors on top of the media framework. Till Aug-2016, Sitecore maintained, and supported both these connectors, after that Sitecore released this products as <a href="https://github.com/Sitecore/Media-Framework-Brightcove-Edition" target="_blank" rel="external">open-source</a>, and discontinued support and maintenance. Now it is up to Sitecore community members, or the hosting providers to keep the connectors up to date, and give support.</p>
+<p><a href="https://support.brightcove.com/en/video-cloud/docs/getting-started-brightcove-video-connect-sitecore-experience-platform" target="_blank" rel="external">Brightcove</a> has taken ownership of this module, and providing full support and maintenance.</p>
+<h4 id="Brightcove_Connector_Installation"><a href="#Brightcove_Connector_Installation" class="headerlink" title="Brightcove Connector Installation"></a>Brightcove Connector Installation</h4><p>Just keep in mind that, first we need to install the Media Framework module, then only we can go ahead with the connector installation, as the connector is built on top of the media framework module.</p>
 <ol>
 <li>Download the related connector package from <a href="https://support.brightcove.com/en/video-cloud/docs/getting-started-brightcove-video-connect-sitecore-experience-platform" target="_blank" rel="external">here</a></li>
 <li>Install the module from Installation wizard.</li>
 </ol>
-<p>Login to Sitecore, and select the Development Tools -&gt; Installation Wizard from startup menu,</p>
+<p>Login to Sitecore, and select the <strong>Development Tools</strong> -&gt; <strong>Installation Wizard</strong> from startup menu,</p>
 <p><img src="/css/images/installationwizard.png" alt=""></p>
 <p>Upload the Sitecore Media Framework Brightcove Edition package, click next to proceed,</p>
 <p><img src="/css/images/brightcove-edition-1.png" alt=""></p>
@@ -280,7 +408,7 @@ ga('send', 'pageview');
 <p><img src="/css/images/brightcove-edition-2.png" alt=""></p>
 <p>Click on Install to proceed,</p>
 <p><img src="/css/images/brightcove-edition-3.png" alt=""></p>
-<p>After the successful installation, check Restart the Sitecore Client, and click on close.</p>
+<p>After the successful installation, check <strong>Restart the Sitecore Client</strong>, and click on close.</p>
 <p><img src="/css/images/Sitecore-mediaframework-6.png" alt=""></p>
 <h5 id="Configuration_changes__28Post_Installation_steps_29_3A"><a href="#Configuration_changes__28Post_Installation_steps_29_3A" class="headerlink" title="Configuration changes (Post Installation steps):"></a>Configuration changes (Post Installation steps):</h5><p><strong>Step 1:</strong> Navigate to webroot, App_Config\Include directory, In my case, <em>brightcovedemo.local.com\Website\App_Config\Include</em></p>
 <p><img src="/css/images/brightcove-configuration-1.png" alt=""></p>
@@ -292,6 +420,10 @@ ga('send', 'pageview');
 <p><img src="/css/images/brightcove-configuration-4.png" alt=""></p>
 <p><strong>Step 5:</strong> Save and close the file.</p>
 <p>By this, we have completed, both Media Framework module setup, as well as the Brightcove connector installation. In next post, let’s explore the Brightcove account, and how can we connect to the same from Sitecore.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
+</ul>
 <p><strong>Happy Learning :)</strong></p>
 
       
@@ -347,8 +479,14 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
                 
-        <h4 id="Sitecore_Media_Framework"><a href="#Sitecore_Media_Framework" class="headerlink" title="Sitecore Media Framework"></a>Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
-<p>Prior to Media Framework, some of the most commonly used approaches to map videos into site,</p>
+        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><strong>Installing Media Framework Module</strong></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+</ul>
+<h4 id="Sitecore_Media_Framework"><a href="#Sitecore_Media_Framework" class="headerlink" title="Sitecore Media Framework"></a>Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
+<p>Prior to Media Framework, some of the most commonly used approaches to map videos into website are,</p>
 <ul>
 <li>Using RTF</li>
 <li>Managing Video id (Ex: Youtube video id)</li>
@@ -360,7 +498,7 @@ ga('send', 'pageview');
 <p>In the above picture, we can observe that, by using the media framework module, and respective hosting (<strong>Brightcove</strong>, <strong>Ooyala</strong>, <strong>Vimeo</strong>, or <strong>Youtube</strong>) connector, videos become <strong>Sitecore native objects</strong>.</p>
 <p>Once video becomes Sitecore native object, it has all the Sitecore capabilities, like <strong>content management</strong>, <strong>analytics</strong>, and <strong>personalization</strong>.</p>
 <p><img src="/css/images/Sitecore-mediaframework-2.png" alt=""></p>
-<p>By using these connectors, Content authors can perform lot of functionalities,</p>
+<p>By using the media framework with respective hosting provider (Ex: Brightcove) connector, Content authors can perform lot of functionalities,</p>
 <ul>
 <li>Import media from hosting platform</li>
 <li>Export media to hosting platform</li>
@@ -368,8 +506,12 @@ ga('send', 'pageview');
 <li>Update/Delete video meta data directly from Sitecore</li>
 <li>Search and select videos to insert on pages</li>
 </ul>
-<p>To integrate media, we require Sitecore media framework module, and hosting provider (Brightcove or Ooyala) connector which is built on top of the media framework.</p>
-<h4 id="Sitecore_Mediaframework_module_Installation"><a href="#Sitecore_Mediaframework_module_Installation" class="headerlink" title="Sitecore Mediaframework module Installation"></a>Sitecore Mediaframework module Installation</h4><ol>
+<p>To integrate media, we need to install two modules into Sitecore,</p>
+<ol>
+<li>Sitecore Media Framework module,</li>
+<li>Hosting provider (Brightcove or Ooyala) connector.</li>
+</ol>
+<h4 id="Sitecore_Media_framework_module_Installation"><a href="#Sitecore_Media_framework_module_Installation" class="headerlink" title="Sitecore Media framework module Installation"></a>Sitecore Media framework module Installation</h4><ol>
 <li>Select and download the respective Media Framework module from <a href="https://dev.sitecore.net/Downloads/Sitecore_Media_Framework" target="_blank" rel="external">Sitecore</a>. For this demo, I have downloaded <em>Media Framework 2.1 module</em> (for <strong>Sitecore 8.1</strong>)</li>
 <li>Install the module from Installation wizard.</li>
 <li>Open the Sitecore Workbox &amp; Select the Analytics Workflow, Deploy &amp; publish the playback page events (<em>Playback Changed</em>, <em>Playback Completed</em>, <em>Playback Error</em> &amp; <em>Playback Started</em>)</li>
@@ -547,90 +689,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Template-Part-6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/Saturday-Sitecore-Learning-Template-Part-6/">Saturday Sitecore Learning - Templates Part 6 (Standard Values)</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/04/Saturday-Sitecore-Learning-Template-Part-6/" style="text-align:right">
-      <time datetime="2017-04-08T04:54:00.000Z" itemprop="datePublished">April 08, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Standard_Values"><a href="#Standard_Values" class="headerlink" title="Standard Values"></a>Standard Values</h4><p>This is the sixth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p>In previous posts, we learned about template fields, different field types and importance of template inheritance, in this post, let’s explore <strong>Standard Values</strong>.</p>
-<p>Standard Values are a way to provide default values to template fields. Once we create a Standard Values for a template, and set the default values for fields, any item which is created from this template gets the default values, later content author can also modify the values, on item level.</p>
-<p>Standard Values are also useful to have a complete picture of what are all the fields a template has, including the inherited fields.</p>
-<p>We can also set default presentation details, and insert options on Standard values.</p>
-<p>By looking at Standard Values, we can understand what all the fields a template contains, including the inherited fields.</p>
-<p>Let’s take the example of three templates, which are created based on <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/">previous post</a></p>
-<p><img src="/css/images/template-inheritance.png" alt=""></p>
-<p><strong>Add Standard Value</strong></p>
-<p>Let’s explore how to add a Standard Value to Article Template,</p>
-<p><strong>Step 1.</strong> Open the Content Editor, navigate to Templates &amp; select the Article Template.</p>
-<p> <img src="/css/images/template-standard-values-1.png" alt=""></p>
-<p><strong>Step 2.</strong> Select the <strong>Builder Options</strong> menu from ribbon, and click on the <strong>Standard Values</strong>. (To view the Builder Options menu, on template level, we need to select the <strong>Builder</strong> tab)</p>
-<p><img src="/css/images/template-standard-values-2.png" alt=""></p>
-<p><strong>Step 3.</strong> Now we should be able to see <strong>__Standard Values</strong> item under the Article template.</p>
-<p><img src="/css/images/template-standard-values-3.png" alt=""></p>
-<p><strong>Step 4.</strong> If we look at newly created <strong>__Standard Values</strong> template, we can observe that there are Article template fields, as well as the inherited fields from Base Content template.</p>
-<p><img src="/css/images/template-standard-values-4.png" alt=""></p>
-<p><strong>Adding Default Values:</strong></p>
-<p>We can add default value to a field, statically or dynamically (with tokens), for the simplicity now let’s add a static value.</p>
-<p><strong>Step 1:</strong> Open the Article template Standard Values, and select a today’s date for Date field, and save it.</p>
-<p><img src="/css/images/template-standard-values-5.png" alt=""></p>
-<p><strong>Step 2:</strong> Create a new Article item under Home node.</p>
-<p><img src="/css/images/template-field-default-value.png" alt=""></p>
-<p><strong>Step 3:</strong> In newly created <em>Test Article</em>, we can see the Date field value has today’s date, and all other fields are empty. Observe that there is a <em>Standard Value</em> text just beside the Date field name.</p>
-<p><img src="/css/images/field-item-default-value.png" alt=""></p>
-<p><strong>Step 4:</strong> Let’s change the Date field value. Now observe that Standard Value text is disappeared, that means we have broken the Default value inheritance.</p>
-<p><img src="/css/images/field-item-default-value-change.png" alt=""></p>
-<p>In next post, let’s explore different template types.</p>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/" data-id="cj19eywz60044msmgzmbkphxf" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -643,6 +701,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/" class="title">Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website</a></p>
+              <p class="item-date"><time datetime="2017-05-14T11:30:00.000Z" itemprop="datePublished">May 14, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -680,15 +747,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/04/Sitecore-search-tips-computed-field-return-value/" class="title">Search Tips: Computed Index Field return value</a></p>
-              <p class="item-date"><time datetime="2017-04-14T17:25:00.000Z" itemprop="datePublished">April 14, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -699,7 +757,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">35</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">36</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
