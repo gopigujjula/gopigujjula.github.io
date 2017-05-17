@@ -24,7 +24,8 @@
 <meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-account-9.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-account-10.png">
 <meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-account-11.png">
-<meta property="og:updated_time" content="2017-05-17T08:54:46.237Z">
+<meta property="og:image" content="http://gopigujjula.com/css/images/brightcove-player.png">
+<meta property="og:updated_time" content="2017-05-17T12:04:11.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sitecore : Media Framework With Brightcove - Part 3 - Integrating Brightcove Account In Sitecore">
 <meta name="twitter:description" content="Sitecore Media Framework with Brightcove Series Installing Media Framework Module Installing Brightcove Connector Integrating Brightcove Account In Sitecore Embed Media Into Sitecore Website Configura">
@@ -209,17 +210,22 @@ ga('send', 'pageview');
 <li>Client Id</li>
 <li>Client Secret<br><img src="/css/images/brightcove-account-details.png" alt=""></li>
 </ul>
-<p><strong>Step 2:</strong><br>Login to Brightcove account, and copy the Account ID, which would be our Publisher ID,</p>
+<p><strong>Step 2:</strong><br>Login to brightcove account. Click on the account name on the top right corner and then click on home to get the publisher id,</p>
 <p><img src="/css/images/brightcove-account-1.png" alt=""></p>
 <p><strong>Step 3:</strong><br>Next we need to create an Application, to get the Client ID, and Client Secret values,</p>
+<ul>
+<li>Click on Admin on top right corner and then API Authentication.</li>
+<li>Click on New application. Fill out details and check all the necessary check boxes for the APIs.</li>
+<li>Click on Save.</li>
+</ul>
 <p><img src="/css/images/brightcove-account-2.png" alt=""></p>
 <p><img src="/css/images/brightcove-account-3.png" alt=""></p>
 <p><img src="/css/images/brightcove-account-4.png" alt=""></p>
 <p><img src="/css/images/brightcove-account-5.png" alt=""></p>
 <p><img src="/css/images/brightcove-account-6.png" alt=""></p>
-<p><strong>Step 4:</strong><br>Once we have three values, login to Sitecore client, and navigate to <em>/sitecore/media library/Media Framework/Accounts</em> item, and create a new Brightcove Account Item under it.</p>
+<p><strong>Step 4:</strong><br>Once we have three values, login to Sitecore client, and navigate to <em>/sitecore/media library/Media Framework/Accounts</em> item, right click insert new <em>Brightcove Account</em>.</p>
 <p><img src="/css/images/brightcove-account-7.png" alt=""></p>
-<p><strong>Step 5:</strong><br>Input the three values, and save the item.</p>
+<p><strong>Step 5:</strong><br>Fill in the publisher Id, client Id, and client secret.</p>
 <p><img src="/css/images/brightcove-account-8.png" alt=""></p>
 <p><strong>Step 6:</strong><br>Next, navigate to the <em>Media Framework</em> menu in toolbar, and click on <em>Import All</em> button,</p>
 <p><img src="/css/images/brightcove-account-9.png" alt=""></p>
@@ -227,6 +233,8 @@ ga('send', 'pageview');
 <p><img src="/css/images/brightcove-account-10.png" alt=""></p>
 <p>Now Content Author can search and select the videos, similar like any other Sitecore item.</p>
 <p><img src="/css/images/brightcove-account-11.png" alt=""></p>
+<p><strong>Step 8:</strong><br>In brightcove website navigate to players tab and select the players that needs to be added to Sitecore, collect the player id.<br>Login to Sitecore, and navigate to the newly brightcove account, select the <em>Players</em> item under the new account, right click, insert a brightcove video player, and fill out the ID field, with the collected player ID.</p>
+<p><img src="/css/images/brightcove-player.png" alt=""></p>
 <p><strong>References:</strong></p>
 <ul>
 <li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
