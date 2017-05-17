@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-05-16T06:15:56.815Z</updated>
+  <updated>2017-05-17T10:38:23.419Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,19 +16,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Embed Media Into Sitecore Website</title>
+    <title>Sitecore : Media Framework With Brightcove - Part 5 - Configuration</title>
+    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/"/>
+    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/</id>
+    <published>2017-05-17T11:30:00.000Z</published>
+    <updated>2017-05-17T10:38:23.419Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+<li><strong>Configuration</strong></li>
+</ul>
+<h4 id="Part_5_-_Configuration"><a href="#Part_5_-_Configuration" class="headerlink" title="Part 5 - Configuration"></a>Part 5 - Configuration</h4><h4 id="1-_Customize_Brightcove_Templates"><a href="#1-_Customize_Brightcove_Templates" class="headerlink" title="1. Customize Brightcove Templates"></a>1. Customize Brightcove Templates</h4><p>When we install Brightcove connector, there are some of the main templates gets added,</p>
+<p><img src="/css/images/brightcove-templates.png" alt=""></p>
+<p>We can use brightcove templates, similar way as our custom templates,</p>
+<ul>
+<li>Inherit from other templates</li>
+<li>Add new fields</li>
+<li>Add presentation</li>
+</ul>
+<p><img src="/css/images/brightcove-template-customize.png" alt=""></p>
+<p>When Brightcove Sync operation runs, our newly added field values are not effected, as there are no corresponding fields in Brightcove to sync.</p>
+<p><em>Note: Do not modify the existing fields, as the sync operation may not work as expected.</em></p>
+<h4 id="2-_TDS__26amp_3B_Code_generation"><a href="#2-_TDS__26amp_3B_Code_generation" class="headerlink" title="2. TDS &amp; Code generation"></a>2. TDS &amp; Code generation</h4><p>We can add Brightcove templates to project, similar way as any other templates. As there are couple of custom field types present, need to modify code gen templates accordingly.<br>Ex: Image Preview, Read-Only Text, etc.</p>
+<p><img src="/css/images/brightcove-template-codegen.png" alt=""></p>
+<h4 id="3-_Video_Search_Index"><a href="#3-_Video_Search_Index" class="headerlink" title="3. Video Search Index"></a>3. Video Search Index</h4><p>Brightcove connector includes “<strong><em>mediaframework_brightcove_index</em></strong>“ index in <strong><em>Sitecore.ContentSearch.MediaFramework.Brightcove.config</em></strong> file. This index crawls on <strong><em>master</em></strong> database, and it is used for searching Brightcove items in Sitecore client.</p>
+<p><img src="/css/images/brightcove-video-search-index.png" alt=""></p>
+<h4 id="4-_CM__26amp_3B_CD_Configuration"><a href="#4-_CM__26amp_3B_CD_Configuration" class="headerlink" title="4. CM &amp; CD Configuration"></a>4. CM &amp; CD Configuration</h4><ul>
+<li>To perform automatic media synchronization, Brightcove connector uses <strong><em>MediaFramework_Import_Brightcove</em></strong> scheduling agent, which is present in <strong><em>Sitecore.MediaFramework.Services.Brightcove.config</em></strong> file. This is required only on CM.</li>
+</ul>
+<p><img src="/css/images/brightcove-scheduling-agent.png" alt=""></p>
+<p><strong>Configurations not required on CD</strong></p>
+<ul>
+<li>Scheduling Agents</li>
+<li>Brightcove Search Index</li>
+</ul>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sitecore_Media_Framework_with_Brightcove_Series&quot;&gt;&lt;a href=&quot;#Sitecore_Media_Framework_with_Brightcove_Series&quot; class=&quot;headerlink&quot; title
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Media Framework with Brightcove" scheme="http://gopigujjula.com/categories/Sitecore/Media-Framework-with-Brightcove/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
+    
+      <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore : Media Framework With Brightcove - Part 4 - Embed Media Into Sitecore Website</title>
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/</id>
-    <published>2017-05-14T11:30:00.000Z</published>
-    <updated>2017-05-16T06:15:56.815Z</updated>
+    <published>2017-05-15T11:30:00.000Z</published>
+    <updated>2017-05-17T08:55:03.333Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
 <li><strong>Embed Media Into Sitecore Website</strong></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/">Configuration</a></li>
 </ul>
-<h4 id="Embed_Media_Into_Sitecore"><a href="#Embed_Media_Into_Sitecore" class="headerlink" title="Embed Media Into Sitecore"></a>Embed Media Into Sitecore</h4><p>After integrating Brightcove account, within Sitecore, now content authors can search and select the videos, similar to any other Sitecore item.</p>
+<h4 id="Part_4_-_Embed_Media_Into_Sitecore"><a href="#Part_4_-_Embed_Media_Into_Sitecore" class="headerlink" title="Part 4 - Embed Media Into Sitecore"></a>Part 4 - Embed Media Into Sitecore</h4><p>After integrating Brightcove account, within Sitecore, now content authors can search and select the videos, similar to any other Sitecore item.</p>
 <p>Media framework module, provides multiple ways for integrating Videos onto website pages,</p>
 <ol>
 <li>RTE</li>
@@ -103,19 +170,20 @@
   </entry>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Integrating Brightcove Account In Sitecore</title>
+    <title>Sitecore : Media Framework With Brightcove - Part 3 - Integrating Brightcove Account In Sitecore</title>
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/</id>
-    <published>2017-05-14T11:30:00.000Z</published>
-    <updated>2017-05-16T06:55:28.057Z</updated>
+    <published>2017-05-14T10:30:00.000Z</published>
+    <updated>2017-05-17T08:54:46.237Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
 <li><strong>Integrating Brightcove Account In Sitecore</strong></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/">Configuration</a></li>
 </ul>
-<h4 id="Brightcove_Account"><a href="#Brightcove_Account" class="headerlink" title="Brightcove Account"></a>Brightcove Account</h4><p>In previous posts, we had looked into, how to install both Media framework module, as well as the Brightcove connector. In this post, let’s explore how to make a connection between Sitecore and Brightcove account.</p>
+<h4 id="Part_3_-_Brightcove_Account"><a href="#Part_3_-_Brightcove_Account" class="headerlink" title="Part 3 - Brightcove Account"></a>Part 3 - Brightcove Account</h4><p>In previous posts, we had looked into, how to install both Media framework module, as well as the Brightcove connector. In this post, let’s explore how to make a connection between Sitecore and Brightcove account.</p>
 <p>To make a connection between Sitecore and Brightcove, we need to have a enterprise account in Brightcove. We can also create a trail account, but trail account does not have privileges to make a connection from external system, so we must have an enterprise account.</p>
 <p><strong>Step 1:</strong><br>Once we have a Brightcove account, we need to collect three values</p>
 <ul>
@@ -170,19 +238,20 @@
   </entry>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Installing Brightcove Connector</title>
+    <title>Sitecore : Media Framework With Brightcove - Part 2 - Installing Brightcove Connector</title>
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/</id>
     <published>2017-05-12T05:30:00.000Z</published>
-    <updated>2017-05-16T07:01:26.327Z</updated>
+    <updated>2017-05-17T08:53:39.658Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
 <li><strong>Installing Brightcove Connector</strong></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/">Configuration</a></li>
 </ul>
-<h4 id="What_is_Brightcove_3F"><a href="#What_is_Brightcove_3F" class="headerlink" title="What is Brightcove?"></a>What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
+<h4 id="Part_2_-_What_is_Brightcove_3F"><a href="#Part_2_-_What_is_Brightcove_3F" class="headerlink" title="Part 2 - What is Brightcove?"></a>Part 2 - What is Brightcove?</h4><p>Brightcove is an enterprise level, complete video hosting &amp; publishing platform, which is similar to Youtube, but of enterprise level.</p>
 <p>Some of the key features are:</p>
 <ul>
 <li>Video CMS</li>
@@ -246,19 +315,20 @@
   </entry>
   
   <entry>
-    <title>Sitecore : Media Framework With Brightcove - Installing Media Framework Module</title>
+    <title>Sitecore : Media Framework With Brightcove - Part 1 - Installing Media Framework Module</title>
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/</id>
     <published>2017-05-03T13:33:00.000Z</published>
-    <updated>2017-05-16T06:46:09.819Z</updated>
+    <updated>2017-05-17T08:54:11.097Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><strong>Installing Media Framework Module</strong></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
+<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/">Configuration</a></li>
 </ul>
-<h4 id="Sitecore_Media_Framework"><a href="#Sitecore_Media_Framework" class="headerlink" title="Sitecore Media Framework"></a>Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
+<h4 id="Part_1_-_Sitecore_Media_Framework"><a href="#Part_1_-_Sitecore_Media_Framework" class="headerlink" title="Part 1 - Sitecore Media Framework"></a>Part 1 - Sitecore Media Framework</h4><p>In simplest terms, Sitecore Media Framework module, help developers to integrate the media services into website.</p>
 <p>Prior to Media Framework, some of the most commonly used approaches to map videos into website are,</p>
 <ul>
 <li>Using RTF</li>
@@ -1124,110 +1194,6 @@
     <summary type="html">
     
       &lt;h4 id=&quot;List_Field_Types&quot;&gt;&lt;a href=&quot;#List_Field_Types&quot; class=&quot;headerlink&quot; title=&quot;List Field Types&quot;&gt;&lt;/a&gt;List Field Types&lt;/h4&gt;&lt;p&gt;This is the th
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Templates Part 2 (Simple Field Types)</title>
-    <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/"/>
-    <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-2/</id>
-    <published>2017-01-21T07:30:00.000Z</published>
-    <updated>2017-02-26T11:03:21.338Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Template_Fields"><a href="#Template_Fields" class="headerlink" title="Template Fields"></a>Template Fields</h4><p>This is the second post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In this post, let’s discuss about fields, and their types. If we think of a <em>template</em> as a <em>class</em>, then <em>fields</em> are <em>properties</em> of that class. We can consider each field is container for the individual piece of content (image, link, text, list, etc.), and using this fields Content Authors can add/update their content.</p>
-<p>How each property of the class has its own type, similar way each template field also has its own field type. Field type determines, three things</p>
-<ol>
-<li>What type of content (normal text, rich text, image etc.) can be entered into the field,</li>
-<li>What type of control (Single line text, Rich text editor, etc.) need to be shown to content authors to enter their data,</li>
-<li>In what format the value is stored in the database.</li>
-</ol>
-<p>Out of the box Sitecore provides lot of field types, but based on the requirement, developers can create custom field types. From requirements, or from design, developer has to infer the fields &amp; corresponding field types required for particular page, or module.</p>
-<p>We can classify/categorize field types as shown below,</p>
-<ul>
-<li>Simple types</li>
-<li>List types</li>
-<li>Link types</li>
-</ul>
-<p>Let’s look into each type in detail,</p>
-<h5 id="Simple_types_3A"><a href="#Simple_types_3A" class="headerlink" title="Simple types:"></a>Simple types:</h5><p>The Simple type field contains individual values, like a text, integer, or date value.</p>
-<p><img src="/css/images/sitecore-simple-types.png" alt=""></p>
-<ul>
-<li><strong>Single-Line Text:</strong> This is one of the most commonly used field type, and also the simplest one. It is similar to a HTML textbox control, and allows content authors to enter simple text.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/single-line-text.png" alt=""></p>
-<ul>
-<li><strong>Multi-Line Text:</strong> As the name suggests this type is used when we have multiple lines of text/comments to be added. This is similar to HTML textarea control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/multi-line-text.png" alt=""></p>
-<ul>
-<li><strong>Rich Text:</strong> This field type allows content authors to enter large text with media items, and also allows to modify HTML. This is similar to WYSIWYG editor.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/rich-text.png" alt=""></p>
-<ul>
-<li><strong>Integer:</strong> This field type allows content authors to enter whole number. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/integer-field-type.png" alt=""></p>
-<ul>
-<li><strong>Number:</strong> This field type allows content authors to enter decimal values. It’s also similar to HTML textbox control.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/number-type.png" alt=""></p>
-<ul>
-<li><strong>Password:</strong> This field type is used for passwords, where characters in the field are masked. It is similar to HTML input control with password type.<br><em>Raw value:</em> string<br><em>Field type class:</em> Sitecore.Data.Fields.TextField</li>
-</ul>
-<p><img src="/css/images/password-field-type.png" alt=""></p>
-<ul>
-<li><strong>Date &amp; Date Time:</strong> As the name suggests both of these field types are used for date &amp; date time respectively. This field types allow content authors to select or manually enter the data and time. These are similar to HTML input control with date type.<br><em>Raw value:</em> string (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601</a> formatted date-time, <strong>yyyyMMddThhmmss</strong>)<br><em>Field type class:</em> Sitecore.Data.Fields.DateField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/date-field-type.png" alt=""></p>
-<ul>
-<li><strong>Checkbox:</strong> This field type allows content authors to check/uncheck a particular value, and it’s similar to HTML input control with checkbox type. It contains either 0 or 1 value.<br><em>Raw value:</em> 0 or 1<br><em>Field type class:</em> Sitecore.Data.Fields.CheckboxField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><img src="/css/images/checkbox-field-type.png" alt=""></p>
-<ul>
-<li><strong>Image:</strong> This field type allows content authors to select an image from the media library and specify image properties.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.ImageField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/image-field-type.png" alt=""></p>
-<ul>
-<li><strong>File:</strong> This field type allows the user to select an item in the media library. Users can click Open file to open the Media Browser and select the desired file from the media library.<br>We can use the Source property of a File field to control the media folder selected when the content author opens the Media Browser, or to specify the root item for this selection interface.<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.FileField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><img src="/css/images/file-field-type.png" alt=""></p>
-<ul>
-<li><strong>Word Document:</strong> The Word Document field type allows the content authors to edit HTML using Microsoft Word embedded in the browser. (I have not yet used this field, and it is only supported in IE browser)<br><em>Raw value:</em> xml<br><em>Field type class:</em> Sitecore.Data.Fields.WordDocumentField</li>
-</ul>
-<p><img src="/css/images/word-document-field-type.png" alt=""></p>
-<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
-<p>In coming posts, will look into List and Link types.</p>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
-<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-<li><a href="http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore" target="_blank" rel="external">http://getfishtank.ca/blog/using-date-and-datetime-fields-in-sitecore</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Template_Fields&quot;&gt;&lt;a href=&quot;#Template_Fields&quot; class=&quot;headerlink&quot; title=&quot;Template Fields&quot;&gt;&lt;/a&gt;Template Fields&lt;/h4&gt;&lt;p&gt;This is the second
     
     </summary>
     
