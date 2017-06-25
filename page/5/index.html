@@ -14,8 +14,6 @@
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
-    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
-  
   
  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -111,7 +109,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        71
+        72
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -142,6 +140,101 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Default-Home-Page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/">Saturday Sitecore Learning - Default Home Page</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" style="text-align:right">
+      <time datetime="2016-12-03T05:30:00.000Z" itemprop="datePublished">December 03, 2016</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As I explained on how to install Sitecore and setup new project in my previous posts, Now it’s time to drill down on the Sitecore default home page. Let’s explore it’s Template, Layout, sub-layout, Content Item etc. At last we will see how the Content Author can change the text using Content editor.</p>
+<p>Before we move further, few of you may not be convenient with terminology (template, layout, sub-layout) but no issues just follow the steps, we will discuss more about each topic in coming posts.</p>
+<p>If we load the newly installed Sitecore website, we can see the below page, as the website home page.</p>
+<p><img src="/css/images/sitecore-default-homepage.png" alt=""></p>
+<p>Now let’s look into each and every aspect from Sitecore side, first let’s login into Sitecore using <strong>admin/b</strong> credentials,</p>
+<p>From Launch pad, navigate to Content Editor, by directly clicking on the <strong>Content Editor</strong> option, or through <strong>Desktop</strong> option, it is a good practice to go from Desktop, as we can open multiple windows, and navigate among them, similar to windows desktop, and also having start menu. This is not possible by directly selecting Content Editor option from Launch pad.</p>
+<p><img src="/css/images/sitecore-desktop.png" alt=""></p>
+<p>If you click on Desktop mode, select Sitecore logo/start button and select “Content Editor” option.</p>
+<p><img src="/css/images/start-menu.png" alt=""></p>
+<p>In Content Editor, navigate to the Home content item (<strong>/sitecore/content/Home</strong>),</p>
+<p><img src="/css/images/default-home-content.png" alt=""></p>
+<h4 id="Data_Template_3A"><a href="#Data_Template_3A" class="headerlink" title="Data Template:"></a>Data Template:</h4><p>In Sitecore, every content item is created from Template. Template contains field definition, and presentation information. Some say <em>“Templates are like class definitions. Content is like an instance of that class.”</em><br>In Sitecore tree, all the templates are present under <strong>sitecore/Templates</strong></p>
+<p>For the default “Home” page Template is already present in Templates section. We can see the Template name, In Quick Info section, which is <strong>Sample Item</strong> in this case. By clicking on the template name, we can navigate to the template item.(if you opened in Desktop mode, Template will be opened in new window, else on the same window) or we can navigate to the template using its path <strong>/sitecore/templates/Sample/Sample Item</strong>.</p>
+<p><img src="/css/images/template-structure.png" alt=""></p>
+<p>By looking into <strong>Sample Item</strong> Template’s <strong>Builder</strong> tab, we can understand that there are two fields defined in it, which are <strong>Title</strong> (text Type) and <strong>Text</strong> (Rich Text Type). <strong>Field Type</strong> determines the control to manage the content by content author using the editing interface.</p>
+<p><img src="/css/images/template-fields.png" alt=""></p>
+<p><strong>Standard Values</strong> for a particular template, lists all the fields including inherited fields. All the presentation details are assigned on Standard values.<br>For all the page templates, we have a presentation, where we can assign a layout and components (sub-layouts). On request of a web page, Sitecore assembles the page dynamically from it’s content and the presentation components.</p>
+<p><img src="/css/images/template-presentation.png" alt=""></p>
+<h4 id="Presentation_3A"><a href="#Presentation_3A" class="headerlink" title="Presentation:"></a>Presentation:</h4><p>Now let’s look into presentation components, both layout, and sub layouts. All the layouts, sub layouts, renderings (in MVC), will be present under <strong>sitecore/Layout</strong> in the Sitecore tree.</p>
+<p><img src="/css/images/layoust.png" alt=""></p>
+<p>From <strong>Sample Item</strong> template presentation, we can see that there is one layout <strong>(Sample Layout)</strong>, and three components <strong>(Sample Sublayout, Sample Inner Sublayout,</strong> and <strong>Sample Rendering)</strong>.</p>
+<p><img src="/css/images/presentation.png" alt=""></p>
+<p>Let’s explore Sample Layout first, which is present in <strong>sitecore/Layout/Layouts/</strong> path. Layout is kind of master page in ASP.NET terminology, where we have basic html tags are added, and placeholders are defined. On Click of Sample Layout item, we can see the <strong>Path</strong> field, there is a .aspx page path is given, which contains all the HTML code with respect to the page.</p>
+<p><img src="/css/images/main-layout.png" alt=""></p>
+<p><img src="/css/images/layout-path.png" alt=""></p>
+<p>If we observe the layout code, we can see that HTML tags are present and also a placeholder with key as <strong>main</strong> is added. This is the placeholder where, other page components are going to be embedded.</p>
+<p><img src="/css/images/layout-code.png" alt=""></p>
+<p>Similar way if we look at <strong>Sample Sublayout</strong> item, which is under <strong>/sitecore/Layout/Sublayouts</strong>. This is an .ascx file.</p>
+<p><img src="/css/images/sublayout.png" alt=""></p>
+<p><img src="/css/images/sublayout-code.png" alt=""></p>
+<p>Similar to this component, other page components also have code files with respect to them.<br>ASP.NET webforms -&gt; <strong>.ascx</strong> files<br>ASP.NET MVC -&gt; <strong>Controller</strong> rendering, or <strong>View</strong> rendering.<br>XSLT -&gt; XSL Rendering</p>
+<p>If we look at the Sample rendering which is a xsl rendering, this is where we are rendering both the fields, <strong>‘title’ &amp; ‘text’</strong>, which are created in template.</p>
+<p><img src="/css/images/xslrendering.png" alt=""></p>
+<p><img src="/css/images/xslrenderingcode.png" alt=""></p>
+<p>Now let’s get back to our home item, where we have already content present for both the fields, which we can see on home page.</p>
+<p><img src="/css/images/conten-output.png" alt=""></p>
+<p>Till now we have seen Templates, Standard values, presentation, layout, sub-layout and renderings. Stay tune to this space for my next posts to discuss more detail on each item we used in home page.</p>
+<h4 id="Hello_World"><a href="#Hello_World" class="headerlink" title="Hello World"></a>Hello World</h4><p>We will try changing the Title field content to <strong>Hello World</strong>, and verify that text is changing on home page or not. After making any change, we need to publish the item; As I discussed earlier our changes will save in to Master database. On Click of publish latest modifications/final content gets pushed to <strong>web</strong> database. Refer Below screenshot for final output we are expecting. Hello world is indeed appearing on home page.</p>
+<p><img src="/css/images/helloworld-content.png" alt=""></p>
+<p>Sitecore supports both ASP.NET web forms and MVC, but default home page comes with all web forms related code. Currently most of new Sitecore implementations are done in MVC. So in coming up posts, we will always try to see the code examples in MVC.<br>ASP.NET web forms is still very much in picture, because lot of implementations till now are done in web forms. Whenever we are maintaining those applications, web forms knowledge is very much required.<br>That’s all for this week.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/" data-id="cj19eyx87007dmsmgh2i64ahm" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/12/Saturday-Sitecore-Learning-Default-Home-Page/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Sitecore-Basic-Code-Review-Checklist" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -602,94 +695,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/">Saturday Sitecore Learning - Sitecore Installation with SIM tool</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" style="text-align:right">
-      <time datetime="2016-10-22T05:30:00.000Z" itemprop="datePublished">October 22, 2016</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h3 id="Saturday_Sitecore_Learning_3A_Sitecore_with_SIM"><a href="#Saturday_Sitecore_Learning_3A_Sitecore_with_SIM" class="headerlink" title="Saturday Sitecore Learning: Sitecore with SIM"></a>Saturday Sitecore Learning: Sitecore with SIM</h3><p>Last week, we had seen how to install Sitecore Instance Manager (SIM) tool. This week we will explore how to install Sitecore using SIM.</p>
-<p>Among all the three (<strong>Web Application Installer, Manual Installation, and SIM</strong>) available options, to choose, SIM is the most preferred choice among all the Sitecore developers. The Main reason for that is the flexibility it provides in managing the Sitecore sites.</p>
-<p>Let’s dive into step by step Sitecore installation,</p>
-<p><strong>Step 1:</strong><br>If we remember in the last post, while installing SIM, we configured <em>4 settings</em>, these are very crucial while installing Sitecore. Before proceeding any further, we need to double check on these settings, and if it is required, make any necessary changes.</p>
-<ul>
-<li>Instance Root Folder</li>
-<li>SQL Server Connection String</li>
-<li>Sitecore License File</li>
-<li>Local repository (Make sure to place downloaded Sitecore zip folder inside this path)</li>
-</ul>
-<p>To verify the 4 options, open the Home tab, and click on the Settings</p>
-<p><img src="/css/images/SIM-home.png" alt=""><br><img src="/css/images/SIM-settings.png" alt=""></p>
-<p><strong>Step 2:</strong><br>For additional settings, click on Advanced Settings. But before making any changes, please go through the <a href="https://github.com/sitecore/sitecore-instance-manager/wiki/Advanced" target="_blank" rel="external">documentation</a> very carefully.</p>
-<p><img src="/css/images/SIM-advanced-settings.png" alt=""></p>
-<p><strong>Step 3:</strong><br>Click on the Install Instance<br><img src="/css/images/SIM-install-instance.png" alt=""></p>
-<p><img src="/css/images/SIM-install-new-instance.png" alt=""></p>
-<p><strong>Step 4:</strong><br>Make all the necessary changes, Site Name, and Host name. Location value is prepopulated from the settings <em>Instance Root Folder</em>. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-new-sitecore.png" alt=""></p>
-<p><strong>Step 5:</strong><br>Some more options for instance details. Better to keep the default values, until and unless you are fully aware of the modifications. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-instance-details.png" alt=""></p>
-<p><strong>Step 6:</strong><br>If any of the Sitecore modules are present in the <em>Instance Root Folder</em>, those all are going to be listed here. We can select the modules, to install with Sitecore. Click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-module-list.png" alt=""></p>
-<p><strong>Step 7:</strong><br>You can select any available custom packages, and click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-custom-packages.png" alt=""></p>
-<p><strong>Step 8:</strong><br>Select any Configuration presets, and click on <em>Next</em> to proceed.</p>
-<p><img src="/css/images/SIM-configuration-presets.png" alt=""></p>
-<p><strong>Step 9:</strong><br>Finally all the selected modules, and custom packages, will be listed for review. Make any final modification and click on <em>Install</em>.</p>
-<p><img src="/css/images/SIM-instance-review.png" alt=""></p>
-<p><strong>Step 10:</strong><br>Now Sitecore is getting installed.</p>
-<p><img src="/css/images/SIM-sitecore-installation.png" alt=""></p>
-<p><strong>Step 11:</strong><br>Once the installation is completed, you can check the listed options, and click on <em>Finish</em>.</p>
-<p><img src="/css/images/SIM-sitecore-installation-finish.png" alt=""></p>
-<p>See you on next <strong><em>Saturday</em></strong>.</p>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/" data-id="cj19eyx49005rmsmgpf1aynq7" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Sitecore-Installation-Using-SIM/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
       </nav>
@@ -702,6 +707,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/06/Saturday-Sitecore-Learning-Template-Part-7/" class="title">Saturday Sitecore Learning - Templates Part 7 (Template Types)</a></p>
+              <p class="item-date"><time datetime="2017-06-24T15:38:00.000Z" itemprop="datePublished">June 24, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -739,15 +753,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/" class="title">Sitecore : Media Framework With Brightcove - Part 1 - Installing Media Framework Module</a></p>
-              <p class="item-date"><time datetime="2017-05-03T13:33:00.000Z" itemprop="datePublished">May 03, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -758,7 +763,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">38</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-05-17T10:38:23.419Z</updated>
+  <updated>2017-06-25T16:54:08.005Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Saturday Sitecore Learning - Templates Part 7 (Template Types)</title>
+    <link href="http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/"/>
+    <id>http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/</id>
+    <published>2017-06-24T15:38:00.000Z</published>
+    <updated>2017-06-25T16:54:08.005Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Template_Types"><a href="#Template_Types" class="headerlink" title="Template Types"></a>Template Types</h4><p>This is the seventh post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
+<p>In previous posts, we learned about template fields, field types, importance of template inheritance, and Standard Values. In this post, let’s explore <strong>Template Types</strong>.</p>
+<p>Templates can be categorized into following ways.</p>
+<ol>
+<li>Page/Module Templates</li>
+<li>Folder Templates</li>
+<li>Branch Templates</li>
+<li>Parameter Templates</li>
+<li>Folder Templates</li>
+<li>Command Templates</li>
+</ol>
+<p><strong>1. Page/Module Templates</strong></p>
+<p>These are the templates we use for page items, as well as for modules.</p>
+<ul>
+<li>When we use the template for pages, they also contain layout information.</li>
+<li>When we use them for module templates, they mainly used as data sources, and they do not contain any layout information.</li>
+</ul>
+<p><img src="/css/images/template-fields.png" alt=""></p>
+<p><img src="/css/images/template-layout-details.png" alt=""></p>
+<p><strong>2. Folder Templates</strong></p>
+<p>Folder templates are used in a way to organize the content items. They neither contain fields (except Sitecore default fields) nor presentation details.<br>The default folder template is present at <em>/sitecore/templates/Common/Folder</em>.</p>
+<p>Sitecore uses folder templates, in lot of places, like</p>
+<ul>
+<li><strong>Templates Folder</strong> - To organize templates.</li>
+<li><strong>Layout Folder</strong> - To organize layouts.</li>
+<li><strong>Rendering Folder</strong> - To organize renderings.</li>
+<li><strong>Media Folder</strong> - To organize media items.</li>
+</ul>
+<p>We can also create a custom folder template to organize our items, by inhering from the default folder template - <em>/sitecore/templates/Common/Folder</em>.</p>
+<p><img src="/css/images/folder-template-type.png" alt=""></p>
+<p><strong>3. Branch Templates</strong></p>
+<p>These are another variation of templates. At once we usually create an item from a template, but what if at a time, we need to create a group of items, Brnach template is the one to help.</p>
+<p>They reside under <em>/sitecore/templates/Branches</em></p>
+<p><img src="/css/images/branch-template-type.png" alt=""></p>
+<p><strong>4. Parameter Templates</strong></p>
+<p>All the content fields are present on Page/Module templates. In some cases, we would need fields for configurations, like Search result count, background color etc, it is very tempting to create these fields also on the page/module templates. But as a best practice, we should always separate the content which will be displayed, and details of how to display the content.</p>
+<p>We can use parameter templates to manage the details about how to display the content.</p>
+<p>We can create a parameter template by deriving from <em>/sitecore/templates/System/Layout/Rendering Parameters/Standard Rendering Parameters</em></p>
+<p><img src="/css/images/parameter-template-type.png" alt=""></p>
+<p><strong>5. Command Templates</strong></p>
+<p>All other template categories contains a predefined structure. But what if we need to write some dynamic logic to create items, for this we use Command templates. Command template define a class and method to be called during an insert operation. Whenever we try to create an item from this template, associate class method would be executed.</p>
+<p>We can create a command template, using <em>/System/Branches/Command Template</em></p>
+<p><img src="/css/images/command-template-type.png" alt=""></p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Template_Types&quot;&gt;&lt;a href=&quot;#Template_Types&quot; class=&quot;headerlink&quot; title=&quot;Template Types&quot;&gt;&lt;/a&gt;Template Types&lt;/h4&gt;&lt;p&gt;This is the seventh po
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore : Media Framework With Brightcove - Part 5 - Configuration</title>
@@ -1130,94 +1204,6 @@
       <category term="Walking" scheme="http://gopigujjula.com/tags/Walking/"/>
     
       <category term="Workout" scheme="http://gopigujjula.com/tags/Workout/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Templates Part 3 (List Field Types)</title>
-    <link href="http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/"/>
-    <id>http://gopigujjula.com/2017/01/Saturday-Sitecore-Learning-Template-Part-3/</id>
-    <published>2017-01-28T02:47:00.000Z</published>
-    <updated>2017-02-26T11:06:06.973Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="List_Field_Types"><a href="#List_Field_Types" class="headerlink" title="List Field Types"></a>List Field Types</h4><p>This is the third post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In the previous <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">post</a>, we discussed about Simple field types, in this post let’s look into <strong>List</strong> field types.</p>
-<h5 id="List_types_3A"><a href="#List_types_3A" class="headerlink" title="List types:"></a>List types:</h5><p>List type fields allow content authors to select one or multiple values, ex: countries, categories, etc.</p>
-<p><img src="/css/images/sitecore-list-types.png" alt=""></p>
-<ul>
-<li><strong>Multilist:</strong> This is one of the most commonly used list type, using this type, content authors can choose one or more items, from the list, which are based on the source property of the field specified. If the field source is not specified, selectable list becomes empty. <em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/multilist-field-type.png" alt=""></p>
-<p><img src="/css/images/multilist-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>Multilist with Search:</strong> This is similar to Multilist field type, but having a search functionality. When there are large number of selectable items, this field type aids content authors to search and choose items.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/multilist-with-search-field-type.png" alt=""></p>
-<ul>
-<li><strong>Treelist:</strong> This list type, lists all the selectable items in tree structure, including the parent item. If no source is specified, it will list whole Sitecore tree.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query, and query string</li>
-</ul>
-<p><img src="/css/images/treelist-field-type.png" alt=""></p>
-<p><img src="/css/images/treelist-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>TreelistEx:</strong> This is pretty much similar to Treelist, except that for this field type, the selection option will be opened in a new browser window (pop up); when no source is specified, this also lists the entire tree. TreelistEx field type performance is better than Treelist field type, because for TreelistEx, the client renders only the list of selected items, and does not render the selection tree until the user clicks the Edit command which is present above the field.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query, and query string</li>
-</ul>
-<p><img src="/css/images/treelistex-field-type.png" alt=""></p>
-<ul>
-<li><strong>Checklist:</strong> The list type allows the user to select one or more checkboxes representing the children of the item specified by Source property of the field. Unlike other list types, content authors cannot order their selection.<br><em>Raw value:</em> Pipe separated GUID’s<br><em>Field type class:</em> Sitecore.Data.Fields.MultilistField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
-</ul>
-<p><img src="/css/images/checklist-field-type.png" alt=""></p>
-<ul>
-<li><strong>Droplist:</strong> The Droplist field type allows the content author to select a single item from the list specified by the Source property of the field.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
-</ul>
-<p><img src="/css/images/droplist-field-type.png" alt=""></p>
-<ul>
-<li><strong>Grouped Droplist:</strong> This field type allows content author to select a single grandchild of the item specified by Source property of the field. This type stores the name of selected item.<br><em>Raw value:</em> string (name of the selected item)<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
-</ul>
-<p><img src="/css/images/groupeddroplist-field-type.png" alt=""></p>
-<ul>
-<li><strong>Grouped Droplink:</strong> This is very much similar to Grouped Droplist field type, except that, The Grouped Droplink field type stores the GUID of the selected item.<br><em>Raw value:</em> GUID (ID of the selected item)<br><em>Field type class:</em> Sitecore.Data.Fields.ReferenceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, XPath Query</li>
-</ul>
-<p><img src="/css/images/groupeddroplink-field-type.png" alt=""></p>
-<ul>
-<li><strong>Name Value List:</strong> This field type allows the content authors to enter values in key-value pairs. When first key, value pair is entered, another row will appear to enter next set of values. Sitecore stores the values entered as a list of key=value pairs separated by ampersands (“&amp;”). I had seen this in real time for Brightcove media framework, for each Brightcove video item, we have custom fields getting imported in name-value pairs.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><img src="/css/images/namevaluelist-field-type.png" alt=""></p>
-<ul>
-<li><strong>Name Lookup Value List:</strong> This field type is similar to Name Value List field type, in Name Value List, content author has to enter both key &amp; value pair, but here content authors enters keys, and for value choose an item from populated drop-down list.<br><em>Raw value:</em> key=value pairs separated by ampersands (“&amp;”)<br><em>Field type class:</em> Sitecore.Data.Fields.NameValueListField<br><em>Field Renderer supported:</em> No</li>
-</ul>
-<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
-<p>In next post, will look into Link types.</p>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
-<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-<li><a href="http://getfishtank.ca/blog/treelist-data-source-hidden-functionality" target="_blank" rel="external">http://getfishtank.ca/blog/treelist-data-source-hidden-functionality</a></li>
-<li><a href="https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/" target="_blank" rel="external">https://exploringsitecore.wordpress.com/category/sitecore/name-value-list-sitecore/</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;List_Field_Types&quot;&gt;&lt;a href=&quot;#List_Field_Types&quot; class=&quot;headerlink&quot; title=&quot;List Field Types&quot;&gt;&lt;/a&gt;List Field Types&lt;/h4&gt;&lt;p&gt;This is the th
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
     
   </entry>
   

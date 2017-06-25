@@ -14,8 +14,6 @@
 <link rel="publisher" href="https://plus.google.com/+gopikreddygujjula">
   
   
-    <link rel="icon" href="themes\hexo-theme-icarus-master\source\css\images\favicon.ico">
-  
   
  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -111,7 +109,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        71
+        72
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -142,6 +140,74 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-DataRowState" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/11/DataRowState/">DataRowState</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2011/11/DataRowState/" style="text-align:right">
+      <time datetime="2011-11-08T12:14:00.000Z" itemprop="datePublished">November 08, 2011</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/C/">C#</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note : <em>This post is first published on Nov-2011 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<p><strong><em>DataRowState</em></strong> : Its a state corresponding to each row in DataTable.</p>
+<p>Consider the following scenario, we have a set of records in DB and from the User Interface we need to provide the facility for user to update any existing records or to add any new records. But, this set of changed records need to send to the DB all at once (i.e for example on a Button Click event), Till that time we need to retain all the records at our page itself. and user also have an option to cancel these changes.<br>So, while sending all the records to DB at once, we need to find a way to check which row is to be inserted, and which row need to be updated in DB, one option is to maintain one more column in the table as flag, but its very difficult to maintain these flags. another option is to take the advantage of the DataRowState (if we assume records will be maintained in the DataTable). Each row will be having a State (like Added, Unchanged, Modified etc..), using this States we can easily find out which row should be saved and which row should be updated.<br>DataRowState is very much useful in this kind of scenarios.</p>
+<p>First we will look at the different states present in DataRowState,</p>
+<ul>
+<li><strong><em>Added</em></strong> The row has been added to a DataRowCollection, and AcceptChanges has not been called.</li>
+<li><strong><em>Modified</em></strong> The row has been modified and AcceptChanges has not been called.</li>
+<li><strong><em>UnChanged</em></strong> The row has not changed since AcceptChanges was last called.</li>
+<li><strong><em>Detached</em></strong> The row has been created but is not part of any DataRowCollection. A DataRow is in this state immediately after it has been created and before it is added to a collection, or if it has been removed from a collection.</li>
+<li><strong><em>Deleted</em></strong> The row was deleted using the Delete method of the DataRow.</li>
+</ul>
+<p>The below is the example with the all states.</p>
+<p><script src="https://gist.github.com/gopigujjula/5412604.js"></script>The output will be as follows:<br><img src="/css/images/DataRowState.jpg" alt=""><br>In the above output we can see that , at last the changes are canceled, but still one of the row is not exist.this is because it has got removed(not deleted).we cannot get the records back once we use Remove. but if we use Delete, still we can get our records back.</p>
+<p><strong>Happy Coding :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2011/11/DataRowState/" data-id="cj19eyxck008ymsmglexic1zh" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2011/11/DataRowState/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-NUnit-Sample-Application" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -525,6 +591,15 @@ ga('send', 'pageview');
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/06/Saturday-Sitecore-Learning-Template-Part-7/" class="title">Saturday Sitecore Learning - Templates Part 7 (Template Types)</a></p>
+              <p class="item-date"><time datetime="2017-06-24T15:38:00.000Z" itemprop="datePublished">June 24, 2017</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
               <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/" class="title">Sitecore : Media Framework With Brightcove - Part 5 - Configuration</a></p>
               <p class="item-date"><time datetime="2017-05-17T11:30:00.000Z" itemprop="datePublished">May 17, 2017</time></p>
             </div>
@@ -557,15 +632,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/" class="title">Sitecore : Media Framework With Brightcove - Part 1 - Installing Media Framework Module</a></p>
-              <p class="item-date"><time datetime="2017-05-03T13:33:00.000Z" itemprop="datePublished">May 03, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -576,7 +642,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">38</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Layouts/">Layouts</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Talks/">Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Templates/">Templates</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
