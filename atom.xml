@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-06-25T16:54:08.005Z</updated>
+  <updated>2017-07-09T11:00:24.738Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Saturday Sitecore Learning - Layout</title>
+    <link href="http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/"/>
+    <id>http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/</id>
+    <published>2017-07-08T15:38:00.000Z</published>
+    <updated>2017-07-09T11:00:24.738Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><p>In previous posts, we learned all about templates, how to create a field, inheriting from another template, and setting default values using Standard values.</p>
+<p>Once we have a template created, we need to output the field content on pages/modules. This is where <strong>Layout</strong> comes into picture, layout is all about the presentation information, and also using which we make the connection between Sitecore and .NET code.</p>
+<p><em>One of the beauty of Sitecore is, as a developer, we have full control on the page HTML.</em></p>
+<p>Let’s have a brief look at page execution, Whenever a user browses for a page, Sitecore locates the particular content item, executes it’s layout, and all the required components, gets the html, and send it back to client to render it on the browser.</p>
+<p>In Sitecore tree, all Layout related items reside under Layout node.</p>
+<p><img src="/css/images/layout.png" alt=""></p>
+<p>From presentation perspective, every page item, contains two things,</p>
+<p><strong>1. Layout</strong></p>
+<p>Each page item has a single layout, which contains the information about basic page structure, and which would be common among all the pages, like <em>html</em>, <em>head</em> and <em>body</em> tags.</p>
+<p>In ASP.NET web-forms the layout file would be of <em>.aspx</em> extension, where as in ASP.NET MVC, this file would be of <em>.cshtml</em> extension.</p>
+<p>In Sitecore tree, all Layout related items reside under Layouts node.</p>
+<p><img src="/css/images/sitecore-layouts.png" alt=""></p>
+<p><strong>2. Components/Modules</strong></p>
+<p>In Sitecore, pages contain lot of components, like carousal module, or a generic callout, or any banner module. All these components would be independent from the page, so that they can be placed on any page. In Sitecore these are also called as <strong>Sub-layouts(web-forms)</strong> or <strong>Renderings(MVC)</strong>.</p>
+<p>One page can have any number of components, and a same component can be added to multiple pages.</p>
+<p>In ASP.NET web-forms the component would be of <em>.ascx</em> extension, where as in ASP.NET MVC, this would be of <em>.cshtml</em> extension (or a Controller’s action method).</p>
+<p>All Sub-layouts items reside under Sublayouts node.</p>
+<p><img src="/css/images/sitecore-sublayouts.png" alt=""></p>
+<p>All rendering items reside under Renderings node.</p>
+<p><img src="/css/images/sitecore-renderings.png" alt=""></p>
+<p>In coming posts, let’s explore each one more deeply.</p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Layout&quot;&gt;&lt;a href=&quot;#Layout&quot; class=&quot;headerlink&quot; title=&quot;Layout&quot;&gt;&lt;/a&gt;Layout&lt;/h4&gt;&lt;p&gt;In previous posts, we learned all about templates, how
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Saturday Sitecore Learning - Templates Part 7 (Template Types)</title>
     <link href="http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/"/>
     <id>http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/</id>
     <published>2017-06-24T15:38:00.000Z</published>
-    <updated>2017-06-25T16:54:08.005Z</updated>
+    <updated>2017-07-01T07:06:32.011Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Types"><a href="#Template_Types" class="headerlink" title="Template Types"></a>Template Types</h4><p>This is the seventh post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p>In previous posts, we learned about template fields, field types, importance of template inheritance, and Standard Values. In this post, let’s explore <strong>Template Types</strong>.</p>
@@ -30,7 +82,6 @@
 <li>Folder Templates</li>
 <li>Branch Templates</li>
 <li>Parameter Templates</li>
-<li>Folder Templates</li>
 <li>Command Templates</li>
 </ol>
 <p><strong>1. Page/Module Templates</strong></p>
@@ -503,13 +554,13 @@
     <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
     <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
     <published>2017-04-23T14:30:00.000Z</published>
-    <updated>2017-05-03T15:13:33.697Z</updated>
+    <updated>2017-07-09T11:04:54.790Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/MghGijxFyaI" frameborder="0" allowfullscreen></iframe></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/april-2017-3/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -633,14 +684,14 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
     <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-05-03T15:12:19.672Z</updated>
+    <updated>2017-07-09T11:06:39.452Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/toDc9toW1ncHoU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-2/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -707,14 +758,14 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
     <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-05-03T15:12:00.730Z</updated>
+    <updated>2017-07-09T11:06:17.458Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
 <p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-1/" target="_blank" rel="external">here</a></p>
 </div>]]></content>
     
@@ -996,7 +1047,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/</id>
     <published>2017-02-22T04:30:00.000Z</published>
-    <updated>2017-03-28T17:28:22.436Z</updated>
+    <updated>2017-07-09T11:07:05.255Z</updated>
     
     <content type="html"><![CDATA[<h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
 <p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
@@ -1005,7 +1056,7 @@
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"></div>
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
 <p>More details about the talk can be found <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">here</a></p>
 <p>Thanks to Surendra, <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> and <a href="https://twitter.com/anandgothe" target="_blank" rel="external">Anand Gothe</a> for their support and encouragement.</p>
 </div>]]></content>
@@ -1156,54 +1207,6 @@
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
       <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verndale Steps Challenge - 2017</title>
-    <link href="http://gopigujjula.com/2017/02/Verndale-Steps-Challenge-2017/"/>
-    <id>http://gopigujjula.com/2017/02/Verndale-Steps-Challenge-2017/</id>
-    <published>2017-02-04T00:47:00.000Z</published>
-    <updated>2017-02-11T01:52:25.797Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Verndale_Steps_Challenge_participation_Experience"><a href="#Verndale_Steps_Challenge_participation_Experience" class="headerlink" title="Verndale Steps Challenge participation Experience"></a>Verndale Steps Challenge participation Experience</h4><p>From childhood I always love walking and running. Walking gives me pleasure, releases my stress, and improves my thinking. Even though I love walking, I am not regular about it, only when I feel to walk, then only I do it. Sometimes if I am stuck up on something, like need to take a critical decision, or to resolve an issue, then walking helps me to think clearly. After I became a Software engineer, Walking helped me to solve lot of developer road blocks.</p>
-<p>Around 4 months back (Sep-2016), my friend from USA gifted me with Power beats wireless earphones, and jawbone Up fitness tracker. once I received both of them, started morning walk for couple twice a week, with 2 to 3 km distance at a time.</p>
-<p><img src="/css/images/powerbeats.jpg" alt=""><br><img src="/css/images/jawbone-up.jpg" alt=""></p>
-<h5 id="Verndale_Steps_Challenge"><a href="#Verndale_Steps_Challenge" class="headerlink" title="Verndale Steps Challenge"></a>Verndale Steps Challenge</h5><p>In December-2016, there was an announcement in office, about holding a month long, companywide steps and run challenge. The challenge is based on the number of miles walked or ran. Immediately, I was interested to participate in steps challenge, and signed up for it. This challenge is going to be tracked on Endomondo (a free fitness app). so downloaded the app, and ready for the challenge.</p>
-<p>While signing up, my thoughts are like, anyway I am going to morning walk for twice a week. So for this challenge, will make it regular, and increase the distance up to 5 km per day, that may give chance to top in the list. So daily 5km, means end of the month it will be 150km, this will be more than enough. (<em>Little did I know that, 150km is no where near, and I will finish the challenge with 510km.</em>)</p>
-<p>Challenge runs from <strong>3rd Jan 2017</strong> to <strong>3rd Feb 2017</strong>. But I started regular walk from 2nd Jan (1 day before), to see whether I can actually walk for 5km in a single workout. It was ok, I was able to walk 5km with ease, and felt good about it.</p>
-<p>Once Challenge is started, and many of my Bangalore colleagues also signed up for it, so in tea time, we used to have fun discussion about the challenge. These discussions continued for whole month.</p>
-<p><strong>First time 10km walk</strong> After initial days of the challenge are over, understood that 5km are not going to be enough. One day wanted to try for 10km, I know that It’s very long for a single workout. Somehow believed, I could make it. By the time I reached 7-8 km, my legs are paining like hell, thought of giving up there, but don’t know what happened, I was determined to finish that 10kms. Pushed myself for another 2kms, and was able to finish 10 km. This is one of the most memorable experience, in the whole journey. Looking back, I feel proud of myself, that I could cross that 10kms.<br><img src="/css/images/endomondo-1.png" alt=""></p>
-<p>Later 10km became a regular distance for my workout. As the days are passing, intensity in the competition has also increased, I also needed to keep up my pace.</p>
-<p><strong>Lake park:</strong> I like walking beside the lake, love the morning breeze, sunrise, and everything around there. Every day I had some wonderful experience there, like meeting new people, and inspired by some of their determination. When I go for walk in other parks, I couldn’t spend so much time there, as I don’t get the same breeze, always wish to go to lake park.</p>
-<p><strong>Music &amp; Podcasts:</strong> Power beats are very useful in this journey. While walking, I love to listen Music, especially Telugu (mother tongue) songs. But this time I also explored another stream which are podcasts. I know about podcasts before, but here and there I used to listen only an episode from <a href="/(http:/hanselminutes.com/">Hansel minutes</a>) podcast. This time, as I am walking long distances, wanted to explore podcasts fully. I listened to some of the wonderful episodes from different podcasts, and now I am following lot of good podcasts like,</p>
-<ul>
-<li><a href="https://coresampler.fireside.fm/" target="_blank" rel="external">CoreSampler</a></li>
-<li><a href="http://hanselminutes.com/" target="_blank" rel="external">Hansel Minutes</a></li>
-<li><a href="http://wildermuth.com/hwpod" target="_blank" rel="external">Hello World Podcast</a></li>
-<li><a href="https://www.dotnetrocks.com/" target="_blank" rel="external">.NET Rocks</a></li>
-<li><a href="http://www.podcasts.com/telugu-bytes" target="_blank" rel="external">Telugu Bytes</a></li>
-</ul>
-<p>I also listened to <strong>Anthem</strong> by Ayn Rand audio book.</p>
-<p><strong>Last day of the challenge</strong> I wanted to finish it on a high note, in morning I increased my pace, and reached  maximum single workout distance of <strong>17km</strong>, and also maximum distance per day <strong>27.5km</strong>.</p>
-<p><img src="/css/images/jawbone-1.png" alt=""></p>
-<p>Irrespective of the result, by participating in this challenge, I am left with so many wonderful memories, and first time covered 10km, 15km, and 17km distance. In my wildest thoughts also, I would have not guessed, that I can walk for <strong>510km</strong> in a month. It made to me to push my limits in all possible ways.</p>
-<p>Image courtesy</p>
-<ul>
-<li><a href="http://www.audiosplitz.com/2016/04/beats-powerbeats2-wireless.html" target="_blank" rel="external">http://www.audiosplitz.com/2016/04/beats-powerbeats2-wireless.html</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Verndale_Steps_Challenge_participation_Experience&quot;&gt;&lt;a href=&quot;#Verndale_Steps_Challenge_participation_Experience&quot; class=&quot;headerlink&quot; t
-    
-    </summary>
-    
-    
-      <category term="Walking" scheme="http://gopigujjula.com/tags/Walking/"/>
-    
-      <category term="Workout" scheme="http://gopigujjula.com/tags/Workout/"/>
     
   </entry>
   
