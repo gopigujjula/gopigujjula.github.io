@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-07-09T11:00:24.738Z</updated>
+  <updated>2017-07-23T14:41:05.263Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore : Helix Project Learnings</title>
+    <link href="http://gopigujjula.com/2017/07/sitecore-helix-project-learnings/"/>
+    <id>http://gopigujjula.com/2017/07/sitecore-helix-project-learnings/</id>
+    <published>2017-07-23T05:30:00.000Z</published>
+    <updated>2017-07-23T14:41:05.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>I am currently working on a project which is based on the Helix principles, it has been couple of months, since I started working on this, here are some of my learnings, we use TDS (Team Development for Sitecore),</p>
+<h4 id="1-TDS_Sync_3A_one_Sitecore_item_to_one_TDS_project"><a href="#1-TDS_Sync_3A_one_Sitecore_item_to_one_TDS_project" class="headerlink" title="1.TDS Sync: one Sitecore item to one TDS project"></a>1.TDS Sync: one Sitecore item to one TDS project</h4><p>Never sync same Sitecore item into multiple TDS projects, this creates lot of dependencies, as well as your automated package deployments go for a toss.</p>
+<p><img src="/css/images/Sitecore-Helix-TDS.png" alt=""></p>
+<h4 id="2-_Web-config_3A_Build_Action_to_none"><a href="#2-_Web-config_3A_Build_Action_to_none" class="headerlink" title="2. Web.config: Build Action to none"></a>2. Web.config: Build Action to <em>none</em></h4><p>Other than your main web.config file, make sure to set all feature/foundation level web.config files <em>Build Action</em> to <em>none</em>, and <em>Copy to Output Directory</em> to <em>Do not copy</em>. If not, these files override the main web.config file.</p>
+<p><img src="/css/images/Sitecore-helix-web-config.png" alt=""></p>
+<p><img src="/css/images/Sitecore-helix-web-config-no-deploy.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I am currently working on a project which is based on the Helix principles, it has been couple of months, since I started working on this
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Helix Learning" scheme="http://gopigujjula.com/categories/Sitecore/Helix-Learning/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Helix" scheme="http://gopigujjula.com/tags/Helix/"/>
+    
+      <category term="Habitat" scheme="http://gopigujjula.com/tags/Habitat/"/>
+    
+      <category term="TDS" scheme="http://gopigujjula.com/tags/TDS/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Layout</title>
@@ -1137,76 +1175,6 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Templates Part 4 (Link Field Types)</title>
-    <link href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/"/>
-    <id>http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/</id>
-    <published>2017-02-04T02:47:00.000Z</published>
-    <updated>2017-02-26T11:06:06.996Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In last two posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Simple field types</a> &amp; <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">List field types</a>, now let’s look into <strong>Link</strong> field types.</p>
-<h5 id="Link_types_3A"><a href="#Link_types_3A" class="headerlink" title="Link types:"></a>Link types:</h5><p>Link field types allow content authors to enter links to Sitecore internal items, external URLs, anchors, and email addresses.</p>
-<p><img src="/css/images/sitecore-link-types.png" alt=""></p>
-<ul>
-<li><strong>Droplink:</strong> Similar to the Droplist field type, which we had seen in the previous <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">post</a>, this field type also allows the content author to select a single item from the list specified by the source property of the field. If the source is not set, no items are shown in the drop-down.<br><em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/droplink-field-type.png" alt=""></p>
-<p><img src="/css/images/droplink-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>Droptree:</strong> This field type also allows the content author to select a single item from the list specified by the source property of the field. Items are shown in tree-view rather than the normal drop-down. If the source is not set, it shows the entire tree.<br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/droptree-field-type.png" alt=""></p>
-<p><img src="/css/images/droptree-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>General Link:</strong> This is the most frequently used link field type. This type allows content authors to link to a Sitecore item, an external URL, an anchor, an email address, or a JavaScript function.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/general-link-field-type.png" alt=""></p>
-<ul>
-<li><strong>General Link with Search:</strong> This is similar to General Link field type, except that this one is having an extra link search functionality. Using this, content authors can search (for Internal link) and link to items.<br><em>Recently we come across a scenario where clients want to search for an item to link, because it is tedious for them to navigate to that item, (we can use other field types, but they want to ) this field type came to our rescue :)</em><br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/general-link-with-search-field-type.png" alt=""></p>
-<p> <strong>Version Identity:</strong> and <strong>Version Link:</strong> field types are used by Sitecore for internal purposes.</p>
-<p>Till now we looked into Simple, List, and field types. But there are other field types which are not so frequently  used by developers.</p>
-<ul>
-<li>Analytics</li>
-<li>Social</li>
-<li>Developer Types</li>
-<li>System Types</li>
-</ul>
-<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
-<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Link_Field_Types&quot;&gt;&lt;a href=&quot;#Link_Field_Types&quot; class=&quot;headerlink&quot; title=&quot;Link Field Types&quot;&gt;&lt;/a&gt;Link Field Types&lt;/h4&gt;&lt;p&gt;This is the fo
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore Field Types" scheme="http://gopigujjula.com/tags/Sitecore-Field-Types/"/>
     
   </entry>
   
