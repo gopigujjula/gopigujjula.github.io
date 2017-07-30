@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-07-23T14:41:05.263Z</updated>
+  <updated>2017-07-30T07:48:23.971Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore - Missing Experience Profile Section </title>
+    <link href="http://gopigujjula.com/2017/07/sitecore-experience-profile-section-missing/"/>
+    <id>http://gopigujjula.com/2017/07/sitecore-experience-profile-section-missing/</id>
+    <published>2017-07-30T06:13:00.000Z</published>
+    <updated>2017-07-30T07:48:23.971Z</updated>
+    
+    <content type="html"><![CDATA[<p>Have you ever come across a scenario, where you installed Sitecore, and load the Sitecore dashboard, but only to find out whole Experience profile dashboard is missing.</p>
+<p>You might be wondering, may be installation gone wrong, or any configuration is missing.</p>
+<p>Couple of months back, I had faced this issue, only later to figure out that, actual issue is my <strong>Sitecore license supports CMS only mode</strong>, not the XP (Experience Platform).</p>
+<p>If you are facing the similar issue, always first check your Sitecore license.</p>
+<p><img src="/css/images/xp-section-missing.png" alt=""></p>
+<blockquote><p>If you do not have a valid xDB license, CMS-only mode is enabled by default.</p>
+</blockquote>
+<p>References:</p>
+<ul>
+<li><a href="https://doc.sitecore.net/sitecore_experience_platform/setting_up_and_maintaining/experience_management/configuring/configure_experience_management" target="_blank" rel="external">The CMS-only mode configuration</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Have you ever come across a scenario, where you installed Sitecore, and load the Sitecore dashboard, but only to find out whole Experienc
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Troubleshooting" scheme="http://gopigujjula.com/categories/Sitecore/Troubleshooting/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore : Helix Project Learnings</title>
@@ -592,7 +630,7 @@
     <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
     <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
     <published>2017-04-23T14:30:00.000Z</published>
-    <updated>2017-07-09T11:04:54.790Z</updated>
+    <updated>2017-07-26T08:56:45.158Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
@@ -610,7 +648,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -722,7 +760,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
     <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-07-09T11:06:39.452Z</updated>
+    <updated>2017-07-26T08:57:11.967Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -741,7 +779,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -759,7 +797,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/</id>
     <published>2017-03-13T12:30:00.000Z</published>
-    <updated>2017-03-28T16:58:07.631Z</updated>
+    <updated>2017-07-26T08:56:58.993Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -778,7 +816,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -796,7 +834,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
     <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-07-09T11:06:17.458Z</updated>
+    <updated>2017-07-26T08:57:05.786Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -815,7 +853,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -833,7 +871,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/</id>
     <published>2017-02-26T11:54:00.000Z</published>
-    <updated>2017-02-28T05:20:23.912Z</updated>
+    <updated>2017-07-30T07:08:55.157Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <ol>
@@ -870,6 +908,8 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
+      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
+    
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
@@ -884,7 +924,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/</id>
     <published>2017-02-26T04:54:00.000Z</published>
-    <updated>2017-02-28T05:19:58.418Z</updated>
+    <updated>2017-07-30T07:12:26.510Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <ol>
@@ -941,7 +981,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Layouts" scheme="http://gopigujjula.com/categories/Sitecore/Layouts/"/>
+      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -957,7 +997,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/</id>
     <published>2017-02-25T21:05:00.000Z</published>
-    <updated>2017-02-28T05:19:12.883Z</updated>
+    <updated>2017-07-30T07:10:52.052Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Template_level"><a href="#Enhancing_Content_Author_Experience_-_Template_level" class="headerlink" title="Enhancing Content Author Experience - Template level"></a>Enhancing Content Author Experience - Template level</h4><p>This is the first post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <p>As a Sitecore developer, I always feel we have two primary users of our work; One is a website visitor, and second one is Content authors. Most of the time, we tend to give more importance to our site visitor, as they make the business happen, but we need to give equal importance to Content authors, to improve their overall experience of managing content.</p>
@@ -1008,7 +1048,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Templates/"/>
+      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -1085,7 +1125,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/</id>
     <published>2017-02-22T04:30:00.000Z</published>
-    <updated>2017-07-09T11:07:05.255Z</updated>
+    <updated>2017-07-26T08:57:18.925Z</updated>
     
     <content type="html"><![CDATA[<h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
 <p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
@@ -1107,7 +1147,7 @@
     
       <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
     
-      <category term="Talks" scheme="http://gopigujjula.com/categories/Sitecore/Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -1117,64 +1157,6 @@
       <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
     
       <category term=".NET User Group" scheme="http://gopigujjula.com/tags/NET-User-Group/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore - Frequently Asked Questions</title>
-    <link href="http://gopigujjula.com/2017/02/Sitecore-FAQ/"/>
-    <id>http://gopigujjula.com/2017/02/Sitecore-FAQ/</id>
-    <published>2017-02-12T07:30:00.000Z</published>
-    <updated>2017-02-26T11:06:06.770Z</updated>
-    
-    <content type="html"><![CDATA[<p>Exactly one and half year back When I started learning Sitecore as a <strong>.Net developer</strong> few questions were in my mind. Now I feel like I’m able to answer all those by adding some more questions asked by participants in last week presentation in <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">Dotnet Bangalore user group</a>.</p>
-<h5 id="1-_What_is_CMS/WCMS_3F"><a href="#1-_What_is_CMS/WCMS_3F" class="headerlink" title="1. What is CMS/WCMS?"></a>1. What is CMS/WCMS?</h5><p>If we break CMS (Content Management System) into pieces,</p>
-<p><strong>Content:</strong> Content is a resource; it can be document, pdf, image, audio, or video file etc.<br><strong>Management:</strong> Organizing (add/update/delete) the content.<br><strong>System:</strong> Application/Platform which helps to manage the content.</p>
-<p>Let’s combine 3 pieces for definition,<br><strong>Content Management System (CMS):</strong> CMS is a system which helps to manage the content.<br><strong>Web Content Management System (CMS):</strong> WCMS is a system which helps to manage the content, via web interface.</p>
-<h5 id="2-_What_problem_Content_Management_systems_are_trying_to_solve_3F"><a href="#2-_What_problem_Content_Management_systems_are_trying_to_solve_3F" class="headerlink" title="2. What problem Content Management systems are trying to solve?"></a>2. What problem Content Management systems are trying to solve?</h5><p>In very high level note, we can categorize websites into <strong>Static</strong> &amp; <strong>Dynamic</strong> sites,<br>In Static Sites content is not changed so frequently, but whereas in Dynamic sites, content need to be updated very frequently.<br>There is no easy way for business people to update the content. As a developer, we can provide an option to business users to update the content by providing them Admin interfaces. But with this option, there is a risk of building and maintaining the Admin interfaces, and there is a lot of time involved in it. What if someone else provide the interfaces, we can concentrate on core development of building the website.<br>This is where <strong>Content Management Systems</strong> come into picture. Content Management System helps business users (non-technical) to easily manage their content via web interface.</p>
-<h5 id="3-_What_is_Sitecore_3F"><a href="#3-_What_is_Sitecore_3F" class="headerlink" title="3. What is Sitecore?"></a>3. What is Sitecore?</h5><p>Sitecore at its essence is a Content Management System, but it is much more than that. “Sitecore Experience Platform is a ‘blended’ solution – it combines web content management with a marketing platform.”<br>Sitecore provides an end to end solution which deals with Content management system and Digital marketing system under one platform as per corporate needs.<br><img src="/css/images/sitecoreexperienceplatform.png" alt=""></p>
-<h5 id="4-_I_am_a_-NET_developer_2C_am_I_suitable_for_Sitecore_development_3F"><a href="#4-_I_am_a_-NET_developer_2C_am_I_suitable_for_Sitecore_development_3F" class="headerlink" title="4. I am a .NET developer, am I suitable for Sitecore development?"></a>4. I am a .NET developer, am I suitable for Sitecore development?</h5><p>Yes, As Sitecore is built on .NET stack, it is best suited for .NET developer to learn and work on Sitecore implementations.</p>
-<h5 id="5-_As_a_-NET_developer_2C_how_does_it_benefit_to_learn_Sitecore_3F"><a href="#5-_As_a_-NET_developer_2C_how_does_it_benefit_to_learn_Sitecore_3F" class="headerlink" title="5. As a .NET developer, how does it benefit to learn Sitecore?"></a>5. As a .NET developer, how does it benefit to learn Sitecore?</h5><p>There are around <strong>4,900+</strong> brands are using Sitecore, and more and more brands are embracing Sitecore. So, more demand for Sitecore developers. As a developer it is good career option to explore, and importantly, you will still be working on .NET tech stack.</p>
-<h5 id="6-_Pre-requisites_to_start_learning_Sitecore_3F"><a href="#6-_Pre-requisites_to_start_learning_Sitecore_3F" class="headerlink" title="6. Pre-requisites to start learning Sitecore?"></a>6. Pre-requisites to start learning Sitecore?</h5><p>Decent amount of knowledge on the .NET technologies, like ASP.NET MVC/Web forms, C#, SQL server (although mostly we don’t write SQL queries), and basic understanding of HTML, JavaScript and JQuery.</p>
-<h5 id="7-_Where_will_I_get_Sitecore_documentation_3F"><a href="#7-_Where_will_I_get_Sitecore_documentation_3F" class="headerlink" title="7. Where will I get Sitecore documentation?"></a>7. Where will I get Sitecore documentation?</h5><p>Please refer official <a href="https://doc.sitecore.net/" target="_blank" rel="external">Sitecore documentation</a>.</p>
-<h5 id="8-_Sitecore_2C_Is_it_free_3F"><a href="#8-_Sitecore_2C_Is_it_free_3F" class="headerlink" title="8. Sitecore, Is it free?"></a>8. Sitecore, Is it free?</h5><p>No, it comes with license fee. Code is also not open source.</p>
-<h5 id="10-_Some_of_the_Indian_companies_2C_where_they_recruit_Sitecore_developers_3F"><a href="#10-_Some_of_the_Indian_companies_2C_where_they_recruit_Sitecore_developers_3F" class="headerlink" title="10. Some of the Indian companies, where they recruit Sitecore developers?"></a>10. Some of the Indian companies, where they recruit Sitecore developers?</h5><p>As per my knowledge, following are some of the organizations,</p>
-<ul>
-<li>Verndale</li>
-<li>Epsilon</li>
-<li>Sapient</li>
-<li>Accenture</li>
-<li>Mindtree</li>
-<li>HCL</li>
-<li>Unicolumn Software PVT LTD,</li>
-<li>Horizontal Integration<br>  For more info, explore <a href="http://www.sitecore.net/en/getting-started/partners/search-partners" target="_blank" rel="external">http://www.sitecore.net/en/getting-started/partners/search-partners</a></li>
-</ul>
-<h5 id="11-_From_-NET_background_2C_where_should_I_start_learning_Sitecore_3F"><a href="#11-_From_-NET_background_2C_where_should_I_start_learning_Sitecore_3F" class="headerlink" title="11. From .NET background, where should I start learning Sitecore?"></a>11. From .NET background, where should I start learning Sitecore?</h5><p>Sitecore recently launched a foundation course called <strong><a href="https://elearning.sitecore.net/public/ContentDetails.aspx?id=7B781B1C3510447BBA22D7B0BF3251A2" target="_blank" rel="external">Sitecore Developer Foundations</a></strong>, which is free, and covers Sitecore basics. Although course is free, you need a license to practice, you can approach Sitecore sales/support to get further information on trial license.</p>
-<h5 id="12-_Can_I_develop_my_personal_website_on_Sitecore_3F"><a href="#12-_Can_I_develop_my_personal_website_on_Sitecore_3F" class="headerlink" title="12. Can I develop my personal website on Sitecore?"></a>12. Can I develop my personal website on Sitecore?</h5><p>Sitecore XP is an Enterprise level Content Management system, it is overkill to use it for personal websites. It is not free; you need to pay license fee.</p>
-<h5 id="13-_What_are_all_the_Sitecore_databases_3F"><a href="#13-_What_are_all_the_Sitecore_databases_3F" class="headerlink" title="13. What are all the Sitecore databases?"></a>13. What are all the Sitecore databases?</h5><p>On very light node Sitecore uses both SQL Server (minimal support to Oracle) and Mongo DB databases; SQL Server databases are for content, and Mongo DB databases for analytics. You can find more details <a href="/2016/11/Saturday-Sitecore-Learning-Sitecore-Databases/">here</a>.</p>
-<h5 id="14-_Can_I_modify_Sitecore_databases_Schema_3F"><a href="#14-_Can_I_modify_Sitecore_databases_Schema_3F" class="headerlink" title="14. Can I modify Sitecore databases Schema?"></a>14. Can I modify Sitecore databases Schema?</h5><p>It is not advisable, if any extra tables are required we can create a custom database, and use it.</p>
-<h5 id="15-_Can_Sitecore_solutions_be_deployed_on_Cloud_3F"><a href="#15-_Can_Sitecore_solutions_be_deployed_on_Cloud_3F" class="headerlink" title="15. Can Sitecore solutions be deployed on Cloud?"></a>15. Can Sitecore solutions be deployed on Cloud?</h5><p>Yes, previously you can do it only using Infrastructure As a Service (IAAS), but recently Sitecore by collaborating with Microsoft, released Platform As a Service (PAAS) tools. Now we can easily deploy using PAAS as well.</p>
-<h5 id="16-_Is_Sitecore_available_as_Software_As_a_Service__28SAAS_29_3F"><a href="#16-_Is_Sitecore_available_as_Software_As_a_Service__28SAAS_29_3F" class="headerlink" title="16. Is Sitecore available as Software As a Service (SAAS)?"></a>16. Is Sitecore available as Software As a Service (SAAS)?</h5><p>No, Sitecore is not a portal kind of solution, which can be used as SAAS. Sitecore provides a platform for developers to implement Sitecore solutions, clients can not directly use Sitecore vanilla version.</p>
-<h5 id="17-_How_can_I_create_user_input_forms_in_Sitecore_3F"><a href="#17-_How_can_I_create_user_input_forms_in_Sitecore_3F" class="headerlink" title="17. How can I create user input forms in Sitecore?"></a>17. How can I create user input forms in Sitecore?</h5><p>Sitecore provides Web Forms For Marketers (WFFM) module, using which you can create simple web forms that record and report information provided by visitors to your website.</p>
-<h5 id="18-_Where_does_Sitecore_stores_content_managed_images_3F"><a href="#18-_Where_does_Sitecore_stores_content_managed_images_3F" class="headerlink" title="18. Where does Sitecore stores content managed images?"></a>18. Where does Sitecore stores content managed images?</h5><p>Sitecore provides two options; In Database or file system; Options are configurable.</p>
-<h5 id="19-_Where_does_Sitecore_stores_content_managed_Videos_3F"><a href="#19-_Where_does_Sitecore_stores_content_managed_Videos_3F" class="headerlink" title="19. Where does Sitecore stores content managed Videos?"></a>19. Where does Sitecore stores content managed Videos?</h5><p>Usually videos are integrated from external media platforms like Brightcove, Ooyala, YouTube, and Vimeo etc. Only Video information gets imported into Sitecore, not the Video file.</p>
-<h5 id="20-_Are_there_any_Sitecore_developer_certifications_3F"><a href="#20-_Are_there_any_Sitecore_developer_certifications_3F" class="headerlink" title="20. Are there any Sitecore developer certifications?"></a>20. Are there any Sitecore developer certifications?</h5><p>Yes, there is a <strong>Sitecore Professional Developer Certification</strong>, which developer get <strong>Sitecore Certified Professional Developer</strong> title.</p>
-<p>Will keep adding more questions and answers.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Exactly one and half year back When I started learning Sitecore as a &lt;strong&gt;.Net developer&lt;/strong&gt; few questions were in my mind. Now I
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
   </entry>
   
