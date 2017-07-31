@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-07-30T07:48:23.971Z</updated>
+  <updated>2017-07-31T19:13:02.319Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sitecore - Unknown Rendering Error</title>
+    <link href="http://gopigujjula.com/2017/07/sitecore-unknown-rendering/"/>
+    <id>http://gopigujjula.com/2017/07/sitecore-unknown-rendering/</id>
+    <published>2017-07-31T08:30:00.000Z</published>
+    <updated>2017-07-31T19:13:02.319Z</updated>
+    
+    <content type="html"><![CDATA[<p>Have you ever come across an issue, like below.</p>
+<p><img src="/css/images/placeholder-error.png" alt=""></p>
+<p>Assume that you are working in a team, and one of your team member, commit all his work (both code files, and Sitcore items) to version control, You have taken latest, and sync all Sitecore items to your local, publish, and tries to load the page.<br>Boom, you are welcomed with <strong><em>System.NullReferenceException: Object reference not set to an instance of an object</em></strong>.</p>
+<p>I face this issue [in]frequently. This always ends up with <strong>Unknown Rendering</strong> issue. Apparently your team member may forgot to check-in the rendering item, but check-in the content item, which references the rendering.</p>
+<p>Whenever you come across this issue, you can always start from checking the item presentation details for any Unknown rendering, </p>
+<p><strong>Happy Troubleshooting :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Have you ever come across an issue, like below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/css/images/placeholder-error.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Assume that you are wo
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Troubleshooting" scheme="http://gopigujjula.com/categories/Sitecore/Troubleshooting/"/>
+    
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sitecore - Missing Experience Profile Section </title>
     <link href="http://gopigujjula.com/2017/07/sitecore-experience-profile-section-missing/"/>
     <id>http://gopigujjula.com/2017/07/sitecore-experience-profile-section-missing/</id>
     <published>2017-07-30T06:13:00.000Z</published>
-    <updated>2017-07-30T07:48:23.971Z</updated>
+    <updated>2017-07-31T19:14:36.096Z</updated>
     
     <content type="html"><![CDATA[<p>Have you ever come across a scenario, where you installed Sitecore, and load the Sitecore dashboard, but only to find out whole Experience profile dashboard is missing.</p>
 <p>You might be wondering, may be installation gone wrong, or any configuration is missing.</p>
@@ -33,7 +65,7 @@
 <ul>
 <li><a href="https://doc.sitecore.net/sitecore_experience_platform/setting_up_and_maintaining/experience_management/configuring/configure_experience_management" target="_blank" rel="external">The CMS-only mode configuration</a></li>
 </ul>
-<p><strong>Happy Learning :)</strong></p>
+<p><strong>Happy Troubleshooting :)</strong></p>
 ]]></content>
     
     <summary type="html">
@@ -1117,46 +1149,6 @@
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
       <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Web Content Management System with .NET</title>
-    <link href="http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/"/>
-    <id>http://gopigujjula.com/2017/02/Sitecore-Web-CMS-with-.NET/</id>
-    <published>2017-02-22T04:30:00.000Z</published>
-    <updated>2017-07-26T08:57:18.925Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="First_presentation_in_-NET_User_Group_Bangalore"><a href="#First_presentation_in_-NET_User_Group_Bangalore" class="headerlink" title="First presentation in .NET User Group Bangalore"></a>First presentation in .NET User Group Bangalore</h4><p>I am regular attendee to <a href="https://www.meetup.com/DotNetBLR/" target="_blank" rel="external">.NET User Group Bangalore</a>. It was always my wish to present in the meetup.</p>
-<p>At last, recently I had given my first presentation in .NET User Group Bangalore, It was wonderful experience of preparing, practicing, and delivering it in front of audience.</p>
-<p><img src="/css/images/dotnetblrQ1-2017.jpg" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/crJIXdf8vGLkUP" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/RzM1DzjneL8" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the talk can be found <a href="https://www.meetup.com/DotNetBLR/events/236111732/" target="_blank" rel="external">here</a></p>
-<p>Thanks to Surendra, <a href="https://twitter.com/andhrachowdary" target="_blank" rel="external">Haribabu</a> and <a href="https://twitter.com/anandgothe" target="_blank" rel="external">Anand Gothe</a> for their support and encouragement.</p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;First_presentation_in_-NET_User_Group_Bangalore&quot;&gt;&lt;a href=&quot;#First_presentation_in_-NET_User_Group_Bangalore&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term=".NET User Group" scheme="http://gopigujjula.com/tags/NET-User-Group/"/>
     
   </entry>
   

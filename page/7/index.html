@@ -109,7 +109,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        75
+        76
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -140,6 +140,84 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Manual-Installation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/">Saturday Sitecore Learning - Manual Installation</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" style="text-align:right">
+      <time datetime="2016-10-08T03:30:00.000Z" itemprop="datePublished">October 08, 2016</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h3 id="Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File"><a href="#Saturday_Sitecore_Learning_3A_Manual_Installation_3A_Installing_from_the_-ZIP_File" class="headerlink" title="Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File"></a>Saturday Sitecore Learning: Manual Installation: Installing from the .ZIP File</h3><p>In this post, we will look into Manual installation option.</p>
+<p><strong><em>Installation Overview:</em></strong><br>Before proceeding, we need to understand what will happen in the installation process. In my previous post we discussed about installation using executable(.exe). There after giving all the information, and click on the install button, in the background it will perform the below operations,</p>
+<ul>
+<li>Creates 5 databases, like shown below,<br><img src="/css/images/sitecoredb.png" alt=""></li>
+<li>Copies Sitecore site in the specified destination folder path.</li>
+<li>Creates new website in IIS, and point to the destination folder.</li>
+<li>Takes care of the other details like updating the database information in <em>ConnectionStrings.config</em> file, folder securities, and other configurations.</li>
+</ul>
+<p>When we go through manual installation, we need to take care of all the above steps.</p>
+<p><strong><em>Sitecore Manual Installation:</em></strong><br>I have downloaded latest Sitecore .ZIP file (<em>Sitecore 8.2 rev. 160729</em>) from <a href="https://dev.sitecore.net/" target="_blank" rel="external">dev.sitecore.net</a>. Unzip the file, then we can see the three folders as shown below, copy all these three folders to destination folder.</p>
+<p><img src="/css/images/sitecore-folders.png" alt=""></p>
+<p>Now we will look into Database setup,</p>
+<p><strong>Step 1</strong>: Open SQL Server Management Studio (SSMS) in Admin mode, Right click on Databases, and select Attach new databases. All the .mdf and .ldf files are present inside the Databases folder, which can be found in the unzipped folder. Attach all five databases.</p>
+<p><img src="/css/images/attach-db.png" alt=""></p>
+<p><strong>Step 2</strong>: Next step is to create new user. Navigate to Security –&gt;Login, and click on ‘New Login’, and map all the five databases, <em>with db_owner role</em>.</p>
+<p><img src="/css/images/db-login.png" alt=""><br><img src="/css/images/new-login-1a.png" alt=""><br><img src="/css/images/new-login-1b.png" alt=""><br><img src="/css/images/new-login-1c.png" alt=""></p>
+<p>Now all the databases are set.</p>
+<p>Next we will proceed to Website setup:</p>
+<p><strong>Step 1</strong>: Copy your Sitecore license (<em>license.xml</em>) file under Data folder, and update the path in <em>Website\App_Config\Sitecore.config</em> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;sc.variable name=&quot;dataFolder&quot; value=&quot;F:\inetpub\wwwroot\Data&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>Step 2</strong>: Update the <em>ConnectionStrings.config</em> file, which is present in <em>Website\App_Config</em> path.<br><img src="/css/images/connectionstring.png" alt=""></p>
+<p><strong>Step 3:</strong> Open IIS, and create new website, and make sure to add new host with site name.</p>
+<p><img src="/css/images/IIS-website.png" alt=""></p>
+<p>Now run the site, it will load the Sitecore default home page.<br>In next post we will explore the Sitecore installation option using SIM.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/" data-id="cj19eyx6a006mmsmg4593bbee" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2016/10/Saturday-Sitecore-Learning-Manual-Installation/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Saturday-Sitecore-Learning-Web-Application-Installer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -516,58 +594,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-career-awards" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/career-awards/">Career Awards</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2016/06/career-awards/" style="text-align:right">
-      <time datetime="2016-06-12T04:30:00.000Z" itemprop="datePublished">June 12, 2016</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>2015 - Spot Award at 𝐍𝐓𝐓𝐃𝐚𝐭𝐚,<br>2016 - VET Award at 𝐕𝐞𝐫𝐧𝐝𝐚𝐥𝐞…</p>
-<p><img src="/css/images/nttdata.jpg" alt=""></p>
-<p><img src="/css/images/verndale.jpg" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2016/06/career-awards/" data-id="cj19eywrm0012msmgbypl6uzx" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2016/06/career-awards/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Career/">Career</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
       </nav>
@@ -580,6 +606,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/07/sitecore-unknown-rendering/" class="title">Sitecore - Unknown Rendering Error</a></p>
+              <p class="item-date"><time datetime="2017-07-31T08:30:00.000Z" itemprop="datePublished">July 31, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -617,15 +652,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/" class="title">Sitecore : Media Framework With Brightcove - Part 5 - Configuration</a></p>
-              <p class="item-date"><time datetime="2017-05-17T11:30:00.000Z" itemprop="datePublished">May 17, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -636,7 +662,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 

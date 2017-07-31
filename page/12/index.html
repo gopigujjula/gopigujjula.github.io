@@ -109,7 +109,7 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        75
+        76
         <span>posts</span>
       </div>
       <div class="article-info-block">
@@ -140,6 +140,71 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Print-N-numbers-without-using-Loops" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/07/Print-N-numbers-without-using-Loops/">Print N numbers without using Loops</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2012/07/Print-N-numbers-without-using-Loops/" style="text-align:right">
+      <time datetime="2012-07-30T06:50:00.000Z" itemprop="datePublished">July 30, 2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/C/">C#</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note :<em>This post is first published on Mar-2013 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<p>In some interviews we may get a question like print certain numbers without using any loops.There are many approaches to accomplish this task. Here i am giving two of the approaches</p>
+<ol>
+<li>With recursion</li>
+<li>With goto statement</li>
+</ol>
+<h4 id="With_Recursion"><a href="#With_Recursion" class="headerlink" title="With Recursion"></a>With Recursion</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">void PrintWithRecursion(int fromNumber, int toNumber)</div><div class="line">&#123;</div><div class="line">    if (fromNumber &lt;= toNumber)</div><div class="line">    &#123;</div><div class="line">        Console.Write(fromNumber + &quot; &quot;);</div><div class="line">        fromNumber++;</div><div class="line">        PrintWithRecursion(fromNumber, toNumber);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="With_goto_statement"><a href="#With_goto_statement" class="headerlink" title="With goto statement"></a>With goto statement</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">void PrintWithGoto(int fromNumber, int toNumber)</div><div class="line">&#123;</div><div class="line">  Repeat:</div><div class="line">        if (fromNumber &lt;= toNumber)</div><div class="line">        &#123;</div><div class="line">            Console.Write(fromNumber + &quot; &quot;);</div><div class="line">            fromNumber++;</div><div class="line">            goto Repeat;</div><div class="line">        &#125;</div><div class="line">  Console.Read();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Complete_Source_code_3A"><a href="#Complete_Source_code_3A" class="headerlink" title="Complete Source code:"></a>Complete Source code:</h4><p><script src="https://gist.github.com/gopigujjula/5412470.js"></script><br><strong><em>output:</em></strong></p>
+<p><img src="/css/images/loopoutput.gif" alt=""></p>
+<p><strong>Happy Coding :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2012/07/Print-N-numbers-without-using-Loops/" data-id="cj19eyx9g007ymsmgz49yp8q2" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2012/07/Print-N-numbers-without-using-Loops/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Unlocker-System-Utility" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -480,89 +545,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Logging-Tool-Log4net" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2010/12/Logging-Tool-Log4net/">Logging Tool (Log4net)</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2010/12/Logging-Tool-Log4net/" style="text-align:right">
-      <time datetime="2010-12-31T12:11:00.000Z" itemprop="datePublished">December 31, 2010</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Note : <em>This post is first published on Dec-2010 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
-<h4 id="LOGGING"><a href="#LOGGING" class="headerlink" title="LOGGING"></a>LOGGING</h4><p>It is an important component of the development cycle. It is the process of recording information with automated program. It is used to understand the activity of the application &amp; to diagnose problems.</p>
-<p><span style="font-weight:bold;">Features</span></p>
-<ul>
-<li>It provides precise context about the execution of the application.</li>
-<li>Once inserted into the code, the generation of logging output requires no human intervention.</li>
-<li>Log output can be saved in persistent medium to be studied at a later time.</li>
-</ul>
-<p><span style="font-weight:bold;">Log4net</span></p>
-<p>Its an open source library that allows .NET applications to output log statements to a variety of output targets such as to a file,the console, the database or even e.mail.<br>It allows the developer to control which log statements are output with arbitrary granularity. It is fully configurable at run time using external configuration files.</p>
-<p><span style="font-weight:bold;">Features:</span></p>
-<ul>
-<li>log4net is optimized for speed.</li>
-<li>log4net is based on a named logger hierarchy.</li>
-<li>log4net is fail-stop but not reliable.</li>
-<li>log4net is thread-safe.</li>
-<li>log4net is not restricted to a predefined set of facilities.</li>
-<li>Logging behavior can be set at run time using a configuration file. Configuration files are in XML format.</li>
-<li>log4net is designed to handle exceptions from the start.</li>
-<li>log4net categorizes logging into levels: DEBUG, INFO, WARN, ERROR and FATAL.</li>
-<li>The format of the log output can be easily changed by implementing a new layout class.</li>
-<li>The target of the log output as well as the writing strategy can be altered by writing a new appender class.</li>
-<li>log4net supports multiple output appenders per logger.</li>
-</ul>
-<p>Log4net can be downloaded from here.<a href="http://logging.apache.org/log4net/download.html" target="_blank" rel="external"> <span style="font-weight:bold;color:red;font-style:italic;">Log4net Download</span></a></p>
-<p>Log4net is from the The Apache Software Foundation<br><span style="font-weight:bold;font-size:12px">Note</span>:It can slow down the application.</p>
-<p>Other Logging frameworks are</p>
-<ul>
-<li><a href="http://logging.apache.org/log4j/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4j</span></a> for Java</li>
-<li><a href="http://logging.apache.org/log4cxx/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4cxx</span></a> for C++</li>
-<li><p><a href="http://logging.apache.org/log4php/index.html" target="_blank" rel="external"><span style="font-weight:bold;color:red;font-style:italic;font-size:11px">log4php</span></a> for PHP</p>
-<p><strong>Happy Learning :)</strong></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2010/12/Logging-Tool-Log4net/" data-id="cj19eyxb8008hmsmghiinq9rn" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2010/12/Logging-Tool-Log4net/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
       </nav>
@@ -575,6 +557,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/07/sitecore-unknown-rendering/" class="title">Sitecore - Unknown Rendering Error</a></p>
+              <p class="item-date"><time datetime="2017-07-31T08:30:00.000Z" itemprop="datePublished">July 31, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -612,15 +603,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/" class="title">Sitecore : Media Framework With Brightcove - Part 5 - Configuration</a></p>
-              <p class="item-date"><time datetime="2017-05-17T11:30:00.000Z" itemprop="datePublished">May 17, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -631,7 +613,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
