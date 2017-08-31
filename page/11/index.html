@@ -109,11 +109,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        76
+        77
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        38
+        40
         <span>tags</span>
       </div>
     </div>
@@ -140,6 +140,138 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-ASP-NET-Page-life-cycle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/ASP-NET-Page-life-cycle/">ASP.NET Page life cycle</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2014/03/ASP-NET-Page-life-cycle/" style="text-align:right">
+      <time datetime="2014-03-29T10:44:00.000Z" itemprop="datePublished">March 29, 2014</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/ASP-NET/">ASP.NET</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Note : <em>This post is first published on Mar-2014 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
+<p>This is some of the notes I have collected when digging more details on the page life cycle. The below points are fetched up from all over the net.</p>
+<p>Page Life Cycle in ASP.NET</p>
+<p><strong><em>Page_PreInit</em></strong></p>
+<ul>
+<li>This is the first event raised in the ASP.NET page life cycle.</li>
+<li>IsPostBack property would have bee already set by this event, so we can determine whether this is the first request or not.</li>
+<li>Create or re-create dynamic controls.</li>
+<li>Set a master page dynamically.</li>
+<li>Set the Theme property dynamically.</li>
+<li>Read or set profile property values.</li>
+<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
+<li>Master page can only be set in this event or before to this event. if we try to set it in any other event, exception will be thrown.</li>
+<li>There are two ways to add dynamic controls in the page,_<ul>
+<li><em>If there is no master page associated with the current page, then we can create dynamic controls in this event.</em></li>
+<li><em>If there is a master page associated with the current page, then we need to add controls in the Init event.</em></li>
+</ul>
+</li>
+</ul>
+<p><strong><em>Page_Init</em></strong></p>
+<ul>
+<li>This event is recursive, The Init event of individual controls occurs before the Init event of the page.</li>
+<li>Create or re-create dynamic controls.</li>
+<li>By using this event we can read or initialize control properties.</li>
+<li>We can set the Page.ViewStateUserKey value only in this event,if we try to set it in any other event, exception will be thrown._</li>
+<li>We can not access any ViewState and PostBack data, because that data would not be loaded by this time.</li>
+</ul>
+<p><strong><em>Page_InitComplete</em></strong></p>
+<ul>
+<li>This is the last event in the initialization.</li>
+<li>Before this event TrackViewState() method would be called. So from here on wards, any changes to viewstate data will be persisted to next postbacks.</li>
+<li>We can not access any ViewState and PostBack data in this event, because that data would not be loaded by this time.</li>
+<li>We can use this event to change any data, that should be persisted in the next postback.</li>
+</ul>
+<p><strong><em>Page_PreLoad</em></strong></p>
+<ul>
+<li>This is the first event will be called after loading the ViewState and the Postback data by two methods, LoadViewState and LoadPostData respectively.</li>
+<li><em>The purpose of the Page.PreLoad event is to provide a hook for control authors. The behavior of the load phase of the page lifecycle, is that &nbsp;the Load event is raised on the page before it is raised on all its child controls. As a control author, you might want to perform some action after viewstate is loaded (so Init is too early), but before Page_Load is called (so Load is too late). How you do that is to add an event handler to Page.PreLoad.</em></li>
+</ul>
+<p><strong><em>Page_Load</em></strong></p>
+<ul>
+<li>This event is recursive, The Load event of the page occurs before the Load event of the controls.</li>
+<li>We can use this event to set properties in controls and to establish database connections.</li>
+</ul>
+<p><strong><em>Control events</em></strong></p>
+<ul>
+<li>Use these events to handle specific control events, such as a Button control’s Click event or a TextBox control’s TextChanged event.</li>
+</ul>
+<p><strong><em>Page_LoadComplete</em></strong></p>
+<ul>
+<li>Use this event for tasks that require that all other controls on the page be loaded.</li>
+<li><em>There may be certain situations where we need to do some processing after control event, in that case Load event will be too early, so we can use the LoadComplete event for this king of processing.When you hook up several methods to the Load event you don’t know the order they will get called. So you have the PreLoad, Load and LoadComplete events to have some more control as to in what order your code gets called. The use of this might not always be clear when working only with your page class. When working with controls however, with the need to have some code running at Load time, you might want to make it run right before or right after what would normally happen in the Load event. Then you can use the PreLoad and LoadComplete methods.</em></li>
+</ul>
+<p><strong><em>Page_PreRender</em></strong></p>
+<ul>
+<li>This event is recursive, The PreRender event of the page occurs before the PreRender event of the controls.</li>
+<li>Raised after the Page object has created all controls that are required in order to render the page, including child controls of composite controls.</li>
+<li>Use the event to make final changes to the contents of the page or its controls before the rendering stage begins.</li>
+</ul>
+<p><strong><em>Page_PreRenderComplete</em></strong></p>
+<ul>
+<li>Raised after each data bound control whose DataSourceID property is set calls its DataBind method.</li>
+<li>This is the last event raised before the page’s view state is saved.</li>
+</ul>
+<p><strong><em>SaveStateComplete</em></strong></p>
+<ul>
+<li>Raised after view state and control state have been saved for the page and for all controls. Any changes to the page or controls at this point affect rendering, but the changes will not be retrieved on the next postback.</li>
+</ul>
+<p><strong><em>Render</em></strong></p>
+<ul>
+<li>This is not an event; instead, at this stage of processing, the Page object calls this method on each control. All ASP.NET Web server controls have a Render method that writes out the control’s markup to send to the browser.</li>
+</ul>
+<p><strong><em>Unload</em></strong></p>
+<ul>
+<li>This event is recursive, The Unload event of individual controls occurs before the Unload event of the page.</li>
+<li>In controls, use this event to do final cleanup for specific controls, such as closing control-specific database connections.For the page itself, use this event to do final cleanup work, such as closing open files and database connections, or finishing up logging or other request-specific tasks.</li>
+<li>During the unload stage, the page and its controls have been rendered, so you cannot make further changes to the response stream. If you attempt to call a method such as the Response.Write method, the page will throw an exception.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/" data-id="cj19eyxdu009bmsmg3aaqy857" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2014/03/ASP-NET-Page-life-cycle/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-typeof" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -457,79 +589,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Split-the-List-of-objects-into-Batches-using-LINQ" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/03/Split-the-List-of-objects-into-Batches-using-LINQ/">Split the List of objects into Batches using LINQ</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2013/03/Split-the-List-of-objects-into-Batches-using-LINQ/" style="text-align:right">
-      <time datetime="2013-03-15T13:10:00.000Z" itemprop="datePublished">March 15, 2013</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/C/">C#</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Note :<em>This post is first published on Mar-2013 in my previous blog <a href="http://Techkindle.blogspot.com" target="_blank" rel="external">Techkindle</a>. Moving the content to here.</em></p>
-<p>There may be certain situations, When we have a number of objects in the list, but we need to split the objects into batches by batch size.</p>
-<p>To achieve that we can use Skip and Take static methods in LINQ,</p>
-<ul>
-<li><strong><em>Skip</em></strong> : Bypasses a specified number of elements in a sequence and then returns the remaining elements.</li>
-<li><strong><em>Take</em></strong> : Returns a specified number of contiguous elements from the start of a sequence.</li>
-</ul>
-<p>Using both these static methods, we can split the list into multiple lists based on the batch size.</p>
-<p>While writing the source code, my main intention is to just show how to split the list into batch sizes. So didn’t take the validations, and other things into consideration.</p>
-<ol>
-<li>First of all creating a Student Class. Which is a template to create the Student objects. (We can use anonymous types also).</li>
-<li>Then writing a method to create a list of objects for student class. I have just given some random data, and creating some 23 objects.</li>
-<li>Then writing a method to split the passed list of objects into batches, based on the passed batch size.</li>
-<li>At last calling all the methods from the Main method. Here I am giving the full source code.</li>
-</ol>
-<script src="https://gist.github.com/gopigujjula/5169877.js"></script>
-
-<p>Output:<br><img src="/css/images/split-output.png" alt=""></p>
-<p><strong>Happy Coding :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2013/03/Split-the-List-of-objects-into-Batches-using-LINQ/" data-id="cj19eywtu0024msmgv36vejiw" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2013/03/Split-the-List-of-objects-into-Batches-using-LINQ/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LINQ/">LINQ</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
       </nav>
@@ -542,6 +601,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" class="title">Saturday Sitecore Learning - Basic Layout</a></p>
+              <p class="item-date"><time datetime="2017-08-26T15:48:00.000Z" itemprop="datePublished">August 26, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -579,15 +647,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/06/Saturday-Sitecore-Learning-Template-Part-7/" class="title">Saturday Sitecore Learning - Templates Part 7 (Template Types)</a></p>
-              <p class="item-date"><time datetime="2017-06-24T15:38:00.000Z" itemprop="datePublished">June 24, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -598,7 +657,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">43</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 

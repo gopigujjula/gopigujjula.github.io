@@ -109,11 +109,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        76
+        77
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        38
+        40
         <span>tags</span>
       </div>
     </div>
@@ -140,6 +140,85 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Saturday-Sitecore-Learning-Basic-Layout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/">Saturday Sitecore Learning - Basic Layout</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" style="text-align:right">
+      <time datetime="2017-08-26T15:48:00.000Z" itemprop="datePublished">August 26, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Basic_Layout"><a href="#Basic_Layout" class="headerlink" title="Basic Layout"></a>Basic Layout</h4><p>In the <a href="/2017/07/sitecore-unknown-rendering/">previous post</a>, we had explored briefly about layout components. Now let’s drill down into each one more deeply.</p>
+<p>As we discussed before, main advantage of Sitecore is, as a developer, we have full control over HTML. First step towards that is, creating a basic layout, which is similar to a master page in ASP.NET web-forms terminology.</p>
+<p>Basic layout contains the common HTML elements like <code>&lt;html&gt;,&lt;head&gt; and &lt;body&gt;</code> tags, and also have references to common resources like <em>css</em>, and <em>js</em> files.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hellworld Sitecore!!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--reference to resources--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--Main content goes here--&gt;</span></div><div class="line">  <span class="comment">&lt;!--Placeholders for modules--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>It also contain placeholders, where another modules (Sublayouts/Renderings) can be placed. In Sitecore every page, have only one layout associated with it, but can have any number of modules.</p>
+<p>When we install Sitecore, we can observe (from presentation details) that, default home page is using Sample Layout.</p>
+<p><img src="/css/images/default-sample-layout.png" alt=""></p>
+<p>We can look at the layout code, by fetching the file from deploy location <strong><em>/layouts/Sample Layout.aspx</em></strong></p>
+<p><img src="/css/images/sample-layout-code.png" alt=""></p>
+<p><strong>Now let’s have a look at, how can we create a new layout.</strong></p>
+<p>Assuming you have a VS solution, associated with your Sitecore installation, add new BasicLayout.aspx file, with the basic HTML code (as shown below), build and deploy the solution.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Helloworld Sitecore!!!<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </div><div class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	Welcome to Sitecore.</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Add a new layout in Sitecore, While adding new layout, Sitecore automatically creates one new file in deploy location, let’s delete that one.</p>
+<p><img src="/css/images/insert-layout.png" alt=""></p>
+<p><img src="/css/images/insert-layout-2.png" alt=""></p>
+<p>Copy the .aspx file location into path field,</p>
+<p><img src="/css/images/insert-layout-3.png" alt=""></p>
+<p>To verify the new layout, let’s change the layout of home page item, from presentation details.</p>
+<p><img src="/css/images/insert-layout-4.png" alt=""></p>
+<p><img src="/css/images/insert-layout-5.png" alt=""></p>
+<p>Click OK, and publish the site. For now, just ignore the controls (Sample sublayout &amp; rendering).</p>
+<p>One you load the site, you will be able to see the newly added layout’s HTML as below,</p>
+<p><img src="/css/images/insert-layout-6.png" alt=""></p>
+<p>Till now, we have only looked at .aspx layout, we can also follow pretty similar steps to create MVC layout, where file extension would be .cshtml.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" data-id="cj6ztbf3a0000acmqbri0ccjr" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Basic-Layout/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-sitecore-unknown-rendering" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -179,7 +258,8 @@ ga('send', 'pageview');
 <p><img src="/css/images/placeholder-error.png" alt=""></p>
 <p>Assume that you are working in a team, and one of your team member, commit all his work (both code files, and Sitcore items) to version control, You have taken latest, and sync all Sitecore items to your local, publish, and tries to load the page.<br>Boom, you are welcomed with <strong><em>System.NullReferenceException: Object reference not set to an instance of an object</em></strong>.</p>
 <p>I face this issue [in]frequently. This always ends up with <strong>Unknown Rendering</strong> issue. Apparently your team member may forgot to check-in the rendering item, but check-in the content item, which references the rendering.</p>
-<p>Whenever you come across this issue, you can always start from checking the item presentation details for any Unknown rendering, </p>
+<p>Whenever you come across this issue, you can always start from checking the item presentation details for any Unknown rendering,</p>
+<p><img src="/css/images/unknown-rendering.png" alt=""></p>
 <p><strong>Happy Troubleshooting :)</strong></p>
 
       
@@ -499,96 +579,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Sitecore-Media-Framework-With-Brightcove-Configuration" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/">Sitecore : Media Framework With Brightcove - Part 5 - Configuration</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/" style="text-align:right">
-      <time datetime="2017-05-17T11:30:00.000Z" itemprop="datePublished">May 17, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
-<li><strong>Configuration</strong></li>
-</ul>
-<h4 id="Part_5_-_Configuration"><a href="#Part_5_-_Configuration" class="headerlink" title="Part 5 - Configuration"></a>Part 5 - Configuration</h4><h4 id="1-_Customize_Brightcove_Templates"><a href="#1-_Customize_Brightcove_Templates" class="headerlink" title="1. Customize Brightcove Templates"></a>1. Customize Brightcove Templates</h4><p>When we install Brightcove connector, there are some of the main templates gets added,</p>
-<p><img src="/css/images/brightcove-templates.png" alt=""></p>
-<p>We can use brightcove templates, similar way as our custom templates,</p>
-<ul>
-<li>Inherit from other templates</li>
-<li>Add new fields</li>
-<li>Add presentation</li>
-</ul>
-<p><img src="/css/images/brightcove-template-customize.png" alt=""></p>
-<p>When Brightcove Sync operation runs, our newly added field values are not effected, as there are no corresponding fields in Brightcove to sync.</p>
-<p><em>Note: Do not modify the existing fields, as the sync operation may not work as expected.</em></p>
-<h4 id="2-_TDS__26amp_3B_Code_generation"><a href="#2-_TDS__26amp_3B_Code_generation" class="headerlink" title="2. TDS &amp; Code generation"></a>2. TDS &amp; Code generation</h4><p>We can add Brightcove templates to project, similar way as any other templates. As there are couple of custom field types present, need to modify code gen templates accordingly.<br>Ex: Image Preview, Read-Only Text, etc.</p>
-<p><img src="/css/images/brightcove-template-codegen.png" alt=""></p>
-<h4 id="3-_Video_Search_Index"><a href="#3-_Video_Search_Index" class="headerlink" title="3. Video Search Index"></a>3. Video Search Index</h4><p>Brightcove connector includes “<strong><em>mediaframework_brightcove_index</em></strong>“ index in <strong><em>Sitecore.ContentSearch.MediaFramework.Brightcove.config</em></strong> file. This index crawls on <strong><em>master</em></strong> database, and it is used for searching Brightcove items in Sitecore client.</p>
-<p><img src="/css/images/brightcove-video-search-index.png" alt=""></p>
-<h4 id="4-_CM__26amp_3B_CD_Configuration"><a href="#4-_CM__26amp_3B_CD_Configuration" class="headerlink" title="4. CM &amp; CD Configuration"></a>4. CM &amp; CD Configuration</h4><ul>
-<li>To perform automatic media synchronization, Brightcove connector uses <strong><em>MediaFramework_Import_Brightcove</em></strong> scheduling agent, which is present in <strong><em>Sitecore.MediaFramework.Services.Brightcove.config</em></strong> file. This is required only on CM.</li>
-</ul>
-<p><img src="/css/images/brightcove-scheduling-agent.png" alt=""></p>
-<p><strong>Configurations not required on CD</strong></p>
-<ul>
-<li>Scheduling Agents</li>
-<li>Brightcove Search Index</li>
-</ul>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/" data-id="cj2sqawa40007okmg8rvuoyq7" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brightcove/">Brightcove</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Media-Framework/">Sitecore Media Framework</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
       </nav>
@@ -601,6 +591,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" class="title">Saturday Sitecore Learning - Basic Layout</a></p>
+              <p class="item-date"><time datetime="2017-08-26T15:48:00.000Z" itemprop="datePublished">August 26, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -638,15 +637,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/06/Saturday-Sitecore-Learning-Template-Part-7/" class="title">Saturday Sitecore Learning - Templates Part 7 (Template Types)</a></p>
-              <p class="item-date"><time datetime="2017-06-24T15:38:00.000Z" itemprop="datePublished">June 24, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -657,7 +647,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">43</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
