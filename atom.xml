@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-08-31T03:16:47.673Z</updated>
+  <updated>2017-09-04T03:50:57.623Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Saturday Sitecore Learning - Sublayouts</title>
+    <link href="http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Sublayouts/"/>
+    <id>http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Sublayouts/</id>
+    <published>2017-08-31T03:16:00.000Z</published>
+    <updated>2017-09-04T03:50:57.623Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sublayouts/Renderings"><a href="#Sublayouts/Renderings" class="headerlink" title="Sublayouts/Renderings"></a>Sublayouts/Renderings</h4><p>In the <a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/">previous post</a>, we had looked into Basic layout, which holds common level HTML tags, and placeholders for components. Now let’s look into what are components, and how to create them.</p>
+<p>Components are called as <strong>Sublayouts</strong> in <strong>ASP.NET web-forms</strong> context, and <strong>Renderings</strong> in <strong>ASP.NET MVC</strong> context. They are independent of the page items, so that they can be placed on any number of pages, any number of times.</p>
+<p>In Sitecore tree, Sublayouts and Renderings reside under <strong>Layout/Sublayouts</strong>, and <strong>Layout/Renderings</strong> nodes respectively.</p>
+<p><img src="/css/images/sublayouts-renderings.png" alt=""></p>
+<h5 id="Placeholders"><a href="#Placeholders" class="headerlink" title="Placeholders"></a>Placeholders</h5><p>Before creating components, let’s briefly look about <strong>Placeholders</strong>. Placeholders are identified by a key, and used for placing the components in certain position on the page. Components are added to the page, using the key. In run time, Sitecore uses this placeholder key, to render components on to the page.</p>
+<p>To add a placeholder, open the previously created <strong>BasicLayout.aspx</strong> file, and add a placeholder key as below,<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">sc:placeholder</span> <span class="attr">key</span>=<span class="string">"center"</span> <span class="attr">runat</span>=<span class="string">"server"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">Page</span> <span class="attr">Language</span>=<span class="string">"C#"</span> <span class="attr">AutoEventWireup</span>=<span class="string">"true"</span> <span class="attr">CodeBehind</span>=<span class="string">"BasicLayout.aspx.cs"</span></span></div><div class="line">    <span class="attr">Inherits</span>=<span class="string">"ScDemo.layouts.BasicLayout"</span> %&gt;</div><div class="line"></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld Sitecore!!!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"form1"</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        Welcome to Sitecore.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">sc:placeholder</span> <span class="attr">key</span>=<span class="string">"content"</span> <span class="attr">runat</span>=<span class="string">"server"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h5 id="How_to_create_a_Sublayout"><a href="#How_to_create_a_Sublayout" class="headerlink" title="How to create a Sublayout"></a>How to create a Sublayout</h5><p><strong>Step 1:</strong><br>Login to Sitecore, add a <strong>Demo</strong> Sublayout folder under Sublayouts, to better organize the components,</p>
+<p><img src="/css/images/add-sublayout-1.png" alt=""><br><img src="/css/images/add-sublayout-2.png" alt=""></p>
+<p><strong>Step 2:</strong><br>Add a <strong>Demo Sublayout</strong> under Demo folder,</p>
+<p><img src="/css/images/add-sublayout-3.png" alt=""><br><img src="/css/images/add-sublayout-4.png" alt=""><br><img src="/css/images/add-sublayout-5.png" alt=""><br><img src="/css/images/add-sublayout-6.png" alt=""><br><img src="/css/images/add-sublayout-7.png" alt=""></p>
+<p><strong>Step 3:</strong><br>Open VS solution, add <strong>Sublayouts</strong> folder, and add <strong>DemoSublayout</strong> user control.</p>
+<p><img src="/css/images/add-sublayout-8.png" alt=""><br><img src="/css/images/add-sublayout-9.png" alt=""></p>
+<p><strong>Step 4:</strong><br>Add some sample text, to the user control as below,</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">Control</span> <span class="attr">Language</span>=<span class="string">"C#"</span> <span class="attr">AutoEventWireup</span>=<span class="string">"true"</span> <span class="attr">CodeBehind</span>=<span class="string">"DemoSublayout.ascx.cs"</span></span></div><div class="line">    <span class="attr">Inherits</span>=<span class="string">"ScDemo.layouts.DemoSublayout"</span> %&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    This is a sample sublayout</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>Step 5:</strong><br>Build and publish the code, so that code moves to deploy location,</p>
+<p><strong>Step 6:</strong><br>Again login to Sitecore, open the <strong>DemoSublayout</strong> item, and verify file path in <strong>Path</strong> field.</p>
+<p><strong>Step 7</strong><br>Now goto Home item presentation details, and delete the existing components. Add the <strong>DemoSublayout</strong> component with <strong>content</strong> placeholder key.</p>
+<p><img src="/css/images/add-sublayout-10.png" alt=""><br><img src="/css/images/add-sublayout-11.png" alt=""><br><img src="/css/images/add-sublayout-12.png" alt=""><br><img src="/css/images/add-sublayout-13.png" alt=""><br><img src="/css/images/add-sublayout-14.png" alt=""></p>
+<p><strong>Step 8</strong><br>Publish Sitecore items, and load the home page,</p>
+<p><img src="/css/images/add-sublayout-15.png" alt=""><br><img src="/css/images/add-sublayout-16.png" alt=""></p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sublayouts/Renderings&quot;&gt;&lt;a href=&quot;#Sublayouts/Renderings&quot; class=&quot;headerlink&quot; title=&quot;Sublayouts/Renderings&quot;&gt;&lt;/a&gt;Sublayouts/Renderings&lt;/
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
+      <category term="Sublayouts" scheme="http://gopigujjula.com/tags/Sublayouts/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Saturday Sitecore Learning - Basic Layout</title>
     <link href="http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Basic-Layout/"/>
     <id>http://gopigujjula.com/2017/08/Saturday-Sitecore-Learning-Basic-Layout/</id>
     <published>2017-08-26T15:48:00.000Z</published>
-    <updated>2017-08-31T03:16:47.673Z</updated>
+    <updated>2017-09-01T05:57:45.401Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Basic_Layout"><a href="#Basic_Layout" class="headerlink" title="Basic Layout"></a>Basic Layout</h4><p>In the <a href="/2017/07/sitecore-unknown-rendering/">previous post</a>, we had explored briefly about layout components. Now let’s drill down into each one more deeply.</p>
 <p>As we discussed before, main advantage of Sitecore is, as a developer, we have full control over HTML. First step towards that is, creating a basic layout, which is similar to a master page in ASP.NET web-forms terminology.</p>
@@ -32,8 +85,9 @@
 <p>We can look at the layout code, by fetching the file from deploy location <strong><em>/layouts/Sample Layout.aspx</em></strong></p>
 <p><img src="/css/images/sample-layout-code.png" alt=""></p>
 <p><strong>Now let’s have a look at, how can we create a new layout.</strong></p>
-<p>Assuming you have a VS solution, associated with your Sitecore installation, add new BasicLayout.aspx file, with the basic HTML code (as shown below), build and deploy the solution.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Helloworld Sitecore!!!<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </div><div class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	Welcome to Sitecore.</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Assuming you have a VS solution, associated with your Sitecore installation, add new <strong>BasicLayout.aspx</strong> file, with the basic code (as shown below), build and deploy the solution.</p>
+<p><img src="/css/images/add-layout-1.png" alt=""></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">Page</span> <span class="attr">Language</span>=<span class="string">"C#"</span> <span class="attr">AutoEventWireup</span>=<span class="string">"true"</span> <span class="attr">CodeBehind</span>=<span class="string">"BasicLayout.aspx.cs"</span></span></div><div class="line">    <span class="attr">Inherits</span>=<span class="string">"ScDemo.layouts.BasicLayout"</span> %&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld Sitecore!!!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"form1"</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        Welcome to Sitecore.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Add a new layout in Sitecore, While adding new layout, Sitecore automatically creates one new file in deploy location, let’s delete that one.</p>
 <p><img src="/css/images/insert-layout.png" alt=""></p>
 <p><img src="/css/images/insert-layout-2.png" alt=""></p>
@@ -1064,73 +1118,6 @@
     <summary type="html">
     
       &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Layouts_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Layouts_level&quot; class=&quot;headerlin
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Enhancing Content Author Experience - Part 1 (Templates)</title>
-    <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/"/>
-    <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/</id>
-    <published>2017-02-25T21:05:00.000Z</published>
-    <updated>2017-07-30T07:10:52.052Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Template_level"><a href="#Enhancing_Content_Author_Experience_-_Template_level" class="headerlink" title="Enhancing Content Author Experience - Template level"></a>Enhancing Content Author Experience - Template level</h4><p>This is the first post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
-<p>As a Sitecore developer, I always feel we have two primary users of our work; One is a website visitor, and second one is Content authors. Most of the time, we tend to give more importance to our site visitor, as they make the business happen, but we need to give equal importance to Content authors, to improve their overall experience of managing content.</p>
-<p>In this three post series, let’s explore some of the tips to enhance content author experience,<br>Lets divide this Enhancing Content author experience into three levels</p>
-<ol>
-<li>Template</li>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/">Layout</a></li>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/">Content</a></li>
-</ol>
-<p>As part of this post, let’s explore templates.</p>
-<p><img src="/css/images/sitecore-templates-content-author-experience.png" alt=""></p>
-<h5 id="1-_Template_Icon"><a href="#1-_Template_Icon" class="headerlink" title="1. Template Icon"></a>1. Template Icon</h5><p>Template Icons help to visually separate semantically related content items. We can Visually provide clues to the type of item in the content tree, by choosing unique icon to each template.</p>
-<p><img src="/css/images/contenttree.png" alt=""></p>
-<p>Image Courtesy: <a href="https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/" target="_blank" rel="external">https://sitecorecreative.wordpress.com/2012/07/13/sitecore-icon-selector/</a></p>
-<p>As a content author, how do you feel, when you see the left side and right side content trees in above screen shot. Definitely left side tree, is much more helpful, because by looking at icons, we can understand item type.</p>
-<p>Icons can be set at template level, or item level. Two ways we can set icons, one is by directly clicking on the template icon, another one is from configure tab.</p>
-<p><img src="/css/images/template-icon.png" alt=""></p>
-<p><img src="/css/images/template-icon-configure.png" alt=""></p>
-<h5 id="2-_Field_Type"><a href="#2-_Field_Type" class="headerlink" title="2. Field Type"></a>2. Field Type</h5><p>Selecting appropriate field type is key for managing the content, as field type effects, what control content author use to modify that field content. Sitecore provides various in-built field types, and if needed we can also create custom field types. Check out more about field types <a href="/tags/Sitecore-Field-Types/">here</a>.</p>
-<p>For example, let’s take the case of Multilist or Multilist with search field types. Both provides a list of items, to choose, but second field type provides extra search option too, this is very much useful, when there are too many selectable items, otherwise it is difficult to scroll and select.</p>
-<p><img src="/css/images/list-field-type.png" alt=""></p>
-<p><img src="/css/images/list-with-search-field-type.png" alt=""></p>
-<h5 id="3-_Field_Source"><a href="#3-_Field_Source" class="headerlink" title="3. Field Source"></a>3. Field Source</h5><p>For list field types, we can control the list of selectable items to be displayed, using field source property. Field source can be set using; Sitecore query, path, and GUID. When Treelist field type is used, and source is not set, full Sitecore tree is displayed in selectable items. Then it is very difficult for Content author, to navigate and select the appropriate item from root node.</p>
-<p><img src="/css/images/without-field-source.png" alt=""></p>
-<p><img src="/css/images/with-field-source.png" alt=""></p>
-<h5 id="4-_Field_Help_Message"><a href="#4-_Field_Help_Message" class="headerlink" title="4. Field Help Message"></a>4. Field Help Message</h5><p>Help message gives extra information to Content Authors about particular field. Sitecore provides the ability to add help information to fields in three ways – using short description, long description, and help link. These three fields are part of the standard fields.<br>Short description is displayed beside the field title, Long description is visible on field title mouse hover, Help link can be navigated, by clicking on field title.</p>
-<p><img src="/css/images/help-message.png" alt=""></p>
-<h5 id="5-_Field_Sorting"><a href="#5-_Field_Sorting" class="headerlink" title="5. Field Sorting"></a>5. Field Sorting</h5><p>For each page, or component, there may be lot of content fields to manage. But among all the fields, there may be few fields which gets changed very frequently. But if these fields are at bottom of the field list, every time content author has to scroll, to make any updates. It is better to place most frequently modified fields on top, using Sort order field, which is part of the standard fields. By default, Sitecore will set sort order to 100 points.</p>
-<p><img src="/css/images/field-sort-order.png" alt=""></p>
-<h5 id="6-_Folder_Templates_-_Insert_Options"><a href="#6-_Folder_Templates_-_Insert_Options" class="headerlink" title="6. Folder Templates - Insert Options"></a>6. Folder Templates - Insert Options</h5><p>Folder templates are used for the purpose of organizing a collection of items. (ex: Rendering folder, Template Folder). The <strong>insert options</strong> configuration provides that the templates relevant to the folder are immediately available.<br>The default folder template for content items is <strong>/sitecore/templates/Common/Folder</strong>.<br>To create a custom folder template, we need to inherit from the default folder template, and then configure with custom insert options.</p>
-<p><img src="/css/images/folder-template.png" alt=""></p>
-<h5 id="7-_Parameter_Templates"><a href="#7-_Parameter_Templates" class="headerlink" title="7. Parameter Templates"></a>7. Parameter Templates</h5><p>There is a difference between <strong>What</strong> &amp; <strong>How to</strong> content. What content means is the actual content on site, whereas How to content means, which controls behavior of the content, example, Search page size, CSS class, number of carousel items.<br>Most of the time, we tend to mix <strong><em>How to</em></strong> content fields with <strong><em>What</em></strong> content fields, but it is very important to don’t mix both, to make sure content looks neat and clean.<br>On component level, we can manage “How to” content using key value pair section. But Content Authors may find difficult to remember, &amp; enter exact key names. To avoid this we can use parameter templates.</p>
-<p>Managing <strong>How to</strong> content becomes more easier using parameter templates. We can create parameter templates, like any other templates, but these templates should inherit from <strong><em>/sitecore/templates/System/Layout/Rendering Parameters/Standard Rendering Parameters</em></strong></p>
-<p>Once parameter template is created, it can be added to component using <strong>Parameters Template</strong> on the rendering.</p>
-<p><img src="/css/images/parameter-template.png" alt=""></p>
-<p>Only one parameter template is allowed on one component, that is the reason inheritance is very important for the parameter templates.</p>
-<p>Once parameter template is added to component, Content can be modified from Control Properties which can be accessed using Page Item Presentation details.</p>
-<p><img src="/css/images/parameter-template-content.png" alt=""></p>
-<p>Thank you for reading, in next post, will explore the tips from layout level.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Template_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Template_level&quot; class=&quot;headerl
     
     </summary>
     

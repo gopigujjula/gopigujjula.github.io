@@ -109,11 +109,11 @@ ga('send', 'pageview');
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        77
+        78
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        40
+        41
         <span>tags</span>
       </div>
     </div>
@@ -140,6 +140,85 @@ ga('send', 'pageview');
 
       
       <section id="main">
+      <article id="post-Sitecore-Enhancing-Content-Author-Experience-Part-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/">Sitecore Enhancing Content Author Experience - Part 3 (Content)</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/" style="text-align:right">
+      <time datetime="2017-02-26T11:54:00.000Z" itemprop="datePublished">February 26, 2017</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
+<ol>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
+<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/">Layout</a></li>
+<li>Content</li>
+</ol>
+<p>In last two posts, we had explored from both template &amp; layout level, in this post, let’s explore at Content level.</p>
+<p><img src="/css/images/sitecore-content-author-experience-content-level.png" alt=""></p>
+<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days almost all Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
+<p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them using experience editor. That’s the reason, we always need to render fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
+<p>Some of the examples:</p>
+<p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Text runat=&quot;server&quot; ID=&quot;Title&quot; Field=&quot;Name&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Name&quot;)</div></pre></td></tr></table></figure></p>
+<p><strong>Image:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Image runat=&quot;server&quot; ID=&quot;ListingImage&quot; Field=&quot;Listing Image&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Listing Image&quot;)</div></pre></td></tr></table></figure></p>
+<p><strong>General Link:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Link runat=&quot;server&quot; ID=&quot;CTA&quot; Field=&quot;CTA&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;CTA&quot;)</div></pre></td></tr></table></figure></p>
+<h5 id="2-_Custom_Experience_Editor_Button"><a href="#2-_Custom_Experience_Editor_Button" class="headerlink" title="2. Custom Experience Editor Button"></a>2. Custom Experience Editor Button</h5><p>Sitecore does not support in-line editing for Checkbox, Multilist, TreeList, and other fields. There are no specific Sitecore controls to support these field types. By utilizing <strong>Custom Experience Editor buttons</strong>, we can provide editing option in experience editor for these fields. In this post let’s explore, how do we achieve it with Field Editor button.</p>
+<p><strong>Field Editor Button:</strong><br>We can find all experience editor buttons in core database, under <strong><em>/sitecore/Content/Applications/WebEdit</em></strong> item.<br>Following are the steps, to configure a field editor button,<br><strong>Step 1:</strong> Switch to the Core database, navigate to <strong><em>/sitecore/Content/Applications/WebEdit/Custom Experience Buttons</em></strong> items in content editor.<br><strong>Step 2:</strong> Create a new button item, using <strong><em>/sitecore/templates/System/WebEdit/Field Editor Button</em></strong> template.<br><strong>Step 3:</strong> Fill out all four fields, Header, Icon, Fields, Tooltip. Fields is the important one here, as we need to add the field title name. (In our case <strong><em>Country</em></strong> is the field which is of Multilist field type)</p>
+<p><img src="/css/images/custom-field-editor-button.png" alt=""></p>
+<p><strong>Step 4:</strong> Switch to master database, and navigate to the component (sub-layout/rendering), and map the newly created button using <strong>Experience Editor Buttons</strong> field.</p>
+<p><img src="/css/images/rendering-custom-experience-button.png" alt=""></p>
+<p><strong>Step 5:</strong> Now go to experience editor, and edit the component, we can see new Edit button, using which we can edit Country Multilist field.</p>
+<p><img src="/css/images/Country-field-editor-button.png" alt=""></p>
+<p>We can use, <strong>Edit frames</strong> to achieve the same.</p>
+<p>In Summary, being a developer, sometimes we often overlook the importance of Content Authors experience to manage their content. It is very important to imagine ourselves as Content Author position, and think how difficult they feel while managing the content.<br>Even after knowing all the topics, we tend to miss few of the things, because of the tight deadlines, or for some other reasons. But it is better to have a <strong>check list</strong>, and do a self-review on these points, before moving any component development to next environment.</p>
+<p>Thank you, and that’s all for now.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/" data-id="cj19eywwe0034msmg1yfv2ryo" class="article-share-link">Share</a>
+      
+        <a href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Content-Author-Experience/">Content Author Experience</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Sitecore-Enhancing-Content-Author-Experience-Part-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -569,98 +648,6 @@ ga('send', 'pageview');
 
 
     
-      <article id="post-Saturday-Sitecore-Learning-Template-Part-4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/">Saturday Sitecore Learning - Templates Part 4 (Link Field Types)</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" style="text-align:right">
-      <time datetime="2017-02-04T02:47:00.000Z" itemprop="datePublished">February 04, 2017</time>
-    </a>
-  </div>
-
-
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <h4 id="Link_Field_Types"><a href="#Link_Field_Types" class="headerlink" title="Link Field Types"></a>Link Field Types</h4><p>This is the fourth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p><strong>Sitecore 8.2 (rev. 160729)</strong></p>
-<p>In last two posts, we discussed about <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-2/">Simple field types</a> &amp; <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">List field types</a>, now let’s look into <strong>Link</strong> field types.</p>
-<h5 id="Link_types_3A"><a href="#Link_types_3A" class="headerlink" title="Link types:"></a>Link types:</h5><p>Link field types allow content authors to enter links to Sitecore internal items, external URLs, anchors, and email addresses.</p>
-<p><img src="/css/images/sitecore-link-types.png" alt=""></p>
-<ul>
-<li><strong>Droplink:</strong> Similar to the Droplist field type, which we had seen in the previous <a href="/2017/01/Saturday-Sitecore-Learning-Template-Part-3/">post</a>, this field type also allows the content author to select a single item from the list specified by the source property of the field. If the source is not set, no items are shown in the drop-down.<br><em>Field source can be set while declaring the field, using Source property.</em><br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/droplink-field-type.png" alt=""></p>
-<p><img src="/css/images/droplink-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>Droptree:</strong> This field type also allows the content author to select a single item from the list specified by the source property of the field. Items are shown in tree-view rather than the normal drop-down. If the source is not set, it shows the entire tree.<br><em>Raw value:</em> Selected Item GUID<br><em>Field type class:</em> Sitecore.Data.Fields.RefernceField<br><em>Field Renderer supported:</em> No<br><em>Allowed format in source field property:</em> GUID, Path, and XPath Query</li>
-</ul>
-<p><img src="/css/images/droptree-field-type.png" alt=""></p>
-<p><img src="/css/images/droptree-field-type-without-source.png" alt=""></p>
-<ul>
-<li><strong>General Link:</strong> This is the most frequently used link field type. This type allows content authors to link to a Sitecore item, an external URL, an anchor, an email address, or a JavaScript function.<br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/general-link-field-type.png" alt=""></p>
-<ul>
-<li><strong>General Link with Search:</strong> This is similar to General Link field type, except that this one is having an extra link search functionality. Using this, content authors can search (for Internal link) and link to items.<br><em>Recently we come across a scenario where clients want to search for an item to link, because it is tedious for them to navigate to that item, (we can use other field types, but they want to ) this field type came to our rescue :)</em><br><em>Raw value:</em> XHTML<br><em>Field type class:</em> Sitecore.Data.Fields.LinkField<br><em>Field Renderer supported:</em> Yes</li>
-</ul>
-<p><img src="/css/images/general-link-with-search-field-type.png" alt=""></p>
-<p> <strong>Version Identity:</strong> and <strong>Version Link:</strong> field types are used by Sitecore for internal purposes.</p>
-<p>Till now we looked into Simple, List, and field types. But there are other field types which are not so frequently  used by developers.</p>
-<ul>
-<li>Analytics</li>
-<li>Social</li>
-<li>Developer Types</li>
-<li>System Types</li>
-</ul>
-<p><em>Raw value: A value which gets stored in the database for each field.<br>Field type class: Using which developer can access the field values.<br>Field Renderer supported: Field type has corresponding FieldRenderer web control, when used, content authors can use Experience editor to manage the content for particular field.</em></p>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf" target="_blank" rel="external">https://sdn.sitecore.net/upload/sitecore6/65/data_definition_reference_sc64-65-usletter.pdf</a></li>
-<li><a href="http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html" target="_blank" rel="external">http://www.mtelligent.com/home/2014/8/29/sitecore-field-type-overview-reference.html</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/" data-id="cj19eyx13004jmsmgn2f9wirs" class="article-share-link">Share</a>
-      
-        <a href="http://gopigujjula.com/2017/02/Saturday-Sitecore-Learning-Template-Part-4/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beginner/">Beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore/">Sitecore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sitecore-Field-Types/">Sitecore Field Types</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
       <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
       </nav>
@@ -673,6 +660,15 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+              <p class="item-title"><a href="/2017/08/Saturday-Sitecore-Learning-Sublayouts/" class="title">Saturday Sitecore Learning - Sublayouts</a></p>
+              <p class="item-date"><time datetime="2017-08-31T03:16:00.000Z" itemprop="datePublished">August 31, 2017</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -710,15 +706,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
-              <p class="item-title"><a href="/2017/07/Saturday-Sitecore-Learning-Layout/" class="title">Saturday Sitecore Learning - Layout</a></p>
-              <p class="item-date"><time datetime="2017-07-08T15:38:00.000Z" itemprop="datePublished">July 08, 2017</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -729,7 +716,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">43</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">44</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
