@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Gopi Notes</title>
-  <subtitle>Notes on .NET &amp; Sitecore</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
@@ -58,11 +58,11 @@
       <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
     
     
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
       <category term="Sublayouts" scheme="http://gopigujjula.com/tags/Sublayouts/"/>
     
@@ -116,11 +116,11 @@
       <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
     
     
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
   </entry>
   
@@ -200,7 +200,7 @@
     <link href="http://gopigujjula.com/2017/07/sitecore-helix-project-learnings/"/>
     <id>http://gopigujjula.com/2017/07/sitecore-helix-project-learnings/</id>
     <published>2017-07-23T05:30:00.000Z</published>
-    <updated>2017-07-23T14:41:05.263Z</updated>
+    <updated>2017-07-23T14:41:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>I am currently working on a project which is based on the Helix principles, it has been couple of months, since I started working on this, here are some of my learnings, we use TDS (Team Development for Sitecore),</p>
 <h4 id="1-TDS_Sync_3A_one_Sitecore_item_to_one_TDS_project"><a href="#1-TDS_Sync_3A_one_Sitecore_item_to_one_TDS_project" class="headerlink" title="1.TDS Sync: one Sitecore item to one TDS project"></a>1.TDS Sync: one Sitecore item to one TDS project</h4><p>Never sync same Sitecore item into multiple TDS projects, this creates lot of dependencies, as well as your automated package deployments go for a toss.</p>
@@ -238,7 +238,7 @@
     <link href="http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/"/>
     <id>http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/</id>
     <published>2017-07-08T15:38:00.000Z</published>
-    <updated>2017-07-09T11:00:24.738Z</updated>
+    <updated>2017-07-09T11:00:26.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><p>In previous posts, we learned all about templates, how to create a field, inheriting from another template, and setting default values using Standard values.</p>
 <p>Once we have a template created, we need to output the field content on pages/modules. This is where <strong>Layout</strong> comes into picture, layout is all about the presentation information, and also using which we make the connection between Sitecore and .NET code.</p>
@@ -277,11 +277,11 @@
       <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
     
     
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
   </entry>
   
@@ -290,7 +290,7 @@
     <link href="http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/"/>
     <id>http://gopigujjula.com/2017/06/Saturday-Sitecore-Learning-Template-Part-7/</id>
     <published>2017-06-24T15:38:00.000Z</published>
-    <updated>2017-07-01T07:06:32.011Z</updated>
+    <updated>2017-07-01T07:06:34.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Template_Types"><a href="#Template_Types" class="headerlink" title="Template Types"></a>Template Types</h4><p>This is the seventh post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p>In previous posts, we learned about template fields, field types, importance of template inheritance, and Standard Values. In this post, let’s explore <strong>Template Types</strong>.</p>
@@ -350,11 +350,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
   </entry>
   
@@ -363,7 +363,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/</id>
     <published>2017-05-17T11:30:00.000Z</published>
-    <updated>2017-05-17T10:38:23.419Z</updated>
+    <updated>2017-05-17T10:38:24.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
@@ -429,7 +429,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/</id>
     <published>2017-05-15T11:30:00.000Z</published>
-    <updated>2017-05-17T08:55:03.333Z</updated>
+    <updated>2017-05-17T08:55:04.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
@@ -517,7 +517,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/</id>
     <published>2017-05-14T10:30:00.000Z</published>
-    <updated>2017-05-17T12:04:11.706Z</updated>
+    <updated>2017-05-17T12:04:12.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
@@ -592,7 +592,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/</id>
     <published>2017-05-12T05:30:00.000Z</published>
-    <updated>2017-05-17T08:53:39.658Z</updated>
+    <updated>2017-05-17T08:53:40.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
@@ -669,7 +669,7 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/</id>
     <published>2017-05-03T13:33:00.000Z</published>
-    <updated>2017-05-17T08:54:11.097Z</updated>
+    <updated>2017-05-17T08:54:12.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
 <li><strong>Installing Media Framework Module</strong></li>
@@ -772,7 +772,7 @@
     <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
     <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
     <published>2017-04-23T14:30:00.000Z</published>
-    <updated>2017-07-26T08:56:45.158Z</updated>
+    <updated>2017-09-10T03:18:47.798Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
@@ -788,9 +788,7 @@
     
     </summary>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -808,7 +806,7 @@
     <link href="http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/"/>
     <id>http://gopigujjula.com/2017/04/Sitecore-search-tips-computed-field-return-value/</id>
     <published>2017-04-14T17:25:00.000Z</published>
-    <updated>2017-04-27T07:28:34.014Z</updated>
+    <updated>2017-04-27T07:28:36.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/css/images/sitecore-search-logo.png" alt=""></p>
 <p>Computed field helps us in doing some extra processing before adding the value to index.</p>
@@ -842,7 +840,7 @@
     <link href="http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/"/>
     <id>http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/</id>
     <published>2017-04-08T04:54:00.000Z</published>
-    <updated>2017-04-08T15:13:23.002Z</updated>
+    <updated>2017-04-08T15:13:24.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Standard_Values"><a href="#Standard_Values" class="headerlink" title="Standard Values"></a>Standard Values</h4><p>This is the sixth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
 <p>In previous posts, we learned about template fields, different field types and importance of template inheritance, in this post, let’s explore <strong>Standard Values</strong>.</p>
@@ -889,11 +887,11 @@
       <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
     
     
+      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
+    
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
     
   </entry>
   
@@ -902,7 +900,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
     <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-07-26T08:57:11.967Z</updated>
+    <updated>2017-09-10T03:18:47.790Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -919,9 +917,7 @@
     
     </summary>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -939,7 +935,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/</id>
     <published>2017-03-13T12:30:00.000Z</published>
-    <updated>2017-07-26T08:56:58.993Z</updated>
+    <updated>2017-09-10T03:18:47.799Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -956,9 +952,7 @@
     
     </summary>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -976,7 +970,7 @@
     <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
     <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
     <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-07-26T08:57:05.786Z</updated>
+    <updated>2017-09-10T03:18:47.792Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
 <h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
@@ -993,9 +987,7 @@
     
     </summary>
     
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Talks/"/>
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
     
     
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
@@ -1013,7 +1005,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/</id>
     <published>2017-02-26T11:54:00.000Z</published>
-    <updated>2017-07-30T07:08:55.157Z</updated>
+    <updated>2017-07-30T07:08:56.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <ol>
@@ -1066,7 +1058,7 @@
     <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/"/>
     <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/</id>
     <published>2017-02-26T04:54:00.000Z</published>
-    <updated>2017-07-30T07:12:26.510Z</updated>
+    <updated>2017-07-30T07:12:28.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
 <ol>
