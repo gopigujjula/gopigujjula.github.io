@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-09-04T03:50:57.623Z</updated>
+  <updated>2017-10-06T12:13:16.587Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,131 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore: ZeroDeploy Tool</title>
+    <link href="http://gopigujjula.com/2017/10/Sitecore-ZeroDeploy-Tool/"/>
+    <id>http://gopigujjula.com/2017/10/Sitecore-ZeroDeploy-Tool/</id>
+    <published>2017-10-06T02:08:00.000Z</published>
+    <updated>2017-10-06T12:13:16.587Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>ZeroDeploy Developer is a tool designed to improve the Sitecore development process by reducing the number of times the Sitecore development environment restarts. Normally, everytime you push new compiled code to Sitecore, the IIS Application Domain reloads itself. This process can take a while even on a fast computer and a clean environment. ZeroDeploy Developer prevents Sitecore from restarting every time compiled code changes.</p>
+<p>This blog helps the developer setup ZeroDeploy in their local environment and shows some strategies that will help to get the most out of ZeroDeploy.</p>
+<p><em>ZeroDeploy tool is being developed by <strong>Hedgehog</strong>, and at present it is in <strong>Beta 2</strong> version.</em></p>
+<h4 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h4><p>ZeroDeploy is designed to work on <strong>Sitecore 8.2</strong> and later. The Visual Studio component of ZeroDeploy can only be installed on <strong>Visual Studio 2015 and 2017</strong>.</p>
+<h4 id="Getting_Started_3A"><a href="#Getting_Started_3A" class="headerlink" title="Getting Started:"></a>Getting Started:</h4><p><strong>Step 1:</strong></p>
+<ul>
+<li>Click on <a href="https://www.teamdevelopmentforsitecore.com/Zero-Deploy-Beta" target="_blank" rel="external">https://www.teamdevelopmentforsitecore.com/Zero-Deploy-Beta</a> link, sign in with your company credentials (personal email id’s are not allowed). You can download ZeroDeploy zip folder and you will also receive an email from Hedgehog, which has the trial key.</li>
+<li>Unzip the folder and double click on <strong>Hedgehog.ZeroDeploy.VSAddin.vsix</strong> to install it on VS 2015 and above.</li>
+</ul>
+<p><strong>Step 2: nuget setup</strong></p>
+<ul>
+<li>Copy all <em>.nupkg</em> files from the ZeroDeploy zip file to a local location (eg. <em>C:\Projects\ZeroDeployBeta\</em>)</li>
+<li>Create a <em>nuget.config</em> to the root of your solution (next to your <em>.sln</em> file)</li>
+<li>Update the <em>nuget.config</em> file with the following code. In line number 4, the path should be the location of your</li>
+<li><p>ZeroDeployBeta nuget packages:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;configuration&gt;</div><div class="line">  &lt;packageSources&gt;</div><div class="line">    &lt;add key=&quot;Zero Deploy Beta&quot; value=&quot;C:\Projects\ZeroDeployBeta&quot; /&gt;</div><div class="line">  &lt;/packageSources&gt;</div><div class="line">  &lt;activePackageSource&gt;</div><div class="line">    &lt;add key=&quot;All&quot; value=&quot;(Aggregate source)&quot; /&gt;</div><div class="line">  &lt;/activePackageSource&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Open the solution. Right click on the main website project, usually located inside the Common folder and then select “Manage NuGet Packages…”</p>
+</li>
+<li>Change to the “Zero Deploy Beta” package source in the top right dropdown control, and switch to the Browse tab in the top left:<br><img src="/css/images/zerodeploy-1.png" alt=""></li>
+<li>Select the Hedgehog.ZeroDeploy.Build package and install it.</li>
+<li>Right click on the .Website project located inside the Common folder, you should be able to see Zero Deploy tab, as shown below:<br><img src="/css/images/zerodeploy-2.png" alt=""></li>
+</ul>
+<p><strong>Step 3: Sitecore Changes</strong></p>
+<p>ASP.Net has a feature to recycle the application pool automatically if it re-compiles too many views. This prevents memory leaks in a production environment due to obsolete view assemblies being held in memory. This is less of an issue in local development, and since ZeroDeploy allows you to make many changes to your assemblies without a recycle, this behavior is not desirable.<br>Setting the attribute numRecompilesBeforeAppRestart on the system.web/compilation element to a large number prevents .Net from recycling after a few View updates.</p>
+<ul>
+<li><p>Update Sitecore’s web.config as shown:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;compilation defaultLanguage=&quot;c#&quot; debug=&quot;false&quot; targetFramework=&quot;4.5.2&quot; numRecompilesBeforeAppRestart=&quot;200&quot;&gt;</div><div class="line"> &lt;assemblies&gt;</div><div class="line">  ....</div><div class="line"> &lt;/assemblies&gt;</div><div class="line">&lt;/compilation&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Add ZeroDeploy components to your Sitecore instance:<br>Go to <website url="">/sitecore/admin/UpdateInstallationWizard.aspx, select the Hedgehon.ZeroDeploy1.0.0.12.update file (which is in ZeroDeploy zip folder), and install it.</website></p>
+</li>
+</ul>
+<p><strong>Step 4: Changes to the Solution for the main project :</strong></p>
+<ul>
+<li>Create a new solution configuration: Click on Build-&gt;Configuration Manager<br><img src="/css/images/zerodeploy-3.png" alt=""></li>
+<li>In Active Solution Configuration, select New<br><img src="/css/images/zerodeploy-4.png" alt=""></li>
+<li>Create a new configuration as shown below<br><img src="/css/images/zerodeploy-5.png" alt=""></li>
+<li>In the configuration drop down, select the Zerodeploy<br><img src="/css/images/zerodeploy-6.png" alt=""></li>
+<li>Create a Conditional Compilation Symbol called ZERO_DEPLOY in Web Application project properties<br><img src="/css/images/zerodeploy-7.png" alt=""></li>
+<li>Select the Zero Deploy property tab and fill the fields with respect to your project<br><img src="/css/images/zerodeploy-8.png" alt=""><br>Click on View License add your trial key.</li>
+<li><p>Update <em>Properties/ApplicationInfo.cs</em> as shown below</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[assembly: AssemblyFileVersion(&quot;1.0.0.0&quot;)]</div><div class="line">#if ZERO_DEPLOY</div><div class="line">[assembly: AssemblyVersion(&quot;1.0.*&quot;)]</div><div class="line">[assembly: Hedgehog.ZeroDeploy.Client.Attributes.ZeroDeployAssembly]</div><div class="line">#else</div><div class="line">[assembly: AssemblyVersion(&quot;1.0.0.0&quot;)]</div><div class="line">#endif</div></pre></td></tr></table></figure>
+</li>
+<li><p>Build the project once.</p>
+</li>
+<li>In your Sitecore instance, you should get your .Website assembly under ZeroDeploy item, as shown below:<br><img src="/css/images/zerodeploy-9.png" alt=""></li>
+<li>Delete the ZeroDeploy assemblies from /bin folder of the main website project as shown:<br><img src="/css/images/zerodeploy-10.png" alt=""></li>
+</ul>
+<p><strong>Step 5: Changes to the Solution for  Adding additional assemblies to ZeroDeploy</strong></p>
+<ul>
+<li>Add the Hedgehog.ZeroDeploy.Client NuGet package to the project you want to add ZeroDeploy support.</li>
+<li><p>Make the changes to the Properties/ApplicationInfo.cs file:<br>[assembly: AssemblyFileVersion(“1.0.0.0”)]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#if ZERO_DEPLOY</div><div class="line">[assembly: AssemblyVersion(&quot;1.0.*&quot;)]</div><div class="line">[assembly: Hedgehog.ZeroDeploy.Client.Attributes.ZeroDeployAssembly]</div><div class="line">#else</div><div class="line">[assembly: AssemblyVersion(&quot;1.0.0.0&quot;)]</div><div class="line">#endif</div></pre></td></tr></table></figure>
+</li>
+<li><p>Build the project. ZeroDeploy build process will push the assembly to your Sitecore instance. You should get a similar message in the output window:<br><img src="/css/images/zerodeploy-11.png" alt=""></p>
+</li>
+<li>Test your Sitecore instance. You should get the assembly in your sitecore, under Zero deploy tab, as shown<br><img src="/css/images/zerodeploy-12.png" alt=""></li>
+<li>Delete the ZeroDeploy assemblies from /bin folder of the project as shown:<br><img src="/css/images/zerodeploy-10.png" alt=""></li>
+</ul>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><p>Work on your solution as usually. Every time you need to test a change that was made to a project, just build the project; the build process will copy the updated assembly to Sitecore and will automatically load it.Then you can test your changes in Sitecore.<br>From some quick tests we made: it takes about 3 minutes to get Sitecore up after a change in an assembly, after doing the same change with ZeroDeploy enabled, Sitecore is up in 10 seconds.</p>
+<h4 id="Known_Limitations"><a href="#Known_Limitations" class="headerlink" title="Known Limitations"></a>Known Limitations</h4><ul>
+<li>Currently ZeroDeploy has no integrations made with TDS, that means that TDS projects have to be removed from the Build options when using ZeroDeploy configuration:<br><img src="/css/images/zerodeploy-13.png" alt=""><br>But this also means the changes made to Views or configuration files will not be moved to Sitecore during a build. Hedgehog’s solution to this problem is to use gulp to automatically move these files when they have been modified.<br>Additionally, please know that updating a configuration file will also cause the AppPool to restart, breaking ZeroDeploy functionality.</li>
+</ul>
+<p><strong>Initially blogged at <a href="http://deployzero.blogspot.in/2017/08/introduction-zerodeploy-developer-is.html" target="_blank" rel="external">http://deployzero.blogspot.in/2017/08/introduction-zerodeploy-developer-is.html</a></strong></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://www.teamdevelopmentforsitecore.com/zero-deploy-beta" target="_blank" rel="external">https://www.teamdevelopmentforsitecore.com/zero-deploy-beta</a></li>
+</ul>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h4&gt;&lt;p&gt;ZeroDeploy Developer is a tool
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="ZeroDeploy" scheme="http://gopigujjula.com/tags/ZeroDeploy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Search Tips: Querying Number/Date Range</title>
+    <link href="http://gopigujjula.com/2017/09/Search-tips-querying-range/"/>
+    <id>http://gopigujjula.com/2017/09/Search-tips-querying-range/</id>
+    <published>2017-09-10T02:08:00.000Z</published>
+    <updated>2017-09-10T14:18:56.509Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore-search-logo.png" alt=""></p>
+<p>While querying the index, for date range, we should always use <strong>Between<t></t></strong> extension method from the <strong>Sitecore.ContentSearch.Linq.MethodExtensions</strong> namespace, which is present in the <strong>Sitecore.ContentSearch.Linq</strong> assembly.</p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore-search-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;While querying the index, for date range, we should always use &lt;strong&gt;Bet
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Tech Tips" scheme="http://gopigujjula.com/categories/Sitecore/Tech-Tips/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
+    
+      <category term="Between" scheme="http://gopigujjula.com/tags/Between/"/>
+    
+  </entry>
   
   <entry>
     <title>Saturday Sitecore Learning - Sublayouts</title>
@@ -997,132 +1122,6 @@
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
     
       <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Enhancing Content Author Experience - Part 3 (Content)</title>
-    <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/"/>
-    <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/</id>
-    <published>2017-02-26T11:54:00.000Z</published>
-    <updated>2017-07-30T07:08:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Content_level"><a href="#Enhancing_Content_Author_Experience_-_Content_level" class="headerlink" title="Enhancing Content Author Experience - Content level"></a>Enhancing Content Author Experience - Content level</h4><p>This is the third and final post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
-<ol>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/">Layout</a></li>
-<li>Content</li>
-</ol>
-<p>In last two posts, we had explored from both template &amp; layout level, in this post, let’s explore at Content level.</p>
-<p><img src="/css/images/sitecore-content-author-experience-content-level.png" alt=""></p>
-<h5 id="1-_Sitecore_Web_Controls"><a href="#1-_Sitecore_Web_Controls" class="headerlink" title="1. Sitecore Web Controls"></a>1. Sitecore Web Controls</h5><p>Sitecore provides two editors for managing the content, i.e. Content Editor &amp; Experience Editor. Now a days almost all Content Authors are using Experience editor to manage their content. To support their activities in Experience Editor, as a developer we need to take care of few things.</p>
-<p>If we render any field content with normal HTML/.NET controls, Content authors will not have any provision to manage them using experience editor. That’s the reason, we always need to render fields content using Sitecore web controls, in this way content author can manage them from experience editor as well.</p>
-<p>Some of the examples:</p>
-<p><strong>Single Line Text:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Text runat=&quot;server&quot; ID=&quot;Title&quot; Field=&quot;Name&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Name&quot;)</div></pre></td></tr></table></figure></p>
-<p><strong>Image:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Image runat=&quot;server&quot; ID=&quot;ListingImage&quot; Field=&quot;Listing Image&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;Listing Image&quot;)</div></pre></td></tr></table></figure></p>
-<p><strong>General Link:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;sc:Link runat=&quot;server&quot; ID=&quot;CTA&quot; Field=&quot;CTA&quot; /&gt;</div><div class="line">or</div><div class="line">@Html.Sitecore().Field(&quot;CTA&quot;)</div></pre></td></tr></table></figure></p>
-<h5 id="2-_Custom_Experience_Editor_Button"><a href="#2-_Custom_Experience_Editor_Button" class="headerlink" title="2. Custom Experience Editor Button"></a>2. Custom Experience Editor Button</h5><p>Sitecore does not support in-line editing for Checkbox, Multilist, TreeList, and other fields. There are no specific Sitecore controls to support these field types. By utilizing <strong>Custom Experience Editor buttons</strong>, we can provide editing option in experience editor for these fields. In this post let’s explore, how do we achieve it with Field Editor button.</p>
-<p><strong>Field Editor Button:</strong><br>We can find all experience editor buttons in core database, under <strong><em>/sitecore/Content/Applications/WebEdit</em></strong> item.<br>Following are the steps, to configure a field editor button,<br><strong>Step 1:</strong> Switch to the Core database, navigate to <strong><em>/sitecore/Content/Applications/WebEdit/Custom Experience Buttons</em></strong> items in content editor.<br><strong>Step 2:</strong> Create a new button item, using <strong><em>/sitecore/templates/System/WebEdit/Field Editor Button</em></strong> template.<br><strong>Step 3:</strong> Fill out all four fields, Header, Icon, Fields, Tooltip. Fields is the important one here, as we need to add the field title name. (In our case <strong><em>Country</em></strong> is the field which is of Multilist field type)</p>
-<p><img src="/css/images/custom-field-editor-button.png" alt=""></p>
-<p><strong>Step 4:</strong> Switch to master database, and navigate to the component (sub-layout/rendering), and map the newly created button using <strong>Experience Editor Buttons</strong> field.</p>
-<p><img src="/css/images/rendering-custom-experience-button.png" alt=""></p>
-<p><strong>Step 5:</strong> Now go to experience editor, and edit the component, we can see new Edit button, using which we can edit Country Multilist field.</p>
-<p><img src="/css/images/Country-field-editor-button.png" alt=""></p>
-<p>We can use, <strong>Edit frames</strong> to achieve the same.</p>
-<p>In Summary, being a developer, sometimes we often overlook the importance of Content Authors experience to manage their content. It is very important to imagine ourselves as Content Author position, and think how difficult they feel while managing the content.<br>Even after knowing all the topics, we tend to miss few of the things, because of the tight deadlines, or for some other reasons. But it is better to have a <strong>check list</strong>, and do a self-review on these points, before moving any component development to next environment.</p>
-<p>Thank you, and that’s all for now.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Content_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Content_level&quot; class=&quot;headerlin
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Enhancing Content Author Experience - Part 2 (Layouts)</title>
-    <link href="http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/"/>
-    <id>http://gopigujjula.com/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-2/</id>
-    <published>2017-02-26T04:54:00.000Z</published>
-    <updated>2017-07-30T07:12:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Enhancing_Content_Author_Experience_-_Layouts_level"><a href="#Enhancing_Content_Author_Experience_-_Layouts_level" class="headerlink" title="Enhancing Content Author Experience - Layouts level"></a>Enhancing Content Author Experience - Layouts level</h4><p>This is the second post as part of <a href="/tags/Content-Author-Experience/">Sitecore Enhancing Content Author Experience series</a>.</p>
-<ol>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-1/">Template</a></li>
-<li>Layout</li>
-<li><a href="/2017/02/Sitecore-Enhancing-Content-Author-Experience-Part-3/">Content</a></li>
-</ol>
-<p>In previous post, we had explored how can we enhance content author experience from template perspective, in this post, let’s explore at layouts level.</p>
-<p><img src="/css/images/sitecore-layouts-content-author-experience.png" alt=""></p>
-<h5 id="1-_Data_source_Location"><a href="#1-_Data_source_Location" class="headerlink" title="1. Data source Location"></a>1. Data source Location</h5><p>In Sitecore, each page is a collection of components. We can add any number of components to a page, and some of the components we add to the page, have their own associated content. Content authors can select the associated  content using data source. If we are not restricting data source location, then full content tree is shown in the selectable items list, then content authors have a tough time to navigate and select the associated content.</p>
-<p>Giving proper Datasource location helps in this situation, we can set selectable items location, while creating sub-layout/rendering using <strong>Datasource Location</strong> field.</p>
-<p><img src="/css/images/datasource-selection.png" alt=""></p>
-<p><strong><em>without data source location (full content tree is listed as bel)</em></strong></p>
-<p><img src="/css/images/without-datasource-location.png" alt=""></p>
-<p><strong><em>with data source location (items shown, based on the location)</em></strong></p>
-<p><img src="/css/images/with-datasource-location.png" alt=""></p>
-<p><a href="http://firebreaksice.com/sitecore-rendering-datasource-locations/" target="_blank" rel="external">Here</a> you can read more information about data source location.</p>
-<h5 id="2-_Data_source_Template"><a href="#2-_Data_source_Template" class="headerlink" title="2. Data source Template"></a>2. Data source Template</h5><p>Once we specify data source location, still content author has to know, What’s the associated content item to choose. If there are only similar content items present in the location, then it becomes easier. But what if there are different variety of content items are present, then it is our job to guide them, to select proper items.</p>
-<p>We can achieve this by using Datasource template, which can be set on sub-layout/rendering <strong>Datasource Template</strong> field.</p>
-<p><img src="/css/images/datasource-template-selection.png" alt=""></p>
-<p>Without Data source Template:</p>
-<ul>
-<li>Any content item can be selected.</li>
-<li><strong><em>Create New Content</em></strong> option is grayed out, because, Sitecore does not know, using which template it has to create new item. (I remember in Sitecore certification exam, there was a question on when does Create New Content is grayed out)</li>
-</ul>
-<p><img src="/css/images/without-datasource-template.png" alt=""></p>
-<p>With Data source template:</p>
-<ul>
-<li>Sitecore prompts with a message, when other template item is selected.</li>
-<li>Create New Item option is available, using which Content authors can create new content directly from here.</li>
-</ul>
-<p><img src="/css/images/with-datasource-template.png" alt=""></p>
-<h5 id="3-_Placeholder_Settings"><a href="#3-_Placeholder_Settings" class="headerlink" title="3. Placeholder Settings"></a>3. Placeholder Settings</h5><p>We can empower the Experience Editor using placeholder settings (Allowed Controls). It is very important to set allowed controls for each placeholder, otherwise it would be difficult for content authors to know, What are all components can be placed on particular placeholder.</p>
-<p>Without allowed controls being set, content authors have to navigate from root and find exact component to add.</p>
-<p><img src="/css/images/placeholder-settings.png" alt=""></p>
-<p><strong><em>Without Allowed controls being set</em></strong></p>
-<p><img src="/css/images/without-placeholder-settings.png" alt=""></p>
-<p><strong><em>With Allowed controls being set</em></strong></p>
-<p><img src="/css/images/with-placeholder-settings.png" alt=""></p>
-<h5 id="4-_Thumbnail"><a href="#4-_Thumbnail" class="headerlink" title="4. Thumbnail"></a>4. Thumbnail</h5><p>After allowed controls is being set, now content authors can see the list of renderings in <strong>Select a Rendering</strong> window. But there is no visual clue, about what design they see on page, by selecting a particular component. Thumbnail is useful for this purpose.</p>
-<p>Thumbnail can be set at Rendering/sub-layout items. We have an option to take screen shot as well, or select an image from media library.</p>
-<p><img src="/css/images/rendering-thumbnail.png" alt=""></p>
-<p>Below, we can observe that “Article module” is having thumbnail view, but Product module is not having any thumbnail view.</p>
-<p><img src="/css/images/with-rendering-thumbnail.png" alt=""></p>
-<p>Thank you for reading, in next post, will explore the tips from content level.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Enhancing_Content_Author_Experience_-_Layouts_level&quot;&gt;&lt;a href=&quot;#Enhancing_Content_Author_Experience_-_Layouts_level&quot; class=&quot;headerlin
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Enhancing Content Author Experience" scheme="http://gopigujjula.com/categories/Sitecore/Enhancing-Content-Author-Experience/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Content Author Experience" scheme="http://gopigujjula.com/tags/Content-Author-Experience/"/>
     
   </entry>
   
