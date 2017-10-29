@@ -156,6 +156,40 @@
   </entry>
   
   <entry>
+    <title>Sitecore Search: Absolute Basics</title>
+    <link href="http://gopigujjula.com/2017/09/Sitecore-Search-Topics-SUG-Webinar/"/>
+    <id>http://gopigujjula.com/2017/09/Sitecore-Search-Topics-SUG-Webinar/</id>
+    <published>2017-09-23T14:30:00.000Z</published>
+    <updated>2017-10-29T14:45:54.373Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Sitecore_Search_-_Absolute_Basics"><a href="#Sitecore_Search_-_Absolute_Basics" class="headerlink" title="Sitecore Search - Absolute Basics"></a>Sitecore Search - Absolute Basics</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/kOf9wHZYPYNNld" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/X4lhrm1gO38" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/september-2017-search-absolute-basics/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Sitecore_Search_-_Absolute_Basics&quot;&gt;&lt;a href=&quot;#Sitecore_Search_-_Absolute_Basics&quot; class=&quot;headerlink&quot; title=&quot;Sitecore Search - Absolute
+    
+    </summary>
+    
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Search Tips: Querying Number/Date Range</title>
     <link href="http://gopigujjula.com/2017/09/Search-tips-querying-range/"/>
     <id>http://gopigujjula.com/2017/09/Search-tips-querying-range/</id>
@@ -527,6 +561,41 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sitecore Goals – Why, What &amp; How</title>
+    <link href="http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/"/>
+    <id>http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/</id>
+    <published>2017-05-27T14:30:00.000Z</published>
+    <updated>2017-10-29T14:52:11.493Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/7kOlvZ6GydjyD0" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/gfILKfnswkk" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/may-2017-indegene/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Presentation_Deck_3A&quot;&gt;&lt;a href=&quot;#Presentation_Deck_3A&quot; class=&quot;headerlink&quot; title=&quot;Presentation Deck:&quot;&gt;&lt;/a&gt;Presentation Deck:&lt;/h5&gt;
+	&lt;if
+    
+    </summary>
+    
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
@@ -1064,76 +1133,6 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore - Media Framework with Brightcove - Part 2 Webinar</title>
-    <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/"/>
-    <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-2-Webinar/</id>
-    <published>2017-03-19T12:30:00.000Z</published>
-    <updated>2017-09-10T03:18:47.790Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 2"></a>Sitecore : Media Framework with Brightcove - Part 2</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/toDc9toW1ncHoU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/b_vY6WtE2gA" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-2/" target="_blank" rel="external">here</a></p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_2&quot; class=&quot;heade
-    
-    </summary>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore : Brightcove Video Cloud Connector</title>
-    <link href="http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/"/>
-    <id>http://gopigujjula.com/2017/03/Sitecore-Brightcove-Video-Cloud-Connector/</id>
-    <published>2017-03-13T12:30:00.000Z</published>
-    <updated>2017-09-10T03:18:47.799Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Brightcove_Video_Cloud_Connector"><a href="#Sitecore__3A_Brightcove_Video_Cloud_Connector" class="headerlink" title="Sitecore : Brightcove Video Cloud Connector"></a>Sitecore : Brightcove Video Cloud Connector</h4><p><img src="/css/images/SUG-Hyd-March-Meetup.png" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/HDnATMkuSkn5g5" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><p>No Recorded video.</p>
-<p>More details about the session can be found <a href="https://www.meetup.com/Sitecore-User-Group-Hyderabad/events/238207641/" target="_blank" rel="external">here</a></p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Sitecore__3A_Brightcove_Video_Cloud_Connector&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Brightcove_Video_Cloud_Connector&quot; class=&quot;headerlink&quot; title=&quot;Si
-    
-    </summary>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
-    
-      <category term="SUG Hyderabad" scheme="http://gopigujjula.com/tags/SUG-Hyderabad/"/>
     
   </entry>
   
