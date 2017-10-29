@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Sitecore: Add HTML Snippet to Rich Text Editor (RTE) | Gopi Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Sitecore,Begineer" />
+    
+    <meta name="description" content="Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control. Step 1:Login to Sitecore, and select core database, from the options available at the right side bot">
+<meta name="keywords" content="Sitecore,Begineer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sitecore: Add HTML Snippet to Rich Text Editor (RTE)">
+<meta property="og:url" content="http://gopigujjula.com/2017/10/Sitecore-RTE-Add-HTML-Snippet/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control. Step 1:Login to Sitecore, and select core database, from the options available at the right side bot">
+<meta property="og:image" content="http://gopigujjula.com/css/images/add-html-snippet-1.png">
+<meta property="og:updated_time" content="2017-10-29T14:19:56.471Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sitecore: Add HTML Snippet to Rich Text Editor (RTE)">
+<meta name="twitter:description" content="Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control. Step 1:Login to Sitecore, and select core database, from the options available at the right side bot">
+<meta name="twitter:image" content="http://gopigujjula.com/css/images/add-html-snippet-1.png">
+    
+
+    
+        <link rel="alternate" href="atom.xml" title="Gopi Notes" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <!--<h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>-->
+                    <!---->                    
+                    <h2 class="subtitle-wrap">
+                        <a href="/" class="custom-logo"><p class="subtitle">GOPI NOTES</p></a>
+                    </h2>
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/">Sitecore</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech-Talks/">Tech Talks</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Sitecore/">Sitecore</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Sitecore-RTE-Add-HTML-Snippet" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Sitecore: Add HTML Snippet to Rich Text Editor (RTE)
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="article-date">
+            <time datetime="2017-10-29T01:29:00.000Z" itemprop="datePublished">October 29, 2017</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Begineer/">Begineer</a>, <a class="tag-link" href="/tags/Sitecore/">Sitecore</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control.</p>
+<p><strong>Step 1:</strong><br>Login to Sitecore, and select <strong><em>core</em></strong> database, from the options available at the right side bottom.</p>
+<p><img src="/css/images/add-html-snippet-1.png" alt=""></p>
+<p><strong>Step 2:</strong><br>Open Content Editor, and navigate to <em>/sitecore/system/Settings/Html Editor Profiles</em> item, where you can see the <strong>Rich Text Profiles</strong>.</p>
+<p><img src="/css/images/add-html-snippet-2.png" alt=""></p>
+<p><strong>Step 3:</strong><br>Open the <em>Rich Text Full</em>, and navigate to <em>/sitecore/system/Settings/Html Editor Profiles/Rich Text Full/Snippets</em> item, under which we add custom HTML snippets.</p>
+<p><strong>Step 4:</strong><br>Under Snippets, create a new Snippet, by using the <em>/sitecore/templates/System/Html Editor Profiles/Html Editor Snippet</em> template, which contains <em>Header</em> and <em>Value</em> fields.</p>
+<p><img src="/css/images/add-html-snippet-3.png" alt=""></p>
+<p><strong>Step 5:</strong><br>Fill the <strong>Header</strong> and <strong>Value</strong> fields, <strong>Header</strong> field holds the title to be displayed in Rich Text Editor, and <strong>Value</strong> field holds the actual HTML block elements.<br>I have added an Image as well.</p>
+<p><img src="/css/images/add-html-snippet-4.png" alt=""><br><em>as this is core database, no need to publish the changes</em></p>
+<p><strong>Step 6:</strong><br>This completes the work on <strong>Core</strong> database, let’s switch back to <strong>Master</strong> database. Create a template with Rich Text field, and have source field point to the Rich Text Profile, for which you have added HTML snippet.</p>
+<p><img src="/css/images/add-html-snippet-5.png" alt=""></p>
+<p>To enable all the Rich fields to use this control, make change in the configuration to <strong>HtmlEditor.DefaultProfile</strong></p>
+<p><img src="/css/images/add-html-snippet-6.png" alt=""></p>
+<p><strong>Step 7:</strong><br>Navigate to the content item, and open the Rich Text Editor, click on the <strong>Insert Code Snippet</strong> option and select the<br><strong>Custom HTML Block</strong>, which inserts the HTML.</p>
+<p><img src="/css/images/add-html-snippet-7.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-8.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-9.png" alt=""></p>
+<p><strong>Step 8:</strong><br>Once the HTML block is added, content authors have flexibility to modify it, event Image can also be modified, by selecting the Image, and right click to get the options.</p>
+<p><img src="/css/images/add-html-snippet-10.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-11.png" alt=""></p>
+<p><strong>Happy Learning :)</strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://gopigujjula.com/2017/10/Sitecore-RTE-Add-HTML-Snippet/" data-id="cj9cqe50n0000jwmjauepdes7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCulVk2SgR3IrCRgz8jTJ-Jg" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/+gopikreddygujjula" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/gopikreddy.gn" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/10/Sitecore-ZeroDeploy-Tool/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Sitecore: ZeroDeploy Tool</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/add-html-snippet-1.png)" alt="Sitecore: Add HTML Snippet to Rich Text Editor (RTE)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="title">Sitecore: Add HTML Snippet to Rich Text Editor (RTE)</a></p>
+                            <p class="item-date"><time datetime="2017-10-29T01:29:00.000Z" itemprop="datePublished">October 29, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/zerodeploy-1.png)" alt="Sitecore: ZeroDeploy Tool" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="title">Sitecore: ZeroDeploy Tool</a></p>
+                            <p class="item-date"><time datetime="2017-10-06T02:08:00.000Z" itemprop="datePublished">October 06, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/Search-tips-querying-range/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/sitecore-search-logo.png)" alt="Search Tips: Querying Number/Date Range" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a></p>
+                            <p class="item-title"><a href="/2017/09/Search-tips-querying-range/" class="title">Search Tips: Querying Number/Date Range</a></p>
+                            <p class="item-date"><time datetime="2017-09-10T02:08:00.000Z" itemprop="datePublished">September 10, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/08/Saturday-Sitecore-Learning-Sublayouts/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/sublayouts-renderings.png)" alt="Saturday Sitecore Learning - Sublayouts" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+                            <p class="item-title"><a href="/2017/08/Saturday-Sitecore-Learning-Sublayouts/" class="title">Saturday Sitecore Learning - Sublayouts</a></p>
+                            <p class="item-date"><time datetime="2017-08-31T03:16:00.000Z" itemprop="datePublished">August 31, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/default-sample-layout.png)" alt="Saturday Sitecore Learning - Basic Layout" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></p>
+                            <p class="item-title"><a href="/2017/08/Saturday-Sitecore-Learning-Basic-Layout/" class="title">Saturday Sitecore Learning - Basic Layout</a></p>
+                            <p class="item-date"><time datetime="2017-08-26T15:48:00.000Z" itemprop="datePublished">August 26, 2017</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech-Talks/">Tech Talks</a><span class="category-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/NET-User-Group/" style="font-size: 10px;">.NET User Group</a> <a href="/tags/ASP-NET/" style="font-size: 12.22px;">ASP.NET</a> <a href="/tags/Bangalore-Tech-event/" style="font-size: 11.11px;">Bangalore Tech event</a> <a href="/tags/Begineer/" style="font-size: 10px;">Begineer</a> <a href="/tags/Beginner/" style="font-size: 18.89px;">Beginner</a> <a href="/tags/Between/" style="font-size: 10px;">Between</a> <a href="/tags/Books/" style="font-size: 11.11px;">Books</a> <a href="/tags/Brightcove/" style="font-size: 14.44px;">Brightcove</a> <a href="/tags/C/" style="font-size: 16.67px;">C#</a> <a href="/tags/Career/" style="font-size: 11.11px;">Career</a> <a href="/tags/Certification/" style="font-size: 10px;">Certification</a> <a href="/tags/Computed-Index/" style="font-size: 10px;">Computed Index</a> <a href="/tags/Content-Author-Experience/" style="font-size: 12.22px;">Content Author Experience</a> <a href="/tags/Dotnet-User-Group/" style="font-size: 11.11px;">Dotnet User Group</a> <a href="/tags/Habitat/" style="font-size: 10px;">Habitat</a> <a href="/tags/Helix/" style="font-size: 10px;">Helix</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/LINQ/" style="font-size: 10px;">LINQ</a> <a href="/tags/MVC/" style="font-size: 10px;">MVC</a> <a href="/tags/Presentation/" style="font-size: 15.56px;">Presentation</a> <a href="/tags/SUG-Bangalore/" style="font-size: 13.33px;">SUG Bangalore</a> <a href="/tags/SUG-Hyderabad/" style="font-size: 10px;">SUG Hyderabad</a> <a href="/tags/Saturday-Sitecore-Learning/" style="font-size: 17.78px;">Saturday Sitecore Learning</a> <a href="/tags/Search/" style="font-size: 11.11px;">Search</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Sitecore/" style="font-size: 20px;">Sitecore</a> <a href="/tags/Sitecore-Field-Types/" style="font-size: 12.22px;">Sitecore Field Types</a> <a href="/tags/Sitecore-Media-Framework/" style="font-size: 14.44px;">Sitecore Media Framework</a> <a href="/tags/Sitecore-User-Group/" style="font-size: 14.44px;">Sitecore User Group</a> <a href="/tags/Sublayouts/" style="font-size: 10px;">Sublayouts</a> <a href="/tags/TDS/" style="font-size: 10px;">TDS</a> <a href="/tags/Technical-Books/" style="font-size: 11.11px;">Technical Books</a> <a href="/tags/Tools/" style="font-size: 15.56px;">Tools</a> <a href="/tags/User-Group/" style="font-size: 11.11px;">User Group</a> <a href="/tags/Walking/" style="font-size: 10px;">Walking</a> <a href="/tags/Workout/" style="font-size: 10px;">Workout</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/ZeroDeploy/" style="font-size: 10px;">ZeroDeploy</a> <a href="/tags/hexo-blog-setup/" style="font-size: 12.22px;">hexo blog setup</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <!--<h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>-->
+                <p>&copy; 2017 <b>Gopikrishna Gujjula</b></p>
+                <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+                <!--<p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'gopigujjula';
+    
+    
+    var disqus_url = 'http://gopigujjula.com/2017/10/Sitecore-RTE-Add-HTML-Snippet/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

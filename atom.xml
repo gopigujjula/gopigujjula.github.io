@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-10-06T12:13:16.587Z</updated>
+  <updated>2017-10-29T14:19:56.471Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore: Add HTML Snippet to Rich Text Editor (RTE)</title>
+    <link href="http://gopigujjula.com/2017/10/Sitecore-RTE-Add-HTML-Snippet/"/>
+    <id>http://gopigujjula.com/2017/10/Sitecore-RTE-Add-HTML-Snippet/</id>
+    <published>2017-10-29T01:29:00.000Z</published>
+    <updated>2017-10-29T14:19:56.471Z</updated>
+    
+    <content type="html"><![CDATA[<p>Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control.</p>
+<p><strong>Step 1:</strong><br>Login to Sitecore, and select <strong><em>core</em></strong> database, from the options available at the right side bottom.</p>
+<p><img src="/css/images/add-html-snippet-1.png" alt=""></p>
+<p><strong>Step 2:</strong><br>Open Content Editor, and navigate to <em>/sitecore/system/Settings/Html Editor Profiles</em> item, where you can see the <strong>Rich Text Profiles</strong>.</p>
+<p><img src="/css/images/add-html-snippet-2.png" alt=""></p>
+<p><strong>Step 3:</strong><br>Open the <em>Rich Text Full</em>, and navigate to <em>/sitecore/system/Settings/Html Editor Profiles/Rich Text Full/Snippets</em> item, under which we add custom HTML snippets.</p>
+<p><strong>Step 4:</strong><br>Under Snippets, create a new Snippet, by using the <em>/sitecore/templates/System/Html Editor Profiles/Html Editor Snippet</em> template, which contains <em>Header</em> and <em>Value</em> fields.</p>
+<p><img src="/css/images/add-html-snippet-3.png" alt=""></p>
+<p><strong>Step 5:</strong><br>Fill the <strong>Header</strong> and <strong>Value</strong> fields, <strong>Header</strong> field holds the title to be displayed in Rich Text Editor, and <strong>Value</strong> field holds the actual HTML block elements.<br>I have added an Image as well.</p>
+<p><img src="/css/images/add-html-snippet-4.png" alt=""><br><em>as this is core database, no need to publish the changes</em></p>
+<p><strong>Step 6:</strong><br>This completes the work on <strong>Core</strong> database, let’s switch back to <strong>Master</strong> database. Create a template with Rich Text field, and have source field point to the Rich Text Profile, for which you have added HTML snippet.</p>
+<p><img src="/css/images/add-html-snippet-5.png" alt=""></p>
+<p>To enable all the Rich fields to use this control, make change in the configuration to <strong>HtmlEditor.DefaultProfile</strong></p>
+<p><img src="/css/images/add-html-snippet-6.png" alt=""></p>
+<p><strong>Step 7:</strong><br>Navigate to the content item, and open the Rich Text Editor, click on the <strong>Insert Code Snippet</strong> option and select the<br><strong>Custom HTML Block</strong>, which inserts the HTML.</p>
+<p><img src="/css/images/add-html-snippet-7.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-8.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-9.png" alt=""></p>
+<p><strong>Step 8:</strong><br>Once the HTML block is added, content authors have flexibility to modify it, event Image can also be modified, by selecting the Image, and right click to get the options.</p>
+<p><img src="/css/images/add-html-snippet-10.png" alt=""></p>
+<p><img src="/css/images/add-html-snippet-11.png" alt=""></p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Let’s have a step by step look on how to add custom HTML Snippet to Rich Text Editor (RTE) control.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt;&lt;br&gt;Lo
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Begineer" scheme="http://gopigujjula.com/tags/Begineer/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore: ZeroDeploy Tool</title>
@@ -1087,41 +1134,6 @@
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
     
       <category term="SUG Hyderabad" scheme="http://gopigujjula.com/tags/SUG-Hyderabad/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore - Media Framework with Brightcove - Part 1 Webinar</title>
-    <link href="http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/"/>
-    <id>http://gopigujjula.com/2017/03/Sitecore-MediaFramework-with-Brightcove-part-1-Webinar/</id>
-    <published>2017-03-05T14:30:00.000Z</published>
-    <updated>2017-09-10T03:18:47.792Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1"><a href="#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1" class="headerlink" title="Sitecore : Media Framework with Brightcove - Part 1"></a>Sitecore : Media Framework with Brightcove - Part 1</h4><p><img src="/css/images/brightcove-video-cloud-connector.png" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/N6QvOn0443Ibo2" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/PxAp073UmQE" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/march-2017-1/" target="_blank" rel="external">here</a></p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1&quot;&gt;&lt;a href=&quot;#Sitecore__3A_Media_Framework_with_Brightcove_-_Part_1&quot; class=&quot;heade
-    
-    </summary>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
