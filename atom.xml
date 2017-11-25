@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2017-10-29T14:19:56.471Z</updated>
+  <updated>2017-11-25T08:07:53.157Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Let&#39;s Explore Sitecore Helix</title>
+    <link href="http://gopigujjula.com/2017/11/Sitecore-Explore-Helix-SUG-Talk/"/>
+    <id>http://gopigujjula.com/2017/11/Sitecore-Explore-Helix-SUG-Talk/</id>
+    <published>2017-11-18T14:30:00.000Z</published>
+    <updated>2017-11-25T08:07:53.157Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Let_u2019s_Explore_Sitecore_Helix"><a href="#Let_u2019s_Explore_Sitecore_Helix" class="headerlink" title="Let’s Explore Sitecore Helix"></a>Let’s Explore Sitecore Helix</h4><p><img src="/css/images/SUG-BGL-Nov-2017-Meetup.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/K4qVAWN1jmIgaE" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
+<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/QlJIsKrtZr0" frameborder="0" allowfullscreen></iframe></div>
+<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/november-2017-indegene/" target="_blank" rel="external">here</a></p>
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Let_u2019s_Explore_Sitecore_Helix&quot;&gt;&lt;a href=&quot;#Let_u2019s_Explore_Sitecore_Helix&quot; class=&quot;headerlink&quot; title=&quot;Let’s Explore Sitecore Hel
+    
+    </summary>
+    
+      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
+    
+      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
+    
+      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore: Add HTML Snippet to Rich Text Editor (RTE)</title>
@@ -160,9 +195,10 @@
     <link href="http://gopigujjula.com/2017/09/Sitecore-Search-Topics-SUG-Webinar/"/>
     <id>http://gopigujjula.com/2017/09/Sitecore-Search-Topics-SUG-Webinar/</id>
     <published>2017-09-23T14:30:00.000Z</published>
-    <updated>2017-10-29T14:45:54.373Z</updated>
+    <updated>2017-11-25T08:12:42.342Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Sitecore_Search_-_Absolute_Basics"><a href="#Sitecore_Search_-_Absolute_Basics" class="headerlink" title="Sitecore Search - Absolute Basics"></a>Sitecore Search - Absolute Basics</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+    <content type="html"><![CDATA[<h4 id="Sitecore_Search_-_Absolute_Basics"><a href="#Sitecore_Search_-_Absolute_Basics" class="headerlink" title="Sitecore Search - Absolute Basics"></a>Sitecore Search - Absolute Basics</h4><p><img src="/css/images/SUG-BGL-Sep-2017-Meetup.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/kOf9wHZYPYNNld" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
@@ -569,9 +605,10 @@
     <link href="http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/"/>
     <id>http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/</id>
     <published>2017-05-27T14:30:00.000Z</published>
-    <updated>2017-10-29T14:52:11.493Z</updated>
+    <updated>2017-11-25T08:10:20.342Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+    <content type="html"><![CDATA[<h4 id="Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How"><a href="#Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How" class="headerlink" title="Sitecore Goals – Why, What &amp; How"></a>Sitecore Goals – Why, What &amp; How</h4><p><img src="/css/images/SUG-BGL-May-Meetup.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/7kOlvZ6GydjyD0" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
@@ -581,8 +618,7 @@
     
     <summary type="html">
     
-      &lt;h5 id=&quot;Presentation_Deck_3A&quot;&gt;&lt;a href=&quot;#Presentation_Deck_3A&quot; class=&quot;headerlink&quot; title=&quot;Presentation Deck:&quot;&gt;&lt;/a&gt;Presentation Deck:&lt;/h5&gt;
-	&lt;if
+      &lt;h4 id=&quot;Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How&quot;&gt;&lt;a href=&quot;#Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How&quot; class=&quot;headerlink&quot; title
     
     </summary>
     
@@ -1013,9 +1049,10 @@
     <link href="http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/"/>
     <id>http://gopigujjula.com/2017/04/Dependency-Injection-In-Sitecore-Webinar/</id>
     <published>2017-04-23T14:30:00.000Z</published>
-    <updated>2017-09-10T03:18:47.798Z</updated>
+    <updated>2017-11-25T08:14:57.302Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
+    <content type="html"><![CDATA[<h4 id="Dependency_Injection_In_Sitecore"><a href="#Dependency_Injection_In_Sitecore" class="headerlink" title="Dependency Injection In Sitecore"></a>Dependency Injection In Sitecore</h4><p><img src="/css/images/SUG-BGL-April-2017-Meetup.png" alt=""></p>
+<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
 	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pakfloOrbv17Hb" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
 
 
@@ -1073,66 +1110,6 @@
       <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
     
       <category term="Computed Index" scheme="http://gopigujjula.com/tags/Computed-Index/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Templates Part 6 (Standard Values)</title>
-    <link href="http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/"/>
-    <id>http://gopigujjula.com/2017/04/Saturday-Sitecore-Learning-Template-Part-6/</id>
-    <published>2017-04-08T04:54:00.000Z</published>
-    <updated>2017-04-08T15:13:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Standard_Values"><a href="#Standard_Values" class="headerlink" title="Standard Values"></a>Standard Values</h4><p>This is the sixth post as part of <a href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Sitecore Template series</a>.</p>
-<p>In previous posts, we learned about template fields, different field types and importance of template inheritance, in this post, let’s explore <strong>Standard Values</strong>.</p>
-<p>Standard Values are a way to provide default values to template fields. Once we create a Standard Values for a template, and set the default values for fields, any item which is created from this template gets the default values, later content author can also modify the values, on item level.</p>
-<p>Standard Values are also useful to have a complete picture of what are all the fields a template has, including the inherited fields.</p>
-<p>We can also set default presentation details, and insert options on Standard values.</p>
-<p>By looking at Standard Values, we can understand what all the fields a template contains, including the inherited fields.</p>
-<p>Let’s take the example of three templates, which are created based on <a href="/2017/02/Saturday-Sitecore-Learning-Template-Part-5/">previous post</a></p>
-<p><img src="/css/images/template-inheritance.png" alt=""></p>
-<p><strong>Add Standard Value</strong></p>
-<p>Let’s explore how to add a Standard Value to Article Template,</p>
-<p><strong>Step 1.</strong> Open the Content Editor, navigate to Templates &amp; select the Article Template.</p>
-<p> <img src="/css/images/template-standard-values-1.png" alt=""></p>
-<p><strong>Step 2.</strong> Select the <strong>Builder Options</strong> menu from ribbon, and click on the <strong>Standard Values</strong>. (To view the Builder Options menu, on template level, we need to select the <strong>Builder</strong> tab)</p>
-<p><img src="/css/images/template-standard-values-2.png" alt=""></p>
-<p><strong>Step 3.</strong> Now we should be able to see <strong>__Standard Values</strong> item under the Article template.</p>
-<p><img src="/css/images/template-standard-values-3.png" alt=""></p>
-<p><strong>Step 4.</strong> If we look at newly created <strong>__Standard Values</strong> template, we can observe that there are Article template fields, as well as the inherited fields from Base Content template.</p>
-<p><img src="/css/images/template-standard-values-4.png" alt=""></p>
-<p><strong>Adding Default Values:</strong></p>
-<p>We can add default value to a field, statically or dynamically (with tokens), for the simplicity now let’s add a static value.</p>
-<p><strong>Step 1:</strong> Open the Article template Standard Values, and select a today’s date for Date field, and save it.</p>
-<p><img src="/css/images/template-standard-values-5.png" alt=""></p>
-<p><strong>Step 2:</strong> Create a new Article item under Home node.</p>
-<p><img src="/css/images/template-field-default-value.png" alt=""></p>
-<p><strong>Step 3:</strong> In newly created <em>Test Article</em>, we can see the Date field value has today’s date, and all other fields are empty. Observe that there is a <em>Standard Value</em> text just beside the Date field name.</p>
-<p><img src="/css/images/field-item-default-value.png" alt=""></p>
-<p><strong>Step 4:</strong> Let’s change the Date field value. Now observe that Standard Value text is disappeared, that means we have broken the Default value inheritance.</p>
-<p><img src="/css/images/field-item-default-value-change.png" alt=""></p>
-<p>In next post, let’s explore different template types.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Standard_Values&quot;&gt;&lt;a href=&quot;#Standard_Values&quot; class=&quot;headerlink&quot; title=&quot;Standard Values&quot;&gt;&lt;/a&gt;Standard Values&lt;/h4&gt;&lt;p&gt;This is the sixth 
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Templates" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Templates/"/>
-    
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
   </entry>
   
