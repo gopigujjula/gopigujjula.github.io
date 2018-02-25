@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL | Gopi Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Sitecore,Beginner,Sitecore 9" />
+    
+    <meta name="description" content="Version : Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)Topology: XP Single (XP0)Solr Version: Solr 6.6.2 Let’s split the Sitecore 9 installation into three parts,  Look at Prerequisites">
+<meta name="keywords" content="Sitecore,Beginner,Sitecore 9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL">
+<meta property="og:url" content="http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="Version : Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)Topology: XP Single (XP0)Solr Version: Solr 6.6.2 Let’s split the Sitecore 9 installation into three parts,  Look at Prerequisites">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore9-logo.png">
+<meta property="og:updated_time" content="2018-02-25T17:26:55.048Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL">
+<meta name="twitter:description" content="Version : Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)Topology: XP Single (XP0)Solr Version: Solr 6.6.2 Let’s split the Sitecore 9 installation into three parts,  Look at Prerequisites">
+<meta name="twitter:image" content="http://gopigujjula.com/css/images/sitecore9-logo.png">
+    
+
+    
+        <link rel="alternate" href="atom.xml" title="Gopi Notes" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <!--<h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>-->
+                    <!---->
+                    <h2 class="subtitle-wrap">
+                        <a href="/" class="custom-logo"><p class="subtitle">GOPI NOTES</p></a>
+                    </h2>                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/">Sitecore</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech-Talks/">Tech Talks</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Sitecore9-Local-Installation-SSL-Solr-Setup-" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/" class="article-date">
+            <time datetime="2018-02-25T05:20:00.000Z" itemprop="datePublished">February 25, 2018</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Beginner/">Beginner</a>, <a class="tag-link" href="/tags/Sitecore/">Sitecore</a>, <a class="tag-link" href="/tags/Sitecore-9/">Sitecore 9</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/css/images/sitecore9-logo.png" alt=""></p>
+<p>Version : <strong>Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)</strong><br>Topology: <strong>XP Single (XP0)</strong><br>Solr Version: <strong>Solr 6.6.2</strong></p>
+<p>Let’s split the Sitecore 9 installation into three parts,</p>
+<ol>
+<li><a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/">Look at Prerequisites</a></li>
+<li><strong>Install Solr with Https</strong></li>
+<li>Install Sitecore 9 with Sitecore Installation Framework (SIF) - Coming Soon</li>
+</ol>
+<p>In this post, let’s explore installing Solr, and setting up Https.</p>
+<p><strong>Java Runtime Environment (JRE)</strong><br>Solr requires Java Runtime Environment (JRE) version 8.8 or later available on the machine.<br>Check whether Java is already installed or not from command prompt. Open command prompt in admin mode, and run the following command,</p>
+<p><code>java -version</code></p>
+<p><img src="/css/images/java-version-check.png" alt=""></p>
+<p>If you need to install JRE, download the latest version (at present <strong>9.0.4</strong>) from <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html" target="_blank" rel="external">here</a></p>
+<p><img src="/css/images/java-download.png" alt=""></p>
+<p>Run the downloaded exe file, and follow the steps to complete the installation.</p>
+<p><img src="/css/images/java-install-1.png" alt=""></p>
+<p>Once the installation completes, verify it using the <code>java -version</code> command as shown before.</p>
+<ul>
+<li>We need to update the Environment Variables, in Windows 10, search for environment variables, and select the <strong>edit the system environment variables</strong></li>
+</ul>
+<p><img src="/css/images/java-install-2.png" alt=""></p>
+<p><img src="/css/images/java-install-3.png" alt=""></p>
+<p><img src="/css/images/java-install-4.png" alt=""></p>
+<p>Variable Name: <code>JAVA_HOME</code>, Variable Value: path for your java installation, in my case <code>c:\Program Files\Java\jre-9.0.4</code></p>
+<p><img src="/css/images/java-install-5.png" alt=""></p>
+<p><img src="/css/images/java-install-6.png" alt=""></p>
+<p>By now we are all set with JRE, let’s start Solr installation.</p>
+<p><strong>Step 1:</strong> Download the Solr-6.6.2.zip file from <a href="http://archive.apache.org/dist/lucene/solr/6.6.2/" target="_blank" rel="external">here</a></p>
+<p><img src="/css/images/solr-install-1.png" alt=""></p>
+<p><strong>Step 2:</strong> Extract the zip file and copy the files to a location, say <code>C:\Sitecore9\solr-6.6.2</code></p>
+<p><img src="/css/images/solr-install-2.png" alt=""></p>
+<p><strong>Step 3:</strong> Now we need to set up SSL certificate, there are multiple ways to do this, but easiest among all is to use script from <a href="https://kamsar.net/index.php/2017/10/Quickly-add-SSL-to-Solr/" target="_blank" rel="external">here</a>, Thanks to <a href="https://twitter.com/kamsar" target="_blank" rel="external">Kam Figy</a>.</p>
+<ul>
+<li><p>Download the file and save it as powershell script <code>solrssl.ps1</code> from <a href="https://gist.githubusercontent.com/kamsar/c3c8322c1ec40eac64c7dd546e5124de/raw/01374d52253abb090d7f0195b8680c8396558f66/solrssl.ps1" target="_blank" rel="external">GitHubGist</a></p>
+</li>
+<li><p>Open the script file and modify the <strong>keytool.exe</strong> path (<em>line number 37</em>), in my case <code>C:\Program Files\Java\jre-9.0.4\bin\keytool.exe</code></p>
+</li>
+</ul>
+<p><img src="/css/images/solr-install-3.png" alt=""></p>
+<ul>
+<li>Open the PowerShell in admin mode, and run the following command. (navigate to script path), and path passed as a parameter is where the newly keystore file gets stored.</li>
+</ul>
+<p><code>.\solrssl.ps1 -KeyStoreFile C:\Sitecore9\solr-6.6.2\server\etc\solr-ssl.keystore.jks</code></p>
+<p><img src="/css/images/solr-install-4.png" alt=""></p>
+<p>Observe the Next Steps, we need to copy the new keystore to <code>$SOLR_HOME\server\etc</code>, but we are already done with the step, as we have directly gave the path to the command itself.</p>
+<p><img src="/css/images/solr-install-5.png" alt=""></p>
+<ul>
+<li>As next step, we need to uncomment few lines from <code>C:\Sitecore9\solr-6.6.2\bin\solr.in.cmd</code></li>
+</ul>
+<p><img src="/css/images/solr-install-6.png" alt=""></p>
+<p><img src="/css/images/solr-install-7.png" alt=""></p>
+<p><img src="/css/images/solr-install-8.png" alt=""></p>
+<p><strong>Step 4:</strong> Now let’s start Solr from command line. Open command prompt, navigate to <code>C:\Sitecore9\solr-6.6.2\bin</code> and execute the following command, (I am using 8985 port)<br><code>Solr start -p 8985</code></p>
+<p>browse the url, with https <code>https://localhost:8985/solr/#/</code></p>
+<p><img src="/css/images/solr-install-9.png" alt=""></p>
+<p><strong>Step 5:</strong> At this point, we are all set with <strong>Solr + SSL</strong>, but every time we need to start the service manually. Let’s automate it using, <strong>Non-Sucking Service Manager (NSSM)</strong>.</p>
+<ul>
+<li>Download the latest NSSM version from <a href="https://nssm.cc/download" target="_blank" rel="external">here</a></li>
+<li>Extract and copy it a folder, let’s say <code>C:\Sitecore9\</code></li>
+</ul>
+<p><img src="/css/images/solr-install-10.png" alt=""></p>
+<ul>
+<li>Open the command prompt in admin mode, and navigate to <code>C:\Sitecore9\nssm-2.24\win64</code> and run the following command, <code>nssm install Solr662Service</code></li>
+</ul>
+<p><img src="/css/images/solr-install-11.png" alt=""></p>
+<p><img src="/css/images/solr-install-12.png" alt=""></p>
+<p><img src="/css/images/solr-install-13.png" alt=""></p>
+<p><img src="/css/images/solr-install-14.png" alt=""></p>
+<p><img src="/css/images/solr-install-15.png" alt=""></p>
+<ul>
+<li>Now open services (Windows + R, and <code>services.msc</code>), navigate to newly created service, and Start it.</li>
+</ul>
+<p><img src="/css/images/solr-install-16.png" alt=""></p>
+<ul>
+<li>Browse the url, with https <code>https://localhost:8985/solr/#/</code><br><img src="/css/images/solr-install-9.png" alt=""></li>
+</ul>
+<p>We are good with Sitecore prerequisites, and Solr with SSL.</p>
+<p>Next… Sitecore Installation with SIF.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/" data-id="cje2wuc2w0000ecmj8mxtls8n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCulVk2SgR3IrCRgz8jTJ-Jg" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/+gopikreddygujjula" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/gopikreddy.gn" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Sitecore 9 Local Installation Part 1 - Prerequisites</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/sitecore9-logo.png)" alt="Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a></p>
+                            <p class="item-title"><a href="/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/" class="title">Sitecore 9 Local Installation Part 2 - Setting up Solr with SSL</a></p>
+                            <p class="item-date"><time datetime="2018-02-25T05:20:00.000Z" itemprop="datePublished">February 25, 2018</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/sitecore9-logo.png)" alt="Sitecore 9 Local Installation Part 1 - Prerequisites" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a></p>
+                            <p class="item-title"><a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" class="title">Sitecore 9 Local Installation Part 1 - Prerequisites</a></p>
+                            <p class="item-date"><time datetime="2018-02-25T02:30:00.000Z" itemprop="datePublished">February 25, 2018</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/11/Sitecore-Explore-Helix-SUG-Talk/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/SUG-BGL-Nov-2017-Meetup.png)" alt="Let&#39;s Explore Sitecore Helix" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tech-Talks/">Tech Talks</a></p>
+                            <p class="item-title"><a href="/2017/11/Sitecore-Explore-Helix-SUG-Talk/" class="title">Let&#39;s Explore Sitecore Helix</a></p>
+                            <p class="item-date"><time datetime="2017-11-18T14:30:00.000Z" itemprop="datePublished">November 18, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/add-html-snippet-1.png)" alt="Sitecore: Add HTML Snippet to Rich Text Editor (RTE)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="title">Sitecore: Add HTML Snippet to Rich Text Editor (RTE)</a></p>
+                            <p class="item-date"><time datetime="2017-10-29T01:29:00.000Z" itemprop="datePublished">October 29, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/zerodeploy-1.png)" alt="Sitecore: ZeroDeploy Tool" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="title">Sitecore: ZeroDeploy Tool</a></p>
+                            <p class="item-date"><time datetime="2017-10-06T02:08:00.000Z" itemprop="datePublished">October 06, 2017</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">43</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech-Talks/">Tech Talks</a><span class="category-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/NET-User-Group/" style="font-size: 10px;">.NET User Group</a> <a href="/tags/ASP-NET/" style="font-size: 12px;">ASP.NET</a> <a href="/tags/Bangalore-Tech-event/" style="font-size: 11px;">Bangalore Tech event</a> <a href="/tags/Begineer/" style="font-size: 10px;">Begineer</a> <a href="/tags/Beginner/" style="font-size: 19px;">Beginner</a> <a href="/tags/Between/" style="font-size: 10px;">Between</a> <a href="/tags/Books/" style="font-size: 11px;">Books</a> <a href="/tags/Brightcove/" style="font-size: 13px;">Brightcove</a> <a href="/tags/C/" style="font-size: 17px;">C#</a> <a href="/tags/Career/" style="font-size: 11px;">Career</a> <a href="/tags/Certification/" style="font-size: 10px;">Certification</a> <a href="/tags/Computed-Index/" style="font-size: 10px;">Computed Index</a> <a href="/tags/Content-Author-Experience/" style="font-size: 12px;">Content Author Experience</a> <a href="/tags/Dotnet-User-Group/" style="font-size: 11px;">Dotnet User Group</a> <a href="/tags/Habitat/" style="font-size: 10px;">Habitat</a> <a href="/tags/Helix/" style="font-size: 10px;">Helix</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/LINQ/" style="font-size: 10px;">LINQ</a> <a href="/tags/MVC/" style="font-size: 10px;">MVC</a> <a href="/tags/Presentation/" style="font-size: 16px;">Presentation</a> <a href="/tags/SUG-Bangalore/" style="font-size: 14px;">SUG Bangalore</a> <a href="/tags/SUG-Hyderabad/" style="font-size: 10px;">SUG Hyderabad</a> <a href="/tags/Saturday-Sitecore-Learning/" style="font-size: 18px;">Saturday Sitecore Learning</a> <a href="/tags/Search/" style="font-size: 11px;">Search</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Sitecore/" style="font-size: 20px;">Sitecore</a> <a href="/tags/Sitecore-9/" style="font-size: 11px;">Sitecore 9</a> <a href="/tags/Sitecore-Field-Types/" style="font-size: 12px;">Sitecore Field Types</a> <a href="/tags/Sitecore-Media-Framework/" style="font-size: 13px;">Sitecore Media Framework</a> <a href="/tags/Sitecore-User-Group/" style="font-size: 15px;">Sitecore User Group</a> <a href="/tags/Sublayouts/" style="font-size: 10px;">Sublayouts</a> <a href="/tags/TDS/" style="font-size: 10px;">TDS</a> <a href="/tags/Technical-Books/" style="font-size: 11px;">Technical Books</a> <a href="/tags/Tools/" style="font-size: 14px;">Tools</a> <a href="/tags/User-Group/" style="font-size: 11px;">User Group</a> <a href="/tags/Walking/" style="font-size: 10px;">Walking</a> <a href="/tags/Workout/" style="font-size: 10px;">Workout</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/ZeroDeploy/" style="font-size: 10px;">ZeroDeploy</a> <a href="/tags/hexo-blog-setup/" style="font-size: 12px;">hexo blog setup</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <!--<h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>-->
+                <p>&copy; 2018 <b>Gopikrishna Gujjula</b></p>
+                <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+                <!--<p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'gopigujjula';
+    
+    
+    var disqus_url = 'http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-SSL-Solr-Setup-/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
