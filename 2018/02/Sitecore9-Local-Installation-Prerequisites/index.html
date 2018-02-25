@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Sitecore 9 Local Install Part 1 - Prerequisites | Gopi Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Sitecore,Beginner,Sitecore 9" />
+    
+    <meta name="description" content="Sitecore 9 Installation - Prerequisites As the installation process for Sitecore 9.0 and above is quite different from previous versions, making notes for myself, and also it might help other Sitecore">
+<meta name="keywords" content="Sitecore,Beginner,Sitecore 9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sitecore 9 Local Install Part 1 - Prerequisites">
+<meta property="og:url" content="http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-Prerequisites/index.html">
+<meta property="og:site_name" content="Gopi Notes">
+<meta property="og:description" content="Sitecore 9 Installation - Prerequisites As the installation process for Sitecore 9.0 and above is quite different from previous versions, making notes for myself, and also it might help other Sitecore">
+<meta property="og:image" content="http://gopigujjula.com/css/images/sitecore9-logo.png">
+<meta property="og:updated_time" content="2018-02-25T14:43:13.596Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sitecore 9 Local Install Part 1 - Prerequisites">
+<meta name="twitter:description" content="Sitecore 9 Installation - Prerequisites As the installation process for Sitecore 9.0 and above is quite different from previous versions, making notes for myself, and also it might help other Sitecore">
+<meta name="twitter:image" content="http://gopigujjula.com/css/images/sitecore9-logo.png">
+    
+
+    
+        <link rel="alternate" href="atom.xml" title="Gopi Notes" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72604921-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <!--<h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>-->
+                    <!---->
+                    <h2 class="subtitle-wrap">
+                        <a href="/" class="custom-logo"><p class="subtitle">GOPI NOTES</p></a>
+                    </h2>                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/">Sitecore</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech-Talks/">Tech Talks</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Sitecore9-Local-Installation-Prerequisites" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Sitecore 9 Local Install Part 1 - Prerequisites
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" class="article-date">
+            <time datetime="2018-02-25T02:30:00.000Z" itemprop="datePublished">February 25, 2018</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Beginner/">Beginner</a>, <a class="tag-link" href="/tags/Sitecore/">Sitecore</a>, <a class="tag-link" href="/tags/Sitecore-9/">Sitecore 9</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h4 id="Sitecore_9_Installation_-_Prerequisites"><a href="#Sitecore_9_Installation_-_Prerequisites" class="headerlink" title="Sitecore 9 Installation - Prerequisites"></a>Sitecore 9 Installation - Prerequisites</h4><p><img src="/css/images/sitecore9-logo.png" alt=""></p>
+<p>As the installation process for <strong>Sitecore 9.0</strong> and above is quite different from previous versions, making notes for myself, and also it might help other Sitecore developers.</p>
+<p>Version : <strong>Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)</strong><br>Topology: <strong>XP Single (XP0)</strong></p>
+<p>Let’s split the installation into three parts,</p>
+<ol>
+<li><strong>Look at Prerequisites</strong></li>
+<li>Install Solr with Https - Coming Soon</li>
+<li>Install Sitecore 9 with Sitecore Installation Framework (SIF) - Coming Soon</li>
+</ol>
+<p>I advise you to go through <a href="https://dev.sitecore.net/~/media/1E934A0DB5534F2CB1D98A0F4000B25C.ashx" target="_blank" rel="external">Sitecore Installation Guide</a> (<em>54 pages</em>), which is very good.</p>
+<p>Let’s have a look at what all the requirements for Sitecore 9 Installation,</p>
+<h4 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h4><ul>
+<li>Operating System: Windows <strong>8.1</strong> or <strong>10</strong>(32/64-bit)</li>
+<li>Web Server: IIS <strong>8.5</strong> or <strong>10.0</strong></li>
+<li>.NET Framework <strong>4.6.2</strong> or later.</li>
+<li>Microsoft SQL Server <strong>2016 SP1</strong></li>
+<li>Solr <strong>6.6.2</strong></li>
+<li>Visual Studio <strong>2015</strong> or later</li>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587" target="_blank" rel="external">Microsoft Visual C++ 2015 Redistributable</a> (for Sitecore 9 Update-1)</li>
+</ul>
+<p>Other than the above requirements, there are quite a few prerequisites for <strong>Sitecore Installation Framework</strong>,</p>
+<p><em>Note: The Sitecore Installation Framework does not validate the prerequisite software that you install; therefore ensure you install the correct versions. (From the Installation Document)</em></p>
+<h4 id="SIF_Requirements"><a href="#SIF_Requirements" class="headerlink" title="SIF Requirements"></a>SIF Requirements</h4><p><strong>Microsoft PowerShell 5.1 or later</strong><br>On Windows 7 or higher versions, PowerShell comes installed by default. You can check PowerShell version using PowerShell console.</p>
+<p>To open PowerShell console, press Windows + R, and type <strong>powershell</strong>.</p>
+<p><img src="/css/images/launch-powershell.png" alt=""></p>
+<p>Using the following command, we can know the version.<br><code>$PSVersionTable</code></p>
+<p><img src="/css/images/powershell-version.png" alt=""></p>
+<p>If your Powershell version is any lower, please upgrade it by following this <a href="https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell" target="_blank" rel="external">link</a></p>
+<p><strong>Web Platform Installer (Web PI) 5.0</strong><br>The Web Platform Installer provides an easy way to quickly install and customize all the software you need to develop or deploy web sites and applications on a Windows machine.</p>
+<p>Download the installer from <a href="https://www.microsoft.com/web/downloads/platform.aspx" target="_blank" rel="external">here</a>, run the <em>.msi</em> file, and follow the steps.</p>
+<p><img src="/css/images/webpi.png" alt=""></p>
+<p>After the installing , you can open Web Pi, in the <em>Windows Start</em> menu, type <em>Microsoft Web Platform Installer</em>, and click on it. (in Windows 10).</p>
+<p><img src="/css/images/webpi-open.png" alt=""></p>
+<p><img src="/css/images/webpi-start-screen.png" alt=""></p>
+<p><strong>WebAdministration Module</strong></p>
+<p>When you configure IIS, the WebAdministration module is automatically installed. To check, fire up Powershell in admin mode, and try the following command. It lists all the cmdlets from webadministration module.</p>
+<p><code>Get-Command -module WebAdministration</code></p>
+<p><img src="/css/images/webadministration-cmdlet.png" alt=""></p>
+<p><strong>Web Deploy 3.6 for Hosting Servers</strong><br>This supports installation of Web Deploy Packages and we can install Web Deploy using Web Platform Installer. Open Web PI and search for <em>Web Deploy 3.6 for Hosting Servers</em>, click on add, and install.</p>
+<p><img src="/css/images/webdeploy.png" alt=""></p>
+<p><img src="/css/images/webdeploy-install-1.png" alt=""></p>
+<p><img src="/css/images/webdeploy-install-2.png" alt=""></p>
+<p><strong>URL Rewrite 2.1</strong><br>Open Web PI, and search for <em>URL Rewrite 2.1</em>, click on add, and install.</p>
+<p><img src="/css/images/url-rewrite-install-1.png" alt=""></p>
+<p><strong>Microsoft SQL Server Data-Tier Application Framework (DacFx) version 2016</strong><br>This supports installation of .dac files in Web Deploy Packages. You can download and install from <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53013" target="_blank" rel="external">here</a>.</p>
+<p><img src="/css/images/DAC-install.png" alt=""></p>
+<p><img src="/css/images/DAC-install-2.png" alt=""></p>
+<p>Run the downloaded .msi file, and install the component.</p>
+<p><img src="/css/images/DAC-install-3.png" alt=""></p>
+<p><em>To ensure that DacFx works correctly, you must install its system requirements including <a href="http://go.microsoft.com/fwlink/?LinkID=849415&amp;clcid=0x409" target="_blank" rel="external">SQLSysCLRTypes.msi</a>. If you are running an x64 environment, must install both the x64 and x86 versions of DacFx and SQLSysCLRTypes.</em> (from the Installation doc)</p>
+<p><strong>Enable Contained Database Authentication</strong><br>To allow the creation of users from SIF, we need to configure the SQL Server. Login to MS SQL Server Management Studio as an administrator, and run the following query. More information can be found <a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/contained-database-authentication-server-configuration-option" target="_blank" rel="external">here</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sp_configure &apos;contained database authentication&apos;, 1;</div><div class="line">GO</div><div class="line">RECONFIGURE;</div><div class="line">GO</div></pre></td></tr></table></figure></p>
+<p>Next… Setting up Solr with Https.</p>
+<p><strong>Happy Learning :)</strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-Prerequisites/" data-id="cje2pk7wb00003smjq7dlxp63" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/gopigujjula" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCulVk2SgR3IrCRgz8jTJ-Jg" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/+gopikreddygujjula" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/gopikreddy.gn" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/11/Sitecore-Explore-Helix-SUG-Talk/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Let&#39;s Explore Sitecore Helix</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/sitecore9-logo.png)" alt="Sitecore 9 Local Install Part 1 - Prerequisites" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a></p>
+                            <p class="item-title"><a href="/2018/02/Sitecore9-Local-Installation-Prerequisites/" class="title">Sitecore 9 Local Install Part 1 - Prerequisites</a></p>
+                            <p class="item-date"><time datetime="2018-02-25T02:30:00.000Z" itemprop="datePublished">February 25, 2018</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/11/Sitecore-Explore-Helix-SUG-Talk/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/SUG-BGL-Nov-2017-Meetup.png)" alt="Let&#39;s Explore Sitecore Helix" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tech-Talks/">Tech Talks</a></p>
+                            <p class="item-title"><a href="/2017/11/Sitecore-Explore-Helix-SUG-Talk/" class="title">Let&#39;s Explore Sitecore Helix</a></p>
+                            <p class="item-date"><time datetime="2017-11-18T14:30:00.000Z" itemprop="datePublished">November 18, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/add-html-snippet-1.png)" alt="Sitecore: Add HTML Snippet to Rich Text Editor (RTE)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-RTE-Add-HTML-Snippet/" class="title">Sitecore: Add HTML Snippet to Rich Text Editor (RTE)</a></p>
+                            <p class="item-date"><time datetime="2017-10-29T01:29:00.000Z" itemprop="datePublished">October 29, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/zerodeploy-1.png)" alt="Sitecore: ZeroDeploy Tool" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sitecore/">Sitecore</a></p>
+                            <p class="item-title"><a href="/2017/10/Sitecore-ZeroDeploy-Tool/" class="title">Sitecore: ZeroDeploy Tool</a></p>
+                            <p class="item-date"><time datetime="2017-10-06T02:08:00.000Z" itemprop="datePublished">October 06, 2017</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/Sitecore-Search-Topics-SUG-Webinar/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/SUG-BGL-Sep-2017-Meetup.png)" alt="Sitecore Search: Absolute Basics" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tech-Talks/">Tech Talks</a></p>
+                            <p class="item-title"><a href="/2017/09/Sitecore-Search-Topics-SUG-Webinar/" class="title">Sitecore Search: Absolute Basics</a></p>
+                            <p class="item-date"><time datetime="2017-09-23T14:30:00.000Z" itemprop="datePublished">September 23, 2017</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ASP-NET/">ASP.NET</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/">Sitecore</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Enhancing-Content-Author-Experience/">Enhancing Content Author Experience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Helix-Learning/">Helix Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Media-Framework-with-Brightcove/">Media Framework with Brightcove</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/">Saturday Sitecore Learning</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Installation/">Installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Layout/">Layout</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/">Templates</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Saturday-Sitecore-Learning/Templates/Field-Types/">Field Types</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Sitecore-9/">Sitecore 9</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Tech-Tips/">Tech Tips</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Sitecore/Troubleshooting/">Troubleshooting</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech-Talks/">Tech Talks</a><span class="category-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">November 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/NET-User-Group/" style="font-size: 10px;">.NET User Group</a> <a href="/tags/ASP-NET/" style="font-size: 12px;">ASP.NET</a> <a href="/tags/Bangalore-Tech-event/" style="font-size: 11px;">Bangalore Tech event</a> <a href="/tags/Begineer/" style="font-size: 10px;">Begineer</a> <a href="/tags/Beginner/" style="font-size: 19px;">Beginner</a> <a href="/tags/Between/" style="font-size: 10px;">Between</a> <a href="/tags/Books/" style="font-size: 11px;">Books</a> <a href="/tags/Brightcove/" style="font-size: 13px;">Brightcove</a> <a href="/tags/C/" style="font-size: 17px;">C#</a> <a href="/tags/Career/" style="font-size: 11px;">Career</a> <a href="/tags/Certification/" style="font-size: 10px;">Certification</a> <a href="/tags/Computed-Index/" style="font-size: 10px;">Computed Index</a> <a href="/tags/Content-Author-Experience/" style="font-size: 12px;">Content Author Experience</a> <a href="/tags/Dotnet-User-Group/" style="font-size: 11px;">Dotnet User Group</a> <a href="/tags/Habitat/" style="font-size: 10px;">Habitat</a> <a href="/tags/Helix/" style="font-size: 10px;">Helix</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/LINQ/" style="font-size: 10px;">LINQ</a> <a href="/tags/MVC/" style="font-size: 10px;">MVC</a> <a href="/tags/Presentation/" style="font-size: 16px;">Presentation</a> <a href="/tags/SUG-Bangalore/" style="font-size: 14px;">SUG Bangalore</a> <a href="/tags/SUG-Hyderabad/" style="font-size: 10px;">SUG Hyderabad</a> <a href="/tags/Saturday-Sitecore-Learning/" style="font-size: 18px;">Saturday Sitecore Learning</a> <a href="/tags/Search/" style="font-size: 11px;">Search</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Sitecore/" style="font-size: 20px;">Sitecore</a> <a href="/tags/Sitecore-9/" style="font-size: 10px;">Sitecore 9</a> <a href="/tags/Sitecore-Field-Types/" style="font-size: 12px;">Sitecore Field Types</a> <a href="/tags/Sitecore-Media-Framework/" style="font-size: 13px;">Sitecore Media Framework</a> <a href="/tags/Sitecore-User-Group/" style="font-size: 15px;">Sitecore User Group</a> <a href="/tags/Sublayouts/" style="font-size: 10px;">Sublayouts</a> <a href="/tags/TDS/" style="font-size: 10px;">TDS</a> <a href="/tags/Technical-Books/" style="font-size: 11px;">Technical Books</a> <a href="/tags/Tools/" style="font-size: 14px;">Tools</a> <a href="/tags/User-Group/" style="font-size: 11px;">User Group</a> <a href="/tags/Walking/" style="font-size: 10px;">Walking</a> <a href="/tags/Workout/" style="font-size: 10px;">Workout</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/ZeroDeploy/" style="font-size: 10px;">ZeroDeploy</a> <a href="/tags/hexo-blog-setup/" style="font-size: 12px;">hexo blog setup</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <!--<h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>-->
+                <p>&copy; 2018 <b>Gopikrishna Gujjula</b></p>
+                <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+                <!--<p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'gopigujjula';
+    
+    
+    var disqus_url = 'http://gopigujjula.com/2018/02/Sitecore9-Local-Installation-Prerequisites/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
