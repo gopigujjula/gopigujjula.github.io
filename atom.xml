@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2018-10-20T17:52:00.111Z</updated>
+  <updated>2018-10-20T18:02:38.496Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Sitecore 9 Solr Group Search Results</title>
     <link href="http://gopigujjula.com/2018/10/sitecore-9-solr-group-search-results/"/>
     <id>http://gopigujjula.com/2018/10/sitecore-9-solr-group-search-results/</id>
-    <published>2018-10-21T09:30:00.000Z</published>
-    <updated>2018-10-20T17:52:00.111Z</updated>
+    <published>2018-10-20T18:02:00.000Z</published>
+    <updated>2018-10-20T18:02:38.496Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/css/images/sitecore-solr-logo.png" alt=""></p>
 <p>Sitecore 9 introduced lot of new features with respect to Solr. As a developer, main change we can notice first is, in local environment also we need to enable SSL for Solr service. As it is required by xConnect. Other than this, Sitecore 9 also included couple of Solr search improvements. Some of them are as below,</p>
