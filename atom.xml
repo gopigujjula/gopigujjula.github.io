@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2018-10-20T15:45:54.662Z</updated>
+  <updated>2018-10-20T17:52:00.111Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore 9 Solr Group Search Results</title>
+    <link href="http://gopigujjula.com/2018/10/sitecore-9-solr-group-search-results/"/>
+    <id>http://gopigujjula.com/2018/10/sitecore-9-solr-group-search-results/</id>
+    <published>2018-10-21T09:30:00.000Z</published>
+    <updated>2018-10-20T17:52:00.111Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore-solr-logo.png" alt=""></p>
+<p>Sitecore 9 introduced lot of new features with respect to Solr. As a developer, main change we can notice first is, in local environment also we need to enable SSL for Solr service. As it is required by xConnect. Other than this, Sitecore 9 also included couple of Solr search improvements. Some of them are as below,</p>
+<ol>
+<li>Group Search Results</li>
+<li>Highlight Search Results</li>
+<li>Spell checker</li>
+<li>Auto-suggest</li>
+<li>Spatial Search</li>
+</ol>
+<p>I must say, <a href="https://doc.sitecore.net/sitecore_experience_platform/setting_up_and_maintaining/search_and_indexing/using_solr_to_group_search_results" target="_blank" rel="external">Sitecore documentation</a> is very good in explaining all the above features.</p>
+<p>In this post, let’s explore, how to achieve Group search results.</p>
+<p><strong>Group Search Results</strong><br>Have you ever used Group By clause in Sql queries, where it returns single row for every grouped item. Solr Group results also works in the similar manner, except that it also returns top documents for each group.</p>
+<p>we use this feature to sort documents into groups, based on a common field value. </p>
+<ul>
+<li><strong>Environment</strong>: Sitecore 9 update 1, and Solr 6.2.</li>
+<li><strong>References</strong>: As this is Solr specific feature, we need to refer following assemblies from our project.<ul>
+<li>SolrNet.dll</li>
+<li>Sitecore.ContentSearch.dll</li>
+<li>Sitecore.ContentSearch.SolrProvider.dll</li>
+<li>Sitecore.ContentSearch.SolrNetExtension.dll</li>
+</ul>
+</li>
+<li><strong>Solr Configuration</strong>: No configuration is required to enable this feature.</li>
+</ul>
+<p>For demo purpose, i have created a book template, and added couple of book items. I have a <em>type</em> field on book template, which can have <em>self-help, fiction, biography or non-fiction</em> values, will be using this field for grouping search results.</p>
+<p><img src="/css/images/sitecore9-solr-book-items.png" alt=""></p>
+<h4 id="Group_3B"><a href="#Group_3B" class="headerlink" title="Group;"></a>Group;</h4><p>To show Group search result, created GroupDemo content item, and added Group component (Controller Rendering) from the presentation details. (to <em>main</em> placeholder)</p>
+<p><img src="/css/images/sitecore9-solr-groupdemo-1.png" alt=""></p>
+<p>Following points, you can observe in the below code, </p>
+<ul>
+<li>Passing search text through query string.</li>
+<li>Using GroupingParameters to pass field name, on which grouping should run.</li>
+<li>Passing query and queryoptions to IProviderSearchContext.Query() method.</li>
+</ul>
+<p>Basic Layout code: (Basic.cshtml)</p>
+<script src="https://gist.github.com/gopigujjula/2068e790c4537ba5134228bf05c768f9.js"></script>
+
+<p>Group component - Controller Rendering: (GroupController.cs)</p>
+<script src="https://gist.github.com/gopigujjula/9c4df5b16bdb900c75ddced354c9cc7b.js"></script>
+
+<p>View (Index.cshtml)</p>
+<script src="https://gist.github.com/gopigujjula/08b5fccc793f31a5e8db4761610981de.js"></script>
+
+<p>Result:<br><img src="/css/images/sitecore9-solr-groupdemo-result.png" alt=""></p>
+<p><img src="/css/images/sitecore9-solr-groupdemo-result2.png" alt=""></p>
+<p>Whole source code, with sitecore items is present at <a href="https://github.com/gopigujjula/Sitecore9SolrDemo" target="_blank" rel="external">https://github.com/gopigujjula/Sitecore9SolrDemo</a> </p>
+<p><em>Note: this code is only demo purposes, you should not be using SolrQueryResults<searchresultitem> as model type in your view.</searchresultitem></em></p>
+<p>Happy Learning :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore-solr-logo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Sitecore 9 introduced lot of new features with respect to Solr. As a develop
+    
+    </summary>
+    
+      <category term="Sitecore 9" scheme="http://gopigujjula.com/categories/Sitecore-9/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
+    
+      <category term="Solr" scheme="http://gopigujjula.com/tags/Solr/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore Index Item Dependencies</title>
@@ -1079,41 +1154,6 @@
       <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
     
       <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore Goals – Why, What &amp; How</title>
-    <link href="http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/"/>
-    <id>http://gopigujjula.com/2017/05/Sitecore-Goals-SUG-Webinar/</id>
-    <published>2017-05-27T14:30:00.000Z</published>
-    <updated>2017-11-25T08:10:20.342Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How"><a href="#Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How" class="headerlink" title="Sitecore Goals – Why, What &amp; How"></a>Sitecore Goals – Why, What &amp; How</h4><p><img src="/css/images/SUG-BGL-May-Meetup.png" alt=""></p>
-<h5 id="Presentation_Deck_3A"><a href="#Presentation_Deck_3A" class="headerlink" title="Presentation Deck:"></a>Presentation Deck:</h5>
-	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/7kOlvZ6GydjyD0" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
-
-
-<h5 id="Recorded_Video_3A"><a href="#Recorded_Video_3A" class="headerlink" title="Recorded Video:"></a>Recorded Video:</h5><div class="video-container"><iframe src="//www.youtube.com/embed/gfILKfnswkk" frameborder="0" allowfullscreen></iframe></div>
-<p>More details about the session can be found <a href="http://sitecoreug.org/usergroups/sitecore-user-group-bangalore/events/may-2017-indegene/" target="_blank" rel="external">here</a></p>
-</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How&quot;&gt;&lt;a href=&quot;#Sitecore_Goals__u2013_Why_2C_What__26amp_3B_How&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-      <category term="Tech Talks" scheme="http://gopigujjula.com/categories/Tech-Talks/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Presentation" scheme="http://gopigujjula.com/tags/Presentation/"/>
-    
-      <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
-    
-      <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
     
   </entry>
   
