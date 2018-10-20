@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2018-10-20T12:50:08.669Z</updated>
+  <updated>2018-10-20T15:45:54.662Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sitecore Index Item Dependencies</title>
+    <link href="http://gopigujjula.com/2018/10/sitecore-index-item-dependencies/"/>
+    <id>http://gopigujjula.com/2018/10/sitecore-index-item-dependencies/</id>
+    <published>2018-10-20T15:30:00.000Z</published>
+    <updated>2018-10-20T15:45:54.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>We all know that, whenever we save any item or publish it, index for the item (<em>sitecore_master_index</em> or <em>sitecore_web_index</em>) gets updated, not rebuild. But there are certain cases, you might require dependent items or child items or parent items need to be updated in the index.</p>
+<p>There is a pipeline to achieve this functionality <strong>“indexing.getDependencies”</strong>, which is present in Sitecore.ContentSearch.config file.</p>
+<p><img src="/css/images/sitecore-index-dependecies.png" alt=""> </p>
+<p>There are already two processors available GetCloningDependencies &amp; GetDatasourceDependencies, by default disabled. But, if you require any new processor to introduce, need to derive from BaseProcessor, and patch the same through configuration.</p>
+<p>Here is nice blog post about how to write custom processor,<br><a href="https://ggullentops.blogspot.com/2016/06/sitecore-index-dependencies.html" target="_blank" rel="external">https://ggullentops.blogspot.com/2016/06/sitecore-index-dependencies.html</a></p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We all know that, whenever we save any item or publish it, index for the item (&lt;em&gt;sitecore_master_index&lt;/em&gt; or &lt;em&gt;sitecore_web_index&lt;/
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+      <category term="Search" scheme="http://gopigujjula.com/categories/Sitecore/Search/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Search" scheme="http://gopigujjula.com/tags/Search/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sitecore Developer Community in India</title>
     <link href="http://gopigujjula.com/2018/10/Sitecore-Developer-community-in-India/"/>
     <id>http://gopigujjula.com/2018/10/Sitecore-Developer-community-in-India/</id>
     <published>2018-10-20T12:30:00.000Z</published>
-    <updated>2018-10-20T12:50:08.669Z</updated>
+    <updated>2018-10-20T14:57:00.324Z</updated>
     
     <content type="html"><![CDATA[<p>Best way to connect with Sitecore community across the globe is through <a href="http://bit.ly/SitecoreSlackSignup" target="_blank" rel="external">Sitecore Slack</a> or <a href="http://sitecore.stackexchange.com/" target="_blank" rel="external">Sitecore Stack Exchange</a>, or <a href="https://community.sitecore.net/" target="_blank" rel="external">Community Site</a>. You can find ways to connect, and further information <a href="https://sitecore.stackexchange.com/questions/1689/how-can-i-connect-with-the-sitecore-community" target="_blank" rel="external">here</a>.</p>
 <p>But there are also large pool of Sitecore developers in India, who connect through local community groups, here I am providing more information about Sitecore user groups in India.</p>
@@ -106,7 +138,7 @@
 <h4 id="SUGCON_India__28Sitecore_User_Group_Conference_India_29_3A"><a href="#SUGCON_India__28Sitecore_User_Group_Conference_India_29_3A" class="headerlink" title="SUGCON India (Sitecore User Group Conference India):"></a>SUGCON India (Sitecore User Group Conference India):</h4><p><img src="/css/images/sugcon2018-sitecore.png" alt=""><br>This is the wonderful conference where you can watch awesome presentations &amp; network with all the Sitecore developers from India at one place. First ever conference happened on May-2018. Look out for next year conference, and find more details <a href="http://www.sugcon.in/" target="_blank" rel="external">here</a>.</p>
 <p>Important points:</p>
 <ul>
-<li>User group name itself suggests you, in which city it is organized. (only exception in SUG India, it is run from Vadodara, Gujarat)</li>
+<li>User group name itself suggests you, in which city it is organized. (only exception is SUG India, it is run from Vadodara, Gujarat)</li>
 <li>All the above meetups are free of cost to attend. In some of the meetups you can also collect goodies from sponsors. (<em>Obviously except the SUGCON India, it is a conference, paid one, but ticket cost is very less compared to what it offers.</em>)</li>
 <li>All the user groups are continuously looking for speakers. If you want to present either remotely or in-person, do reach out to organizers immediately.</li>
 <li>Most of the user groups record their sessions and put it on YouTube. So you can also watch previous meetup sessions.</li>
@@ -1082,72 +1114,6 @@
       <category term="Sitecore User Group" scheme="http://gopigujjula.com/tags/Sitecore-User-Group/"/>
     
       <category term="SUG Bangalore" scheme="http://gopigujjula.com/tags/SUG-Bangalore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sitecore : Media Framework With Brightcove - Part 5 - Configuration</title>
-    <link href="http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/"/>
-    <id>http://gopigujjula.com/2017/05/Sitecore-Media-Framework-With-Brightcove-Configuration/</id>
-    <published>2017-05-17T11:30:00.000Z</published>
-    <updated>2017-05-17T10:38:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Sitecore_Media_Framework_with_Brightcove_Series"><a href="#Sitecore_Media_Framework_with_Brightcove_Series" class="headerlink" title="Sitecore Media Framework with Brightcove Series"></a>Sitecore Media Framework with Brightcove Series</h4><ul>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Media-Framework-Module/">Installing Media Framework Module</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Installing-Brightcove-Connector/">Installing Brightcove Connector</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Integrating-Brightcove-Account-In-Sitecore/">Integrating Brightcove Account In Sitecore</a></li>
-<li><a href="/2017/05/Sitecore-Media-Framework-With-Brightcove-Embed-Media/">Embed Media Into Sitecore Website</a></li>
-<li><strong>Configuration</strong></li>
-</ul>
-<h4 id="Part_5_-_Configuration"><a href="#Part_5_-_Configuration" class="headerlink" title="Part 5 - Configuration"></a>Part 5 - Configuration</h4><h4 id="1-_Customize_Brightcove_Templates"><a href="#1-_Customize_Brightcove_Templates" class="headerlink" title="1. Customize Brightcove Templates"></a>1. Customize Brightcove Templates</h4><p>When we install Brightcove connector, there are some of the main templates gets added,</p>
-<p><img src="/css/images/brightcove-templates.png" alt=""></p>
-<p>We can use brightcove templates, similar way as our custom templates,</p>
-<ul>
-<li>Inherit from other templates</li>
-<li>Add new fields</li>
-<li>Add presentation</li>
-</ul>
-<p><img src="/css/images/brightcove-template-customize.png" alt=""></p>
-<p>When Brightcove Sync operation runs, our newly added field values are not effected, as there are no corresponding fields in Brightcove to sync.</p>
-<p><em>Note: Do not modify the existing fields, as the sync operation may not work as expected.</em></p>
-<h4 id="2-_TDS__26amp_3B_Code_generation"><a href="#2-_TDS__26amp_3B_Code_generation" class="headerlink" title="2. TDS &amp; Code generation"></a>2. TDS &amp; Code generation</h4><p>We can add Brightcove templates to project, similar way as any other templates. As there are couple of custom field types present, need to modify code gen templates accordingly.<br>Ex: Image Preview, Read-Only Text, etc.</p>
-<p><img src="/css/images/brightcove-template-codegen.png" alt=""></p>
-<h4 id="3-_Video_Search_Index"><a href="#3-_Video_Search_Index" class="headerlink" title="3. Video Search Index"></a>3. Video Search Index</h4><p>Brightcove connector includes “<strong><em>mediaframework_brightcove_index</em></strong>“ index in <strong><em>Sitecore.ContentSearch.MediaFramework.Brightcove.config</em></strong> file. This index crawls on <strong><em>master</em></strong> database, and it is used for searching Brightcove items in Sitecore client.</p>
-<p><img src="/css/images/brightcove-video-search-index.png" alt=""></p>
-<h4 id="4-_CM__26amp_3B_CD_Configuration"><a href="#4-_CM__26amp_3B_CD_Configuration" class="headerlink" title="4. CM &amp; CD Configuration"></a>4. CM &amp; CD Configuration</h4><ul>
-<li>To perform automatic media synchronization, Brightcove connector uses <strong><em>MediaFramework_Import_Brightcove</em></strong> scheduling agent, which is present in <strong><em>Sitecore.MediaFramework.Services.Brightcove.config</em></strong> file. This is required only on CM.</li>
-</ul>
-<p><img src="/css/images/brightcove-scheduling-agent.png" alt=""></p>
-<p><strong>Configurations not required on CD</strong></p>
-<ul>
-<li>Scheduling Agents</li>
-<li>Brightcove Search Index</li>
-</ul>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework" target="_blank" rel="external">https://community.sitecore.net/technical_blogs/b/getting_to_know_sitecore/posts/introducing-sitecore-media-framework</a></li>
-</ul>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Sitecore_Media_Framework_with_Brightcove_Series&quot;&gt;&lt;a href=&quot;#Sitecore_Media_Framework_with_Brightcove_Series&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Media Framework with Brightcove" scheme="http://gopigujjula.com/categories/Sitecore/Media-Framework-with-Brightcove/"/>
-    
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
-    
-      <category term="Brightcove" scheme="http://gopigujjula.com/tags/Brightcove/"/>
-    
-      <category term="Sitecore Media Framework" scheme="http://gopigujjula.com/tags/Sitecore-Media-Framework/"/>
     
   </entry>
   
