@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2018-10-29T15:21:38.453Z</updated>
+  <updated>2018-10-29T15:40:30.493Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Sitecore 9 Solr Highlight Search Results</title>
-    <link href="http://gopigujjula.com/2018/10/sitecore-9-solr-highlight-search-results1/"/>
-    <id>http://gopigujjula.com/2018/10/sitecore-9-solr-highlight-search-results1/</id>
+    <link href="http://gopigujjula.com/2018/10/sitecore-9-solr-highlight-search-results/"/>
+    <id>http://gopigujjula.com/2018/10/sitecore-9-solr-highlight-search-results/</id>
     <published>2018-10-29T18:02:00.000Z</published>
-    <updated>2018-10-29T15:21:38.453Z</updated>
+    <updated>2018-10-29T15:40:30.493Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/css/images/sitecore-solr-logo.png" alt=""></p>
 <p><strong>Highlight Search Results</strong></p>
