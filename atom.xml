@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2019-02-09T03:51:16.510Z</updated>
+  <updated>2019-02-09T04:00:24.872Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Sitecore 9 Unofficial Developer Training</title>
     <link href="http://gopigujjula.com/2019/02/sitecore-9-unofficial-training/"/>
     <id>http://gopigujjula.com/2019/02/sitecore-9-unofficial-training/</id>
-    <published>2019-02-09T05:30:00.000Z</published>
-    <updated>2019-02-09T03:51:16.510Z</updated>
+    <published>2019-02-09T04:00:00.000Z</published>
+    <updated>2019-02-09T04:00:24.872Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/css/images/sitecore-learning-together.png" alt=""></p>
 <p><strong>About the Course:</strong><br>I usually get lot of requests from .NET developers who wants to learn about Sitecore development. Most of them neither work for a Sitecore client nor partner, but they are eager to learn Sitecore out of their own interest. But, money wise(e-learning - $1500 &amp; In-Person - $2500), without their employer support, Sitecore official training is little out of reach for them. Hence I made this course specifically for them. (This is only possible as we now have Sitecore developer trail program.)</p>
