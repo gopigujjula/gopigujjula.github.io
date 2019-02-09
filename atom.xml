@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gopigujjula.com/"/>
-  <updated>2018-10-29T15:40:30.493Z</updated>
+  <updated>2019-02-09T03:51:16.510Z</updated>
   <id>http://gopigujjula.com/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sitecore 9 Unofficial Developer Training</title>
+    <link href="http://gopigujjula.com/2019/02/sitecore-9-unofficial-training/"/>
+    <id>http://gopigujjula.com/2019/02/sitecore-9-unofficial-training/</id>
+    <published>2019-02-09T05:30:00.000Z</published>
+    <updated>2019-02-09T03:51:16.510Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/css/images/sitecore-learning-together.png" alt=""></p>
+<p><strong>About the Course:</strong><br>I usually get lot of requests from .NET developers who wants to learn about Sitecore development. Most of them neither work for a Sitecore client nor partner, but they are eager to learn Sitecore out of their own interest. But, money wise(e-learning - $1500 &amp; In-Person - $2500), without their employer support, Sitecore official training is little out of reach for them. Hence I made this course specifically for them. (This is only possible as we now have Sitecore developer trail program.)</p>
+<p>If you can afford, stop it here, and navigate to <a href="https://elearning.sitecore.net/" target="_blank" rel="external">Sitecore e-learning portal</a> and take the training. I highly recommend you to go through official training.</p>
+<p><strong>About the Instructor:</strong> I am Gopikrishna Reddy Gujjula, a Sitecore consultant with 3.6+ years of experience on Sitecore, overall around 9 years of experience on Microsoft technologies. You can read more about me <a href="/about/">here</a>.</p>
+<p><strong>Course Topics:</strong> </p>
+<iframe src="https://drive.google.com/file/d/1L13whIJII9Nuu63fTf-k9-JDMrCCZDvn/preview" width="640" height="480"></iframe>
+
+<p><strong>Duration:</strong> 40 hours</p>
+<p><strong>Schedule:</strong> Starting from <em>23-Feb-2019</em>, every Saturday &amp; Sunday 4 hours per day. Planning to complete by <em>March 24th</em>.</p>
+<p><strong>Delivery Mode:</strong> Online</p>
+<p><strong>Target Audience</strong>: .NET Developers with minimum 1 year experience on ASP.NET &amp; C#</p>
+<p><strong>FAQs</strong></p>
+<ol>
+<li><p><strong>We already have Official training from Sitecore? Does this course replaces that?</strong></p>
+<p>Nope, absolutely not. If you can afford, i highly recommend you to go through official training. This is course is no way replacement for official one. As i stated earlier this unofficial training is made for developers who wants to learn Sitecore out of their own interest.</p>
+</li>
+<li><p><strong>What about License file?</strong></p>
+<p>In 2018, Sitecore launched the awesome <a href="https://www.sitecore.com/getting-started/developer-trial" target="_blank" rel="external">Developer trail program</a>, in which any developer can request trail license for learning purpose, which is valid for 60 days.</p>
+</li>
+<li><p><strong>Is it free or paid training?</strong></p>
+<p>I have not created this course to earn money out of it. Having said that, i am also not providing it for fee, as only looking for serious learners. Mail me at <a href="mailo:gopikreddy.gn@gmail.com" target="_blank" rel="external">gopikreddy.gn@gmail.com</a>, to know more about fee.</p>
+</li>
+<li><p><strong>Is there any Demo lesson available?</strong></p>
+<p>I am not planning on doing any demo session. You can watch my SUG presentations on <a href="https://www.youtube.com/channel/UCulVk2SgR3IrCRgz8jTJ-Jg" target="_blank" rel="external">YouTube channel</a>. If you still have doubts, you can join first session, and decide whether to continue or not.</p>
+<!-- 8. I am already a Sitecore developer, don't need all the modules, can i pick and choose the modules? -->
+</li>
+</ol>
+<p>If you are interested or if you have any further queries, please mail me at <a href="mailo:gopikreddy.gn@gmail.com" target="_blank" rel="external">gopikreddy.gn@gmail.com</a></p>
+<p><strong>Happy Learning :)</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/sitecore-learning-together.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;About the Course:&lt;/strong&gt;&lt;br&gt;I usually get lot of requests 
+    
+    </summary>
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
+    
+    
+      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
+    
+      <category term="Training" scheme="http://gopigujjula.com/tags/Training/"/>
+    
+  </entry>
   
   <entry>
     <title>Sitecore 9 Solr Highlight Search Results</title>
@@ -1102,58 +1156,6 @@
       <category term="Habitat" scheme="http://gopigujjula.com/tags/Habitat/"/>
     
       <category term="TDS" scheme="http://gopigujjula.com/tags/TDS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Saturday Sitecore Learning - Layout</title>
-    <link href="http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/"/>
-    <id>http://gopigujjula.com/2017/07/Saturday-Sitecore-Learning-Layout/</id>
-    <published>2017-07-08T15:38:00.000Z</published>
-    <updated>2017-07-09T11:00:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><p>In previous posts, we learned all about templates, how to create a field, inheriting from another template, and setting default values using Standard values.</p>
-<p>Once we have a template created, we need to output the field content on pages/modules. This is where <strong>Layout</strong> comes into picture, layout is all about the presentation information, and also using which we make the connection between Sitecore and .NET code.</p>
-<p><em>One of the beauty of Sitecore is, as a developer, we have full control on the page HTML.</em></p>
-<p>Let’s have a brief look at page execution, Whenever a user browses for a page, Sitecore locates the particular content item, executes it’s layout, and all the required components, gets the html, and send it back to client to render it on the browser.</p>
-<p>In Sitecore tree, all Layout related items reside under Layout node.</p>
-<p><img src="/css/images/layout.png" alt=""></p>
-<p>From presentation perspective, every page item, contains two things,</p>
-<p><strong>1. Layout</strong></p>
-<p>Each page item has a single layout, which contains the information about basic page structure, and which would be common among all the pages, like <em>html</em>, <em>head</em> and <em>body</em> tags.</p>
-<p>In ASP.NET web-forms the layout file would be of <em>.aspx</em> extension, where as in ASP.NET MVC, this file would be of <em>.cshtml</em> extension.</p>
-<p>In Sitecore tree, all Layout related items reside under Layouts node.</p>
-<p><img src="/css/images/sitecore-layouts.png" alt=""></p>
-<p><strong>2. Components/Modules</strong></p>
-<p>In Sitecore, pages contain lot of components, like carousal module, or a generic callout, or any banner module. All these components would be independent from the page, so that they can be placed on any page. In Sitecore these are also called as <strong>Sub-layouts(web-forms)</strong> or <strong>Renderings(MVC)</strong>.</p>
-<p>One page can have any number of components, and a same component can be added to multiple pages.</p>
-<p>In ASP.NET web-forms the component would be of <em>.ascx</em> extension, where as in ASP.NET MVC, this would be of <em>.cshtml</em> extension (or a Controller’s action method).</p>
-<p>All Sub-layouts items reside under Sublayouts node.</p>
-<p><img src="/css/images/sitecore-sublayouts.png" alt=""></p>
-<p>All rendering items reside under Renderings node.</p>
-<p><img src="/css/images/sitecore-renderings.png" alt=""></p>
-<p>In coming posts, let’s explore each one more deeply.</p>
-<p><strong>Happy Learning :)</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;Layout&quot;&gt;&lt;a href=&quot;#Layout&quot; class=&quot;headerlink&quot; title=&quot;Layout&quot;&gt;&lt;/a&gt;Layout&lt;/h4&gt;&lt;p&gt;In previous posts, we learned all about templates, how
-    
-    </summary>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/categories/Sitecore/"/>
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Layout" scheme="http://gopigujjula.com/categories/Sitecore/Saturday-Sitecore-Learning/Layout/"/>
-    
-    
-      <category term="Saturday Sitecore Learning" scheme="http://gopigujjula.com/tags/Saturday-Sitecore-Learning/"/>
-    
-      <category term="Sitecore" scheme="http://gopigujjula.com/tags/Sitecore/"/>
-    
-      <category term="Beginner" scheme="http://gopigujjula.com/tags/Beginner/"/>
     
   </entry>
   
